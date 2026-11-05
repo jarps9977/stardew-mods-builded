@@ -1,0 +1,13 @@
+# Excluded folders
+.src/
+SaveBackup/
+ConsoleCommands/
+
+# Runtime cache (files exceed GitHub 100 MB limit)
+CoopMusic/cache/
+
+# OS / editor junk
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log

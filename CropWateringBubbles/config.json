@@ -1,0 +1,16 @@
+{
+  "OnlyWhenWatering": false,
+  "IncludeGiantable": true,
+  "ToggleEmoteKey": "None",
+  "DefaultToggleOn": false,
+  "EmoteInterval": 250,
+  "NoAnimation": false,
+  "Enabled": true,
+  "OffsetX": 0,
+  "OffsetY": 0,
+  "OpacityPercent": 75,
+  "SizePercent": 100,
+  "Opacity": 0.75,
+  "Scale": 4.0,
+  "MovePercent": 0.0
+}

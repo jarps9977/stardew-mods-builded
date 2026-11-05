@@ -1,0 +1,29 @@
+{"Changes": [
+{"Action":"EditData",
+"Target":"Strings/Characters/",
+"Entries": {
+  "Satoru_Forest": "Hello, @! I'm just out here training for a bit.$9#Training is my way of preparing for whatever comes my way. Can't afford to be caught off guard.$9",
+  "Spouse_Satoru_Forest": "Hello, @! I'll be out here training for a bit longer.$9#I'll see you at home later, sweetheart.$7",
+}
+},
+{"Action":"EditData",
+"Target":"Strings/StringsFromMaps/",
+"Entries": {
+	"Satoru_Room_001": "Maybe I should play with him someday.",
+	"Satoru_Room_002": "\"In the shadows of the night, where mortals fear to tread, lies the realm of the unseen. Seek not to gaze upon it unless you are prepared to face its mysteries.\"",
+	"Satoru_Room_003": "You browse through Satoru's book collection, finding a diverse array of titles.#There are volumes on Eastern philosophy, martial arts, occult studies, literary classics, and historical texts.#His shelves are a testament to his broad range of interests and depth of knowledge."
+}
+},
+{"Action":"EditData",
+"Target":"Strings/schedules/Satoru",
+"Entries": {
+"winter_17.000": "I wonder what kind of unusual wares the market has this year.$0",
+"marriage_winter_17.000": "Looking for something nice to take home from the market, gorgeous?$7",
+"DesertFestival_Satoru_y1": "The smells from this tent are making my stomach grumble...$0#Maybe I should order something.$0",
+"DesertFestival_Satoru_marriage": "Something smells divine...$0#Oh, hello @! Have you ordered anything to eat yet?$6",
+"DesertFestival_Satoru_y2": "Me, run a stall? Nah, I'll let the others have their fun.$0",
+"DesertFestival_Satoru_marriage_y2": "I hear the other residents are selling some unique items. Let me know if you find anything interesting!$7",
+},
+}
+]
+}

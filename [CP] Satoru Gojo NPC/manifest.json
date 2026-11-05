@@ -1,0 +1,13 @@
+{
+   "Name": "SatoruGojoNPC",
+   "Author": "Cursedcure",
+   "Version": "2.0.5",
+   "Description": "Adds Satoru Gojo as an NPC in Stardew Valley.",
+   "UniqueID": "Cursedcure.SatoruGojoNPC",
+   "MinimumApiVersion": "4.0.0",
+   "UpdateKeys": ["Nexus:21209"],
+   "ContentPackFor": 
+	{
+    	"UniqueID": "Pathoschild.ContentPatcher"
+ 	}
+}

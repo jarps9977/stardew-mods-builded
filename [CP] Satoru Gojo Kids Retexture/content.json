@@ -1,0 +1,55 @@
+{
+  "Format": "2.0.0",
+  
+  "Changes": [
+      {
+          "Action": "Load",
+          "Target": "Characters/Baby",
+          "FromFile": "assets/Baby.png",
+      "When": {
+       "Relationship:Satoru": "Married"
+      }
+      },
+	  {
+	      "Action": "Load",
+		  "Target": "Characters/Baby_dark",
+		  "FromFile": "assets/Baby_dark.png",
+      "When": {
+       "Relationship:Satoru": "Married"
+     }
+	 },
+	 {
+	      "Action": "Load",
+		  "Target": "Characters/Toddler",
+		  "FromFile": "assets/Toddler.png",
+      "When": {
+       "Relationship:Satoru": "Married"
+     }
+	 },
+
+	 {
+	      "Action": "Load",
+		  "Target": "Characters/Toddler_dark",
+		  "FromFile": "assets/Toddler_dark.png",
+      "When": {
+       "Relationship:Satoru": "Married"
+     }
+	 },
+	 {
+	      "Action": "Load",
+		  "Target": "Characters/Toddler_girl",
+		  "FromFile": "assets/Toddler_girl.png",
+      "When": {
+       "Relationship:Satoru": "Married"
+     }
+	 },
+	 {
+	      "Action": "Load",
+		  "Target": "Characters/Toddler_girl_dark",
+		  "FromFile": "assets/Toddler_girl_dark.png",
+      "When": {
+       "Relationship:Satoru": "Married"
+     }
+	   }
+    ]
+}

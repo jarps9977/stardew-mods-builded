@@ -1,0 +1,251 @@
+{
+    "Changes": [
+        {
+            "LogName": "Satoru's Egg Festival",
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Satoru 34 74 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "MainEvent_additionalCharacters"],
+                    "Value": "Satoru 34 74 0",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                    "Value": "Satoru 34 74 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+                    "Value": "Satoru 34 73 0",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        {
+            "LogName": "Satoru's Flower Festival",
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Satoru 21 31 0",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "MainEvent_additionalCharacters"],
+                    "Value": "Satoru 19 30 0",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                    "Value": "Satoru 21 31 0",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+                    "Value": "Satoru 19 30 0",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        {
+            "LogName": "Satoru's Luau Festival",
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer11",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Satoru 32 14 0",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "MainEvent_additionalCharacters"],
+                    "Value": "Satoru 31 15 0",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                    "Value": "Satoru 32 14 0",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+                    "Value": "Satoru 30 15 0",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        {
+            "LogName": "Satoru's Dance of the Moonlight Jellies",
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Satoru 24 26 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "MainEvent_additionalCharacters"],
+                    "Value": "Satoru 24 26 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                    "Value": "Satoru 83 25 2",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+                    "Value": "Satoru 83 25 2",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        {
+            "LogName": "Satoru's Spirit's Eve",
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Satoru 30 62 0",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                    "Value": "Satoru 18 57 2",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        {
+            "LogName": "Satoru's Festival of Ice",
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter8",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Satoru 78 36 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Main-Event_additionalCharacters"],
+                    "Value": "Satoru 78 36 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                    "Value": "Satoru 78 36 3",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Main-Event_additionalCharacters_y2"],
+                    "Value": "Satoru 79 35 3",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+        {
+            "LogName": "Satoru's Feast of the Winter Star",
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Satoru 31 77 2",
+                    "Delimiter": "/"
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+                    "Value": "Satoru 31 77 2",
+                    "Delimiter": "/"
+                }
+            ]
+        },
+         {
+            "LogName": "Satoru's Egg Festival Dialogue",
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13",
+            "Entries": {
+                "Satoru": "It's a really cozy festival!$1#Don't you agree?$3",
+                "Satoru_spouse": "Hmmm...$6#I'm thinking if I should join the egg hunt.$6"
+            }
+        },
+        {
+            "LogName": "Satoru's Luau Festival Dialogue",
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer11",
+            "Entries": {
+                "Satoru": "I hope the soup is really sweet! Will you be adding something to the soup?$1",
+                "Satoru_spouse": "Hello, darling. Having fun?$8#Hm?$3"
+            }
+        },
+        {
+            "LogName": "Satoru's Dance of the Moonlight Jellies Dialogue",
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "Entries": {
+                "Satoru": "Watching the jellies dance is mesmerizing!$8",
+                "Satoru_spouse": "There's something magical about this night, @. Maybe it's the jellies, or maybe it's just being here with you.$3"
+            }
+        },
+        {
+            "LogName": "Satoru's Spirit's Eve Dialogue",
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "Entries": {
+                "Satoru": "Are you scared?$3#Want me to protect you?$7#Hm?$8",
+                "Satoru_spouse": "If you find yourself getting spooked, @, you know where to find me, love.$7#I'll always keep you safe.$1"
+            }
+        },
+        {
+            "LogName": "Satoru's Festival of Ice Dialogue",
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter8",
+            "Entries": {
+                "Satoru": "Are you going to try your luck at fishing?$7#Be careful not to slip on the ice!$8",
+                "Satoru_spouse": "Don't worry about the ice, @.$7#I'll be right here to catch you if you fall.$1"
+            }
+        },
+        {
+            "LogName": "Satoru's Feast of the Winter Star Dialogue",
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries": {
+                "Satoru": "This year has gone by pretty fast.$6#Any new year wishes, @?$8",
+                "Satoru_spouse": "Happy Winter Star, my love. This festival always reminds me of how lucky I am to have you in my life.$7#I love you.$1"
+            }
+        }
+    ]
+}

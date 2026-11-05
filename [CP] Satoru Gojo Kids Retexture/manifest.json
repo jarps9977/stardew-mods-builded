@@ -1,0 +1,13 @@
+{
+   "Name": "Satoru Gojo Kids Retexture",
+   "Author": "Cursedcure",
+   "Description": "Kids that looks like Satoru Gojo",
+   "Version": "1.0.0",
+   "UniqueID": "Cursedcure.SatoruGojoKidsRetexture",
+   "MinimumApiVersion": "4.0.0",
+   "UpdateKeys": ["Nexus:????"],
+   "ContentPackFor": 
+	{
+    	"UniqueID": "Pathoschild.ContentPatcher"
+ 	}
+}

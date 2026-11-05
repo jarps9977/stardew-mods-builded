@@ -1,0 +1,15 @@
+{
+  "enabled": "Enabled",
+  "only-when-watering": "Only When Watering",
+  "include-giantable": "Show For Giantable",
+  "toggle-emote-key": "Toggle Emote Key",
+  "toggle-emote-key-tooltip": "Press this key to hide/show bubbles",
+  "default-toggle-on": "Default Toggle On",
+  "default-toggle-on-tooltip": "When a toggle key is set, bubbles are visible by default",
+  "bubble-y-offset": "Bubble Y Offset",
+  "bubble-x-offset": "Bubble X Offset",
+  "emote-interval": "Emote Interval (ms)",
+  "no-animation": "No Animation",
+  "opacity": "Opacity",
+  "bubble-size": "Bubble Size"
+}

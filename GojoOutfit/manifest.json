@@ -1,0 +1,17 @@
+{
+  "Name": "Gojo Outfit",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Monsters drop Gojo's hairstyle, shirt, pants and boots. Wear the full set for a bonus.",
+  "UniqueID": "Gego.GojoOutfit",
+  "EntryDll": "GojoOutfit.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "Cursedcure.SatoruGojoNPC",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}

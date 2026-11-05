@@ -1,0 +1,201 @@
+{
+  "Format": "2.3.0",
+  "Changes": [
+    {  
+      "Action": "Include",
+      "FromFile": "assets/events/events.json"
+    },   
+    {
+      "Action": "Include",
+      "FromFile": "assets/sound/sound.json"
+    },
+    {    
+      "Action": "Load",
+      "Target": "Maps/domainexpansion",
+      "Name": "domainexpansion",
+      "FromFile": "Maps/domainexpansion.tmx"
+    },
+    {    
+      "Action": "EditImage",
+      "Target": "Maps/domainexpansion",
+      "FromFile": "Maps/domainexpansion.png"
+    },
+    {    
+      "Action": "Load",
+      "Target": "Maps/beachdate",
+      "LogName": "beachdate",
+      "FromFile": "Maps/beachdate.tmx"
+    },
+    {    
+      "Action": "EditImage",
+      "Target": "Maps/beachdate",
+      "FromFile": "Maps/islandtile.png"
+    },
+    {    
+      "Action": "EditImage",
+      "Target": "Maps/beachdate",
+      "FromFile": "Maps/summeroutdoorstiles.png"
+    },
+    {    
+      "Action": "Load",
+      "Target": "Maps/picnicdate",
+      "LogName": "picnicdate",
+      "FromFile": "Maps/picnicdate.tmx"
+    },
+    {    
+      "Action": "EditImage",
+      "Target": "Maps/picnicdate",
+      "FromFile": "Maps/picnicdate.png"
+    },
+    {    
+      "Action": "EditImage",
+      "Target": "Maps/beachdate",
+      "FromFile": "Maps/picnicdate2.png"
+    },
+    {    
+      "Action": "Load",
+      "Target": "Maps/tenheartevent",
+      "LogName": "tenheartevent",
+      "FromFile": "Maps/tenheartevent.tmx"
+    },
+    {    
+      "Action": "EditImage",
+      "Target": "Maps/10heartevent",
+      "FromFile": "Maps/10heartevent1.png"
+    },
+    {    
+      "Action": "EditImage",
+      "Target": "Maps/10heartevent",
+      "FromFile": "Maps/10heartevent2.png"
+    },
+    {
+      "LogName": "NPC Manifestation",
+      "Action": "Include",
+      "FromFile": "assets/disposition/Disposition.json"
+    },
+	//added some stuff v
+    {
+      "LogName": "NPC Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Satoru": "Wow, @. You know the way to my heart with something sweet like this.$1#Thanks, it's much appreciated!$1/233 234 611 220 221 223 612 238 208 731 604 608 232 222/Ah, not bad.$8# You've got good taste @, I'll give you that.$7/243 651 732 614 228 593 194 195 196 197 198 199 200 201 202 203 104 205 206 207 208 209 210 211 212 213 214 215 216 218 219 224 225 226 227 229 230 231 232 235 236 237 238 239 240 241 242 244 395 423 424 454/Ehh, not exactly my cup of tea...$2/346 265 733 348 303 873/Eh?...$10/682/Ah, a gift! Thank you!$6#It's not exactly my usual preference, but I'll find a use for it./296 436 438 442 444 400 406 416 398 410 414 417 418 421 591 595 597 613 635 634 636 637 638 254 258 268 270 282 306 305 307 308   "
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/Cursedcure.SatoruGojoNPC_SpouseRoom",
+      "FromFile": "Maps/SatoruSpouseRoom.tmx"
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/SatoruSpousePatio",
+      "FromFile": "Maps/SatoruSpousePatio.tmx"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Maps/SatoruSpousePatio",
+      "FromFile": "assets/maps/SatoruSpousePatio.png"
+    },
+    {
+      "LogName": "Satoru's Flower Dance Dialogue",
+      "Action": "EditData",
+      "Target": "Data/Festivals/spring24",
+      "Entries": {
+        "Satoru": "Hey, @!$7",
+        "Satoru_Spouse": "You're the prettiest here, @!$7",
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Satoru",
+      "Entries": {
+        "give_flowersA": "Well, @, I have to say, I've been hoping you'd ask. I'd love to be your boyfriend. Let's make this official.$7",
+        "give_flowersB": "These flowers?$6#$b#Of course! I'm happy to become your boyfriend!$1",
+        "give_pendant": "Whoa, @, didn't see that coming!$6#$b#I'll marry you, no doubt about it, sweetheart.$8"
+      }
+    },
+    {
+      "LogName": "Animation Frames",
+      "Action": "Include",
+      "FromFile": "assets/animations/Animations.json"
+    },
+    {
+      "LogName": "NPC Sprite",
+      "Action": "Load",
+      "Target": "Characters/Satoru",
+      "FromFile": "assets/img/spritesheet.png"
+    },
+    {
+      "LogName": "NPC Portrait",
+      "Action": "Load",
+      "Target": "Portraits/Satoru",
+      "FromFile": "assets/img/portrait.png"
+    },
+{"LogName": "Blank JSON",
+"Action": "Load",
+"Target": "Characters/schedules/Satoru, Characters/Dialogue/Satoru, Characters/Dialogue/MarriageDialogueSatoru, Strings/schedules/Satoru",
+"FromFile": "assets/blank.json"},
+    {
+      "LogName": "Schedule",
+      "Action": "Include",
+      "FromFile": "assets/schedules/schedule.json"
+    },
+    {
+      "LogName": "Dialogue",
+      "Action": "Include",
+      "FromFile": "assets/dialogue/Dialogue.json"
+    },
+    {
+      "LogName": "Satoru's Character",
+      "Action": "Load",
+      "Target": "Characters/Satoru_Beach",
+      "FromFile": "assets/img/SatoruCharacter_Beach.png"
+    },
+	//new v
+	{
+      "LogName": "Satoru's Character",
+      "Action": "Load",
+      "Target": "Portraits/Satoru_Beach",
+      "FromFile": "assets/img/SatoruPortrait_Beach.png"
+    },
+    {
+      "LogName": "Marriage Dialogue",
+      "Action": "Include",
+      "FromFile": "assets/dialogue/MarriageDialogue.json"
+    },
+    {
+      "LogName": "Engagement Dialogue",
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "Entries": {
+        "Satoru0": "Hey, sweetheart. Just wanted to steal a moment to remind you how much I love you.$3",
+        "Satoru1": "Are you nervous?$7"
+      }
+    },
+    {
+      "LogName": "Schedule Dialogue",
+      "Action": "Include",
+      "FromFile": "assets/schedules/scheduleDialogue.json"
+    },
+    {
+      "LogName": "Satoru's Festivals Data",
+      "Action": "Include",
+      "FromFile": "assets/festivals/Festivals.json"
+    },
+    {
+      "LogName": "Satoru's Wedding Dialogue",
+      "Action": "EditData",
+      "Target": "strings/StringsFromCSFiles",
+      "Entries": {
+        "Utility.cs.5371": "@... Satoru... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you husband and husband!$h",
+        "Utility.cs.5377": "@... Satoru... #$b# As the mayor of Pelican Town, and regional bearer of the matrimonial seal, I now pronounce you wife and husband!$h",
+        "Utility.cs.5367": "When @ first arrived in Pelican Town, no one knew if he'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Satoru in the bonds of marriage.",
+        "Utility.cs.5369": "When @ first arrived in Pelican Town, no one knew if she'd fit in with our community...#$b#But from this day forward, @ is going to be as much a part of this town as any of us!$h#$b#It is my great honor on this day {0} of {1}, to unite @ and Satoru in the bonds of marriage."
+      },
+      "When": {
+        "Relationship:Satoru": "Engaged, Married"
+      }
+    }
+  ]
+}

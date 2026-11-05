@@ -1,0 +1,26 @@
+{"Changes": [
+	{"Action":"EditData",
+"Target":"Characters/schedules/Satoru",
+"Entries":
+{
+	//changed his position on the ArchaeologyHouse to 19 5 0 from 20 5 0
+	"spring": "700 ArchaeologyHouse 19 5 0/2000 AdventureGuild 7 16 1",
+	"Mon": "700 ArchaeologyHouse 19 5 0/2000 AdventureGuild 7 16 1",
+	"Tue": "700 Town 46 32 2 Training \"Strings\\Characters:Satoru_Forest\"/2000 AdventureGuild 7 16 1",
+	"Thu": "700 Forest 43 12 2 Training \"Strings\\Characters:Satoru_Forest\"/2000 AdventureGuild 7 16 1",
+	"Fri": "700 Forest 43 12 2 Training \"Strings\\Characters:Satoru_Forest\"/2000 AdventureGuild 7 16 1",
+	"Sat": "700 ArchaeologyHouse 19 5 0/2000 AdventureGuild 7 16 1",
+	"Sun": "700 ArchaeologyHouse 19 5 0/2000 AdventureGuild 7 16 1",
+	"marriage_Mon": "800 ArchaeologyHouse 19 5 0/2000 bed",
+	"marriage_Tue": "700 Town 46 32 2 Training \"Strings\\Characters:Spouse_Satoru_Forest\"/2000 bed",
+	"marriage_Thu": "700 Forest 43 12 2 Training \"Strings\\Characters:Spouse_Satoru_Forest\"/2000 bed",
+	"marriage_Fri": "700 Forest 43 12 2 Training \"Strings\\Characters:Spouse_Satoru_Forest\"/2000 bed",
+	"marriage_DesertFestival_1": "800 Desert 12 20 2 \"Strings\\schedules\\Satoru:DesertFestival_Satoru_marriage\"/2000 bed",
+	"DesertFestival_1": "830 Desert 12 20 2 \"Strings\\schedules\\Satoru:DesertFestival_Satoru_y1\"/2000 AdventureGuild 7 16 1",
+	"marriage_DesertFestival_2": "800 Desert 11 49 1 \"Strings\\schedules\\Satoru:DesertFestival_Satoru_marriage_y2\"/2000 bed",
+	"DesertFestival_2": "830 Desert 11 49 1 \"Strings\\schedules\\Satoru:DesertFestival_Satoru_y2\"/2000 AdventureGuild 7 16 1",
+	"winter_17": "900 Forest 43 12 2 Training\"Strings\\Characters:Spouse_Satoru_Forest\"/1430 Beach 27 34 2 \"Strings\\schedules\\Satoru:winter_17.000\"/2300 AdventureGuild 7 16 1",
+	"marriage_winter_17": "900 Forest 43 12 2 Training\"Strings\\Characters:Spouse_Satoru_Forest\"/1430 Beach 27 34 2 \"Strings\\schedules\\Satoru:marriage_winter_17.000\"/2300 bed",
+}
+}]
+}

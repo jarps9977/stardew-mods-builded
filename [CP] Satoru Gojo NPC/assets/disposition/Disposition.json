@@ -1,0 +1,48 @@
+{
+  "Changes": [
+    {"Action": "EditData",
+"Target": "Data/Characters",
+"Entries": {
+"Satoru": {
+"DisplayName": "Satoru",
+"BirthSeason": "Winter",
+"BirthDay": 7,
+"HomeRegion": "Town",
+"Gender": "Male",
+"Age": "Adult",
+"Manner": "Polite",
+"SocialAnxiety": "Outgoing",
+"Optimism": "Positive",
+"CanBeRomanced": "True",
+"IntroductionsQuest": "False",
+"SpouseRoom": {
+"MapAsset": "Cursedcure.SatoruGojoNPC_SpouseRoom",
+},
+"SpousePatio": {
+"MapAsset": "SatoruSpousePatio",
+"SpriteAnimationFrames": [ [16, 500], [17, 500], [18, 500], [19, 500], [20, 500] ],
+},
+"WinterStarGifts": [ ],
+"Home": [
+{"Id": "Default",
+"Location": "AdventureGuild",
+"Tile": {"X": 7, "Y": 16},
+"Direction": "left"}],
+"Appearance": [
+  {"Id": "Default",
+  "Sprite": "/Characters/Satoru",
+  "Portrait": "/Portraits/Satoru",
+  "IsIslandAttire": "False",
+  },
+  {"Id": "Island",
+"Sprite": "/Characters/Satoru_Beach",
+"Portrait": "/Portraits/Satoru_Beach",
+"IsIslandAttire": "True",
+}],
+"KissSpriteIndex": 28,
+"KissSpriteFacingRight": "True",
+}, //Close NPC model
+}, //Close Characters Entries
+}, //Close EditData Characters Action
+  ]
+}

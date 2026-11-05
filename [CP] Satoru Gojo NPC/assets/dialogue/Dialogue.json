@@ -1,0 +1,137 @@
+{ "Changes": [
+{"Action":"EditData",
+"Target":"Characters/Dialogue/Satoru",
+"Entries": {
+  "Introduction": "Ah, a new face. Interesting. I'm Satoru Gojo. You can call me Satoru!$3#@? Nice to meet you!$8",
+  "give_pendant": "Whoa, @, didn't see that coming!$6#I'll marry you, no doubt about it, sweetheart.$8",
+  "MovieInvitation": "A movie date, huh? Sounds like fun, @. I'm game! Let's see what's playing and make a night of it.$3",
+ 
+  //new 
+  "FlowerDance_Accept": "A dance? Sure, why not!$7",
+  "FlowerDance_Reject": "Sorry, sweetheart. I don't dance.$7",
+  "AcceptBouquet_1": "Well, @, I have to say, I've been hoping you'd ask. I'd love to be your boyfriend. Let's make this official.$7",
+  "give_flowers1": "Well, @, I have to say, I've been hoping you'd ask. I'd love to be your boyfriend. Let's make this official.$7",
+  "AcceptBouquet": "These flowers?$6#$b#Of course! I'm happy to become your boyfriend!$1",
+  "give_flowers2": "These flowers?$6#$b#Of course! I'm happy to become your boyfriend!$1",
+ 
+  "dumped_Boys": "I can't believe this, @. I don't want to talk to you.$5",
+  "breakUp": "I can't believe this, @. After everything we've been through, you're just going to walk away? Fine. Go ahead. Just go.$5",
+  "AcceptGift_(O)StardropTea": "Ah, Stardrop tea? You know, @, this is a rare treat. Thank you.$1",
+  "GreenRain": "I wonder what kind of sorcery is behind this.",
+  "GreenRainFinished": "Well, that was an interesting phenomenon while it lasted. Back to regular weather, I suppose.$6",
+  "GreenRain_2": "Hmm, green rain. Reminds me of a curse I encountered once. Better stay on our toes.",
+
+  "divorced": "What do you want now, @? Can't you see you've already torn us apart? Just leave me alone...$5",
+  
+  "AcceptBirthdayGift_Loved": "@, you know me too well! Sweets is a must on a birthday! Thank you!$1",
+  "birthdayLoveA": "@, you know me too well! Sweets is a must on a birthday! Thank you!$1",
+  "birthdayLoveB": "@, you know me too well! Sweets is a must on a birthday! Thank you!$1",
+  "AcceptBirthdayGift_Liked": "Thanks for the birthday gift! I'm happy that you remembered it!$3",
+  "birthdayLikeA": "Thanks for the birthday gift! I'm happy that you remembered it!$3",
+  "birthdayLikeB": "Thanks for the birthday gift! I'm happy that you remembered it!$3",
+  "AcceptBirthdayGift_Disliked": "Um, thanks? You didn't have too...$2",
+  "birthdayDislikeA": "Um, thanks? You didn't have too...$2",
+  "birthdayDislikeB": "Um, thanks? You didn't have too...$2",
+  
+  "AcceptBirthdayGift_Neutral": "Oh! You remember my birthday, @! Thank you!$8",
+  "birthdayNeutralA": "Oh! You remember my birthday, @! Thank you!$8",
+  "birthdayNeutralB": "Oh! You remember my birthday, @! Thank you!$8",
+  
+  "engageA": "You know that I really love you, @.$7",
+  "engageB": "I'm the happiest I've ever been, because of you!8",
+  "marriedA": "You're always so pretty, @! No matter what.$7",
+  "marriedB": "I love you, @.$8",
+  
+  "Mon": "Hey there, @. Anything exciting happening today?$6#Me? Just the usual.$7",
+  "Mon2": "Ah, you're here again. Starting to feel like you're part of the scenery around here, in a good way.$7",
+  "Mon4": "Hey, @, did you catch the latest episode of that show everyone's talking about? I heard it's pretty intense.$7#The name of the show? ... I don't remember.$2",
+  "Mon6": "You know, @, sometimes I think life's all about the unexpected twists and turns. Keeps things interesting, don't you think?$3",
+  "Mon8": "Feeling adventurous today, @? Maybe we should go explore someplace new. Who knows what we might discover?$7",
+  "Mon10": "Hey, @, how about we grab some deserts together sometime?$8#I really love sweets!$8",
+
+  "Tue": "So, @, what's on your mind? I'm all ears.$8#Just wanted to talk with me, huh?$7",
+  "Tue2": "Well, well, well, if it isn't my favorite @. Ready to take on whatever this day throws our way?$3",
+  "Tue4": "I stumbled upon this interesting article yesterday. It was all about the wonders of nature. Fascinating stuff, really.$6",
+  "Tue6": "You seem like you could use a break, @. How about we take a stroll and enjoy the fresh air?$8",
+  "Tue8": "I could use a good laugh. Know any funny jokes or stories?$1",
+  "Tue10": "You know, I'm pretty strong, would you like to spare with me someday?$7",
+
+  "Wed": "Have you seen anything out of the ordinary lately, @?$2",
+  "Wed2": "Hey, @, can I let you in on a little secret?$3#You're one of the few people I truly enjoy spending time with.$7",
+  "Wed4": "You ever wonder about the secrets this town holds, @? It's like there's a whole other world hiding just beneath the surface.$6#It makes me all excited to find out!$8",
+  "Wed6": "Isn't it fascinating how technology keeps evolving? I wonder what the future holds.$8",
+  "Wed8": "There's something magical about days like this, don't you think? Makes you appreciate the little things.$8#So, what's your plans for today?$3",
+  "Wed10": "You know, sometimes I wish I could just sleep in for a day. How about you?$3",
+  
+  "Thu": "Have you noticed the carp from this town is a bit different compared to other places? I wonder why.$2#Everyone I talked to hates them.$2",
+  "Thu2": "Hey there, @. Anything exciting happening today?$3#Me? Same as usual.$3",
+  "Thu4": "I've been noticing some strange occurrences around town lately. Makes you wonder what's going on behind the scenes.$2",
+  "Thu6": "There's this book I've been meaning to read. It's supposed to be pretty enlightening.$6#It's about magic and such.$3",
+  "Thu8": "I've got a craving for something sweet.$6#@, any suggestions?$7#How about you? ... I'm kidding! $8",
+  "Thu10": "Any thrilling adventure you been on?$7",
+  
+  "Fri": "I came across this intriguing scroll the other day.#It got me thinking about the complexities of life and the mysteries that surround us.#What do you make of it?",
+  "Fri2": "You seem lost in thought, @. Care to share what's on your mind?$8#What's on my mind?$2#Right now to eat something nice!$1",
+  "Fri4": "I've been thinking about trying out some new combat techniques. Any chance you'd be interested in sparring with me sometime?$3#I'll go easy on you if you want that.$7",
+  "Fri6": "Life's full of mysteries, but sometimes it's nice to just take things at face value.$8",
+  "Fri8": "You've got a spark in your eyes. Keep that curiosity alive, it'll take you places.$7",
+  "Fri10": "I've been meaning to explore more of the city. Any hidden gems you'd recommend?$7",
+  
+  "Sat": "Do you ever find yourself craving something sweet, @?$8#I've got a weakness for desserts. Maybe we should indulge in some treats together, what do you say?$1",
+  "Sat2": "Hey there! Enjoying the ordinary life, huh? It's got its own charm, doesn't it?$7",
+  "Sat4": "Sometimes, the greatest adventures are the ones we find in the everyday moments.$8",
+  "Sat6": "Do you enjoy reading? I've got this book I think you might like.$7",
+  "Sat8": "I could really go for some ice cream right now. What's your favorite flavor?$8#",
+  "Sat10": "So you're saying that your grandpa gave you the farm.$6#That's really nice!",
+  
+  "Sun": "You may not see the world like I do, but that's what makes it interesting, right?$7",
+  "Sun2": "Anything exciting happening lately?$8",
+  "Sun4": "So where are you from, @?$3#Me? I'm Japanese.$8#Want me to say something? Hmm...$7#Nihongo o hanasu hito ga suki desu ka?$7#Did you like that?$7",
+  "Sun6": "It's a beautiful day outside.$8#What are you up to?$3",
+  "Sun8": "Hello, @.$3#What are your plans for today?$3",
+  "Sun10": "Don't underestimate the power of kindness. It can change someone's entire day.$8",
+    
+  "spring_Mon0": "I love the scent of flowers in the air during springtime, @. It's refreshing, just like your presence.$8",
+  "spring_Mon2": "You know, @, spring reminds me of the importance of growth and renewal. It's a time to plant seeds, both literally and figuratively.$3",
+ 
+  "summer_Mon2": "Summer days are made for relaxation, @. How about we escape the heat and spend a lazy afternoon together?$7",
+  "summer_Tue2": "Nothing beats a refreshing swim on a hot summer day, @.$7",
+ 
+  "fall_Mon4": "Ah, the crisp air and the colorful leaves... Fall has a way of stirring up nostalgic feelings, doesn't it, @?$8",
+  "fall_Tue10": "There's something comforting about cozying up with a warm drink on a chilly fall evening, @.$8",
+ 
+  "winter_Mon2": "The holiday season always brings a sense of joy and togetherness, @.$8",
+  "winter_Mon10": "Winter nights are perfect for cozying up indoors with a hot drink and a good book. Care to join me, @?$7",
+  
+
+  "spring_1_2": "Happy new year!$3",
+  
+  "Resort": "Ginger Island is quite the paradise, isn't it?$1",
+  "Resort_Bar": "Ah, the bar! While I'm not a fan of alcohol, I'm glad they offer refreshing drinks without it. Let's enjoy something non-alcoholic together, shall we?$3",
+  "Resort_Entering": "Stepping foot on Ginger Island always fills me with a sense of adventure. Who knows what we'll discover today?$6",
+  "Resort_Leaving": "Leaving Ginger Island is always bittersweet. Until next time, paradise.$8",
+  "Resort_Shore": "The shore is the perfect spot to take in the beauty of Ginger Island. Don't you think?$7",
+  "Resort_Wander": "Adventure awaits around every corner.$6",
+}
+},
+{"Action":"EditData",
+"Target": "Data/EngagementDialogue",
+"Entries": {
+  "Satoru0": "You know that I really love you, @.$7",
+  "Satoru1": "I'm the happiest I've ever been, because of you!8",
+}
+},
+{"Action":"EditData",
+"Target": "Strings/StringsFromCSFiles",
+"Entries": {
+  "Satoru_Engaged": "Whoa, @, didn't see that coming!$6#$b#I'll marry you, no doubt about it, sweetheart.$8",
+  "Satoru_AfterWedding": "I love you, @.$8",
+}
+},
+{"Action": "EditData",
+"Target": "Data/ExtraDialogue",
+"Entries": {
+  "SummitEvent_Dialogue3_Satoru": "The day we crossed paths was the luckiest day of my life.#$b#I wouldn't want to be anywhere else, but here with you.$l",
+}
+}
+ ] }

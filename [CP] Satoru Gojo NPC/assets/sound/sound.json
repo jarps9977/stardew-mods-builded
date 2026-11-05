@@ -1,0 +1,16 @@
+{
+    "Changes": [
+        
+        {
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "ryoikitenkai": {
+                    "ID": "ryoikitenkai",
+                    "Category": "Sound",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/sound/sounds/ryoikitenkai.ogg}}" ],
+                    "StreamedVorbis": false,
+                    "Looped": false
+                }
+            }
+        }]}
