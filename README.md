@@ -35,6 +35,7 @@ Script จะ:
 |---|---|---|
 | `-ModsPath` | `C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods` | Folder Mods ปลายทาง |
 | `-Branch` | `main` | Branch ที่จะดาวน์โหลด |
+| `-NoPause` | off | ไม่ต้องรอกด Enter ตอนจบ (สำหรับ automation) |
 
 ตัวอย่าง (เกมติดตั้งที่ drive อื่น):
 

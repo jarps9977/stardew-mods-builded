@@ -20,8 +20,8 @@
 param(
     [string]$ModsPath = 'C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods',
     [string]$Branch = 'main',
-    # Internal: set when relaunched as admin so the new window stays open.
-    [switch]$Elevated
+    # Skip the final "Press Enter" prompt (for automation).
+    [switch]$NoPause
 )
 
 $ErrorActionPreference = 'Stop'
@@ -42,9 +42,16 @@ function Test-Writable([string]$Path) {
     } catch { return $false }
 }
 
+function Stop-WithError([string]$Message) {
+    Write-Host "FAILED: $Message" -ForegroundColor Red
+    if (-not $NoPause) { Read-Host 'Press Enter to close' | Out-Null }
+    exit 1
+}
+
+$exitCode = 0
 $gameDir = Split-Path -Parent $ModsPath
 if (-not (Test-Path -LiteralPath $gameDir)) {
-    throw "Stardew Valley folder not found: $gameDir. Use -ModsPath to set the correct Mods folder."
+    Stop-WithError "Stardew Valley folder not found: $gameDir. Use -ModsPath to set the correct Mods folder."
 }
 if (-not (Test-Path -LiteralPath $ModsPath)) {
     New-Item -ItemType Directory -Path $ModsPath | Out-Null
@@ -52,10 +59,10 @@ if (-not (Test-Path -LiteralPath $ModsPath)) {
 
 # Program Files may need elevation; relaunch as admin when the folder is not writable.
 if (-not (Test-Writable $ModsPath)) {
-    if (Test-IsAdmin) { throw "Cannot write to $ModsPath." }
-    if (-not $PSCommandPath) { throw "No write access to $ModsPath. Run PowerShell as Administrator." }
+    if (Test-IsAdmin) { Stop-WithError "Cannot write to $ModsPath." }
+    if (-not $PSCommandPath) { Stop-WithError "No write access to $ModsPath. Run PowerShell as Administrator." }
     Write-Host 'No write access to Mods folder. Relaunching as Administrator...' -ForegroundColor Yellow
-    $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch, '-Elevated')
+    $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch)
     Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait
     return
 }
@@ -103,9 +110,11 @@ try {
 }
 catch {
     Write-Host "FAILED: $($_.Exception.Message)" -ForegroundColor Red
-    if (-not $Elevated) { throw }
+    $exitCode = 1
 }
 finally {
     Remove-Item -LiteralPath $tempRoot -Recurse -Force -ErrorAction SilentlyContinue
-    if ($Elevated) { Read-Host 'Press Enter to close' | Out-Null }
 }
+
+if (-not $NoPause) { Read-Host 'Press Enter to close' | Out-Null }
+if ($exitCode) { exit $exitCode }
