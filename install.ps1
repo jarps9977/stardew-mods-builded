@@ -5,7 +5,7 @@
 .DESCRIPTION
     Downloads the repo archive and copies every mod folder into the Stardew Valley Mods folder.
     Existing mod folders are updated (files overwritten), missing ones are created.
-    Existing config.json files are kept so user settings are not reset.
+    Repo is the source of truth: all files, including config.json, are overwritten.
 
 .PARAMETER ModsPath
     Target Mods folder. Defaults to the standard Steam install location.
@@ -13,17 +13,13 @@
 .PARAMETER Branch
     Git branch to download. Default: main.
 
-.PARAMETER OverwriteConfig
-    Also overwrite existing config.json files.
-
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File .\install.ps1
 #>
 [CmdletBinding()]
 param(
     [string]$ModsPath = 'C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods',
-    [string]$Branch = 'main',
-    [switch]$OverwriteConfig
+    [string]$Branch = 'main'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -57,9 +53,7 @@ if (-not (Test-Writable $ModsPath)) {
     if (Test-IsAdmin) { throw "Cannot write to $ModsPath." }
     if (-not $PSCommandPath) { throw "No write access to $ModsPath. Run PowerShell as Administrator." }
     Write-Host 'No write access to Mods folder. Relaunching as Administrator...' -ForegroundColor Yellow
-    $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch)
-    if ($OverwriteConfig) { $argList += '-OverwriteConfig' }
-    Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait
+    $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch)    Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait
     return
 }
 
@@ -89,11 +83,6 @@ try {
         foreach ($file in Get-ChildItem -LiteralPath $mod.FullName -Recurse -File) {
             $rel = $file.FullName.Substring($mod.FullName.Length).TrimStart('\', '/')
             $target = Join-Path $dest $rel
-
-            # Keep user settings on update.
-            if (-not $isNew -and -not $OverwriteConfig -and $file.Name -ieq 'config.json' -and (Test-Path -LiteralPath $target)) {
-                continue
-            }
 
             $targetDir = Split-Path -Parent $target
             if (-not (Test-Path -LiteralPath $targetDir)) {

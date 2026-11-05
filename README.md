@@ -26,7 +26,7 @@ Script จะ:
 - ดาวน์โหลด Mod ล่าสุดจาก branch `main`
 - Folder Mod ที่ **มีอยู่แล้ว** → อัปเดตไฟล์ (overwrite)
 - Folder Mod ที่ **ยังไม่มี** → สร้างใหม่
-- **ไม่ทับ `config.json` เดิม** (เก็บการตั้งค่าของผู้ใช้ไว้)
+- **ทับ `config.json` ทุก mod** ด้วยค่าจาก repo (repo เป็นหลัก — การตั้งค่าเดิมในเครื่องจะถูกแทนที่)
 - ขอสิทธิ์ Administrator อัตโนมัติ ถ้าไม่มีสิทธิ์เขียนใน `Program Files`
 
 ### Options
@@ -35,7 +35,6 @@ Script จะ:
 |---|---|---|
 | `-ModsPath` | `C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods` | Folder Mods ปลายทาง |
 | `-Branch` | `main` | Branch ที่จะดาวน์โหลด |
-| `-OverwriteConfig` | off | ทับ `config.json` เดิมด้วย |
 
 ตัวอย่าง (เกมติดตั้งที่ drive อื่น):
 
