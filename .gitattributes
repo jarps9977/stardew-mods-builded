@@ -1,0 +1,3 @@
+# Store batch files as-is (CRLF) so raw GitHub downloads still run; LF breaks cmd labels/goto
+*.bat -text
+*.cmd -text

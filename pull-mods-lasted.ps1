@@ -14,7 +14,7 @@
     Git branch to download. Default: main.
 
 .EXAMPLE
-    powershell -ExecutionPolicy Bypass -File .\install.ps1
+    powershell -ExecutionPolicy Bypass -File .\pull-mods-lasted.ps1
 #>
 [CmdletBinding()]
 param(
@@ -26,7 +26,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $RepoZipUrl = "https://github.com/jarps9977/stardew-mods-builded/archive/refs/heads/$Branch.zip"
-$RootFiles = @('README.md', 'install.ps1', '.gitignore', '.gitattributes')
+$RootFiles = @('README.md', 'pull-mods-lasted.ps1', 'pull-mods-lasted.bat', '.gitignore', '.gitattributes')
 
 function Test-IsAdmin {
     $id = [Security.Principal.WindowsIdentity]::GetCurrent()

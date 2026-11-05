@@ -9,16 +9,25 @@
 
 ## ติดตั้ง / อัปเดต (แนะนำ)
 
-เปิด PowerShell แล้วรันคำสั่งนี้ (ไม่ต้อง clone repo):
+### วิธีที่ 1: Double-click (ง่ายสุด)
+
+1. ดาวน์โหลด [`pull-mods-lasted.bat`](https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/pull-mods-lasted.bat) (คลิกขวา > Save link as...)
+2. Double-click `pull-mods-lasted.bat`
+
+ไฟล์ `.bat` จะดึง `pull-mods-lasted.ps1` เวอร์ชันล่าสุดจาก GitHub มารันให้อัตโนมัติ เก็บ `.bat` ไว้ที่ไหนก็ได้ กดซ้ำเมื่อต้องการอัปเดต
+
+> ถ้า Windows ขึ้น "Windows protected your PC" ให้กด **More info > Run anyway**
+
+### วิธีที่ 2: PowerShell
 
 ```powershell
-irm https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/install.ps1 -OutFile "$env:TEMP\install.ps1"; powershell -ExecutionPolicy Bypass -File "$env:TEMP\install.ps1"
+irm https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/pull-mods-lasted.ps1 -OutFile "$env:TEMP\pull-mods-lasted.ps1"; powershell -ExecutionPolicy Bypass -File "$env:TEMP\pull-mods-lasted.ps1"
 ```
 
 หรือถ้า clone/download repo มาแล้ว:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\install.ps1
+powershell -ExecutionPolicy Bypass -File .\pull-mods-lasted.ps1
 ```
 
 Script จะ:
@@ -40,7 +49,13 @@ Script จะ:
 ตัวอย่าง (เกมติดตั้งที่ drive อื่น):
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\install.ps1 -ModsPath "D:\SteamLibrary\steamapps\common\Stardew Valley\Mods"
+powershell -ExecutionPolicy Bypass -File .\pull-mods-lasted.ps1 -ModsPath "D:\SteamLibrary\steamapps\common\Stardew Valley\Mods"
+```
+
+หรือผ่าน `.bat` (option ส่งต่อให้ `.ps1` ได้เหมือนกัน):
+
+```bat
+pull-mods-lasted.bat -ModsPath "D:\SteamLibrary\steamapps\common\Stardew Valley\Mods"
 ```
 
 ## ติดตั้งแบบ Manual
