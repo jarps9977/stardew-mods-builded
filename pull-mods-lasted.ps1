@@ -8,7 +8,8 @@
     Repo is the source of truth: all files, including config.json, are overwritten.
 
 .PARAMETER ModsPath
-    Target Mods folder. Defaults to the standard Steam install location.
+    Target Mods folder. If omitted, the game folder is auto-detected
+    (Steam libraries, GOG, common paths), then a folder picker is shown.
 
 .PARAMETER Branch
     Git branch to download. Default: main.
@@ -18,7 +19,7 @@
 #>
 [CmdletBinding()]
 param(
-    [string]$ModsPath = 'C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods',
+    [string]$ModsPath = '',
     [string]$Branch = 'main',
     # Skip the final "Press Enter" prompt (for automation).
     [switch]$NoPause
@@ -48,11 +49,92 @@ function Stop-WithError([string]$Message) {
     exit 1
 }
 
-$exitCode = 0
-$gameDir = Split-Path -Parent $ModsPath
-if (-not (Test-Path -LiteralPath $gameDir)) {
-    Stop-WithError "Stardew Valley folder not found: $gameDir. Use -ModsPath to set the correct Mods folder."
+function Test-GameDir([string]$Dir) {
+    if (-not $Dir -or -not (Test-Path -LiteralPath $Dir -PathType Container)) { return $false }
+    foreach ($f in @('Stardew Valley.dll', 'Stardew Valley.exe', 'StardewModdingAPI.exe')) {
+        if (Test-Path -LiteralPath (Join-Path $Dir $f)) { return $true }
+    }
+    return $false
 }
+
+function Get-RegValue([string]$Key, [string]$Name) {
+    try { (Get-ItemProperty -LiteralPath $Key -Name $Name -ErrorAction Stop).$Name } catch { $null }
+}
+
+function Find-GameDir {
+    $candidates = New-Object System.Collections.Generic.List[string]
+
+    # Steam: every library listed in libraryfolders.vdf.
+    $steamRoots = @(
+        (Get-RegValue 'HKCU:\Software\Valve\Steam' 'SteamPath'),
+        (Get-RegValue 'HKLM:\SOFTWARE\WOW6432Node\Valve\Steam' 'InstallPath'),
+        (Get-RegValue 'HKLM:\SOFTWARE\Valve\Steam' 'InstallPath'),
+        'C:\Program Files (x86)\Steam'
+    ) | Where-Object { $_ } | ForEach-Object { $_ -replace '/', '\' } | Select-Object -Unique
+
+    foreach ($root in $steamRoots) {
+        $candidates.Add(([IO.Path]::Combine($root, 'steamapps\common\Stardew Valley')))
+        $vdf = [IO.Path]::Combine($root, 'steamapps\libraryfolders.vdf')
+        if (Test-Path -LiteralPath $vdf) {
+            foreach ($m in [regex]::Matches((Get-Content -LiteralPath $vdf -Raw), '"path"\s+"([^"]+)"')) {
+                $lib = $m.Groups[1].Value -replace '\\\\', '\'
+                $candidates.Add(([IO.Path]::Combine($lib, 'steamapps\common\Stardew Valley')))
+            }
+        }
+    }
+
+    # GOG Galaxy registry entry for Stardew Valley.
+    $gog = Get-RegValue 'HKLM:\SOFTWARE\WOW6432Node\GOG.com\Games\1453375253' 'path'
+    if ($gog) { $candidates.Add($gog) }
+
+    # Common default locations on every fixed drive.
+    foreach ($drive in [IO.DriveInfo]::GetDrives() | Where-Object { $_.DriveType -eq 'Fixed' -and $_.IsReady }) {
+        $d = $drive.RootDirectory.FullName
+        $candidates.Add(([IO.Path]::Combine($d, 'SteamLibrary\steamapps\common\Stardew Valley')))
+        $candidates.Add(([IO.Path]::Combine($d, 'Steam\steamapps\common\Stardew Valley')))
+        $candidates.Add(([IO.Path]::Combine($d, 'GOG Games\Stardew Valley')))
+        $candidates.Add(([IO.Path]::Combine($d, 'Program Files (x86)\GOG Galaxy\Games\Stardew Valley')))
+        $candidates.Add(([IO.Path]::Combine($d, 'Games\Stardew Valley')))
+    }
+
+    foreach ($c in $candidates | Select-Object -Unique) {
+        if (Test-GameDir $c) { return $c }
+    }
+    return $null
+}
+
+function Select-GameDir {
+    try {
+        Add-Type -AssemblyName System.Windows.Forms
+        $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
+        $dlg.Description = 'Stardew Valley folder not found. Select the game folder (the one containing "Stardew Valley.exe") or its Mods folder.'
+        $dlg.ShowNewFolderButton = $false
+        if ($dlg.ShowDialog() -ne [System.Windows.Forms.DialogResult]::OK) { return $null }
+        $sel = $dlg.SelectedPath
+    } catch {
+        $sel = (Read-Host 'Stardew Valley folder not found. Paste the game folder path').Trim('"', ' ')
+    }
+    if (-not $sel) { return $null }
+    if (Test-GameDir $sel) { return $sel }
+    $parent = Split-Path -Parent $sel
+    if ((Split-Path -Leaf $sel) -ieq 'Mods' -and (Test-GameDir $parent)) { return $parent }
+    return $null
+}
+
+$exitCode = 0
+if ($ModsPath) {
+    $gameDir = Split-Path -Parent $ModsPath
+    if (-not (Test-Path -LiteralPath $gameDir)) {
+        Stop-WithError "Stardew Valley folder not found: $gameDir"
+    }
+} else {
+    Write-Host 'Looking for Stardew Valley...'
+    $gameDir = Find-GameDir
+    if (-not $gameDir) { $gameDir = Select-GameDir }
+    if (-not $gameDir) { Stop-WithError 'Stardew Valley folder not found or invalid folder selected.' }
+    $ModsPath = Join-Path $gameDir 'Mods'
+}
+Write-Host "Mods folder: $ModsPath"
 if (-not (Test-Path -LiteralPath $ModsPath)) {
     New-Item -ItemType Directory -Path $ModsPath | Out-Null
 }

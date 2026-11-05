@@ -32,6 +32,7 @@ powershell -ExecutionPolicy Bypass -File .\pull-mods-lasted.ps1
 
 Script จะ:
 
+- หา folder เกมอัตโนมัติ: Steam (ทุก Library ใน `libraryfolders.vdf`) → GOG → path ทั่วไปทุก drive → ถ้าไม่เจอ จะเปิดหน้าต่างให้เลือก folder เกมเอง
 - ดาวน์โหลด Mod ล่าสุดจาก branch `main`
 - Folder Mod ที่ **มีอยู่แล้ว** → อัปเดตไฟล์ (overwrite)
 - Folder Mod ที่ **ยังไม่มี** → สร้างใหม่
@@ -42,7 +43,7 @@ Script จะ:
 
 | Parameter | Default | คำอธิบาย |
 |---|---|---|
-| `-ModsPath` | `C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods` | Folder Mods ปลายทาง |
+| `-ModsPath` | auto-detect | Folder Mods ปลายทาง (ระบุเองเพื่อข้ามการหาอัตโนมัติ) |
 | `-Branch` | `main` | Branch ที่จะดาวน์โหลด |
 | `-NoPause` | off | ไม่ต้องรอกด Enter ตอนจบ (สำหรับ automation) |
 
