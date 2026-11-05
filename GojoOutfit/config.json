@@ -1,17 +1,23 @@
 {
   "DropChance": 1.0,
-  "DropFromAllMonsters": true,
+  "DropFromAllMonsters": false,
+  "MinesMinLevel": 80,
+  "MinesMaxLevel": 119,
   "MonsterNames": [
     "Shadow Brute",
     "Shadow Shaman",
     "Serpent"
   ],
   "HairStyleId": 31700,
+  "RemoveHairKey": "F8",
   "SetDefense": 5,
   "SetAttack": 5,
   "SetSpeed": 1,
   "SetImmunity": 3,
+  "UseMaskedSprite": true,
   "HairRows": 14,
   "HairOffsetY": 0,
-  "ShirtTop": 17
+  "ShirtTop": 17,
+  "LongSleeves": true,
+  "SleeveExtraRows": 3
 }

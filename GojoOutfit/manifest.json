@@ -11,6 +11,10 @@
     {
       "UniqueID": "Cursedcure.SatoruGojoNPC",
       "IsRequired": false
+    },
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
     }
   ],
   "UpdateKeys": []
