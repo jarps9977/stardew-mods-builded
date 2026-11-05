@@ -1,0 +1,23 @@
+{
+  "CastKey": "R",
+  "MonsterDropChance": 0.002,
+  "ContainerDropChance": 0.004,
+  "MinMineLevel": 40,
+  "SkullCavernMultiplier": 1.5,
+  "LuckInfluence": 0.25,
+  "MaxDropsPerDay": 1,
+  "HealPercent": 0.35,
+  "EnergyPerHp": 1.2,
+  "CastSeconds": 1.5,
+  "CooldownSeconds": 40,
+  "UsesPerDay": 2,
+  "MaxCharges": 6,
+  "ExhaustBelowPercent": 0.15,
+  "AutoCast": false,
+  "AutoCastHpPercent": 0.2,
+  "AutoCastCostMultiplier": 1.5,
+  "UnlimitedVoidSynergy": false,
+  "UnlimitedVoidCooldownReduction": 0.25,
+  "PlaySounds": true,
+  "GiveTestRing": true
+}
