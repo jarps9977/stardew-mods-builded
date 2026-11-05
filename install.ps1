@@ -19,7 +19,9 @@
 [CmdletBinding()]
 param(
     [string]$ModsPath = 'C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods',
-    [string]$Branch = 'main'
+    [string]$Branch = 'main',
+    # Internal: set when relaunched as admin so the new window stays open.
+    [switch]$Elevated
 )
 
 $ErrorActionPreference = 'Stop'
@@ -53,7 +55,8 @@ if (-not (Test-Writable $ModsPath)) {
     if (Test-IsAdmin) { throw "Cannot write to $ModsPath." }
     if (-not $PSCommandPath) { throw "No write access to $ModsPath. Run PowerShell as Administrator." }
     Write-Host 'No write access to Mods folder. Relaunching as Administrator...' -ForegroundColor Yellow
-    $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch)    Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait
+    $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch, '-Elevated')
+    Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait
     return
 }
 
@@ -98,6 +101,11 @@ try {
     Write-Host ''
     Write-Host "Done. New: $created, Updated: $updated -> $ModsPath" -ForegroundColor Green
 }
+catch {
+    Write-Host "FAILED: $($_.Exception.Message)" -ForegroundColor Red
+    if (-not $Elevated) { throw }
+}
 finally {
     Remove-Item -LiteralPath $tempRoot -Recurse -Force -ErrorAction SilentlyContinue
+    if ($Elevated) { Read-Host 'Press Enter to close' | Out-Null }
 }
