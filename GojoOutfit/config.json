@@ -1,6 +1,9 @@
 {
   "DropChance": 0.002,
   "DropFromAllMonsters": false,
+  "SkullCavernMultiplier": 1.5,
+  "LuckInfluence": 0.25,
+  "MaxDropsPerDay": 1,
   "MinesMinLevel": 80,
   "MinesMaxLevel": 119,
   "MonsterNames": [
@@ -19,8 +22,5 @@
   "HairOffsetY": 0,
   "ShirtTop": 17,
   "LongSleeves": true,
-  "SleeveExtraRows": 3,
-  "SkullCavernMultiplier": 1.5,
-  "LuckInfluence": 0.25,
-  "MaxDropsPerDay": 1
+  "SleeveExtraRows": 3
 }
