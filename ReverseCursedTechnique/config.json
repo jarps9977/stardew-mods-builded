@@ -1,7 +1,7 @@
 {
   "CastKey": "R",
-  "MonsterDropChance": 0.004,
-  "ContainerDropChance": 0.008,
+  "MonsterDropChance": 0.015,
+  "ContainerDropChance": 0.03,
   "MinMineLevel": 40,
   "SkullCavernMultiplier": 1.5,
   "LuckInfluence": 0.25,
