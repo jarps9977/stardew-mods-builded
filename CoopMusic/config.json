@@ -2,6 +2,7 @@
   "OpenMenuKey": "F7",
   "LocalVolume": 1.0,
   "MuteGameMusic": true,
+  "StreamMode": false,
   "MaxTrackMinutes": 180,
   "SearchResultCount": 10,
   "MaxCachedTracks": 30

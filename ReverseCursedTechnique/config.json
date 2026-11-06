@@ -1,7 +1,7 @@
 {
   "CastKey": "R",
-  "MonsterDropChance": 0.002,
-  "ContainerDropChance": 0.004,
+  "MonsterDropChance": 0.004,
+  "ContainerDropChance": 0.008,
   "MinMineLevel": 40,
   "SkullCavernMultiplier": 1.5,
   "LuckInfluence": 0.25,
@@ -18,6 +18,5 @@
   "AutoCastCostMultiplier": 1.5,
   "UnlimitedVoidSynergy": false,
   "UnlimitedVoidCooldownReduction": 0.25,
-  "PlaySounds": true,
-  "GiveTestRing": true
+  "PlaySounds": true
 }
