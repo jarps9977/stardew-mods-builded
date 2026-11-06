@@ -29,6 +29,10 @@
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File .\pull-mods-lasted.ps1
+
+.EXAMPLE
+    # No file on disk (paste into Win+R):
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/pull-mods-lasted.ps1 | iex"
 #>
 [CmdletBinding()]
 param(
@@ -449,11 +453,19 @@ if (-not (Test-Path -LiteralPath $ModsPath)) {
 # Program Files may need elevation; relaunch as admin when the folders are not writable.
 if (-not ((Test-Path -LiteralPath $ModsPath) -and (Test-Writable $ModsPath) -and (Test-Writable $gameDir))) {
     if (Test-IsAdmin) { Stop-WithError "Cannot write to $gameDir." }
-    if (-not $PSCommandPath) { Stop-WithError "No write access to $gameDir. Run PowerShell as Administrator." }
     Write-Host 'No write access to game folder. Relaunching as Administrator...' -ForegroundColor Yellow
-    $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch)
-    if ($SkipSmapi) { $argList += '-SkipSmapi' }
-    if ($SkipValidate) { $argList += '-SkipValidate' }
+    $extra = @()
+    if ($SkipSmapi) { $extra += '-SkipSmapi' }
+    if ($SkipValidate) { $extra += '-SkipValidate' }
+    if ($PSCommandPath) {
+        $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch) + $extra
+    } else {
+        # Running from memory (irm | iex): re-download the script in the elevated process.
+        $selfUrl = "https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/$Branch/pull-mods-lasted.ps1"
+        $q = { param($s) "'" + ($s -replace "'", "''") + "'" }
+        $cmd = "[Net.ServicePointManager]::SecurityProtocol = 'Tls12'; & ([scriptblock]::Create((Invoke-RestMethod -Uri $(& $q $selfUrl) -UseBasicParsing))) -ModsPath $(& $q $ModsPath) -Branch $(& $q $Branch) $($extra -join ' ')"
+        $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-EncodedCommand', [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($cmd)))
+    }
     Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait
     return
 }

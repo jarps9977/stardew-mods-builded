@@ -18,7 +18,15 @@
 
 > ถ้า Windows ขึ้น "Windows protected your PC" ให้กด **More info > Run anyway**
 
-### วิธีที่ 2: PowerShell
+### วิธีที่ 2: Win+R (ไม่มีไฟล์ลงเครื่อง)
+
+กด `Win+R` วางคำสั่งนี้ แล้วกด Enter:
+
+```
+powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/pull-mods-lasted.ps1 | iex"
+```
+
+### วิธีที่ 3: PowerShell
 
 ```powershell
 irm https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/pull-mods-lasted.ps1 -OutFile "$env:TEMP\pull-mods-lasted.ps1"; powershell -ExecutionPolicy Bypass -File "$env:TEMP\pull-mods-lasted.ps1"
