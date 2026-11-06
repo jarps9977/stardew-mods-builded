@@ -198,7 +198,7 @@ function Install-Smapi([string]$GameDir, [string]$TempRoot) {
     if (-not $exe) { throw 'SMAPI.Installer.exe not found in the SMAPI package.' }
 
     $installerArgs = @('--install', '--game-path', "`"$GameDir`"", '--no-prompt')
-    $p = Start-Process -FilePath $exe.FullName -ArgumentList $installerArgs-WorkingDirectory $exe.DirectoryName -NoNewWindow -Wait -PassThru
+    $p = Start-Process -FilePath $exe.FullName -ArgumentList $installerArgs -WorkingDirectory $exe.DirectoryName -NoNewWindow -Wait -PassThru
     if ($p.ExitCode -ne 0) { throw "SMAPI installer exited with code $($p.ExitCode)." }
 
     $now = Get-InstalledSmapiVersion $GameDir
