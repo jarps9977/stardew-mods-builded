@@ -30,7 +30,7 @@ irm https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/pull-m
 powershell -ExecutionPolicy Bypass -File .\pull-mods-lasted.ps1
 ```
 
-> **ปิดเกมก่อนรัน** — ถ้าเกมเปิดอยู่ script จะหยุด
+> **ถ้าเกมเปิดอยู่ script จะบังคับปิดเกมให้** (นับถอยหลัง 5 วินาที กด `Ctrl+C` เพื่อยกเลิก) — progress ที่ยังไม่ได้ save จะหาย
 
 Script จะ:
 
@@ -43,7 +43,7 @@ Script จะ:
    - ไฟล์เก่าค้างใน mod (เช่น `.dll` จากเวอร์ชันเก่า) → ย้ายไป backup เช่นกัน
    - ไม่แตะ `ConsoleCommands`, `SaveBackup` (มากับ SMAPI), folder ที่ขึ้นต้นด้วย `.` และ sub-folder `cache` / `data` / `saves` / `logs` ใน mod
 4. **ตั้ง Steam Launch Options** (Steam เท่านั้น) เป็น `"<game>\StardewModdingAPI.exe" %command%` ถ้ายังไม่ได้ตั้ง
-   - ต้องปิด Steam ระหว่างแก้ — script จะปิด Steam ให้เอง แล้วเปิดกลับ
+   - ต้องปิด Steam ระหว่างแก้ — script จะปิด Steam ให้เอง (ถ้าปิดปกติไม่ได้ภายใน 30 วินาที จะบังคับปิด) แล้วเปิดกลับ
    - backup ไฟล์เดิมไว้ที่ `localconfig.vdf.bak-<วันเวลา>`
 5. **ให้ Steam ตรวจไฟล์เกม** (Verify integrity) — ดูความคืบหน้าในหน้าต่าง Steam
 

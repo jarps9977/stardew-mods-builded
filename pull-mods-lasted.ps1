@@ -377,7 +377,12 @@ function Set-SteamLaunchOptions([string]$GameDir) {
         Write-Host 'Closing Steam to update launch options...' -ForegroundColor Yellow
         $steamExe = Join-Path $steamRoot 'steam.exe'
         Start-Process -FilePath $steamExe -ArgumentList '-shutdown'
-        if (-not (Wait-SteamExit 60)) { Write-Host 'Steam did not close. Launch options not changed.' -ForegroundColor Yellow; return $false }
+        if (-not (Wait-SteamExit 30)) {
+            # Graceful shutdown stuck (e.g. dialog open); force close Steam and its helpers.
+            Write-Host 'Steam did not close in time. Forcing it to close...' -ForegroundColor Yellow
+            Get-Process -Name 'steam', 'steamwebhelper', 'steamservice' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+            if (-not (Wait-SteamExit 15)) { Write-Host 'Cannot close Steam. Launch options not changed.' -ForegroundColor Yellow; return $false }
+        }
         Start-Sleep -Seconds 2
         $restartSteam = $true
     }
@@ -425,8 +430,16 @@ if ($ModsPath) {
 }
 Write-Host "Game folder: $gameDir"
 
-if (Get-Process -Name 'Stardew Valley', 'StardewModdingAPI' -ErrorAction SilentlyContinue) {
-    Stop-WithError 'Stardew Valley is running. Close the game and run again.'
+$gameProcs = @(Get-Process -Name 'Stardew Valley', 'StardewModdingAPI' -ErrorAction SilentlyContinue)
+if ($gameProcs) {
+    Write-Host 'Stardew Valley is running and will be closed in 5 seconds (unsaved progress is lost). Press Ctrl+C to cancel.' -ForegroundColor Yellow
+    Start-Sleep -Seconds 5
+    $gameProcs | Stop-Process -Force -ErrorAction SilentlyContinue
+    $gameProcs | Wait-Process -Timeout 30 -ErrorAction SilentlyContinue
+    if (Get-Process -Name 'Stardew Valley', 'StardewModdingAPI' -ErrorAction SilentlyContinue) {
+        Stop-WithError 'Cannot close Stardew Valley. Close the game and run again.'
+    }
+    Write-Host 'Game closed.'
 }
 
 if (-not (Test-Path -LiteralPath $ModsPath)) {
