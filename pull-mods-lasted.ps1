@@ -559,16 +559,25 @@ if (-not ((Test-Path -LiteralPath $ModsPath) -and (Test-Writable $ModsPath) -and
     $extra = @()
     if ($SkipSmapi) { $extra += '-SkipSmapi' }
     if ($SkipValidate) { $extra += '-SkipValidate' }
-    if ($PSCommandPath) {
-        $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch) + $extra
-    } else {
-        # Running from memory (irm | iex): re-download the script in the elevated process.
-        $selfUrl = "https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/$Branch/pull-mods-lasted.ps1"
-        $q = { param($s) "'" + ($s -replace "'", "''") + "'" }
-        $cmd = "[Net.ServicePointManager]::SecurityProtocol = 'Tls12'; & ([scriptblock]::Create((Invoke-RestMethod -Uri $(& $q $selfUrl) -UseBasicParsing))) -ModsPath $(& $q $ModsPath) -Branch $(& $q $Branch) $($extra -join ' ')"
-        $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-EncodedCommand', [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($cmd)))
+    $scriptFile = $PSCommandPath
+    $selfTemp = $null
+    if (-not $scriptFile) {
+        # Running from memory (irm | iex): save a temp copy and relaunch with -File.
+        # -EncodedCommand is avoided because antivirus heuristics flag it.
+        $selfUrl = "https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/$Branch/$ScriptName"
+        $selfTemp = Join-Path ([IO.Path]::GetTempPath()) "stardew-mods-$([guid]::NewGuid().ToString('N'))"
+        try {
+            New-Item -ItemType Directory -Path $selfTemp | Out-Null
+            $scriptFile = Join-Path $selfTemp $ScriptName
+            Invoke-WebRequest -Uri $selfUrl -OutFile $scriptFile -UseBasicParsing
+        } catch {
+            Remove-Item -LiteralPath $selfTemp -Recurse -Force -ErrorAction SilentlyContinue
+            Stop-WithError "Cannot download $selfUrl : $($_.Exception.Message)"
+        }
     }
-    Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait
+    $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$scriptFile`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch) + $extra
+    try { Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait }
+    finally { if ($selfTemp) { Remove-Item -LiteralPath $selfTemp -Recurse -Force -ErrorAction SilentlyContinue } }
     return
 }
 
