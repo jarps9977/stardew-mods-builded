@@ -8,7 +8,9 @@
        Repo is the source of truth: all files, including config.json, are overwritten.
        Mods not in the repo, and stale files inside repo mods, are moved to
        <game>\Mods_backup\<timestamp> (SMAPI bundled mods and dot-folders are kept).
-    3. Steam only: sets the game launch options to run SMAPI if not set yet,
+    3. Saves this script to the game folder.
+    4. Steam only: sets the game launch options to run this script with -Launch
+       (auto-update on every Play, then SMAPI) if not set yet,
        then asks Steam to verify the game files.
 
 .PARAMETER ModsPath
@@ -27,28 +29,53 @@
 .PARAMETER NoPause
     Skip the final "Press Enter" prompt (for automation).
 
+.PARAMETER Launch
+    Steam launch mode: update SMAPI, sync mods only when the repo has a new commit,
+    then start SMAPI with the arguments Steam passes in %command%.
+    Never closes Steam, never verifies files, never asks for admin, and always starts
+    the game even when the update fails (e.g. offline).
+
+.PARAMETER GameArgs
+    Remaining arguments (Steam %command%), forwarded to StardewModdingAPI.exe in -Launch mode.
+
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File .\pull-mods-lasted.ps1
 
 .EXAMPLE
     # No file on disk (paste into Win+R):
     powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/pull-mods-lasted.ps1 | iex"
+
+.EXAMPLE
+    # Steam launch option set automatically by a normal run:
+    powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\pull-mods-lasted.ps1" -Launch %command%
 #>
-[CmdletBinding()]
+[CmdletBinding(PositionalBinding = $false)]
 param(
     [string]$ModsPath = '',
     [string]$Branch = 'main',
     [switch]$SkipSmapi,
     [switch]$SkipValidate,
-    [switch]$NoPause
+    [switch]$NoPause,
+    [switch]$Launch,
+    [Parameter(ValueFromRemainingArguments = $true)]
+    [string[]]$GameArgs = @()
 )
+
+if ($Launch) {
+    # Runs from Steam on every Play; never block the game start.
+    $NoPause = $true
+    $SkipValidate = $true
+}
 
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $RepoZipUrl = "https://github.com/jarps9977/stardew-mods-builded/archive/refs/heads/$Branch.zip"
+$RepoCommitApi = "https://api.github.com/repos/jarps9977/stardew-mods-builded/commits/$Branch"
 $SmapiReleaseApi = 'https://api.github.com/repos/Pathoschild/SMAPI/releases/latest'
+$ShaFileName = '.pull-mods-sha'
+$ScriptName = 'pull-mods-lasted.ps1'
 $SteamAppId = '413150'
 $RootFiles = @('README.md', 'pull-mods-lasted.ps1', 'pull-mods-lasted.bat', '.gitignore', '.gitattributes')
 # Installed by SMAPI itself; never move these.
@@ -70,8 +97,38 @@ function Test-Writable([string]$Path) {
     } catch { return $false }
 }
 
+function Start-Game {
+    # Same as the plain '"StardewModdingAPI.exe" %command%' launch option: Steam's %command% is forwarded to SMAPI.
+    $exe = $null
+    $forward = @($GameArgs)
+    if ($gameDir) {
+        $smapi = Join-Path $gameDir 'StardewModdingAPI.exe'
+        if (Test-Path -LiteralPath $smapi) { $exe = $smapi }
+    }
+    if (-not $exe) {
+        if (-not $GameArgs -or -not (Test-Path -LiteralPath $GameArgs[0] -PathType Leaf)) {
+            Write-Host 'FAILED: Cannot find StardewModdingAPI.exe or the game to start.' -ForegroundColor Red
+            Read-Host 'Press Enter to close' | Out-Null
+            return 1
+        }
+        Write-Host 'StardewModdingAPI.exe not found. Starting the game without SMAPI.' -ForegroundColor Yellow
+        $exe = $GameArgs[0]
+        $forward = @($GameArgs | Select-Object -Skip 1)
+    }
+
+    Write-Host ''
+    Write-Host "Starting $exe ..." -ForegroundColor Green
+    $startArgs = @{ FilePath = $exe; WorkingDirectory = (Split-Path -Parent $exe); PassThru = $true; Wait = $true }
+    $argLine = ($forward | Where-Object { $_ } | ForEach-Object { '"' + ($_ -replace '"', '\"') + '"' }) -join ' '
+    if ($argLine) { $startArgs.ArgumentList = $argLine }
+    # Wait so Steam keeps the game marked as running.
+    $p = Start-Process @startArgs
+    return $p.ExitCode
+}
+
 function Stop-WithError([string]$Message) {
     Write-Host "FAILED: $Message" -ForegroundColor Red
+    if ($Launch) { exit (Start-Game) }
     if (-not $NoPause) { Read-Host 'Press Enter to close' | Out-Null }
     exit 1
 }
@@ -173,7 +230,7 @@ function Get-InstalledSmapiVersion([string]$GameDir) {
 
 function Install-Smapi([string]$GameDir, [string]$TempRoot) {
     Write-Step 'SMAPI'
-    $release = Invoke-RestMethod -Uri $SmapiReleaseApi -UseBasicParsing
+    $release = Invoke-RestMethod -Uri $SmapiReleaseApi -UseBasicParsing -TimeoutSec 15
     $latest = [version](($release.tag_name -replace '^v', '' -split '[+\- ]')[0])
     $installed = Get-InstalledSmapiVersion $GameDir
 
@@ -207,6 +264,25 @@ function Install-Smapi([string]$GameDir, [string]$TempRoot) {
 }
 
 # ---------- Mods ----------
+
+function Get-RemoteSha {
+    try {
+        $sha = Invoke-RestMethod -Uri $RepoCommitApi -Headers @{ Accept = 'application/vnd.github.sha' } -UseBasicParsing -TimeoutSec 10
+        $sha = "$sha".Trim()
+        # Used in a URL and a file; accept only a full commit SHA.
+        if ($sha -match '^[0-9a-f]{40}$') { return $sha }
+        Write-Host 'Unexpected commit SHA response.' -ForegroundColor Yellow
+    } catch {
+        Write-Host "Cannot check latest commit: $($_.Exception.Message)" -ForegroundColor Yellow
+    }
+    return $null
+}
+
+function Get-LocalSha([string]$GameDir) {
+    $f = Join-Path $GameDir $ShaFileName
+    if (-not (Test-Path -LiteralPath $f)) { return $null }
+    try { return ([IO.File]::ReadAllText($f)).Trim() } catch { return $null }
+}
 
 function Move-ToBackup([string]$Path, [string]$RelPath) {
     $dst = Join-Path $script:BackupRoot $RelPath
@@ -340,10 +416,10 @@ function Get-SteamAppNode($Vdf, [switch]$Create) {
     return , $app
 }
 
-function Test-LaunchOptionsSet($AppNode) {
+function Test-LaunchOptionsSet($AppNode, [string]$Pattern) {
     if ($null -eq $AppNode) { return $false }
     foreach ($e in $AppNode) {
-        if ($e.Key -ieq 'LaunchOptions' -and $e.Value -is [string] -and $e.Value -match 'StardewModdingAPI\.exe') { return $true }
+        if ($e.Key -ieq 'LaunchOptions' -and $e.Value -is [string] -and $e.Value -match $Pattern) { return $true }
     }
     return $false
 }
@@ -363,6 +439,17 @@ function Set-SteamLaunchOptions([string]$GameDir) {
     if (-not $steamRoot -or $GameDir -notmatch '\\steamapps\\common\\') { Write-Host 'Not a Steam install. Skipped.'; return $false }
     if (-not (Test-Path -LiteralPath $smapiExe)) { Write-Host 'StardewModdingAPI.exe not found. Skipped.' -ForegroundColor Yellow; return $false }
 
+    # Prefer the -Launch wrapper (auto-update on Play); fall back to plain SMAPI if the local script is missing.
+    $localScript = Join-Path $GameDir $ScriptName
+    if (Test-Path -LiteralPath $localScript) {
+        $wantRaw = 'powershell -NoProfile -ExecutionPolicy Bypass -File "' + $localScript + '" -Launch %command%'
+        # Exact match on the escaped VDF value; any other existing option is replaced.
+        $setPattern = '^' + [regex]::Escape($wantRaw.Replace('\', '\\').Replace('"', '\"')) + '$'
+    } else {
+        $wantRaw = '"' + $smapiExe + '" %command%'
+        $setPattern = 'StardewModdingAPI\.exe|pull-mods-lasted\.ps1'
+    }
+
     $configs = @(Get-ChildItem -Path (Join-Path $steamRoot 'userdata\*\config\localconfig.vdf') -File -ErrorAction SilentlyContinue)
     if (-not $configs) { Write-Host 'No Steam user config found. Skipped.' -ForegroundColor Yellow; return $false }
 
@@ -370,7 +457,7 @@ function Set-SteamLaunchOptions([string]$GameDir) {
     foreach ($cfg in $configs) {
         try {
             $app = Get-SteamAppNode (ConvertFrom-Vdf ([IO.File]::ReadAllText($cfg.FullName)))
-            if (-not (Test-LaunchOptionsSet $app)) { $pending += $cfg }
+            if (-not (Test-LaunchOptionsSet $app $setPattern)) { $pending += $cfg }
         } catch { Write-Host "Cannot read $($cfg.FullName): $($_.Exception.Message)" -ForegroundColor Yellow }
     }
     if (-not $pending) { Write-Host 'Launch options already set.' -ForegroundColor Cyan; return $false }
@@ -391,14 +478,14 @@ function Set-SteamLaunchOptions([string]$GameDir) {
         $restartSteam = $true
     }
 
-    $want = ('"' + $smapiExe + '" %command%').Replace('\', '\\').Replace('"', '\"')
+    $want = $wantRaw.Replace('\', '\\').Replace('"', '\"')
     $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
     foreach ($cfg in $pending) {
         try {
             $vdf = ConvertFrom-Vdf ([IO.File]::ReadAllText($cfg.FullName))
             $app = Get-SteamAppNode $vdf -Create
             if ($null -eq $app) { Write-Host "Unexpected format in $($cfg.FullName). Skipped." -ForegroundColor Yellow; continue }
-            if (Test-LaunchOptionsSet $app) { continue }
+            if (Test-LaunchOptionsSet $app $setPattern) { continue }
 
             $entry = $app | Where-Object { $_.Key -ieq 'LaunchOptions' } | Select-Object -First 1
             if ($entry) { $entry.Value = $want }
@@ -406,7 +493,7 @@ function Set-SteamLaunchOptions([string]$GameDir) {
 
             Copy-Item -LiteralPath $cfg.FullName -Destination "$($cfg.FullName).bak-$stamp" -Force
             [IO.File]::WriteAllText($cfg.FullName, (ConvertTo-Vdf $vdf), (New-Object System.Text.UTF8Encoding $false))
-            Write-Host "Launch options set: `"$smapiExe`" %command%" -ForegroundColor Green
+            Write-Host "Launch options set: $wantRaw" -ForegroundColor Green
         } catch { Write-Host "Cannot update $($cfg.FullName): $($_.Exception.Message)" -ForegroundColor Yellow }
     }
     return $restartSteam
@@ -420,7 +507,13 @@ function Open-SteamUrl([string]$Url) {
 # ---------- Main ----------
 
 $exitCode = 0
-if ($ModsPath) {
+$gameDir = $null
+if (-not $ModsPath -and $Launch -and $GameArgs -and (Test-Path -LiteralPath $GameArgs[0] -PathType Leaf) -and
+    (Test-GameDir (Split-Path -Parent $GameArgs[0]))) {
+    # Steam %command% starts with the game exe path.
+    $gameDir = Split-Path -Parent $GameArgs[0]
+    $ModsPath = Join-Path $gameDir 'Mods'
+} elseif ($ModsPath) {
     $gameDir = Split-Path -Parent $ModsPath
     if (-not (Test-Path -LiteralPath $gameDir)) {
         Stop-WithError "Stardew Valley folder not found: $gameDir"
@@ -435,6 +528,10 @@ if ($ModsPath) {
 Write-Host "Game folder: $gameDir"
 
 $gameProcs = @(Get-Process -Name 'Stardew Valley', 'StardewModdingAPI' -ErrorAction SilentlyContinue)
+if ($gameProcs -and $Launch) {
+    Write-Host 'Stardew Valley is already running. Update skipped.' -ForegroundColor Yellow
+    exit (Start-Game)
+}
 if ($gameProcs) {
     Write-Host 'Stardew Valley is running and will be closed in 5 seconds (unsaved progress is lost). Press Ctrl+C to cancel.' -ForegroundColor Yellow
     Start-Sleep -Seconds 5
@@ -452,6 +549,11 @@ if (-not (Test-Path -LiteralPath $ModsPath)) {
 
 # Program Files may need elevation; relaunch as admin when the folders are not writable.
 if (-not ((Test-Path -LiteralPath $ModsPath) -and (Test-Writable $ModsPath) -and (Test-Writable $gameDir))) {
+    if ($Launch) {
+        # Avoid a UAC prompt on every Play.
+        Write-Host "No write access to $gameDir. Update skipped." -ForegroundColor Yellow
+        exit (Start-Game)
+    }
     if (Test-IsAdmin) { Stop-WithError "Cannot write to $gameDir." }
     Write-Host 'No write access to game folder. Relaunching as Administrator...' -ForegroundColor Yellow
     $extra = @()
@@ -484,19 +586,49 @@ try {
     }
 
     Write-Step 'Download'
-    Write-Host "Downloading $RepoZipUrl ..."
-    $zipPath = Join-Path $tempRoot 'repo.zip'
-    Invoke-WebRequest -Uri $RepoZipUrl -OutFile $zipPath -UseBasicParsing
-    $extractDir = Join-Path $tempRoot 'extract'
-    Expand-Archive -LiteralPath $zipPath -DestinationPath $extractDir -Force
-    $srcRoot = Get-ChildItem -LiteralPath $extractDir -Directory | Select-Object -First 1
-    if (-not $srcRoot) { throw 'Downloaded archive is empty.' }
+    $remoteSha = Get-RemoteSha
+    $doSync = $true
+    if ($Launch) {
+        if (-not $remoteSha) {
+            Write-Host 'Mods update skipped.' -ForegroundColor Yellow
+            $doSync = $false
+            $exitCode = 1
+        } elseif ($remoteSha -eq (Get-LocalSha $gameDir)) {
+            Write-Host "Mods are up to date ($($remoteSha.Substring(0, 7)))." -ForegroundColor Cyan
+            $doSync = $false
+        }
+    }
 
-    Sync-Mods $srcRoot.FullName $ModsPath
+    if ($doSync) {
+        # Download the exact commit that was checked so the saved SHA matches the files.
+        $zipUrl = if ($remoteSha) { "https://github.com/jarps9977/stardew-mods-builded/archive/$remoteSha.zip" } else { $RepoZipUrl }
+        Write-Host "Downloading $zipUrl ..."
+        $zipPath = Join-Path $tempRoot 'repo.zip'
+        Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath -UseBasicParsing
+        $extractDir = Join-Path $tempRoot 'extract'
+        Expand-Archive -LiteralPath $zipPath -DestinationPath $extractDir -Force
+        $srcRoot = Get-ChildItem -LiteralPath $extractDir -Directory | Select-Object -First 1
+        if (-not $srcRoot) { throw 'Downloaded archive is empty.' }
+
+        Sync-Mods $srcRoot.FullName $ModsPath
+
+        # Keep a local copy for the Steam launch option; same commit and trust level as the mod DLLs.
+        $srcScript = Join-Path $srcRoot.FullName $ScriptName
+        if (Test-Path -LiteralPath $srcScript) {
+            try { Copy-Item -LiteralPath $srcScript -Destination (Join-Path $gameDir $ScriptName) -Force }
+            catch { Write-Host "Cannot save $ScriptName to game folder: $($_.Exception.Message)" -ForegroundColor Yellow }
+        }
+
+        $shaFile = Join-Path $gameDir $ShaFileName
+        if ($remoteSha) { [IO.File]::WriteAllText($shaFile, $remoteSha) }
+        elseif (Test-Path -LiteralPath $shaFile) { Remove-Item -LiteralPath $shaFile -Force }
+    }
 
     $restartSteam = $false
-    try { $restartSteam = Set-SteamLaunchOptions $gameDir }
-    catch { Write-Host "Launch options step failed: $($_.Exception.Message)" -ForegroundColor Yellow }
+    if (-not $Launch) {
+        try { $restartSteam = Set-SteamLaunchOptions $gameDir }
+        catch { Write-Host "Launch options step failed: $($_.Exception.Message)" -ForegroundColor Yellow }
+    }
 
     if ($gameDir -match '\\steamapps\\common\\') {
         if (-not $SkipValidate) {
@@ -520,5 +652,6 @@ finally {
     Remove-Item -LiteralPath $tempRoot -Recurse -Force -ErrorAction SilentlyContinue
 }
 
+if ($Launch) { exit (Start-Game) }
 if (-not $NoPause) { Read-Host 'Press Enter to close' | Out-Null }
 if ($exitCode) { exit $exitCode }
