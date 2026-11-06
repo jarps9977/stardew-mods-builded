@@ -4,8 +4,8 @@
 
 ## Requirements
 
-- Stardew Valley 1.6+
-- [SMAPI](https://smapi.io/) 4.x (ติดตั้งก่อน)
+- Stardew Valley 1.6+ (Steam อัปเดตให้อัตโนมัติ)
+- [SMAPI](https://smapi.io/) — script ติดตั้ง/อัปเดตให้เอง
 
 ## ติดตั้ง / อัปเดต (แนะนำ)
 
@@ -30,14 +30,26 @@ irm https://raw.githubusercontent.com/jarps9977/stardew-mods-builded/main/pull-m
 powershell -ExecutionPolicy Bypass -File .\pull-mods-lasted.ps1
 ```
 
+> **ปิดเกมก่อนรัน** — ถ้าเกมเปิดอยู่ script จะหยุด
+
 Script จะ:
 
-- หา folder เกมอัตโนมัติ: Steam (ทุก Library ใน `libraryfolders.vdf`) → GOG → path ทั่วไปทุก drive → ถ้าไม่เจอ จะเปิดหน้าต่างให้เลือก folder เกมเอง
-- ดาวน์โหลด Mod ล่าสุดจาก branch `main`
-- Folder Mod ที่ **มีอยู่แล้ว** → อัปเดตไฟล์ (overwrite)
-- Folder Mod ที่ **ยังไม่มี** → สร้างใหม่
-- **ทับ `config.json` ทุก mod** ด้วยค่าจาก repo (repo เป็นหลัก — การตั้งค่าเดิมในเครื่องจะถูกแทนที่)
-- ขอสิทธิ์ Administrator อัตโนมัติ ถ้าไม่มีสิทธิ์เขียนใน `Program Files`
+1. **หา folder เกมอัตโนมัติ**: Steam (ทุก Library ใน `libraryfolders.vdf`) → GOG → path ทั่วไปทุก drive → ถ้าไม่เจอ จะเปิดหน้าต่างให้เลือก folder เกมเอง
+2. **ติดตั้ง/อัปเดต SMAPI** เป็นเวอร์ชันล่าสุดจาก [GitHub releases](https://github.com/Pathoschild/SMAPI/releases) (ข้ามถ้าเป็นเวอร์ชันล่าสุดอยู่แล้ว)
+3. **Sync Mods ให้ตรงกับ repo** (repo เป็นหลัก)
+   - Folder Mod ที่มีอยู่แล้ว → อัปเดตไฟล์ (overwrite) รวมถึง **`config.json`**
+   - Folder Mod ที่ยังไม่มี → สร้างใหม่
+   - **Mod ที่ไม่ได้อยู่ใน repo** → ย้ายไป `Stardew Valley\Mods_backup\<วันเวลา>\`
+   - ไฟล์เก่าค้างใน mod (เช่น `.dll` จากเวอร์ชันเก่า) → ย้ายไป backup เช่นกัน
+   - ไม่แตะ `ConsoleCommands`, `SaveBackup` (มากับ SMAPI), folder ที่ขึ้นต้นด้วย `.` และ sub-folder `cache` / `data` / `saves` / `logs` ใน mod
+4. **ตั้ง Steam Launch Options** (Steam เท่านั้น) เป็น `"<game>\StardewModdingAPI.exe" %command%` ถ้ายังไม่ได้ตั้ง
+   - ต้องปิด Steam ระหว่างแก้ — script จะปิด Steam ให้เอง แล้วเปิดกลับ
+   - backup ไฟล์เดิมไว้ที่ `localconfig.vdf.bak-<วันเวลา>`
+5. **ให้ Steam ตรวจไฟล์เกม** (Verify integrity) — ดูความคืบหน้าในหน้าต่าง Steam
+
+ขอสิทธิ์ Administrator อัตโนมัติ ถ้าไม่มีสิทธิ์เขียนใน `Program Files`
+
+> ถ้ามี mod ที่ถูกย้ายออกแล้วอยากได้คืน ให้ย้าย folder จาก `Mods_backup\<วันเวลา>\` กลับเข้า `Mods`
 
 ### Options
 
@@ -45,6 +57,8 @@ Script จะ:
 |---|---|---|
 | `-ModsPath` | auto-detect | Folder Mods ปลายทาง (ระบุเองเพื่อข้ามการหาอัตโนมัติ) |
 | `-Branch` | `main` | Branch ที่จะดาวน์โหลด |
+| `-SkipSmapi` | off | ไม่ติดตั้ง/อัปเดต SMAPI |
+| `-SkipValidate` | off | ไม่สั่ง Steam ตรวจไฟล์เกม |
 | `-NoPause` | off | ไม่ต้องรอกด Enter ตอนจบ (สำหรับ automation) |
 
 ตัวอย่าง (เกมติดตั้งที่ drive อื่น):
