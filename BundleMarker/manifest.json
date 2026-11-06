@@ -2,7 +2,7 @@
     "Name": "Bundle Marker",
     "Author": "jarukit",
     "Version": "1.1.0",
-    "Description": "Marks items needed for bundles, museum donations, shipping collection and quests. (update test)",
+    "Description": "Marks items needed for bundles, museum donations, shipping collection and quests.",
     "UniqueID": "jarukit.BundleMarker",
     "EntryDll": "BundleMarker.dll",
     "MinimumApiVersion": "4.0.0",
