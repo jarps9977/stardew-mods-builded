@@ -1,0 +1,9 @@
+{
+  "Enabled": true,
+  "ToggleKey": "F7",
+  "ShowCrops": true,
+  "ShowFruitTrees": true,
+  "ShowCrabPots": true,
+  "ShowWaterWarning": true,
+  "TextScale": 0.8
+}

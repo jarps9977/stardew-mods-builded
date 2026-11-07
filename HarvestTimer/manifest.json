@@ -2,7 +2,7 @@
   "Name": "Harvest Timer",
   "Author": "Gego",
   "Version": "1.0.0",
-  "Description": "Hover a crop, fruit tree or crab pot to see how many days until harvest.",
+  "Description": "Hover a crop, fruit tree, crab pot, machine or fish pond to see time until harvest.",
   "UniqueID": "Gego.HarvestTimer",
   "EntryDll": "HarvestTimer.dll",
   "MinimumApiVersion": "4.0.0",
