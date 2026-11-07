@@ -102,7 +102,7 @@ pull-mods-lasted.bat -ModsPath "D:\SteamLibrary\steamapps\common\Stardew Valley\
 | Lookup Anything | Pathoschild | 1.55.0 | ดูข้อมูลทุกอย่างด้วยการกดปุ่ม |
 | NPC Map Locations | Bouhm | 3.5.2 | แสดงตำแหน่ง NPC และผู้เล่นบนแผนที่ |
 | Range Highlight | Jamie Taylor | 4.2.1 | Highlight ระยะของ scarecrow, sprinkler ฯลฯ |
-| Tornado Warp | Gego | 1.0.0 | Return Scepter เรียกพายุหมุนยักษ์ ชาร์จ 3 วิก่อนวาร์ปกลับบ้าน เลือกสีได้ |
+| Tornado Warp | Gego | 1.1.0 | Return Scepter เรียกพายุหมุนยักษ์ ชาร์จ 3 วิก่อนวาร์ปกลับบ้าน เลือกสีได้ |
 | Unlimited Void | Gego | 1.0.0 | ฆ่า monster ชาร์จเกจ แล้วกาง domain Unlimited Void |
 | [CP] Satoru Gojo Kids Retexture | Cursedcure | 1.0.0 | เปลี่ยนหน้าตาลูกให้เหมือน Satoru Gojo (ต้องใช้ Content Patcher) |
 | [CP] Satoru Gojo NPC | Cursedcure | 2.0.5 | เพิ่ม Satoru Gojo เป็น NPC (ต้องใช้ Content Patcher) |

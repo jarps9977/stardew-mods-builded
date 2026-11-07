@@ -1,7 +1,7 @@
 {
   "Name": "Tornado Warp",
   "Author": "Gego",
-  "Version": "1.0.0",
+  "Version": "1.1.0",
   "Description": "Return Scepter summons a giant tornado and charges for a few seconds before warping you home.",
   "UniqueID": "Gego.TornadoWarp",
   "EntryDll": "TornadoWarp.dll",
