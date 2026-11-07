@@ -1,0 +1,22 @@
+﻿{
+  "Format": "1.29.0",
+  "Changes": [
+    {
+      "Action": "EditImage",
+      "Target": "Minigames/TitleButtons",
+      "FromFile": "assets/Gojocat.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 305,
+        "Width": 400,
+        "Height": 141
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 305,
+        "Width": 400,
+        "Height": 141
+      }
+    }
+  ]
+}

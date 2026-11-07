@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Gojocat Title Screen",
+  "Author": "lunarmilktea",
+  "Version": "1.0.0",
+  "Description": "Gojocat from Jujutsu Kaisen in the title screen!",
+  "UniqueID": "lunarmilktea.GojocatTitleScreen",
+  "UpdateKeys": ["Nexus:18389"],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "1.0.0"
+  }
+}
