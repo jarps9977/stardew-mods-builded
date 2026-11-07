@@ -1,0 +1,7 @@
+{
+  "Enabled": true,
+  "IntervalGameHours": 4,
+  "ShowMessage": true,
+  "BackupEnabled": true,
+  "MaxBackups": 10
+}
