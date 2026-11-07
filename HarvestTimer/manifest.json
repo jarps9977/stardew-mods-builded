@@ -1,0 +1,17 @@
+{
+  "Name": "Harvest Timer",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Hover a crop, fruit tree or crab pot to see how many days until harvest.",
+  "UniqueID": "Gego.HarvestTimer",
+  "EntryDll": "HarvestTimer.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}

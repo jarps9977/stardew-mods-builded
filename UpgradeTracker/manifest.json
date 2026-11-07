@@ -1,0 +1,17 @@
+{
+  "Name": "Upgrade Tracker",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Small top-left HUD showing Clint tool upgrades and Robin construction progress.",
+  "UniqueID": "Gego.UpgradeTracker",
+  "EntryDll": "UpgradeTracker.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
