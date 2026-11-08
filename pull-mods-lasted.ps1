@@ -57,6 +57,8 @@ param(
     [switch]$SkipValidate,
     [switch]$NoPause,
     [switch]$Launch,
+    # Internal: elevated child of -Launch; applies the update and does not start the game.
+    [switch]$UpdateOnly,
     [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$GameArgs = @()
 )
@@ -98,6 +100,7 @@ function Test-Writable([string]$Path) {
 }
 
 function Start-Game {
+    if ($UpdateOnly) { return 0 }
     # Same as the plain '"StardewModdingAPI.exe" %command%' launch option: Steam's %command% is forwarded to SMAPI.
     $exe = $null
     $forward = @($GameArgs)
@@ -550,8 +553,17 @@ if (-not (Test-Path -LiteralPath $ModsPath)) {
 # Program Files may need elevation; relaunch as admin when the folders are not writable.
 if (-not ((Test-Path -LiteralPath $ModsPath) -and (Test-Writable $ModsPath) -and (Test-Writable $gameDir))) {
     if ($Launch) {
-        # Avoid a UAC prompt on every Play.
-        Write-Host "No write access to $gameDir. Update skipped." -ForegroundColor Yellow
+        # Ask for admin only when the repo has a new commit, not on every Play.
+        $newSha = if ($UpdateOnly -or -not $PSCommandPath) { $null } else { Get-RemoteSha }
+        if (-not $newSha -or $newSha -eq (Get-LocalSha $gameDir)) {
+            Write-Host "No write access to $gameDir. Update skipped." -ForegroundColor Yellow
+            exit (Start-Game)
+        }
+        Write-Host 'New mods update needs write access. Requesting Administrator...' -ForegroundColor Yellow
+        $argList = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "`"$PSCommandPath`"", '-ModsPath', "`"$ModsPath`"", '-Branch', $Branch, '-Launch', '-UpdateOnly')
+        if ($SkipSmapi) { $argList += '-SkipSmapi' }
+        try { Start-Process -FilePath 'powershell.exe' -ArgumentList $argList -Verb RunAs -Wait }
+        catch { Write-Host "Update skipped: $($_.Exception.Message)" -ForegroundColor Yellow }
         exit (Start-Game)
     }
     if (Test-IsAdmin) { Stop-WithError "Cannot write to $gameDir." }
