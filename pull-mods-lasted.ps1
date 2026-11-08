@@ -6,8 +6,9 @@
     1. Installs or updates SMAPI to the latest release.
     2. Downloads the repo archive and syncs every mod folder into the Mods folder.
        Repo is the source of truth: all files, including config.json, are overwritten.
-       Mods not in the repo, and stale files inside repo mods, are moved to
-       <game>\Mods_backup\<timestamp> (SMAPI bundled mods and dot-folders are kept).
+       A local config.json is kept when the repo has none for that mod.
+       Mods not in the repo, and stale files inside repo mods, are deleted
+       (SMAPI bundled mods and dot-folders are kept). Old <game>\Mods_backup is deleted.
     3. Saves this script to the game folder.
     4. Steam only: sets the game launch options to run this script with -Launch
        (auto-update on every Play, then SMAPI) if not set yet,
@@ -287,11 +288,14 @@ function Get-LocalSha([string]$GameDir) {
     try { return ([IO.File]::ReadAllText($f)).Trim() } catch { return $null }
 }
 
-function Move-ToBackup([string]$Path, [string]$RelPath) {
-    $dst = Join-Path $script:BackupRoot $RelPath
-    $parent = Split-Path -Parent $dst
-    if (-not (Test-Path -LiteralPath $parent)) { New-Item -ItemType Directory -Path $parent -Force | Out-Null }
-    Move-Item -LiteralPath $Path -Destination $dst -Force
+function Remove-ModPath([string]$Path) {
+    $item = Get-Item -LiteralPath $Path -Force
+    if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {
+        # Delete only the link; Remove-Item -Recurse in PowerShell 5.1 would follow it and wipe the target.
+        if ($item.PSIsContainer) { [IO.Directory]::Delete($Path, $false) } else { [IO.File]::Delete($Path) }
+        return
+    }
+    Remove-Item -LiteralPath $Path -Recurse -Force
 }
 
 function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
@@ -303,10 +307,17 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
 
     $created = 0; $updated = 0; $removed = 0; $stale = 0
 
-    # Move mods that are not part of the repo.
+    # Backups made by older versions of this script.
+    $oldBackup = Join-Path (Split-Path -Parent $ModsPath) 'Mods_backup'
+    if (Test-Path -LiteralPath $oldBackup) {
+        try { Remove-ModPath $oldBackup; Write-Host "[DELETE] $oldBackup" -ForegroundColor Yellow }
+        catch { Write-Host "Cannot delete ${oldBackup}: $($_.Exception.Message)" -ForegroundColor Yellow }
+    }
+
+    # Delete mods that are not part of the repo.
     foreach ($dir in Get-ChildItem -LiteralPath $ModsPath -Directory) {
         if ($dir.Name.StartsWith('.') -or $ProtectedMods -contains $dir.Name -or $repoNames.Contains($dir.Name)) { continue }
-        Move-ToBackup $dir.FullName $dir.Name
+        Remove-ModPath $dir.FullName
         $removed++
         Write-Host "[REMOVE] $($dir.Name)" -ForegroundColor Yellow
     }
@@ -326,14 +337,16 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
             Copy-Item -LiteralPath $file.FullName -Destination $target -Force
         }
 
-        # Move leftover files from older versions.
+        # Delete leftover files from older versions.
         if (-not $isNew) {
             foreach ($file in Get-ChildItem -LiteralPath $dest -Recurse -File) {
                 $rel = $file.FullName.Substring($dest.Length).TrimStart('\', '/')
                 if ($repoFiles.Contains($rel)) { continue }
                 $first = ($rel -split '[\\/]')[0]
                 if ($rel -match '[\\/]' -and $KeepSubdirs -contains $first) { continue }
-                Move-ToBackup $file.FullName (Join-Path $mod.Name $rel)
+                # SMAPI creates config.json on first run; keep player settings unless the repo ships one.
+                if ($rel -ieq 'config.json') { continue }
+                Remove-ModPath $file.FullName
                 $stale++
             }
         }
@@ -344,7 +357,6 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
 
     Write-Host ''
     Write-Host "Mods: New $created, Updated $updated, Removed $removed, Stale files $stale" -ForegroundColor Green
-    if ($removed -or $stale) { Write-Host "Backup: $script:BackupRoot" -ForegroundColor Yellow }
 }
 
 # ---------- Steam launch options ----------
@@ -595,7 +607,6 @@ if (-not ((Test-Path -LiteralPath $ModsPath) -and (Test-Writable $ModsPath) -and
 
 $tempRoot = Join-Path ([IO.Path]::GetTempPath()) "stardew-mods-$([guid]::NewGuid().ToString('N'))"
 New-Item -ItemType Directory -Path $tempRoot | Out-Null
-$script:BackupRoot = Join-Path $gameDir ("Mods_backup\" + (Get-Date -Format 'yyyyMMdd-HHmmss'))
 
 try {
     if (-not $SkipSmapi) {
