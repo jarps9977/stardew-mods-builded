@@ -4,6 +4,8 @@
   "ShowCrops": true,
   "ShowFruitTrees": true,
   "ShowCrabPots": true,
+  "ShowMachines": true,
+  "ShowFishPonds": true,
   "ShowWaterWarning": true,
   "TextScale": 0.8
 }

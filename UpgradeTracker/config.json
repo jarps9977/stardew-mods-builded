@@ -1,0 +1,12 @@
+{
+  "Enabled": true,
+  "ToggleKey": "F6",
+  "ShowTool": true,
+  "ShowBuildings": true,
+  "ShowHouse": true,
+  "ShowCommunity": true,
+  "TextScale": 0.8,
+  "OffsetX": 12,
+  "OffsetY": 12,
+  "ShowBackground": true
+}
