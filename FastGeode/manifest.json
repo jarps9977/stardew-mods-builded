@@ -1,0 +1,17 @@
+{
+  "Name": "Fast Geode",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Speeds up Clint's geode cracking animation only.",
+  "UniqueID": "Gego.FastGeode",
+  "EntryDll": "FastGeode.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
