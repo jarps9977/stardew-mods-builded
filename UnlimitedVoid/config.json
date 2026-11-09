@@ -21,5 +21,6 @@
   "BannerSubtitle": "Unlimited Void",
   "DarknessDurationSeconds": 2.0,
   "DarknessOpacity": 0.6,
-  "ShowVoidEye": true
+  "ShowVoidEye": true,
+  "UseGojoVoice": true
 }
