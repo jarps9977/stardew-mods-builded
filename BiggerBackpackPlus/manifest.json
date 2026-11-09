@@ -1,0 +1,13 @@
+{
+  "Name": "Bigger Backpack Plus",
+  "Author": "glnn30",
+  "Version": "1.0.0",
+  "Description": "Another Backpack upgrades to 48, 60 and 72 slots. Based on Bigger Backpack and Even Bigger Backpack. Requires Stardew Hack.",
+  "UniqueID": "glnn30.BiggerBackpackPlus",
+  "EntryDll": "BiggerBackpackPlus.dll",
+  "MinimumApiVersion": "4.0.0",
+  "Dependencies": [
+    { "UniqueID": "bcmpinc.StardewHack", "MinimumVersion": "7.4", "IsRequired": true },
+    { "UniqueID": "spacechase0.GenericModConfigMenu", "IsRequired": false }
+  ]
+}

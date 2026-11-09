@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="6" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="1">
+ <properties>
+  <property name="DayTiles" value="Front 1 0 256 Front 4 0 256 Front 4 1 288 "/>
+  <property name="NightTiles" value="Front 1 0 1253 Front 4 0 1253 Front 4 11285"/>
+ </properties>
+ <tileset firstgid="1" name="indoor" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="2177" name="p" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+  <image source="paths" width="64" height="256"/>
+ </tileset>
+ <layer id="1" name="Back" width="6" height="9">
+  <data encoding="csv">
+35,35,35,35,35,35,
+67,67,67,67,67,67,
+99,99,99,99,99,99,
+575,576,576,575,576,575,
+608,639,1661,1662,1663,1664,
+607,639,1693,1694,1695,1696,
+640,607,1725,1726,1727,1728,
+607,608,1757,1758,1759,1760,
+639,640,1789,1790,1791,1792
+</data>
+ </layer>
+ <layer id="2" name="Buildings" width="6" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,
+580,258,581,0,0,0,
+612,673,613,0,0,1486,
+644,705,645,435,432,1518,
+481,0,0,0,0,433,
+0,0,0,0,0,1179,
+0,0,0,0,0,0,
+0,887,712,713,0,1460,
+0,0,0,887,0,1492
+</data>
+ </layer>
+ <layer id="3" name="Paths" width="6" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+2185,0,0,0,0,0,
+0,0,0,2184,0,2185,
+0,0,0,0,0,0,
+0,0,2185,2185,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Front" width="6" height="9">
+  <data encoding="csv">
+0,257,0,0,257,0,
+0,641,435,182,289,309,
+0,0,0,0,280,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,680,681,0,0,
+0,0,0,0,0,1460,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="5" name="Back"/>
+ <objectgroup id="6" name="Buildings"/>
+ <objectgroup id="7" name="Paths"/>
+ <objectgroup id="8" name="Front"/>
+</map>

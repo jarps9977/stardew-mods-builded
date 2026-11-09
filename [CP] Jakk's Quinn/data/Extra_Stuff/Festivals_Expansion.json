@@ -1,0 +1,282 @@
+{
+  "Changes": [
+    //SPIRITS EVE NEW CONTENT
+    {
+      "LogName": "SE Special order",
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Entries": {
+        //Room decor quest
+        //debug specialorder jkkps.quinn_Decor
+        "{{modID}}_Decor": {
+          "Name": "{{i18n:quest.SpookyDecorations.title}}",
+          "Requester": "Quinn",
+          "Duration": "TwoWeeks",
+          "Repeatable": false,
+          "RequiredTags": "season_fall",
+          "Condition": "PLAYER_FRIENDSHIP_POINTS Current Quinn 250",
+          "OrderType": "",
+          "SpecialRule": "",
+          "Text": "{{i18n:quest.SpookyDecorations.text}}",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.SpookyDecorations.Pumpkin.Deliver}}",
+              "RequiredCount": "15",
+              "Data": {
+                "AcceptedContextTags": "item_pumpkin",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "4 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.SpookyDecorations.Bones.Deliver}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "item_bone_fragment",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "4 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.SpookyDecorations.BatWings.Deliver}}",
+              "RequiredCount": "20",
+              "Data": {
+                "AcceptedContextTags": "item_bat_wing",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "4 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.SpookyDecorations.Quartz.Deliver}}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "item_refined_quartz",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "4 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.SpookyDecorations.Slime.Deliver}}",
+              "RequiredCount": "45",
+              "Data": {
+                "AcceptedContextTags": "item_slime",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "4 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.SpookyDecorations.Fiber.Deliver}}",
+              "RequiredCount": "150",
+              "Data": {
+                "AcceptedContextTags": "item_fiber",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "4 10"
+              }
+            }
+          ],
+          "Rewards": [
+            {
+              "Type": "Money",
+              "Data": {
+                "Amount": "10000"
+              }
+            },
+            {
+              "Type": "Friendship",
+              "Data": {
+                "Amount": "125",
+                "TargetName": "Quinn"
+              }
+            },
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "{{modID}}_HalloweenDecor",
+                "NoLetter": "true"
+              }
+            }
+          ],
+          "CustomFields": null
+        },
+        //Potion ingredients quest
+        //debug specialorder jkkps.quinn_Quinn_Ingredients
+        "{{ModId}}_Quinn_Ingredients": {
+          "Name": "{{i18n:quest.UnusualIngredients.title}}",
+          "Requester": "Quinn",
+          "Duration": "Month",
+          "Repeatable": false,
+          "RequiredTags": "event_{{ModId}}_next, season_fall, mail_{{modID}}_HalloweenDecor, event_{{ModId}}_wizardsapprentice",
+          "Condition": "",
+          "OrderType": "",
+          "SpecialRule": "",
+          "Text": "{{i18n:quest.UnusualIngredients.text}}",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": null,
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.UnusualIngredients.SlimeEgg.Deliver}}",
+              "RequiredCount": "1",
+              "Data": {
+                "AcceptedContextTags": "item_green_slime_egg",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "9 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.UnusualIngredients.PrismaticShard.Deliver}}",
+              "RequiredCount": "1",
+              "Data": {
+                "AcceptedContextTags": "item_prismatic_shard",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "9 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.UnusualIngredients.CommonMushroom.Deliver}}",
+              "RequiredCount": "15",
+              "Data": {
+                "AcceptedContextTags": "item_common_mushroom",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "9 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.UnusualIngredients.PurpleMushroom.Deliver}}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "item_purple_mushroom",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "9 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.UnusualIngredients.RedMushroom.Deliver}}",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "item_red_mushroom",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "9 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.UnusualIngredients.VoidEssence.Deliver}}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "item_void_essence",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "9 10"
+              }
+            },
+            {
+              "Type": "Donate",
+              "Text": "{{i18n:quest.UnusualIngredients.SolarEssence.Deliver}}",
+              "RequiredCount": "25",
+              "Data": {
+                "AcceptedContextTags": "item_solar_essence",
+                "DropBox": "{{ModId}}_box",
+                "DropBoxGameLocation": "{{ModId}}_QuinnRoom",
+                "DropBoxIndicatorLocation": "9 10"
+              }
+            }
+          ],
+          "Rewards": [
+            {
+              "Type": "Money",
+              "Data": {
+                "Amount": "12000"
+              }
+            },
+            {
+              "Type": "Friendship",
+              "Data": {
+                "Amount": "125",
+                "TargetName": "Quinn"
+              }
+            },
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "{{modID}}_Weird_Ingredients",
+                "NoLetter": "true"
+              }
+            }
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    //Spirit's eve map edits
+    {
+      "Action": "EditMap",
+      "Target": "Maps/{{ModId}}_QuinnRoom",
+      "FromFile": "assets/Maps/{{ModId}}_QuinnRoom.InBetween.SpiritsEve.tmx",
+      "When": {
+        "Season": "Fall",
+        "HasFlag: AnyPlayer |contains={{modID}}_HalloweenDecor": true,
+        "HasFlag: AnyPlayer |contains={{modID}}_Weird_Ingredients": false,
+        "Query: {{Day}} >= 14": false
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/{{ModId}}_QuinnRoom",
+      "FromFile": "assets/Maps/{{ModId}}_QuinnRoom.SpiritsEve.tmx",
+      "When": {
+        "Season": "Fall",
+        "HasFlag: AnyPlayer |contains={{modID}}_HalloweenDecor": true,
+        "Query: {{Day}} >= 14": true
+      }
+    },
+    {
+      "LogName": "Strings From Maps Halloween",
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "Entries": {
+        "jkkps.quinn.computer": "{{i18n:jkkps.quinn.computer}}",
+        "jkkps.quinn.spider": "{{i18n:jkkps.quinn.spider}}",
+        "jkkps.quinn.jackolantern": "{{i18n:jkkps.quinn.jackolantern}}",
+        "jkkps.quinn.mountedbooks": "{{i18n:jkkps.quinn.mountedbooks}}",
+        "jkkps.quinn.emptyfrasks": "{{i18n:jkkps.quinn.emptyfrasks}}",
+        "jkkps.quinn.fullfrasks": "{{i18n:jkkps.quinn.fullfrasks}}",
+        "jkkps.quinn.frog": "{{i18n:jkkps.quinn.frog}}",
+        "jkkps.quinn.magicalbooks": "{{i18n:jkkps.quinn.magicalbooks}}",
+        "jkkps.quinn.skull": "{{i18n:jkkps.quinn.skull}}",
+        "jkkps.quinn.purplebook": "{{i18n:jkkps.quinn.purplebook}}",
+        "jkkps.quinn.secret": "{{i18n:jkkps.quinn.secret}}",
+        "jkkps.quinn.cauldron": "{{i18n:jkkps.quinn.cauldron}}",
+        "jkkps.quinn.plant": "{{i18n:jkkps.quinn.plant}}",
+        "jkkps.quinn.list": "{{i18n:jkkps.quinn.list}}",
+        "jkkps.quinn.crystalball": "{{i18n:jkkps.quinn.crystalball}}",
+        "jkkps.quinn.bed": "{{i18n:jkkps.quinn.bed}}"
+      }
+    }
+  ]
+}

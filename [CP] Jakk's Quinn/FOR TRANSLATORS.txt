@@ -1,0 +1,631 @@
+psssst, hey, you, translator! I'm very thankful for your work and all the love directed at this mod.
+If you have any questions or suggestions, just shoot me a message on Nexus! Especially if there's any trouble with translations, be it on my side or yours, we'll work it out!! s2    
+
+I will always keep this document updated. It can be checked to quickly see what's new and what's been changed. I will never delete an entry from the log.
+
+TRANSLATIONS LOG:
+
+>> 1.2.12
+
+       New configs
+              "config.ShorterEvents.name": "Shorter Events",
+              "config.ShorterEvents.description": "Whether to keep the legacy events or the new versions, that are slightly shorter. Affects 4, 6, 8 and 14 hearts events.",
+
+              "config.QuinnRelationship.name": "Relationship to Quinn",
+              "config.QuinnRelationship.description": "Choose what type of relationship you'll have with Quinn. Romance Quinn, or get the full story as friends!",
+              "config.QuinnRelationship.values.Platonic": "Platonic",
+              "config.QuinnRelationship.values.Romantic": "Romantic",
+       
+              "config.section.Events.name": "Events",
+              "config.section.Events.description": "",
+       
+              "config.QuinnGender.name": "Quinn's Gender",
+              "config.QuinnGender.description": "How Quinn and other characters refer to her. Only works if you also have '[CP] Jakk's Masculine Quinn' installed as well. Otherwise, Quinn will ALWAYS be female.",
+              "config.QuinnGender.values.Female": "Female",
+              "config.QuinnGender.values.NonBinary": "NonBinary",
+              "config.QuinnGender.values.Male": "Male",
+
+              "config.section.Genderbent Quinn Compat.name": "Genderbent Quinn Compatibility",
+              "config.section.Genderbent Quinn Compat.description": "",
+
+
+       Changed event lines for shorter events
+
+              "shorter.beachcomfort.9": "But I failed.$9",
+              "shorter.beachcomfort.12": "I feel so miserable.$8",
+              "shorter.beachcomfort.15": "Worst part is, I took it all out on Emily.$9#$b#It's just... She doesn't understand what she's asking me to do.$9#$b#I need to get my old life back...$9#$b#I used to be respected. Now, my only colleague hates me.$8",
+              
+              "shorter.next.4": "But I was kinda hoping I would.$3#$b#You were here the other day, weren't you?$2#$b#I'm sorry I kept you waiting...$2#$b#And thanks. For trying to stick around for me. Yoba knows how long you were here...$2", //<- this one is a fusion of next.4 and next.5
+              "shorter.next.9": "Why did I expect anything else from a money-hungry company, though?$2",
+              "shorter.next.11": "Sorry. I'm talking too much.$2#$b#These are all things I've been thinking about for a while, now.$2#$b#If I'd known bottling them up would bring me here, maybe I'd have been honest about them sooner.$2",
+              "shorter.next.12": "Ha! Who am I fooling?$2#$b#I always knew this would happen.$2#$b#It's happened before... so many times.$2#$b#I guess it's simply easier to ignore these things, when they come up.$2",
+              "shorter.next.17": "On the other hand, if I leave, I'm for sure out of a job, even if my current one is trashy.$2#$b#And I doubt I'd manage to get anything better than this back in the city.$2",
+              "shorter.next.18": "In summary, I need to think. It's a tough choice.#$b#The big city, where my family lives, or this middle-of-nowhere town, where my friends live.#2",
+              "shorter.next.8": "Joja is never transferring me back to ZuzuCity.$2#$b#There was never a 'second chance'. They were never giving my job back if I 'excelled'.$2#$b#But why fire a dedicated employee when you can underpay them instead?$2#$b#Of course I'd happily accept a second chance. Joja was everything to me.$2#$b#They knew that, and they took advantage of it.$5",
+              
+              "shorter.zuzucityvisit.0": "Hey! Thanks for coming, @!$1#$b#Honestly, I was wondering if you'd even come at all.#$b#Sorry for ever doubting you...$2",
+              "shorter.zuzucityvisit.1": "Mum and dad can be overwhelming... Be warned.$1",
+              "shorter.zuzucityvisit.2": "Well, I suppose you can handle yourself just fine.#$b#Let's go.$1",
+              "shorter.zuzucityvisit.57": "What's the full story, then?$2",
+              "shorter.zuzucityvisit.58": "Joja was too demanding. Better said, *I* was too demanding of myself.$3#$b#I was so focused on pushing through and so dedicated to my work I neglected vital parts of my life... My friends, even my health.$2#$b#Until I couldn't do it anymore, and one day I woke up glued to the bed.$9#$b#@ was the one who helped me through it. {{HeShe}} heard me out and helped me come to terms with my feelings.$8#$b#I really didn't want to give up on Joja... I kept thinking back to you guys, and what you'd think of me if I quit...$9",
+              "shorter.zuzucityvisit.18": "{{JaniceCommentary}}$1",
+              "shorter.plato.zuzucityvisit.friendnotpartner": "Mum, @ is not my partner!$11#$b#Just a really good friend, alright?",
+              
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+       PAST LOGS
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+>> v1.2.8:
+
+       New:
+              "dialogue.troutderby_read": "Apparently, there have been reports of fish farmers finding Prismatic Shards in their Rainbow Trout ponds...#$b#Some believe it is the trouts' way of saying 'thank you'.$1",
+              "dialogue.troutderby_start": "Guess who I'm rooting for this year.$1",
+              "dialogue.troutderby_after": "I've collected a lot of fishing trinkets over the years... Only a fraction of them is displayed on this wall.$2#$b#I wish I had the guts to actually do it.$2",
+              "dialogue.troutderby_end": "Don't misread the smile on my face! I'm taking this very, very seriously.$1",
+              "dialogue.troutderby_middle": "I put a *lot* of sunscreen on this morning, but seem to have neglected my scalp.$2#$b#It burns...$3",
+              "movie.dragon.1": "I'm excited! I love myself an animated film...$1",
+              "movie.dragon.2": "These adventures are dragging out almost as much as the commercials were...$10",
+              "movie.dragon.3": "Honestly, for a moment there, the movie kind of lost me...#$b#Still, that was a fun watch! Beats idling around, if you ask me.$1",
+
+       Changed:
+              "schedule.dialogue.saloon.01": "Hey, @. Nice to see you here tonight. Have you come to drink or dine?#$b#By the looks of you... Probably drink.",
+              "dialogue.Resort": "I haven't spotted any sea urchins yet... beautiful creatures, but rather nasty pricks.",
+              "dialogue.Resort_Shore": "Fancy jumping some waves with me?#$b#Some say that if you manage to jump seven in a row, you'll have a year of good fortune.$1",
+              "dialogue.purchasedAnimal_Cow": "%revealtaste:Quinn:424 I heard from Marnie that you bought a cow. Planning to make cheese, are you?#$b#If you do, make sure to bring me some. I'm somewhat of a cheese enthusiast.$1",
+              "dialogue.summer_Tue": "%revealtaste:Quinn:233 This is perfect weather for some ice cream...#$e#I wonder if Alex's stand opens today?",
+              "dialogue.fall_Sat": "%revealtaste:Quinn:445 I struggle to understand why some people like sturgeon roe so much. Honestly, any aged roe will do for me, but caviar is just... *shiver* *shiver* Blegh.$1",
+              "dialogue.winter_Wed10": "%revealtaste:Quinn:424 Do you think you can bring me some cheese the next time you visit?$1#$b#I've been craving some for a couple of days, now.$1",
+              "dialogue.winter_12JJ": "%revealtaste:Quinn:151 The SquidFest started today! I have to work this afternoon, but I'll be there all day tomorrow.",
+              "dialogue.winter_12CC": "%revealtaste:Quinn:151 The SquidFest started today! I'm feeling a little beat up today, but I'll be there all day tomorrow.",
+
+       Genderbent dialogue:
+              New genderbent lines for a future update (likely 1.3.0). Unused for now.
+              s
+                     "GBQ.stringsFromMaps.jkkps.quinn.6": "Dearest Quinn,^^We are glad to hear things have been going well over there. We are thrilled to hear you have finally made yourself a friend. We're praying you'll find friends outside of work, too! You're a fine young man, so we wager it won't be a challenge.^You mentioned he's a fan of gridball, so we've sent alongside this letter a Tunneler's shirt we bought at the stadium when we went the other night. You could bring him with you when you come visit and we could all go to the games together.^We've also attached some coin. It should be enough for rent, food and some extras.^^We love you dearly.^^- Bill and Janice Berrybrook.",
+                     "GBQ.stringsFromMaps.jkkps.quinn.5": "Dear Mum and Dad, ^^I'm sorry I haven't written back yet.^^Things are not going how I expected them to go. Honestly, they've been rough.  The job is extremely tiresome.^But I have a new colleague. We're not close yet, but I think we'll get along well enough, given some time.^Emily and I worked out a good agreement so that I can stay here. It's not sustainable in the long run, but I won't be staying here for long, will I?^^I miss you two. I can't wait to go home and make you proud.^^- Quinn S2 S2 S2",
+                     "GBQ.flowerdance.Quinn_y2": "To be quite frank, I'm feeling pretty sharp in this suit.#$b#Now, all I need is a dance partner to match...$7",
+                     "GBQ.30181007_hiding.6": "Still, I... I'm not mad about that. I'm glad we three found each other.#$b#I feel like the luckiest guy in the world... I get to be married to the two of you.$4",
+                     "GBQ.workplacefight.6": "Man, do you even hear yourself?$3#$b#You sound like a total fanboy.",
+                     "GBQ.workplacefight.7": "I'm not a fanboy!$11",
+                     "GBQ.dialogueShane.summer_Wed_inlaw_Quinn": "Do you hear that? Silence. Great stuff.$1#$b#Tell that husband of yours to keep to the farmhouse, will 'ya?",
+                     "GBQ.dialogueMarSpring.OneKid_0": "%kid1 taught me a new way to pronouce my name today. Basically, you just ditch the 'Qui' and the 'inn' and say it like 'pa'. Twice. It's very important that you say it twice.$1",
+                     "GBQ.dialogueMarSpring.Indoor_Night_3": "@, aren't you into gridball?#$e#... No, I'm not a huge fan of sports, but I guess it would be fun to have a {{HusbandOrWife}} who watches the games religiously.#$e#I could come up with some finger foods for you... And just... Watch you watch it.#$e#Silly, I know. I'm not really a traditional husband... Well, oh, I am totally a traditional husband.#$b#And I want to make you snacks!$1",
+                     "GBQ.dialogueMarSummer.TwoKids_3": "I never thought I'd be a father of two... but I'm not complaining!$1",
+                     "GBQ.dialogueMarSummer.TwoKids_1": "I'm considering changing my legal name to 'Papa'. It sounds so right when the kids call me that...$1",
+                     "GBQ.dialogueMarSpring.spring_24": "It took me a while to find that old blue suit, but I found it.$1#$1#I hope there'll be a {{PrinceOrPrincess}} there to dance with me today...$7",
+                     "GBQ.dialogueMarSpring.TwoKids_2": "Yep, two kids are enough. Papa Quinn can barely handle the spars between two little imps... imagine if there were three of them.$2",
+                     "GBQ.dialogue.Wed10": "$d joja#Hm, just so you know, I've been considering quitting Joja for good. I mean... Yeah, I'd totally be a stay at home husband.#$e#Why do I say that? Well, I... Oh, you can probably figure that out yourself, buddy.$4|I hated the thought of becoming a stay at home husband when I was little. Now, it doesn't seem all that bad.$4",
+                     "GBQ.dialogue.summer_Fri6": "I wish I could have some pretty tan lines, like Alex does.#$b#But I'm only ever only out in full clothes... never quite had the confidence to go shirtless... Tank tops are the most revealing I can go.",
+
+       ** MARRIAGE DIALOGUE REWORK:
+              Marriage dialogue was simply too messy for me to try and fix in any reasonable, logical way, so it'll be reworked in a future update (1.2.9 or 1.2.10).
+              There are a bunch of new entries in the i18n file, but no new content. These are just the old lines re-labled. 
+
+                     "dialogueMar.give_flowersA": "I didn't think you felt this way for me.$1#$b#I guess we're a couple now.$4",
+                     "dialogueMar.give_flowersB": "Are those for me?  I feel the same!#$b#Let's take it to the next level.$1",
+                     "dialogueMar.give_pendant": "Is that for what I think you mean?!#$b#Of course I'll accept it!$1#$b#I'll let Mayor Lewis know.. our ceremony will be in three days.#$b#Don't be late.$4",
+                     "dialogueMar.stardrop_gift": "@, you've been a wonderful husband to me.  I feel very special.$4^@, you've been a wonderful wife to me.  I feel very special.$4#$b#I hope this gift will convey how happy you make me.",
+                     "dialogueMar.rejectNPCA": "Isn't it a little too soon to declare your feelings?",
+                     "dialogueMar.rejectNPCB": "Um... no thank you..",
+                     "dialogueMar.engageA": "Why are you giving me this?  You are already getting married...$2#$b#Please don't do this..$2",
+                     "dialogueMar.engageB": "This isn't right...$2",
+                     "dialogueMar.marriedA": "I don't think %spouse would want to find out you're doing this.#2",
+                     "dialogueMar.marriedB": "I think %spouse deserves better than this behavior, @.$5",
+                     "dialogueMar.refusal_knownA": "I don't think I'm ready for the next level.",
+                     "dialogueMar.refusal_knownB": "We're just friends, @.#$b#I guess I should be flattered at least.$1",
+                     "dialogueMar.refusal_botherA": "Didn't you ask me this already?  We can't get married yet...$5",
+                     "dialogueMar.refusal_botherB": "My patience is wearing thin, @.$5",
+                     "dialogueMar.refusal_no_heartsA": "Isn't this a little too soon?",
+                     "dialogueMar.refusal_no_heartsB": "Why?! We just met.$1",
+                     "dialogueMar.birthdayLoveA": "Hey now!  This is a great birthday present!#$b#Thank you so much.$1",
+                     "dialogueMar.birthdayLoveB": "I had a feeling you would bring me something wonderful!  This is fantasic!$1",
+                     "dialogueMar.birthdayLikeA": "Oh!  You brought me a birthday present!#$b#I appreciate it, thank you!$1",
+                     "dialogueMar.birthdayLikeB": "You got this for me? This is wonderful, thank you.",
+                     "dialogueMar.birthdayDislikeA": "What is this.. are you trying to make a joke?$5",
+                     "dialogueMar.birthdayDislikeB": "This is horrid.. Why would you do this?$5",
+                     "dialogueMar.birthdayNeutralA": "Did my birthday come up faster than you expected?#$b#Thank you for trying, @.",
+                     "dialogueMar.giftquestion_yes": "That's good, sweetie.. You were always kind and giving.$4",
+                     "dialogueMar.giftquestion_lie": "You do know this is a small community right?  I mean I obviously know you did.$5#$b#You're not up to something are you?$2",
+                     "dialogueMar.breakUp": "Oh.. I guess we should just be friends..",
+                     "dialogueMar.baby_anxiety": "Having a baby is a big change.  I'm a bit worried on how much will change...$2",
+                     "dialogueMar.adopt_excitedA": "I finished all the paperwork to adopt a child.  This is so exciting, I can't wait for it to be approved!$1",
+                     "dialogueMar.adopt_excitedB": "Everything is filled out for an Adoption.  I hope it gets approved fast.$4",
+                     "dialogueMar.morningsick": "I feel awful today.  You go on, @, I think I'll sit near the toilet for a while..$2",
+                     "dialogueMar.moodyPregnant": "Ugh... I'm not in the mood, @.  Make your own breakfast..$2",
+                     "dialogueMar.informPregnancyA": "I have something important to tell you, @.#$b# I'm pregnant!! Isn't that wonderful!?$1",
+                     "dialogueMar.informPregnancyB": "Guess what?!  We did it!! I'm finally pregnant!!$1",
+                     "dialogueMar.yourePregnantA": "Jeeze, @.  Are you eating too much?$1#$b#Wait... I think you're actually pregnant!#$b#This is wonderful news, @.",
+                     "dialogueMar.yourePregnantB": "How's the new mom doing?$4#$b#.... Who?... You do know you're obviously pregnant.  You're the new mom.$1",
+                     "dialogueMar.annoyedParent": "Ugh.. I don't want to take care of the kids..Let me go back to sleep a while longer.$2",
+                     "dialogueMar.aloneTime": "@, I need some time for myself..#$b#Why don't you be the big daddy for a while.$1|Why don't you be their momma for a while.$1",
+                     "dialogueMar.jkkps.quinn_quinnmarriagecrisis": "Why would you throw me under the bus like that?...$2#$b#I mean, you should've at least told me how you felt earlier...$2#$e#... For as much as I think your feelings are wrong and stupid.",
+                     "dialogueMar.eventSeen_jkkps.quinn_jojaparsnip": "I still stand by everything I said. Joja is way more convenient!",
+                     "dialogueMar.eventSeen_jkkps.quinn_overwork": "..........$8#$b#Not now, @.$9",
+                     "dialogueMar.eventSeen_4081148": "You lot went to the city??$1#$b#Yoba, had I known, I'dve tagged along!$1",
+                     "dialogueMar.eventSeen_jkkps.quinn_beachconfession": "Thanks for lending an ear back at the beach. It meant a lot to me.",
+                     "dialogueMar.eventSeen_jkkps.quinn_workplacefight": "Hope you're not here to ask for any more beers... I'm broke.$2",
+                     "dialogueMar.eventSeen_jkkps.quinn_saloonfiasco": "I'm sorry for everything I said at the saloon. It was plainly untrue.$2",
+                     "dialogueMar.eventSeen_jkkps.quinn_beachcomfort": "Emily hasn't said a thing about... uh... our... well, the things I told you back at the beach.$2#$b#So, thank you. Thank you for not telling her about it. She's lovely, but I'm not in a place to be comforted yet.$2",
+                     "dialogueMar.eventSeen_jkkps.quinn_getupfrombed": "I've been feeling so weak, these past few days...$3",
+                     "dialogueMar.eventSeen_jkkps.quinn_picnic": "(no translation:dialogueMarGen.eventSeen__picnic)",
+                     "dialogueMar.eventSeen_jkkps.quinn_next": "Dr. Harvey thinks I might benefit from talking to a neuropsychologist... or something like that?$2#$b#Well, we've been talking a lot and I haven't held back when answering his questions, so I trust his judgement.",
+                     "dialogueMar.SpouseStardrop": "@... can we talk for a second?#$b#You probably know by now that I've never really felt like I belonged anywhere. Even after I left Joja, Pelican Town felt so alien to me.$2#$b#But you... you showed me I'm exactly where I'm supposed to be.$4#$b#And I've spent most of my life chasing that feeling. So...$7#$b#I wanted you to have this.$7#$b#I love you, @.$4",
+                     "dialogueMar.Spouse_MonstersInHouse": "Eek! What is that thing doing in our house?!$11#$b#Nope. Absolutely not. Get rid of it!!$11",
+                     "dialogueMar.SpouseFarmhouseClutter": "Hm... You've rearranged the furniture, have you not?$12#$b#It's not that I don't like it... It's just...It's hard to get around the house, dear.$12#$b#Would you mind cleaning up some of this clutter?$12",
+                     "dialogueMar.SpringFall.Rainy_Day_Quinn": "Rainy season just doesn't quit, does it? Well, it's definitely better than the snow...",
+                     "dialogueMar.SpringFall.Rainy_Night_0": "Good evening, @. Hope your day was better than mine...#$b#Well, it wasn't *that* bad, it was just super slow.",
+                     "dialogueMar.SpringFall.Rainy_Night_3": "Let me know when you're ready to call it a night.#$b#I'm exhausted... But I'll try to wait for you before heading to bed.",
+                     "dialogueMar.SpringFall.Rainy_Night_4": "Did you catch anything interesting today?$1#$b#Wait... did you even fish?$11",
+                     "dialogueMar.SpringFall.Indoor_Day_0": "I'll just hang back and relax today, hope you don't mind.#$b#Have a good day out there!$1",
+                     "dialogueMar.SpringFall.Indoor_Day_1": "I'll stay back and run some chores around the house. You go ahead and have a great day, sweetheart.$1",
+                     "dialogueMar.SpringFall.Indoor_Day_Quinn": "Did my singing wake you up? Sorry...$11#$e#I can't help myself whenever 'ADDA' comes on.$1",
+                     "dialogueMar.SpringFall.Indoor_Day_3": "Honey-bun, don't worry about me. I'll rest indoors today. I'm feeling a tad low.",
+                     "dialogueMar.SpringFall.Indoor_Day_4": "Hm, I don't think I've been eating well. As a matter of fact, I don't think I've been eating at all. I'll try to cook something up for me today!$1",
+                     "dialogueMar.SpringFall.Indoor_Day_2": "I wrote down this idea for a romance novel, but it's so messy it totally eludes me now.$2",
+                     "dialogueMar.SpringFall.Indoor_Night_1": "It's getting chilly out there.#$b#It's almost hard to believe summer was just here...",
+                     "dialogueMar.SpringFall.Indoor_Night_2": "I might have to sleep under a second blanket tonight. This cold wind is no joke.",
+                     "dialogueMar.SpringFall.Indoor_Night_3": "@, aren't you into gridball?#$e#... No, I'm not a huge fan of sports, but I guess it would be fun to have a {{HusbandOrWife}} who watches the games religiously.#$e#I could come up with some finger foods for you... And just... Watch you watch it.#$e#Silly, I know. I'm not really a traditional wife... Well, oh, I am totally a traditional wife.#$b#And I want to make you snacks!$1",
+                     "dialogueMar.SpringFall.Indoor_Night_4": "*sneeze *wheeze* *sneeze*....$2#$b#Oh, sorry. Sorry. There's a lot of dust on the air.$2",
+                     "dialogueMar.SpringFall.OneKid_0": "%kid1 taught me a new way to pronouce my name today. Basically, you just ditch the 'Qui' and the 'inn' and say it like 'ma'. Twice. It's very important that you say it twice.$1",
+                     "dialogueMar.SpringFall.OneKid_1": "$1 jkkps.quinn_toothfairy#Hey, careful around %kid1 today. I accidentally let slip that tooth fairies aren't real...$2#$e#Remember that time I accidentally told %kid1 the tooth fairy wasn't real? Oh, they cried their poor little heart out.",
+                     "dialogueMar.SpringFall.OneKid_2": "Here, have some cookies. %kid1 helped me bake them, so make sure to thank them as well.[223]$1",
+                     "dialogueMar.SpringFall.OneKid_3": "Dad says he can't wait to meet %kid1 in person, but he and mom are really busy with the cafeteria. Autumn has always been a good season for coffee sales.",
+                     "dialogueMar.SpringFall.OneKid_4": "%kid1 asked me a ton about the farm today. They seemed really interested.#$b#Maybe you'd take them on a tour sometime?$!",
+                     "dialogueMar.SpringFall.TwoKids_0": "%kid1 and %kid2 were playing gridball together earlier. They almost broke our windows! But they didn't. No harm no foul, yeah?$1",
+                     "dialogueMar.SpringFall.TwoKids_1": "The kids were playing dress-up with our clothes earlier... I tried putting everything back in place, but do forgive us if something of yours is out of place.$1",
+                     "dialogueMar.SpringFall.TwoKids_2": "Yep, two kids are enough. Mama Quinn can barely handle the spars between two little imps... imagine if there were three of them.$2",
+                     "dialogueMar.SpringFall.TwoKids_3": "Yoba my back hurts. %kid2 asked for a piggyback ride. I said sure... why not?#$b#Well, %kid1, that's why.$2#$b#Try carrying the both of them at the same time on your backside, I dare you.$2",
+                     "dialogueMar.SpringFall.Good_1": "If I asked nicely, would you please put aside some pumpkins for Jack-o'-lanterns?$1#$b#Can we have a ton of Jack-o'-lanterns, pretty please?$1",
+                     "dialogueMar.SpringFall.Good_2": "You're looking super stylish today. Like, insanely so.$4",
+                     "dialogueMar.SpringFall.Good_9": "I love you, @. That's a promise.$7",
+                     "dialogueMar.SpringFall.Good_8": "Good morning, babe. Sleep alright?$1",
+                     "dialogueMar.SummerWinter.spouseRoom_Quinn": "Should I draw, write or learn a new skill?...#$b#Y'know what? Nevermind. I'll just read another book.",
+                     "dialogueMar.SummerWinter.funLeave_Quinn": "Good morning, sweetcheeks!#$b#I'm headed to town today. Do you need anything?$1#$e#Well, sorry for offering, I see you have everything you need already.$1#$b#Might I interest you in a kiss, then?$4",
+                     "dialogueMar.SummerWinter.funReturn_Quinn": "I had a great day in the city, hun. It's good to see my friends are keeping well.$1",
+                     "dialogueMar.SummerWinter.Rainy_Night_2": "Nothing like some melted cheese on a dark day like this. Warm and soft and greasy. Just throw some on a frying pan and voilá! The best quick dish ever!$1",
+                     "dialogueMar.SummerWinter.Rainy_Night_3": "Doomdoomdoomdoomdoomdoomdoomdoomdoomdoom, that's how the rain sounds.$3#$e#I might need a cold one before heading to bed...$2",
+                     "dialogueMar.SummerWinter.Rainy_Night_4": "Tomorrow, if this awful weather clears up, I'll definitely head down to the beach.$1#$e#You'd be surprised by how much fish you can catch the day after a storm.$1",
+                     "dialogueMar.SummerWinter.Indoor_Day_Quinn": "Good morning, @. Have you slept well? I lit some incense earlier, hope it didn't disturb you. It gets my creative juices flowing.",
+                     "dialogueMar.SummerWinter.Indoor_Day_2": "Something smells rotten... oh, It's just the yogurt I left out to ferment yesterday... whops.$2",
+                     "dialogueMar.SummerWinter.Indoor_Night_1": "I never really went to college. At first, I thought I couldn't get in because I was too dumb to do so.$2#$b#Now, looking back, it wasn't really meant to be.$2",
+                     "dialogueMar.SummerWinter.Indoor_Night_3": "Hey, thanks for being there for me. I still can't really believe you actually think I'm enough...#$b#But, hey, who's complaining?$4",
+                     "dialogueMar.SummerWinter.Outdoor_2": "Have we got any cows? If we don't, we should definitely get some. Artisanal cheese is the best.$1",
+                     "dialogueMar.SummerWinter.Outdoor_4": "I used to say the beach was my favorite place, but the farm comes in such a close second.$1#$b#Sorry, honey, it's wonderful, really, but I just love hanging by the docks.$1",
+                     "dialogueMar.SummerWinter.OneKid_0": "I can barely take care of myself...#$b#... But, somehow, I've found the energy and disposition to care for and love that tiny human we've brought into this world.$1#$b#It's fantastic, isn't it?$1",
+                     "dialogueMar.SummerWinter.OneKid_1": "%kid1 got their smile from you. I can't resist their little giggles.$1",
+                     "dialogueMar.SummerWinter.OneKid_2": "I caught %kid1 and %pet cuddling earlier today... I almost had a heart attack.$4",
+                     "dialogueMar.SummerWinter.OneKid_3": "Dad loved the baby pictures I sent him. He says %kid1 looks exactly like you.$1#$e#No, of course my feelings aren't hurt.$3#$b#After all I've done for this kid... They have the gull to look *exactly* like you?$2#$b#Jokes aside, though, it's adorable that %kid1 does. I love the both of you.$4",
+                     "dialogueMar.SummerWinter.OneKid_4": "I'm afraid my accent has started rubbing off on %kid1.#$b#Maybe you'd like to talk some more to them?#$b#Maybe then they wouldn't sound so much like a tourist.",
+                     "dialogueMar.SummerWinter.TwoKids_0": "%kid1 is really protective of %kid2. It's cute, but I worry they might become overbearing.",
+                     "dialogueMar.SummerWinter.TwoKids_1": "I'm considering changing my legal name to 'Mama'. It sounds so right when the kids call me that...$1",
+                     "dialogueMar.SummerWinter.TwoKids_2": "%kid1 and %kid2 are such close friends! I'm glad they have each other...$1#Sb#I know I always felt alone, growing up an only child.$2",
+                     "dialogueMar.SummerWinter.TwoKids_3": "I never thought I'd be a mother of two... but I'm not complaining!$1",
+                     "dialogueMar.SummerWinter.Good_1": "Good morning, sweetheart. Can I call you sweetheart?$7#$b#Oh, there's that smile... I'll be here daydreaming of you if you need me, sweetheart.$7",
+                     "dialogueMar.SummerWinter.Good_2": "Sweetheart, if you say my name like that again, I'll faint.$4#$e#Oh. Oh! Baaaaah.... I've fainted.$7",
+                     "dialogueMar.SummerWinter.Good_9": "Hello, sweetheart. Did you sleep well?...$4#$b#Well, of course I realise you barely slept at all...$7",
+                     "dialogueMar.Winter.patio_Quinn": "Just enjoying the fresh snow. It looks mighty beautiful.$1#$b#I'm pretty warm under this cape so don't worry.$1#$b#Are you? Don't underestimate this cold air, I'm warning you.$11",
+                     "dialogueMar.Winter.Rainy_Day_0": "Remind me to put an extra blanket on for us tonigh.",
+                     "dialogueMar.Winter.Rainy_Day_1": "I'll wrap myself in blankets, curl into a ball and sleep until the day's over. Care to join?$4",
+                     "dialogueMar.Winter.Rainy_Day_2": "It's snowing again?$11#$b#Hot chocolate for lunch it is.$1",
+                     "dialogueMar.Winter.Rainy_Day_3": "The soft crunch of fresh snow... I love it.$1",
+                     "dialogueMar.Winter.Rainy_Day_4": "This is perfect weather for cranberry sauce. If only dad were here to make it...$2",
+                     "dialogueMar.Winter.Rainy_Day_Quinn": "If the snow's too heavy for you to leave, I'll love to spend the day here with you.$7",
+                     "dialogueMar.Winter.Rainy_Night_0": "I keep phoning me mum and dad, but they're not picking up.$2",
+                     "dialogueMar.Winter.Rainy_Night_1": "Hot chocolate doesn't sound like such a bad meal right now.$2",
+                     "dialogueMar.Winter.Indoor_Day_0": "It feels a little claustrophobic having to stay indoors, but... I guess I'm glad to have a warm place to hide in.",
+                     "dialogueMar.Winter.Indoor_Day_1": "Hey, would you mind fetching me something cold to drink while you're in town today? I could definitely use the distraction.",
+                     "dialogueMar.Winter.Indoor_Day_3": "Honey-bun, don't worry about me. I'll rest indoors today. I'm feeling a tad low.",
+                     "dialogueMar.Winter.Indoor_Day_4": "I'll stay back and run some chores around the house. You go ahead and have a great day, sweetheart.$1",
+                     "dialogueMar.Winter.Indoor_Night_2": "I've been eating too much cheese... I miss other flavours. Next time you visit town, would you mind fetching me something different? Pretty please?#$e#Thanks!$1",
+                     "dialogueMar.Winter.Indoor_Night_4": "I tried growing some cactuses a while back, before I moved in. Killed them all.#$b#Now I can rest knowing Winter is what's killing my plants, at least.",
+                     "dialogueMar.Winter.Outdoor_0": "I just love the tranquility of winter.$1",
+                     "dialogueMar.Winter.Outdoor_1": "Aren't you cold, dear? I could help you warm up.$4",
+                     "dialogueMar.Winter.Good_4": "@! Good morning! I'm torn between silver and blue nail polish.$2#$b#Which do you reckon will look best with this outfit?$1",
+                     "dialogueMar.Winter.winter_1": "I wanted to visit my parents this Winter, but I've been avoiding the whole actually planning thing and now there aren't any more tickets for sale.$2#$b#Next year I'll try to plan ahead...$2",
+                     "dialogueMar.Winter.winter_24": "Did you remember to get your secret friend a gift?#$b#I got you this, just in case.[426 64 220 797 724 444 483 Book_PriceCatalogue 591]#$b#It's not ideal, but it's better than going empty handed.",
+                     "dialogueMar.Winter.winter_25": "Another full year in the valley!$1#$b#Here's to many more![346]$1",
+                     "dialogueMar.Winter.winter_11": "Tomorrow it's the SquidFest... here's something to help you out![265]$1#$e#It was hard to get my hands on that, but I pulled a few strings.$1",
+                     "dialogueMar.Winter.winter_12": "SquidFest starts today. Are you going to participate?#$e#I'll be at the beach watching, if you need me.$1",
+                     "dialogueMar.Winter.winter_13": "Today is the final day of SquidFest. I'm totally rooting for Willy... Sorry, babe.$1",
+                     "dialogueMar.Winter.winter_7": "Are you joining us at the Festival of Ice tomorrow?#$b#I don't fish and I'm afraid of the wild hooks people throw, so I'll leave early...$2#$b#But I'll be there before the main event!$1",
+                     "dialogueMar.Winter.winter_15": "I'm visiting the Night Market Tonight with Ems. You're welcome to join!$1",
+                     "dialogueMar.Winter.winter_27": "$1 jkkpsquinn_NYEDialogueTrigger#Tomorrow's the last day of the year... I will be down at the beach celebrating all night. Do feel free to join me, if you'd like.$4#$e#It is the final day of the year, and nothing is going to stop me from partying until sunrise, even if it is just me on my own.$1#$b#And, hey, you're welcome to join!$4",
+                     "dialogueMar.Winter.Good_8": "Good morning, babe. Sleep alright?$1",
+                     "dialogueMar.Spring.patio_Quinn": "Hello, @! Don't mind me, I'm just appreciating the birds and the flowers.#$b#Everything out here smells so nice... Very floral.$1",
+                     "dialogueMar.Spring.spouseRoom_Quinn": "I need more books. These... I've read through most of them already.$1",
+                     "dialogueMar.Spring.funLeave_Quinn": "I'm headed to town today, hun, but I'll be back before you notice!",
+                     "dialogueMar.Spring.funReturn_Quinn": "It was great seeing my friends today. I've missed them.$1",
+                     "dialogueMar.Spring.Rainy_Day_0": "Rain makes the plants happy, so I'm happy.$1",
+                     "dialogueMar.Spring.Rainy_Day_1": "I suppose this - the rain - saves you a lot of time out there, doesn't it?$1",
+                     "dialogueMar.Spring.Rainy_Day_2": "I don't mind the rain, but I do miss the birds that usually hang out on our porch.$1",
+                     "dialogueMar.Spring.Rainy_Day_3": "Oof! I'm glad I didn't put the clothes out to dry!$1",
+                     "dialogueMar.Spring.Rainy_Day_4": "I already closed all the windows, so no need to worry about our things getting wet.$1",
+                     "dialogueMar.Spring.Rainy_Night_1": "I made some soup. Want some?[218]$1#$e#I find warm food to be uncannily comforting on nights like this.$1",
+                     "dialogueMar.Spring.Rainy_Night_2": "I read a lot today. Tried reading on rain... And then tried looking for rain spirits. Didn't learn anything new, though.$2",
+                     "dialogueMar.Spring.Outdoor_0": "How great is this weather? Not too cold, not too hot, just perfect!$1",
+                     "dialogueMar.Spring.Outdoor_1": "So many beautiful blooms... Yet all I have eyes for is you.$4#$b#Too cheesy? Yeah, too cheesy...$7",
+                     "dialogueMar.Spring.Outdoor_2": "I can just picture you with a gorgeous wild flower crown on... Sutff of legends.$4",
+                     "dialogueMar.Spring.Outdoor_4": "I used to say the beach was my favorite place, but the farm comes in such a close second.$1#$b#Sorry, honey, it's wonderful, really, but I just love hanging by the docks.$1",
+                     "dialogueMar.Spring.Good_4": "@! Good morning! I'm torn between pink and purple nail polish.$2#$b#Which do you reckon will look best with this outfit?$1",
+                     "dialogueMar.Spring.spring_1": "Hey. Uhhh.... I'm a little... well...$2#$b#I'm hangover. Would you mind keeping your voice down?$2",
+                     "dialogueMar.Spring.spring_20": "It's Shane's birthday!$1#$e#No, I haven't given up on being friends with him, not yet.$1",
+                     "dialogueMar.Spring.spring_27": "It's Ems birthday today. I'll be headed to town later.$1#$e#You didn't get her a gift?$11#$b#Here's something you could give her![60 62 64 66 68 70 74 241 428 797 StardropTea 278 446 440]",
+                     "dialogueMar.Spring.spring_13": "Today is a good day to mingle, sweetheart. Everyone will be in high spirits!$#$b#I'm not going if you aren't... but I really rather we went!$1",
+                     "dialogueMar.Spring.spring_24": "It took me a while to find that old campy dress, but I found it.$1#$1#I hope there'll be a {{PrinceOrPrincess}} there to dance with me today...$7",
+                     "dialogueMar.Fall.patio_Quinn": "Heeey, @. What do you reckon you'll wear for Spirit's Eve?",
+                     "dialogueMar.Fall.spouseRoom_Quinn": "I need more books. These... I've read through most of them already.$1",
+                     "dialogueMar.Fall.funLeave_Quinn": "Have I ever told you not to go looking for me late at night?...#$b#Well, don't. I'll be back safe and sound, pinky promise!$1",
+                     "dialogueMar.Fall.funReturn_Quinn": "Pelican Town looks great this time of year.$1#$b#So spooky!$1",
+                     "dialogueMar.Fall.Rainy_Day_0": "Still rainy? Well, I suppose no autumn is truly autumn if it ain't pouring...$1",
+                     "dialogueMar.Fall.Rainy_Day_1": "I love days like these. Moody, humid, comfortable.$1",
+                     "dialogueMar.Fall.Rainy_Day_2": "Hey, I uh... I know you get whiplash, seeing me in such good humor after such a rough summer.$2#$b#It's just that summer, in specific, brings out a lot of bad memories.$3#$b#When it comes to fall, it's quite the opposite.$1",
+                     "dialogueMar.Fall.Rainy_Day_3": "Careful when stepping on piles of leaves today. Yoba knows what could be hiding beneath them...",
+                     "dialogueMar.Fall.Rainy_Day_4": "I think there's a family of frogs hiding underneath the floorboards. I don't know whether to think they're cute or terrifying.",
+                     "dialogueMar.Fall.Rainy_Night_1": "I made some soup. Want some?[236]$1#$e#I find warm food to be uncannily comforting on nights like this.$1",
+                     "dialogueMar.Fall.Rainy_Night_2": "I read a lot today. Tried reading about the rain... And then tried looking for rain spirits. Didn't learn anything new, though.$2",
+                     "dialogueMar.Fall.Outdoor_0": "Would you mind checking the cave for any monsters later? I swear I saw something creeping around last night, but I was too scared to check.$11",
+                     "dialogueMar.Fall.Outdoor_1": "I love the copper leaves this time of year. It looks like a dream, honestly.$1",
+                     "dialogueMar.Fall.Outdoor_2": "I wish I could paint well so that I could paint you. These moody oranges and browns make you look insanely pretty.$4",
+                     "dialogueMar.Fall.Outdoor_4": "%farm farm during autumn totally trumps the beach.$1#$e#Don't tell Willy I said that.$11",
+                     "dialogueMar.Fall.Good_4": "@! Good morning! I'm torn between red and black nail polish.$2#$b#Which do you reckon will look best with this outfit?$1",
+                     "dialogueMar.Fall.fall_1": "This.!!!!$1#$b#This is the best time of the year!!!$1#$b#Turning leaves, windy days, creepy and nostalgic nights... All leading up to the best time of year: Spirit's Eve!$1",
+                     "dialogueMar.Fall.fall_28": "I feel really low on days like this... Buuuh, I don't know.$2#$b#Maybe it's because the best time of year it's over...$2#$e#... But I don't think that's it... Not entirely, at least.$2",
+                     "dialogueMar.Fall.fall_27": "Don't forget to stop by the town square later tonight for the festival. It'll be fun!$1",
+                     "dialogueMar.Fall.fall_26": "Do you have a costume planned for tomorrow?#$e#Me? I'll probably go dressed as some iconic pop culture character!$1#$b#Can't decide which, though.#$e#Hey, I might have something for you to wear...$4#$b#Maybe this?[(P)5] [(S)1111] [(H)43] $1",
+                     "dialogueMar.Fall.fall_16": "Honey, regardless of whether you win or lose the competition today, know that your effort does not go unnoticed!$1#$b#%farm Farm looks prettier by the day and I've stood witness to your hard work.$1#$b#Let's celebrate your achievements together later, yeah?$4",
+                     "dialogueMar.Fall.fall_15": "Don't mind me if I fawn all over Marnie and Shane's animals.$1#$b#It's not my fault if they're adorable!$1",
+                     "dialogueMar.Summer.patio_Quinn": "Just enjoying the breeze... and the view.$1#$b#I put sunscreen on, don't worry!$1#$b#Have you? If you haven't, go on and put it on right now!$11",
+                     "dialogueMar.Summer.Rainy_Day_0": "Ah, the fresh smell of mud during the mornings... invigorating! I should go puddle-hunting when it's over.$1",
+                     "dialogueMar.Summer.Rainy_Day_1": "Have a productive day out there, sweetie. I'll just lay in bed until the day's over.",
+                     "dialogueMar.Summer.Rainy_Day_2": "I was on the cusp of hammering the kitchen counters down.$2#$b#I'm glad you showed up.$3#$e#I hate the rain...$3",
+                     "dialogueMar.Summer.Rainy_Day_3": "Yoba, I hope nothing molds. I'm terribly allergic. Terribly.$3",
+                     "dialogueMar.Summer.Rainy_Day_4": "You wouldn't consider staying in bed with me today, would you?$3#$b#It's... the rain. I hate it.$2",
+                     "dialogueMar.Summer.Rainy_Day_Quinn": "I'm sorry for being so blue during rainy days. It's just... I don't know.$2#$b#I like rain, but being stuck inside brings back some things I've been shoving down my whole life.$3",
+                     "dialogueMar.Summer.Rainy_Night_0": "I want to call my parents again, but I'm afraid they'll worry sick when I tell them I'm out of a job.$3",
+                     "dialogueMar.Summer.Rainy_Night_1": "Ice cream doesn't sound like such a bad meal right now.$2",
+                     "dialogueMar.Summer.Indoor_Day_0": "I've been climbing up the walls. I need to do something. I need to be useful.$3#$b#Ugh... Sorry. I'll try to relax.$2",
+                     "dialogueMar.Summer.Indoor_Day_1": "Hey, would you mind fetching me something sweet while you're in town today? Pretty please?",
+                     "dialogueMar.Summer.Indoor_Day_3": "Hmm, should I deep clean our oven or our fridge? I did both last night... but, ugh, I really need to do something useful, otherwise I'll short-circuit.$3",
+                     "dialogueMar.Summer.Indoor_Day_4": "Hey, what is that smell?...$2#$b#C'mere, I think you need yourself a warm and thorough shower, sweetheart.$1",
+                     "dialogueMar.Summer.Indoor_Night_2": "I've been eating too much bread... I miss other flavours. Next time you pick some vegetables, leave some for me in the fridge? Pretty please?#$e#Thanks!$1",
+                     "dialogueMar.Summer.Indoor_Night_4": "I tried growing some cactuses a while back, before I moved in. Killed them all.#$b#Now that I'm here... You should take a look for youserlf.$1#$b#I have a couple of them bad boys growing in my room.$1",
+                     "dialogueMar.Summer.Outdoor_0": "I just love the smell of stardew and mud.$1",
+                     "dialogueMar.Summer.Outdoor_1": "Not a bad view, you, all sweaty and glistening under the sun, working hard around the farm.$7#$e#Did I say that out loud...?$11#$b#Good.$4",
+                     "dialogueMar.Summer.Good_4": "@! Good morning! I'm torn between green and golden nail polish.$2#$b#Which do you reckon will look best with this outfit?$1",
+                     "dialogueMar.Summer.summer_1": "This is perfect weather for sunbathing.$1#$b#And maybe some swimming in the ocean... I'm terrified of the urchins, though.$2",
+                     "dialogueMar.Summer.summer_10": "Don't expect me to eat that awful communal soup tomorrow. We have absolutely no idea what people put in there.$2",
+                     "dialogueMar.Summer.summer_11": "I'm glad to spend the day at the beach!$1#$e#... But maybe not super excited about all that socializing.$1",
+                     "dialogueMar.Summer.summer_27": "The season is almost over... And tomorrow night we'll wave it goodbye.$1#$b#It's going to be so beautiful...$3",
+                     "dialogueMar.Summer.Good_8": "This is usually the time of year when I'm depressed and anxious.$2#$e#I had a bad friend, back in Zuzu City, that would conveniently remember I existed every summer.$2#$e#It wasn't...$3#$b#I don't know. I guess what I'm trying to say is I'm glad I'm out of that situation.$2",
+
+>> v1.2.7:
+
+       Changed:
+              "dialogueMarFall.Indoor_Day_2": "I wrote down this idea for a romance novel earlier, but it's so messy I don't even understand it myself.$2",
+
+       Removed keys:
+              "dialogueMarFall.OneKid_0"
+              "dialogueMarFall.Indoor_Night_3"
+              "dialogueMarFall.Indoor_Day_Quinn"
+              "dialogueMarSpring.Indoor_Day_4"
+              "dialogueMarFall.Indoor_Day_0"
+              "dialogueMarFall.Rainy_Night_3"
+              "dialogueMarFall.spouseRoom_Quinn"
+              "dialogueMarFall.Rainy_Day_Quinn"
+              "dialogueMarFall.TwoKids_2"
+
+>> v1.2.6:
+
+       Added a display name for Quinn's Room for compatibility with Schedule Viewer and Event Lookup.
+              "QuinnsRoomName": "Quinn's Bedroom"
+
+       Changed lines:
+              "JJHG.NEW.1": "And, well... Emily's never worked at Joja, but she's here for emotional support!$1"
+                     |---> The word 'here' was duplicated. Used to be:  "[...] she's here here for emotional support!$1"
+              "SVEdialogue.Sam.MeetUpDay": "Man, it's hard to believe these are the same people from Joja.#$b#I never thought they could be this much fun.$h"
+                     |---> Changed "[...] people I met at Joja " to "[...] people from Joja". Minor change, likely won't need fixin in other languages.
+              "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.LesbianLollipop": "Sweet and sapphic? Yep, that's just my type.$1#$b#Wait, you're not trying to tell me to 'pick a side' are you, @?$12#$b#I'm kidding, I know you'd never.$1#$b#Happy pride, @!$1"
+                     |---> Old version: "Sweet, colorful and sapphic? Yep, that's just my type.$1#$b#Wait, you're not trying to tell me to 'pick a side' are you, @?$12#$b#I'm kidding, I know you'd never.$1#$b#Happy pride, @!$1" Changed the meaning of the first line. Used to be very literally about food, but now it's got double meaning.
+              "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.BiBerryMuffin": "Hey, thanks for this. Truly.$1#$b#It's silly, but sometimes I feel like the odd one out. Far from it, though.$1",
+                     |---> Old version: "Hey, thanks for this. Truly.$1#$b#It's silly, but sometimes I feel like the odd one out. This reminds me I'm not.$1" Changed the last phrase to be a little less on the nose. Old dialogue felt a little too forced.
+              "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.GaylacticCookie": "A 'gaylactic' cookie, you say? Clever, clever name.$1#$b#This is great! Thank you kindly.$1",
+                     |---> Old version: "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.GaylacticCookie": "A 'gaylactic' cookie, you say? Clever, clever name.$1#$b#This is great! Thank you kindly, @.$1" Just removed the @ at the end.
+       
+       NEW CONFIGS
+              "config.section.Fixes.name": "Fixes",
+              "config.section.Fixes.description": "",
+       Config sections "Generic Fixes" and "SVE Fixes" no longer exist.
+
+>> v1.2.3:
+
+       An event that used to be an SVE-exclusive is no longer SVE-exclusive, so a config description has been changed to no longer mention SVE:
+              "config.Meet up day.description": "Quinn and some NPCs might meet up once a month to chat. Standard is every 7th of every month, but feel free to customize it if so needed. Some days are purposefully ommited as to avoid conflicts with characters' schedules and festivals. Note that characters that work will not work if you pick a weekday.",
+       
+       New lines:
+              "JJHG.NEW.1": "And, well... Emily's never worked at Joja, but she's here here for emotional support!$1",
+              "JJHG.NEW.2": "That's right!",
+              "dialogue.refusal_no_heartsB": "Do I even know you?$2",
+              "dialogue.AcceptBouquet": "Oh... are these for me?$4#$b#You mean it? Like, actually mean it?$4#$e#Yoba... alright. Yeah.$4#$b#*giggle* *giggle* You're really my {{BoyfriendGirlfriend}}...!$7",
+              "dialogue.SpouseStardrop": "@... can we talk for a second?#$b#You probably know by now that I've never really felt like I belonged anywhere. Even after I left Joja, Pelican Town felt so alien to me.$2#$b#But you... you showed me I'm exactly where I'm supposed to be.$4#$b#And I've spent most of my life chasing that feeling. So...$7#$b#I wanted you to have this.$7#$b#I love you, @.$4",
+              "dialogue.Spouse_MonstersInHouse": "Eek! What is that thing doing in our house?!$11#$b#Nope. Absolutely not. Get rid of it!!$11",
+              "dialogue.SpouseFarmhouseClutter": "Hm... You've rearranged the furniture, have you not?$12#$b#It's not that I don't like it... It's just...It's hard to get around the house, dear.$12#$b#Would you mind cleaning up some of this clutter?$12",
+              "quest.SpookyDecorations.Bones.Deliver": "Place 20 Bone Fragments in the box by Quinn's desk",
+
+
+>> v.1.2.0:
+       This one's a doozy, folks. Brace yourselves, it's a lot.
+
+       New schedule strings:
+                     "dialogue.beach_moping": ".....................$7#$b#%Quinn won't look you in the eyes."
+                     "dialogue.AcceptGift_LuckyPurpleShorts": "......................$12",
+                     "dialogue.eventSeen_841125": "I was surprised to see you featured in the film Shane submitted for the Joja contest.#$b#I... I might hate Joja, and I'm super against speculative work...$2#$b#... But, hey, I'm glad to see Shane having fun.#$e#Besides, you looked great! Shane knew to capture your best angle.$4",
+
+              > Platonic replacements for 10 hearts event dialogue: 
+                     "plato.lakeswim.12": "I'm so glad to have a friend like you, @.$1",
+                     "plato.lakeswim.13": "...@?", 
+                     "plato.lakeswim.14": "You've been quiet for a moment... Is everything alright?",
+                     "plato.lakeswim.farmer1": "I'm glad we're friends too.",
+                     "plato.lakeswim.farmer2": "I'm not your friend.",
+                     "plato.lakeswim.16": "Well, then...$2#$b#Why did you even come in the first place?$12",
+                     "plato.lakeswim.17": "Well, doesn't matter. You can leave now. I'm sorry for having misread the situation.",
+                     "plato.kisseywissey.0": "I'm glad to hear that.$1#$b#As silly as it sounds... I think I needed that confirmation.$10",
+                     "plato.kisseywissey.1": "Would you mind staying a little while longer...?#$b#I think I finnaly got used to the water.$1",
+
+              > Platonic replacements for 14 hearts event (now a y2, JojaMart or CC Complete, 10 hearts event):
+                     "plato.zuzucityvisit.9": "Me and my friend here needed some time to get ready.#$b#Oh, this is @, by the way. I hope you don't mind I brought them over...$1",
+                     "plato.zuzucityvisit.19": "Mum, @ is not my partner!$11#$b#Plus... what mess?#$b#The house is super tidy.",
+                     "plato.zuzucityvisit.41": "No, I'm up to date with the payments.",
+                     "plato.zuzucityvisit.43": "What's left from Joja. Plus some of the money you guys gave me.#$b#Thanks, by the way.",
+                     "plato.zuzucityvisit.48": "Mum, what are you getting at?$2",
+                     "plato.zuzucityvisit.68": "Yeah... I don't want to. I love Stardew Valley, I love Pelican Town.#$b#I love you... And I hope to visit frequently, but I won't move back to Zuzu City.$2",
+
+              > Dialogue for East Scarp Spirit's eve:
+                     "dialogue.ES.spiritseve.changing": "Where did I put that frog costume...?#$b#Wait, how did you get past the town barricades, @?$11",
+                     "dialogue.ES.spiritseve.coffee": "Alcohol is traditional, but coffee' is always my pregame of choice.$1#$b#Though, full disclosure... I'm not fully myself while under the influence.#$b#So, if you see me on the dancefloor at any point... No you didn't.$1",
+                     "dialogue.ES.spiritseve.costume": "Good thing I put aside two costumes for today... This one's getting sweaty already!$1",
+
+              >Dialogue related to SapphicSaph's Pride In The Valley:
+                     "PITV.dialogue.PrideFest.Read": "Penny suggested I read 'Not Just Broomates'. It's a sappy sapphic novel about two witches who fall in love and spend their lives shepherding wayward spirits together.$4",
+                     "PITV.dialogue.PrideFest.Emily": "Yoba, I'm reeling. I'm so happy I get to be part of such a strong community...$1",
+                     "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.EnbyEclair": "Hey, this looks yummy! Thanks a ton!$1",
+                     "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.LesbianLollipop": "Sweet, colorful and sapphic? Yep, that's my type of gift.$1#$b#Wait, you're not trying to tell me to 'pick a side' are you, @?$12#$b#I'm kidding, I know you'd never.$1#$b#Happy pride, @!$1",
+                     "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.ARomanticCookie": "Oh, wow, this certainly does smell nice. Thanks!$1",
+                     "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.GaylacticCookie": "A 'gaylactic' cookie, you say? Clever, clever name.$1#$b#This is great! Thank you kindly, @.$1",
+                     "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.PridePop": "Ey, happy pride to you, too!$1#$b#I reckon I should take you to the Zuzu City pride parade someday... What do you say?$1",
+                     "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.TransTart": "Trans rights all the way!$1",
+                     "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.BiBerryMuffin": "Hey, thanks for this. Truly.$1#$b#It's silly, but sometimes I feel like the odd one out. This reminds me I'm not.$1",
+                     "PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.AngelHairAlfredo": "This is out of this world. Thanks, @!$1",
+                     "PITV.dialogue.WelcomeToPridePITV": "Elliott and Leah are inseparable, aren't they?#$b#I wish dad was here so he could see them... When I came out, he was very supportive, but he never managed to grasp the meaning of 'bi panic'.#$b#And I'm pretty sure he'd get it if he saw those two walk into a room.$4",
+                     "PITV.dialogue.PrideSeasonStartPITV": "Today I got the sweetest letter from dad in the mail. He sent me his recipe for pride-themed pancakes alongside a beautiful dress in the colours of the bi flag.$1#$b#I might wear it sometime soon... Or save it for some special occasion!$1",
+                     "PITV.dialogue.PrideSeasonGiftPITV": "I'm sorry, I'm a bit sentimental today.$2#$b#Have you read today's issue of the Gem Sea for Pride? It's adorable!$9",
+                     "PITV.dialogue.HatMouseTheAllyPITV": "I don't have any fond memories from when I came out.$2#$b#Despite the rocky start, everything that followed was incredible. There are so many good, supportive people out there... I just had to find them!$1",
+
+              > New Spirit's Eve content:
+                     "quest.SpookyDecorations.title":"Spooky Decorations",
+                     "quest.SpookyDecorations.text":"I'd like to decorate my room for Spirit's Eve, but I don't have any materials. I know this is a huge ask, but would a kind soul mind lending me some? (I won't really return a thing, but I'll pay you handsomely!)",
+                     "quest.SpookyDecorations.Pumpkin.Collect": "Collect 12 fresh Pumpkins",
+                     "quest.SpookyDecorations.Pumpkin.Deliver": "Place the Pumpkins in the box by Quinn's desk",
+                     "quest.SpookyDecorations.Tibias.Deliver": "Place the Prehistoric Tibias in the box by Quinn's desk",
+                     "quest.SpookyDecorations.BatWings.Deliver": "Place the Bat Wings in the box by Quinn's desk",
+                     "quest.SpookyDecorations.Quartz.Deliver": "Place the Refined Quartz in the box by Quinn's desk",
+                     "quest.SpookyDecorations.Slime.Deliver": "Place the Slime in the box by Quinn's desk",
+                     "quest.SpookyDecorations.Fiber.Deliver": "Place the Fiber in the box by Quinn's desk",
+                     "quest.UnusualIngredients.title":"Unusual ingredients",
+                     "quest.UnusualIngredients.text":"I'm looking for some very specific ingredients for a personal project.",
+                     "quest.UnusualIngredients.SlimeEgg.Deliver": "Deliver a Green Slime Egg to Quinn's room.",
+                     "quest.UnusualIngredients.PrismaticShard.Deliver": "Deliver a Prismatic Shard to Quinn's room.",
+                     "quest.UnusualIngredients.Tigerseye.Deliver": "Deliver a Tigerseye to Quinn's room.",
+                     "quest.UnusualIngredients.VoidSalmon.Deliver": "Deliver 3 Void Salmon to Quinn's room.",
+                     "quest.UnusualIngredients.SweetGemBerry.Deliver": "Deliver a Sweet Gem Berry to Quinn's room.",
+                     "quest.UnusualIngredients.PurpleMushroom.Deliver": "Deliver 5 Purple Mushrooms to Quinn's room.",
+                     "quest.UnusualIngredients.MagmaCaps.Deliver": "Deliver 5 Magma Caps to Quinn's room.",
+                     "quest.UnusualIngredients.VoidEssence.Deliver": "Deliver 15 Void Essence to Quinn's room.",
+                     "quest.UnusualIngredients.SolarEssence.Deliver": "Deliver 15 Solar Essence to Quinn's room.",
+
+              > Strings for new room decorations after completing new special order:
+                     "jkkps.quinn.computer": "That's... Fanfic?#You rather not know if Quinn's the author or a reader.",
+                     "jkkps.quinn.spider": "A furry toy spider.",
+                     "jkkps.quinn.jackolantern": "These looked good from afar but, upon closer inspection, they seem to have been carved by someone very inexperienced.",
+                     "jkkps.quinn.mountedbooks": "Books in an assortment of languages you can't even begin to comprehend.#Does Quinn actually read any of these?",
+                     "jkkps.quinn.emptyfrasks": "A bunch of clean glass flasks.",
+                     "jkkps.quinn.fullfrasks": "A bunch of round flasks filled with a warm liquid.",
+                     "jkkps.quinn.frog": "A drawer has been exclusively dedicated to Quinn's Spirit's Eve costumes.",
+                     "jkkps.quinn.magicalbooks": "A pile of books brimming with arcane energy.",
+                     "jkkps.quinn.skull": "A skull. It looks like it belonged to some mammal.",
+                     "jkkps.quinn.purplebook": "'An introduction to wizardry and the everyday arcane'",
+                     "jkkps.quinn.secret": "I really debated sending you this letter. But, at the end of the day, I think I deserve to tell you how I really feel, even though you don't deserve any closure.^^I hate you, Tessa. Hate. I've never hated anyone like I hate you before.^You knew I was in love with you and you played me. You made me a fool, you humiliated me in front of your new fancy friends.^Made me feel dumb and small, like you always do.^I pray to Yoba you never do to someone else what you did to me. I pray no one ever treats you the way you treated me.^I'm sober. I'm doing good. I've moved on.^Stop trying to pull me back to that dark well you love to dwell on.^^Don't EVER contact me again.",
+                     "jkkps.quinn.cauldron": "How is it bubbling?",
+                     "jkkps.quinn.plant": "A weird plant. It reminds you of something...",
+                     "jkkps.quinn.list": "- 5 pumpkins^- Some bones? Maybe 20? enough for a cool skeleton^- 3 refined quartz^- A lot of fiber^- Slime for the cauldron ^^Maybe bat wings? Bats could look cool^^^!! Don't forget to forage for ingredients.",
+                     "jkkps.quinn.crystalball": "You catch a glimpse of a cliff... followed by a bright rainbow.#As quickly as it appeared, it is gone.",
+
+              > DSV compatibility tokens and replacement strings:
+                     "DSV.cc_Bus": "Emily won't stop talking about that friend of theirs who lives out in the Calico Desert.#$b#I've not met her yet, but if Ems is happy, I'm happy!$1",
+                     "DSV.dialogueMarGen.eventSeen_beachcomfort": "Emily hasn't said a thing about... uh... our... well, the things I told you back at the beach.$2#$b#So, thank you. Thank you for not telling them about it. They're lovely, but I'm not in a place to be comforted yet.$2",
+                     "DSV.Thu8": "I've grown really close to Emily. I'd say they're one of my best friends.$1#$b#That's so much better than what I had back in the city...$1",
+                     "DSV.Thu6": "Emily and I grew super close over such a short period of time... I'm so thankful for all that they do for me.$1",
+                     "DSV..Wed2": "If Emily ever asks where I am, please just tell them you haven't seem me.#$e#I'm not in the mood to talk to them right now...$2",
+                     "DSV.inter_Wed2_inlaw_Emily": "Hey, please tell Ems to come visit when you can! I've finally made some cranberry sauce and I want their opinion on it.#$b#It's my father's recipe. Perhaps I'll share it with you sometime...!$1 ",
+                     "DSV.married_Emily": "I'm so glad you and Ems are married now.$1#$b#You should have seen how giddy they got talking about you. I was so rooting for you guys!$1",
+                     "DSV.eventSeen_beachcomfort": "Emily hasn't said a thing about... Uh... Our... well, the things I told you back at the beach.$2#$b#So, thank you. Thank you for not telling them about it. They'res lovely, but I'm not in a place to be comforted yet.$2",
+                     "DSV.fall_15": "Emily sews all their own clothes.#$b#Wonder if they'd teach me a thing or two?",
+                     "DSV.divorced_Emily": "Emily has too kind of a heart... They refuse to say a single bad word about you.$1#$b#But know that, if I ever find out you intentionally hurt them, you're done for.$5",
+                     "DSV.emily_room": "Oh, @, you're up early!$1#$b#Feeling a bit lonesome up at %farm Farm, were you?#$b#I don't mind you sticking about, long as Emily's alright with it. It is *their* room, after all...$1",
+                     "DSV.emily_works_here": "I'm not particularly fond of drinking, really, but Emily's here most nights, and I just love being around them.",
+                     "DSV.summer_Sun_inlaw_Quinn": "Emily won't shut up about the dirty laundry.$3#$b#Can't they just do it themselves?$5",
+                     "DSV.mail.thanksforleaving.text": "@, ^^I heard you stopped by yesterday. I'm sorry I couldn't be there to greet you.^I believe you deserve an explanation.^I'm not sure you remember that night at the beach... You probably don't. Well, I opened up about not knowing if I'd be able to keep up with the increasing workload. Turns out, I couldn't, really. But I tried. Hard. Really hard. As you may already have guessed, it didn't work.^ Dumb decisions were made. But this episode gave me the opportunity to fix things.^I apologised to Emily. For my behaviour and all that. They were mostly worried... not so much upset. Still, I did them wrong, and I look forward to rebuilding my relationship with them.^Also, I've had a good long chat with Dr. Harvey. He got me on meds.^^Well, I don't even know if you care... just wanted to let you know. Keep you updated and all that...^^Sorry for everything. And anything.^^- Quinn",
+                     "DSV.NB.Emily.ny2unmet.1": "Quite the gathering, ey?$1#$b#Emily organised it. I figure they were the one who invited you.$1#$b#Not everyone they invited came... But quite a bit of them did!$1#$b#Granted, they kind of invited the whole town... We were bound to have some no-call-no-shows.$1",
+                     "DSV.NB.Emily.zuzucityvisit.40": "And how's Emily doing? Do we owe them anything?",
+                     "DSV.NB.Emily.next.22": "I'll head over to the clinic later.#$b#I need to clear things up with Emily first, though... but, buuuuuh, I sure don't feel like it.$2#$b#But enough avoiding hard thoughts and feelings. I can't do that anymore.#$b#I'll talk to them. I'll apologise.",
+                     "DSV.NB.Emily.beachcomfort.15": "Worst part is, I took it all out on Emily.$9#$b#It's just... They don't understand what they're asking me to do.$9#$b#I need to get my old life back... I need it so much.$9#$b#I was respected. I had a job, a family.$9#$b#Now, my only colleague hates me.$8#$b#I could just disappear for all he cares.$8",
+                     "DSV.NB.Abigail.ny2strangers.3": "Over here, we've got Sam, who's very kindly offered to play the guitar.$1#$b#Abigail decided they'd join with the flute, too!$1#$b#Sebastian was too tired to play tonight, but he installed the speakers.$1",
+                     "DSV.NB.Sebastian.ny2strangers.3": "Over here, we've got Sam, who's very kindly offered to play the guitar.$1#$b#Abigail decided she'd join with the flute, too!$1#$b#Sebastian was too tired to play tonight, but they installed the speakers.$1",
+                     "DSV.NB.AbbyAndSeb.ny2strangers.3": "Over here, we've got Sam, who's very kindly offered to play the guitar.$1#$b#Abigail decided they'd join with the flute, too!$1#$b#Sebastian was too tired to play tonight, but they installed the speakers.$1",
+   
+       Changed dialogue:
+              
+              "SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Money_Bag": "Pfft. I don't need your 'charity', @.$12"
+                     |---> Only changed the portrait!
+              "mail.letter.text": "@,^^Meet me at the Mountain Lake at night.^^8 p.m.^Don't leave me hanging. :) ^^- Quinn"
+                     |--> OLD ONE: "@,^^Meet me at the Mountain Lake at night.^^8 p.m. or later. Don't leave me hanging.^:) ^^- Quinn"
+              "DesertFestival_Quinn_marriage": "Emily really does have a knack for fashion.$1"
+                     |---> OLD ONE: "Shane will warm up to me... Eventually.$2"
+       
+       Changed a bunch of questions' strings. Here they are:
+              SUN 10 
+                     (always first line to appear)"dialogue.Sun10Question01": "Good morning, @.$1"
+                     (first time only; question that appears above possible answers)"dialogue.Sun10Question02": "I've been meaning to take on a new hobby. What do you think I should try?"
+
+              MON 6
+                     (always first line to appear)"dialogue.Mon6Question01": "Nice to see you today, @!$1"
+                     (first time only; question that appears above possible answers)"dialogue.Mon6Question02": "Hey, you seem like a reasonable person. Waffles or pancakes?"
+                     (every time this dialogue key plays after the first, it'll play "dialogue.Mon6Question01" followed by this one if the player chose Waffles) "dialogue.Mon6MainAwnser": "Y'know, I was reminded of you earlier, when I was making some pancakes. I don't think Pierre sells frozen waffles... But hey, pancakes were always *my* favorite anyway.$1"
+
+              THU 2 (used to be Tue2, that's why the keys reference Tuesday, but it actually played on Thursdays)
+                     (always first line to appear)"dialogue.Tue2Question01": "@! I was just thinking about you!"
+                     (first time only; question that appears above possible answers)"dialogue.Tue2Question02": "If you don't mind me asking, why'd you leave Joja?"
+                     (every time this dialogue key plays after the first, it'll play "dialogue.Mon6Question01" followed by this one if the player 
+                     regrets leaving Joja)"dialogue.Tue2Mainanswer": "I remember you said you regretted leaving Joja. I was wondering if... After all this time, does that still hold true?$2"
+                     (if player chose any other option, this will be played instead)"dialogue.Tue2Fallback": "The fact you're still following through with your dream of farm life... Honestly, it's inspiring.$1#$b#I keep looking at you and thinking 'hey, that could be me'... maybe, someday, it will.$1#$b#I just need to figure out what my dream is.$1"
+
+       NEW CONFIGS
+              "config.Player_Relationship.name": "Farmer's relationship with Quinn",
+              "config.Player_Relationship.values.Romantic": "Romantic",
+              "config.Player_Relationship.values.Platonic": "Platonic",
+              "config.Disable_DumpedEvent.name": "Disable break-up events",
+              "config.Disable_DumpedEvent.description": "If false, NPCs will break up with you if you're dating multiple people. Only affects Quinn and the new break-up events added by this mod.",
+
+              
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+OLDER VERSIONS (before v1.2.x)
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+>> v.1.1.8:
+       Quinn now reacts to some important character events.
+              "dialogue.eventSeen_3910975": "I, uh... I heard about what happened to Shane.$2#$b#I didn't hear it from him, though. Heard it from Sam, who'd heard it from Vince, who'd heard it from Jas, and...$2#$b#Do you reckon I should talk to him about it? Tell him I'm here if he ever needs anything and all that?$2"
+              "dialogue.eventSeen_463391": "Can you believe Emily actually adopted a wild parrot? You wouldn't believe how loud that darn thing is!$11"
+       Quinn now has new dialogue for Green Rain weather.
+              "dialogue.GreenRain_2": "I wonder how the rain tastes. I wonder if it attracts any new sorts of fish...?",
+              "dialogue.GreenRain": "Is that really the greenwash consumers are so terrified of? And here I thought it was an extra coat of green paint or something."
+              "dialogue.GreenRainFinished": "Hm, you look okay... No new limbs, no strange mutations... Nothing out of the ordinary.#$b#Well, besides your usual quirks, that is.$1#$b#Still, the trees look greener, the flowers brighter, and there's this lovely mossy smell still hanging in the air.$1#$e#And you do look kind of cuter today than you did before the rain, ey?$4#$b# Do you reckon it was the rainwater? Maybe I should've kept a jar.$1",
+              
+>> v.1.1.7:
+       Mon4 dialogue wasn't translatable, now it is.
+              "dialogue.Mon4": "Hi, @. How are you doing today?#$e#That's nice to hear!$1",
+
+>> v.1.1.6:
+       Quinn's display name is now translatable.
+              "Quinn.DisplayName": "Quinn",
+
+       Configs are now translatable!
+              "config.Seasonal cuter Quinn.name": "Seasonal outfits for Quinn",
+              "config.Seasonal cuter Quinn.description": "Seasonal outfits made to go match Poltergeister's 'Seasonal Outfits - Slightly Cuter Aesthetic'.",
+              "config.Has nose.name": "Has nose",
+              "config.Has nose.description": "Nose overlay. 'True' will look closer to vanilla, 'False' will fit alongside Poltergeister's 'Seasonal Outfits - Slightly Cuter Aesthetic'.",
+              "config.New mail paper.name": "New mail paper",
+              "config.New mail paper.description": "Allows Quinn's mail to be sent in custom mail paper. Set to false if there are bugs related to mail form other mods.",
+              "config.Include Quinn in CT.name": "Include Quinn in CT",
+              "config.Include Quinn in CT.description": "Includes Quinn in Emily's 8 Hearts event. This config exists for better compatibility with mods that may change Emily's cutscenes. Extremely miniscule narrative impact.",
+              "config.Meet up day.name": "Meet up day",
+              "config.Meet up day.description": "If you have SVE installed, Quinn and some NPCs might meet up once a month to chat. Standard is every 7th of every month, but feel free to customize it if so needed. Some days are purposefully ommited as to avoid conflicts with characters' schedules and festivals. Note that characters that work will not work if you pick a weekday.",
+              "config.Outfit.name": "Outfit",
+              "config.Outfit.values.Cosplay": "Cosplay",
+              "config.Outfit.values.Fair": "Fair",
+              "config.Outfit.values.Fall": "Fall",
+              "config.Outfit.values.Jellies": "Jellies",
+              "config.Outfit.values.Joja": "Joja",
+              "config.Outfit.values.LakeSwim": "LakeSwim",
+              "config.Outfit.values.Luau": "Luau",
+              "config.Outfit.values.Spring": "Spring",
+              "config.Outfit.values.Summer": "Summer",
+              "config.Outfit.values.Winter": "Winter",
+              "config.Background Color.name": "Background Color",
+              "config.Background Color.values.Ancient": "Ancient",
+              "config.Background Color.values.Brick": "Brick",
+              "config.Background Color.values.Cheesy": "Cheesy",
+              "config.Background Color.values.Cyan": "Cyan",
+              "config.Background Color.values.Dino": "Dino",
+              "config.Background Color.values.Midnight": "Midnight",
+              "config.Background Color.values.Parchment": "Parchment",
+              "config.Background Color.values.PinkCake": "PinkCake",
+              "config.Background Color.values.Plum": "Plum",
+              "config.Background Color.values.Quartz": "Quartz",
+              "config.Background Color.values.Rhubarb": "Rhubarb",
+              "config.Background Color.values.SeaFoam": "SeaFoam",
+              "config.Background Color.values.Shadow": "Shadow",
+              "config.Background Color.values.Shimmer": "Shimmer",
+              "config.Background Color.values.Strawberry": "Strawberry",
+              "config.Background Color.values.Sugar": "Sugar",
+              "config.Background Color.values.Urchin": "Urchin",
+              "config.Background Color.values.Wild": "Wild",
+              "config.Frame Color.name": "Frame Color",
+              "config.Frame Color.values.Baby_Pink": "Baby_Pink",
+              "config.Frame Color.values.Baby_Purple": "Baby_Purple",
+              "config.Frame Color.values.Bamboo": "Bamboo",
+              "config.Frame Color.values.Birch": "Birch",
+              "config.Frame Color.values.Black": "Black",
+              "config.Frame Color.values.Cold_Metal": "Cold_Metal",
+              "config.Frame Color.values.Dark_Metal": "Dark_Metal",
+              "config.Frame Color.values.Green": "Green",
+              "config.Frame Color.values.Mahogany": "Mahogany",
+              "config.Frame Color.values.Oak": "Oak",
+              "config.Frame Color.values.Vanilla": "Vanilla",
+              "config.Frame Color.values.Walnut": "Walnut",
+              "config.Frame Color.values.Wizard_Furniture": "Wizard_Furniture",
+              "config.Is Special Portrait.name": "Is Special Portrait",
+              "config.What Special Portrait.name": "What Special Portrait",
+              "config.What Special Portrait.values.Dancer": "Dancer",
+              "config.What Special Portrait.values.NightSky": "NightSky",
+              "config.What Special Portrait.values.MagicSailor": "MagicSailor",
+              "config.What Special Portrait.values.Cupid": "Cupid",
+              "config.Emily Polyamoury Events.name": "Emily Polyamoury Events",
+              "config.Emily Polyamoury Events.description": "Adds new events if player's in a polycule with both Emily and Quinn. ONE event currently available.",
+              "config.Shane Polyamoury Events.name": "Shane Polyamoury Events",
+              "config.Shane Polyamoury Events.description": "Adds new events if player's in a polycule with both Shane and Quinn. ONE event currently available.",
+              "config.section.Poltergeister's Seasonal Cute Characters Compatibility.name": "Poltergeister's Seasonal Cute Characters Compatibility",
+              "config.section.Poltergeister's Seasonal Cute Characters Compatibility.description": "",
+              "config.section.Generic Fixes.name": "Generic Fixes",
+              "config.section.Generic Fixes.description": "",
+              "config.section.SVE Fixes.name": "SVE Fixes",
+              "config.section.SVE Fixes.description": "",
+              "config.section.Portrait Configs.name": "Portrait Configs",
+              "config.section.Portrait Configs.description": "",
+              "config.section.Extra Content.name": "Extra Content",
+              "config.section.Extra Content.description": "",
+
+       Some lines of dialogue for SVE compatibility weren't in the translation files.
+              "SVEdialogue.Claire.MeetUpDay.1": "A couple of people are meeting tonight for... 'Joja Rehab', as Quinn calls it.#$b#It's fun.$h",
+              "SVEdialogue.Claire.MeetUpDay.2": "A couple of people are meeting tonight for... An 'Employee Hang-out', as Quinn calls it.#$b#It's fun.$h",
+              "SVEdialogue.Shane.MeetUpDay.1": "If it were up to me, I would never host these 'hang-outs'. But aunt Marnie insisted I brought my 'friends' over, so here we are...",
+              "SVEdialogue.Shane.MeetUpDay.2": "These guys are huge nerds...$1",
+              "SVEdialogue.Shane.MeetUpDay.3": "The Spa is a long way up, but I'd say it's totally worth it. If not for the pool, at least for the peace and quiet.",
+              "SVEdialogue.Shane.MeetUpDay.4": "If it were up to me, I would never host these 'rehabs'. But aunt Marnie insisted I brought my 'friends' over, so here we are...",
+              "SVEdialogue.Sam.MeetUpDay": "Man, it's hard to believe these are the same people I met at Joja.#$b#I never thought they could be this much fun.$h",
+
+>> v.1.1.5:
+       No changes made.
+
+>> v.1.1.4:
+
+       NEW I18N KEYS:
+              - "schedule.dialogue.saloon.01": "Hey, @. Nice to see you here tonight. Have you come to drink or dine?#$b#Oof, by the looks of you, probably drink.",
+                     > Used in data/ScheduleDialogue.json. Generic dialogue for some Saloon visits.
+              - "dialogueMar.Good_8": "Good morning, babe. Sleep alright?$1"
+                     > Married dialogue for good relationship
+
+       CHANGES TO EMILY'S CLOTHING THERAPY EVENT IN v1.1.4:
+              - Prior to v1.1.4, the event script had a mistyped translation key(my bad). The event called for '{{i18n:2123243.23}}' when it should've called for '{{i18n:2123243.23Emily}}'. Unless you've noticed this bug before and changed the translation key yourself, you don't have to change anything in your translation file.
+
+       REMOVED DIALOGUE KEYS
+       A bunch of dialogue keys had duplicate values. Here are the ones removed and the one thay stayed.
+              Keys that are no longer used:
+                     x All Spring, Summer and Fall variants of the following keys:
+                            "dialogueMar.Bad_9", "dialogueMar.Rainy_Night_Quinn", "dialogueMar.Bad_8", "dialogueMar.Bad_7", "dialogueMar.Bad_6", "dialogueMar.Bad_5", "dialogueMar.Bad_4", "dialogueMar.Bad_0", "dialogueMar.Bad_1", "dialogueMar.Bad_2", "dialogueMar.Bad_3", "dialogueMar.Neutral_0", "dialogueMar.Neutral_1", "dialogueMar.Neutral_2", "dialogueMar.Neutral_3", "dialogueMar.Neutral_4", "dialogueMar.Neutral_5", "dialogueMar.Neutral_6", "dialogueMar.Neutral_7", "dialogueMar.Neutral_8", "dialogueMar.Neutral_9", "dialogueMar.Good_3", "dialogueMar.TwoKids_4", "dialogueMar.Outdoor_3", "dialogueMar.Indoor_Night_Quinn", "dialogueMarWinter.Indoor_Night_0", "dialogueMar.Good_8", "dialogueMar.Good_5", "dialogueMar.Good_7", "dialogueMar.Good_6"
+                            !!! They were all replaced with their winter specific variants. In v1.1.5, those'll be replaced by season-unespecific keys. For instance, "dialogueMarWinter.Bad_9" will be replaced by "dialogueMar.Bad_9"(removed 'Winter')
+                     x

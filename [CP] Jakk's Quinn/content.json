@@ -1,0 +1,1575 @@
+{
+  "Format": "2.1.0",
+  "ConfigSchema": {
+    "ShorterEvents": {
+      "AllowValues": "True, False",
+      "Default": "True",
+      "Description": "Whether to keep the legacy events, which used to be MINUTES long, or the new, revamped versions, that are much shorter. Affects 4, 6, 8, 10 and 14 hearts events.",
+      "Section": "Events",
+      "AllowBlank": false
+    },
+    "QuinnRelationship": {
+      "AllowValues": "Platonic, Romantic",
+      "Default": "Romantic",
+      "Description": "Romance Quinn, or get the full story without romancing Quinn!",
+      "Section": "Events",
+      "AllowBlank": false
+    },
+    "Outfit": {
+      "AllowValues": "Cosplay, Fair, Fall, Jellies, Joja, LakeSwim, Luau, Spring, Summer, Winter",
+      "Default": "Spring",
+      "Section": "Portrait Configs",
+      "AllowBlank": false
+    },
+    "Background Color": {
+      "AllowValues": "Ancient, Brick, Cheesy, Cyan, Dino, Midnight, Parchment, PinkCake, Plum, Quartz, Rhubarb, SeaFoam, Shadow, Shimmer, Strawberry, Sugar, Urchin, Wild",
+      "Default": "Cyan",
+      "Section": "Portrait Configs",
+      "AllowBlank": false
+    },
+    "Frame Color": {
+      "AllowValues": "Baby_Pink, Baby_Purple, Bamboo, Birch, Black, Cold_Metal, Dark_Metal, Green, Mahogany, Oak, Vanilla, Walnut, Wizard_Furniture",
+      "Default": "Vanilla",
+      "Section": "Portrait Configs",
+      "AllowBlank": false
+    },
+    "Is Special Portrait": {
+      "AllowValues": "False, True",
+      "Default": "False",
+      "Section": "Portrait Configs",
+      "AllowBlank": false
+    },
+    "What Special Portrait": {
+      "AllowValues": "Dancer, NightSky, MagicSailor, Cupid",
+      "Default": "NightSky",
+      "Section": "Portrait Configs",
+      "AllowBlank": false
+    },
+    "QuinnsGender": {
+      "AllowValues": "Female, Male", //nonbinary will be added later
+      "Default": "Female",
+      "Description": "How Quinn and other characters refer to her. Only works if you also have '[CP] Jakk's Masculine Quinn' installed as well. Otherwise, Quinn will ALWAYS be female.",
+      "Section": "Genderbent Quinn Compat",
+      "AllowBlank": false
+    },
+    "New mail paper": {
+      "AllowValues": "True, False",
+      "Default": "False",
+      "Description": "Allows Quinn's mail to be sent in custom mail paper. Set to false if there are bugs related to mail form other mods.",
+      "Section": "Fixes",
+      "AllowBlank": false
+    },
+    "Include Quinn in CT": {
+      "AllowValues": "True, False",
+      "Default": "False",
+      "Description": "Includes Quinn in Emily's 8 Hearts event. This config exists for better compatibility with mods that may change Emily's cutscenes. Extremely miniscule narrative impact.",
+      "Section": "Fixes",
+      "AllowBlank": false
+    },
+    "Meet up day": {
+      "AllowValues": "4, 5, 6, 7, 9, 10, 14, 18, 19, 26",
+      "Default": "7",
+      "Description": "Quinn and some NPCs might meet up once a month to chat. Standard is every 7th of every month, but feel free to customize it if so needed. Some days are purposefully ommited as to avoid conflicts with characters' schedules and festivals. Note that characters that work will not work if you pick a weekday.",
+      "Section": "Fixes",
+      "AllowBlank": false
+    },
+    "Seasonal cuter Quinn": {
+      "AllowValues": "True, False",
+      "Default": "False",
+      "Description": "Seasonal Outfits made to go match Poltergeister's 'Seasonal Outfits - Slightly Cuter Aesthetic'.",
+      "Section": "Poltergeister's Seasonal Cute Characters Compatibility",
+      "AllowBlank": false
+    },
+    "Has nose": {
+      "AllowValues": "True, False",
+      "Default": "True",
+      "Description": "Nose overlay. 'True' will look closer to vanilla, 'False' will fit alongside Poltergeister's 'Seasonal Outfits - Slightly Cuter Aesthetic'.",
+      "Section": "Poltergeister's Seasonal Cute Characters Compatibility",
+      "AllowBlank": false
+    },
+    "Emily Polyamoury Events": {
+      "AllowValues": "True, False",
+      "Default": "False",
+      "Section": "Extra Content",
+      "AllowBlank": false,
+      "Description": "Adds new events if player's in a polycule with both Emily and Quinn. ONE event currently available."
+    },
+    "Shane Polyamoury Events": {
+      "AllowValues": "True, False",
+      "Default": "False",
+      "Section": "Extra Content",
+      "AllowBlank": false,
+      "Description": "Adds new events if player's in a polycule with both Shane and Quinn. ONE event currently available."
+    }
+  },
+  "CustomLocations": [
+    {
+      "Name": "jkkps.quinn_QuinnView",
+      "FromMapFile": "assets/Maps/QuinnView.tmx"
+    },
+    {
+      "Name": "Custom_QuinnParentsHouse",
+      "FromMapFile": "assets/Maps/Custom_QuinnParentsHouse.tmx"
+    },
+    {
+      "Name": "Custom_QuinnNewYear",
+      "FromMapFile": "assets/Maps/Beach_NYE2.tmx"
+    },
+    {
+      "Name": "jkkps.quinn_QuinnRoom",
+      "FromMapFile": "assets/Maps/jkkps.quinn_QuinnRoom.tmx"
+    },
+    {
+      "Name": "jkkps.quinn_QuinnLimbo",
+      "FromMapFile": "assets/Maps/jkkps.quinn_QuinnLimbo.tmx"
+    },
+    {
+      "Name": "jkkps.quinn_JojaNightmare",
+      "FromMapFile": "assets/Maps/jkkps.quinn_JojaNightmare.tmx"
+    }
+  ],
+  "DynamicTokens": [
+    //Platonic or Romantic
+    {
+      "Name": "CanBeRomanced",
+      "Value": true,
+      "When": {
+        "QuinnRelationship": "Romantic"
+      }
+    },
+    {
+      "Name": "CanBeRomanced",
+      "Value": false,
+      "When": {
+        "QuinnRelationship": "Platonic"
+      }
+    },
+    //Platonic or Romantic
+    {
+      "Name": "PortraitHeartsRequirement",
+      "Value": "14",
+      "When": {
+        "QuinnRelationship": "Romantic"
+      }
+    },
+    {
+      "Name": "PortraitHeartsRequirement",
+      "Value": "10",
+      "When": {
+        "QuinnRelationship": "Platonic"
+      }
+    },
+    //Genderbent stuff
+    {
+      "Name":"QuinnGender",
+      "Value": "Female",
+      "When": {
+        "HasMod: |contains=jkkps.QuinnGenderbent": false
+      }
+    },
+    {
+      "Name":"QuinnGender",
+      "Value": "Female",
+      "When": {
+        "QuinnsGender": "Female",
+        "HasMod: |contains=jkkps.QuinnGenderbent": true
+      }
+    },
+    {
+      "Name":"QuinnGender",
+      "Value": "Male",
+      "When": {
+        "QuinnsGender": "Male",
+        "HasMod: |contains=jkkps.QuinnGenderbent": true
+      }
+    },
+    //Silly little thing just to make it easier to code the portrait
+    {
+      "Name": "Spouse_Portrait_Outfit",
+      "Value": "{{Outfit}}"
+    },
+    {
+      "Name": "Spouse_Portrait_Background_Color",
+      "Value": "{{Background Color}}"
+    },
+    {
+      "Name": "Spouse_Portrait_Frame_Color",
+      "Value": "{{Frame Color}}"
+    },
+    {
+      "Name": "Meet_up.Day",
+      "Value": "{{Meet up day}}"
+    },
+    {
+      "Name": "What_Special_Portrait",
+      "Value": "{{What Special Portrait}}"
+    },
+    //Again, just to make life a little easier
+    {
+      "Name": "SeasonalCuterQuinn",
+      "Value": "{{Seasonal cuter Quinn}}"
+    },
+    //What Quinn says about the valey in her 14 hearts.
+    {
+      "Name": "SeasonalValleyLife1",
+      "Value": "{{i18n:SeasonalValleyLife1.fall}}",
+      "When": {
+        "Season": "Fall"
+      }
+    },
+    {
+      "Name": "SeasonalValleyLife1",
+      "Value": "{{i18n:SeasonalValleyLife1.winter}}",
+      "When": {
+        "Season": "Winter"
+      }
+    },
+    {
+      "Name": "SeasonalValleyLife1",
+      "Value": "{{i18n:SeasonalValleyLife1.spring}}",
+      "When": {
+        "Season": "Spring"
+      }
+    },
+    {
+      "Name": "SeasonalValleyLife1",
+      "Value": "{{i18n:SeasonalValleyLife1.summer}}",
+      "When": {
+        "Season": "Summer"
+      }
+    },
+    //This was used by the old code for seasonal clothes. Currently unused, but kept because maybe I'll need them later.
+    {
+      "Name": "WinterClothesSpecifics",
+      "Value": "Joja",
+      "When": {
+        "LocationName": "JojaMart"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Name": "WinterClothesSpecifics",
+      "Value": "Home",
+      "When": {
+        "LocationName": "HaleyHouse"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Name": "WinterClothesSpecifics",
+      "Value": "Outdoor",
+      "When": {
+        "Query: '{{LocationName}}' IN ( 'Saloon', 'SeedShop', 'FishShop', 'ArchaeologyHouse', 'WizardHouse', 'CommunityCenter' )": false
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Name": "WinterClothesSpecifics",
+      "Value": "Indoor",
+      "When": {
+        "Query: '{{LocationName}}' IN ( 'Saloon', 'SeedShop', 'FishShop', 'ArchaeologyHouse', 'WizardHouse', 'CommunityCenter', 'IslandSouth', 'BathHouse_Pool' )": true
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "Name": "WinterClothesSpecifics",
+      "Value": "Swimsuit",
+      "When": {
+        "Query: '{{LocationName}}' IN ( 'IslandSouth', 'BathHouse_Pool' )": true
+      },
+      "Update": "OnLocationChange"
+    },
+    //Some code for the NYE events that is repetitive and it didn't make sense to keep it repeated over and over.
+    //Also, this way it's a LOT easier to change the events if I need to, rather than manually going and editing one by one.
+    {
+      "Name": "NYE_SETUP",
+      "Value": "sweet/-1000 -1000/Emily 42 16 2 Quinn 41 13 2 farmer 40 6 2 Shane 46 20 2 Haley 37 12 2 Clint 48 18 3 Willy 51 23 2 Sebastian 33 17 1 Sam 46 14 2 Abigail 47 14 2 Elliott 42 21 2 Leah 43 21 2/skippable/changeLocation Custom_QuinnNewYear/addLantern 735 48 14 1/addLantern 735 44 21 1/addLantern 735 24 35 1/addLantern 735 40 34 1/addLantern 735 31 34 1/addLantern 735 38 36 1/addLantern 9999 31 13 1/addLantern 9999 32 13 1/addLantern 9999 48 20 1/addLantern 9999 49 20 1/addLantern 9999 39 15 1/addLantern 9999 39 16 1/addLantern 9999 40 15 1/addLantern 9999 40 16 1/addLantern 9999 41 15 1/addLantern 9999 41 16 1/addLantern 9999 42 15 1/addLantern 9999 42 16 1/addLantern 9999 45 18 1/addLantern 9999 40 20 1/addLantern 9999 35 17 1/addLantern 735 39 12 1/animate Emily false true 250 16 17 16 17 20 21 20 21 18 19 18 19 22 23 22 23/animate Sebastian false true 100 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 17 18 19 20 21 21 21 21 21 21 21 21 21 22 23 16 16 16 16 16 16 16 16 16 16 16/animate Sam false true 400 52 53/animate Abigail false true 400 16 16 17 17 18 18 19 19/animate Shane false true 120 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 22 23 24 24 24 24 24 24 24 23 22 21/animate Willy false true 500 28 29 30 31/move farmer 0 7 2 true/globalFadeToClear 0.01 true/viewport 40 16/pause 2000"
+    },
+    {
+      "Name": "NYE_01",
+      "Value": "pause 200/faceDirection Quinn 2/faceDirection farmer 2/pause 2000/faceDirection Quinn 3"
+    },
+    {
+      "Name": "NYE_02_GiveBeer",
+      "Value": "pause 500/showFrame Quinn 25/pause 500/playSound coin"
+    },
+    {
+      "Name": "NYE_03",
+      "Value": "showFrame 90/stopAnimation Quinn/showFrame Quinn 20/pause 500/showFrame Quinn 20"
+    },
+    {
+      "Name": "NYE_04_Countdown",
+      "Value": "pause 500/shake Quinn 200/showFrame Quinn 20/speak Quinn \"{{i18n:NYE.countdown.0}}\"/pause 500/textAboveHead Quinn \"{{i18n:NYE.countdown.1}}\"/pause 1000/textAboveHead Quinn \"{{i18n:NYE.countdown.2}}\"/pause 1000/textAboveHead Quinn \"{{i18n:NYE.countdown.3}}\"/pause 1000/animate Quinn false true 100 21 22 23 24 24 24 24 23 23 23 24 24 24 23 23 23 24 24 24 23 22 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20/farmerEat 351/pause 1000/changePortrait Quinn DrunkY2"
+    },
+    {
+      "Name": "NYE_05",
+      "Value": "pause 500/faceDirection farmer 1/stopAnimation Quinn 0/"
+    },
+    {
+      "Name": "NYE_06_DocksBase",
+      "Value": "globalFade/viewport -1000 1000/pause 1000/stopMusic/pause 1000/playSound batScreech/pause 500/speak Quinn \"{{i18n:NYE.extra.0}}\"/warp Quinn 31 36/faceDirection Quinn 2/warp Haley 34 36/faceDirection Haley 2/halt/warp Emily 35 36/faceDirection Emily 2/warp Shane 32 34/faceDirection Shane 2/warp Willy 30 34/faceDirection Willy 2/warp Sebastian 41 35/faceDirection Sebastian 2/warp Abigail 42 35/faceDirection Abigail 2/warp Sam 43 35/faceDirection Sam 2/warp Clint 28 36/faceDirection Clint 2/warp Elliott 25 36/faceDirection Elliott 2/faceDirection Leah 2/warp Leah 26 36/playMusic ocean/warp farmer 25 35/pause 500/globalFadeToClear 0.01 true/viewport 33 36/speed farmer 1/move farmer 7 0 2/move farmer 0 1 2/pause 2000/textAboveHead Quinn \"{{i18n:NYE.extra.1}}\"/pause 2000/textAboveHead Quinn \"{{i18n:NYE.extra.2}}\"/pause 1000/textAboveHead Quinn \"{{i18n:NYE.extra.3}}\"/pause 1000/textAboveHead Quinn \"{{i18n:NYE.extra.4}}\"/pause 1000/textAboveHead Quinn \"{{i18n:NYE.extra.5}}\"/pause 1000/textAboveHead Quinn \"{{i18n:NYE.extra.6}}\"/pause 1500/jump Emily/textAboveHead Emily \"{{i18n:NYE.extra.7}}\"/faceDirection Emily 3 true/faceDirection Haley 1 true/emote Haley 28 true/jump Leah/emote Elliott 20 true/faceDirection Quinn 3 true/pause 500/faceDirection Abigail 1/emote Abigail 52 true/textAboveHead Willy \"{{i18n:NYE.extra.8}}\"/faceDirection Sam 3/emote Abigail 8 true/jump Sam/emote Sebastian 28/faceDirection Sam 3 true/faceDirection Abigail 3 true/jump Sam/faceDirection Quinn 1/faceDirection Willy 0/move Willy 0 -1/warp Willy 1000 1000/playSound doorClose/faceDirection farmer 3/shake Quinn 200"
+    },
+    //Change Bill's Name to William if DTZC is installed, otherwise you won't be able to run both mods together
+    {
+      "Name": "Bill",
+      "Value": "Bill",
+      "When": {
+        "HasMod: |contains=DTZ.DowntownZuzuDLL, DTZ.DowntownZuzuCP, DTZ.DowntownZuzuCC, DTZ.DowntownZuzuBL, Downtown_Zuzu.dll, DTZ.DowntownZuzuFTM, DTZ.DowntownZuzuMFM, DTZ.DowntownZuzuTS)": false
+      }
+    },
+    {
+      "Name": "Bill",
+      "Value": "William",
+      "When": {
+        "HasMod: |contains=DTZ.DowntownZuzuDLL, DTZ.DowntownZuzuCP, DTZ.DowntownZuzuCC, DTZ.DowntownZuzuBL, Downtown_Zuzu.dll, DTZ.DowntownZuzuFTM, DTZ.DowntownZuzuMFM, DTZ.DowntownZuzuTS)": true
+      }
+    },
+    //Schedule tokens
+    //Changes a couple of coordinates around to account for map changes or other custom npcs
+    {
+      "Name": "default_schedule",
+      "Value": "640 HaleyHouse 20 16 0 Quinn_dishes/720 JojaMart 21 19 2 Quinn_stock_shelves/1030 JojaMart 25 10 2 Quinn_stock_shelves/1200 JojaMart 23 27 2 Quinn_sweep/1250 JojaMart 5 27 2 Quinn_sweep/1400 JojaMart 13 12 2 Quinn_stock_shelves/1600 JojaMart 5 18 2 Quinn_stock_shelves",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "Name": "default_schedule",
+      "Value": "640 HaleyHouse 20 16 0 Quinn_dishes/720 JojaMart 21 18 2 Quinn_stock_shelves/1030 JojaMart 25 11 2 Quinn_stock_shelves/1200 JojaMart 15 24 2 Quinn_sweep/1250 JojaMart 5 27 2 Quinn_sweep/1400 JojaMart 13 12 2 Quinn_stock_shelves/1600 JojaMart 5 18 2 Quinn_stock_shelves",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": true,
+        "HasMod: |contains=Sable17.JojaBoxPackage": true
+      }
+    },
+    {
+      "Name": "default_schedule",
+      "Value": "640 HaleyHouse 20 16 0 Quinn_dishes/720 JojaMart 21 18 2 Quinn_stock_shelves/1030 JojaMart 25 11 2 Quinn_stock_shelves/1200 JojaMart 16 24 2 Quinn_sweep/1250 JojaMart 5 27 2 Quinn_sweep/1400 JojaMart 13 12 2 Quinn_stock_shelves/1600 JojaMart 5 18 2 Quinn_stock_shelves",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": true,
+        "HasMod: |contains=Sable17.JojaBoxPackage": false
+      }
+    },
+    {
+      "Name": "museum_read_pos",
+      "Value": "45 4 2",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "Name": "museum_read_pos",
+      "Value": "45 5 2",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    },
+    {
+      "Name": "Saloon_TalkToShane",
+      "Value": "Saloon 22 18 3",
+      "When": {
+        "HasMod: |contains=Himetarts.ARV.CP": false
+      }
+    },
+    {
+      "Name": "Saloon_TalkToShane",
+      "Value": "Saloon 20 18 1",
+      "When": {
+        "HasMod: |contains=Himetarts.ARV.CP": true
+      }
+    },
+    {
+      "Name": "Saloon_OrderDrink",
+      "Value": "Saloon 18 20 3",
+      "When": {
+        "HasMod: |contains=SpecialAgentJonson.MirrenTheFlorist": false
+      }
+    },
+    {
+      "Name": "Saloon_OrderDrink",
+      "Value": "Saloon 5 17 2",
+      "When": {
+        "HasMod: |contains=SpecialAgentJonson.MirrenTheFlorist": true
+      }
+    },
+    {
+      "Name": "Saloon_HangAround",
+      "Value": "Saloon 40 17 2",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "Name": "Saloon_HangAround",
+      "Value": "Saloon 39 18 2",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    }, //FIXED SALOON POS
+    {
+      "Name": "Quinn_LateSchedule",
+      "Value": "930 JojaMart 21 19 2 Quinn_stock_shelves/1300 JojaMart 25 21 2 Quinn_sweep/1500 JojaMart 13 12 2 Quinn_stock_shelves",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "Name": "Quinn_LateSchedule",
+      "Value": "930 JojaMart 21 19 2 Quinn_stock_shelves/1300 JojaMart 5 27 2 Quinn_sweep/1500 JojaMart 13 12 2 Quinn_stock_shelves",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    },
+    {
+      "Name": "WizardHouse.Shelves",
+      "Value": "6 5 0",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "Name": "WizardHouse.Shelves",
+      "Value": "2 18 3",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    },
+    {
+      "Name": "WizardHouse.Read",
+      "Value": "5 17 2",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "Name": "WizardHouse.Read",
+      "Value": "6 15 0",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    },
+    {
+      "Name": "Quinn_SleepLocation",
+      "Value": "jkkps.quinn_QuinnRoom 6 4 1 Quinn_sleep"
+      //was here while I was testing Quinn's custom bedroom.
+      //Fun fact! Quinn used to sleep in Emily's bed hugging her! I very much intend to add some very sappy (and sapphic lmao) rival heart events for the two of them.
+    },
+    //FAIR POSITION - COMPATIBILITY WITH DYLAN FROM 'ELI AND DYLAN'
+    {
+      "Name": "Quinn_FairY1Disposition",
+      "Value": "62 65 2",
+      "When": {
+        "HasMod: |contains=TenebrousNova.EliDylan.CP, atravita.NovaNPCTest, TenebrousNova.EliDylanCC": false
+      }
+    },
+    {
+      "Name": "Quinn_FairY1Disposition",
+      "Value": "60 65 2",
+      "When": {
+        "HasMod: |contains=TenebrousNova.EliDylan.CP, atravita.NovaNPCTest, TenebrousNova.EliDylanCC": true
+      }
+    },
+    //WINTER STAR POSITION - COMPATIBILITY WITH 'DEFENSE DIVISION'
+    {
+      "Name": "Quinn_WinterStarY2Disposition",
+      "Value": "38 60 1",
+      "When": {
+        "HasMod: |contains=DD.DefenseDivision, DD.Seguidores, DD.Monstro": false
+      }
+    },
+    {
+      "Name": "Quinn_WinterStarY2Disposition",
+      "Value": "37 61 0",
+      "When": {
+        "HasMod: |contains=DD.DefenseDivision, DD.Seguidores, DD.Monstro": true
+      }
+    },
+    //LUAU POSITION - COMPATIBILITY WITH 'JADE NPC'
+    {
+      "Name": "Quinn_LuauY1Disposition",
+      "Value": "27 13 1",
+      "When": {
+        "HasMod: |contains=malic.cp.jadeNPC": false
+      }
+    },
+    {
+      "Name": "Quinn_LuauY1Disposition",
+      "Value": "30 11 3",
+      "When": {
+        "HasMod: |contains=malic.cp.jadeNPC": true
+      }
+    },
+    //JELLYFISHES POSITION - COMPATIBILITY WITH 'ALWAYS RAINING IN THE VALLLEY' AND 'ELI AND DYLAN'
+    {
+      "Name": "Quinn_JelliesY1Disposition",
+      "Value": "43 24 2",
+      "When": {
+        "HasMod: |contains=Himetarts.ARV.CP": false,
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": false
+      }
+    },
+    {
+      "Name": "Quinn_LuauY1Disposition",
+      "Value": "43 23 2",
+      "When": {
+        "HasMod: |contains=Himetarts.ARV.CP": true,
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": false
+      }
+    },
+    {
+      "Name": "Quinn_LuauY1Disposition",
+      "Value": "45 24 2",
+      "When": {
+        "HasMod: |contains=Himetarts.ARV.CP": false,
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true
+      }
+    },
+    {
+      "Name": "Quinn_LuauY1Disposition",
+      "Value": "44 23 2",
+      "When": {
+        "HasMod: |contains=TenebrousNova.EliDylan.CP": true,
+        "HasMod: |contains=Himetarts.ARV.CP": true
+      }
+    },
+    //IS PTIV INSTALLED
+    {
+      "Name": "IS_PITV_INSTALLED",
+      "Value": "true",
+      "When": {
+        "HasMod: |contains=sapphicsaph_pitv": true
+      }
+    },
+    {
+      "Name": "IS_PITV_INSTALLED",
+      "Value": "false",
+      "When": {
+        "HasMod: |contains=sapphicsaph_pitv": false
+      }
+    },
+    //IS ES INSTALLED
+    {
+      "Name": "IS_ES_INSTALLED",
+      "Value": "false",
+      "When": {
+        "HasMod: |contains=atravita.EastScarp": false
+      }
+    },
+    {
+      "Name": "IS_ES_INSTALLED",
+      "Value": "true",
+      "When": {
+        "HasMod: |contains=atravita.EastScarp": true
+      }
+    },
+    //GENDER-ED/LESS TOKENS FOR GENDER NEUTRALITY MOD TOKENS
+    {
+      "Name": "GuyGalPal",
+      "Value": "{{i18n:token.guy}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "GuyGalPal",
+      "Value": "{{i18n:token.gal}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "GuyGalPal",
+      "Value": "{{Lowercase:{{Random:{{Hana.GNMTokens/AdultAntiquatedNoun}}}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "TitleBday",
+      "Value": "{{i18n:token.Mr.}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "TitleBday",
+      "Value": "{{i18n:token.Lady}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "TitleBday",
+      "Value": "{{Lowercase:{{Random:{{Hana.GNMTokens/Title}}}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "ShaneOrEmily",
+      "Value": "{{i18n:token.shane}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "ShaneOrEmily",
+      "Value": "{{i18n:token.emily}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "ShaneOrEmily",
+      "Value": "{{i18n:token.shane}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "HarveyOrRobin",
+      "Value": "{{i18n:token.robin}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HarveyOrRobin",
+      "Value": "{{i18n:token.harvey}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HarveyOrRobin",
+      "Value": "{{i18n:token.robin}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "ElliottOrLeah",
+      "Value": "{{i18n:token.elliott}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "ElliottOrLeah",
+      "Value": "{{i18n:token.leah}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "ElliottOrLeah",
+      "Value": "{{i18n:token.leah}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "HarveyOrCaroline",
+      "Value": "{{i18n:token.harvey}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HarveyOrCaroline",
+      "Value": "{{i18n:token.caroline}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HarveyOrCaroline",
+      "Value": "{{i18n:token.harvey}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "HesStrong",
+      "Value": "{{i18n:token.strong}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HesStrong",
+      "Value": "{{i18n:token.adorable}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HesStrong",
+      "Value": "{{Lowercase:{{Random:{{Hana.GNMTokens/SubjectivePronoun}}}}}} is so {{Lowercase:{{Random:{{Hana.GNMTokens/Adjective}}}}}}...",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true,
+        "Hana.GNMTokens/Singular": true
+      }
+    },
+    {
+      "Name": "HesStrong",
+      "Value": "{{Lowercase:{{Random:{{Hana.GNMTokens/SubjectivePronoun}}}}}} are so {{Lowercase:{{Random:{{Hana.GNMTokens/Adjective}}}}}}...",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true,
+        "Hana.GNMTokens/Singular": false
+      }
+    },
+    {
+      "Name": "CutesyDialog",
+      "Value": "{{i18n:token.cutesy.handsome}}$4",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "CutesyDialog",
+      "Value": "{{i18n:token.cutesy.dropdead}}$4",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "CutesyDialog",
+      "Value": "{{i18n:token.cutesy.firsthalf |TEMPTOKEN={{Lowercase:{{Random:{{Hana.GNMTokens/Adjective}}}}}}}}$4",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "HusbandOrWife",
+      "Value": "{{i18n:token.husband}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HusbandOrWife",
+      "Value": "{{i18n:token.wife}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HusbandOrWife",
+      "Value": "{{Lowercase:{{Random:{{Hana.GNMTokens/SpouseNoun}}}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "PrinceOrPrincess",
+      "Value": "{{i18n:token.prince}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "PrinceOrPrincess",
+      "Value": "{{i18n:token.princess}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "PrinceOrPrincess",
+      "Value": "{{Lowercase:{{Random:{{Hana.GNMTokens/Adjective}}}}}} {{Lowercase:{{Random:{{Hana.GNMTokens/AdultAntiquatedNoun}}}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "JaniceCommentary",
+      "Value": "{{i18n:token.raves}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false,
+      }
+    },
+    {
+      "Name": "JaniceCommentary",
+      "Value": "{{i18n:token.phase}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "JaniceCommentary",
+      "Value": "{{i18n:token.them |THEYTOKEN={{Lowercase:{{Random:{{Hana.GNMTokens/SubjectivePronoun}}}}}} |THEMTOKEN={{Lowercase:{{Random:{{Hana.GNMTokens/ObjectivePronoun}}}}}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "JojaOrCCZCConfession",
+      "Value": "{{i18n:Joja.ZCConfession}}",
+      "When": {
+        "IsCommunityCenterComplete": false
+      }
+    },
+    {
+      "Name": "JojaOrCCZCConfession",
+      "Value": "{{i18n:CC.ZCConfession}}",
+      "When": {
+        "IsCommunityCenterComplete": true
+      }
+    },
+    {
+      "Name": "Title",
+      "Value": "{{i18n:token.Mister}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "Title",
+      "Value": "{{i18n:token.Mrs}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "Title",
+      "Value": "{{Random:{{Hana.GNMTokens/Title}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "HeShe",
+      "Value": "{{i18n:token.he}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HeShe",
+      "Value": "{{i18n:token.she}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HeShe",
+      "Value": "{{Lowercase:{{Random:{{Hana.GNMTokens/SubjectivePronoun}}}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "HeSheCapital",
+      "Value": "{{i18n:token.Hecap}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HeSheCapital",
+      "Value": "{{i18n:token.KEY}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "HeSheCapital",
+      "Value": "{{Random:{{Hana.GNMTokens/SubjectivePronoun}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "BoyfriendGirlfriend",
+      "Value": "{{i18n:token.boyfriend}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "BoyfriendGirlfriend",
+      "Value": "{{i18n:token.girlfriend}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "BoyfriendGirlfriend",
+      "Value": "{{i18n:token.partner}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    {
+      "Name": "BoyGirl",
+      "Value": "{{i18n:token.boy}}",
+      "When": {
+        "PlayerGender": "male",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "BoyGirl",
+      "Value": "{{i18n:token.girl}}",
+      "When": {
+        "PlayerGender": "female",
+        "HasMod: |contains=Hana.GNMTokens": false
+      }
+    },
+    {
+      "Name": "BoyGirl",
+      "Value": "{{Random:{{Hana.GNMTokens/AdultAntiquatedNoun}}}}",
+      "When": {
+        "HasMod: |contains=Hana.GNMTokens": true
+      }
+    },
+    //DSV Compat Tokens
+    {
+      "Name": "zuzucityvisit.40",
+      "Value": "{{i18n:zuzucityvisit.40}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": false
+      }
+    },
+    {
+      "Name": "zuzucityvisit.40",
+      "Value": "{{i18n:zuzucityvisit.40}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": false
+      }
+    },
+    {
+      "Name": "zuzucityvisit.40",
+      "Value": "{{i18n:DSV.NB.Emily.zuzucityvisit.40}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": true
+      }
+    },
+    {
+      "Name": "ny2unmet.1",
+      "Value": "{{i18n:ny2unmet.1}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": false
+      }
+    },
+    {
+      "Name": "ny2unmet.1",
+      "Value": "{{i18n:ny2unmet.1}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": false
+      }
+    },
+    {
+      "Name": "ny2unmet.1",
+      "Value": "{{i18n:DSV.NB.Emily.ny2unmet.1}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": true
+      }
+    },
+    {
+      "Name": "next.22",
+      "Value": "{{i18n:next.22}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": false
+      }
+    },
+    {
+      "Name": "next.22",
+      "Value": "{{i18n:next.22}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": false
+      }
+    },
+    {
+      "Name": "next.22",
+      "Value": "{{i18n:DSV.NB.Emily.next.22}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": true
+      }
+    },
+    {
+      "Name": "beachcomfort.15",
+      "Value": "{{i18n:beachcomfort.15}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": false
+      }
+    },
+    {
+      "Name": "beachcomfort.15",
+      "Value": "{{i18n:beachcomfort.15}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": false
+      }
+    },
+    {
+      "Name": "beachcomfort.15",
+      "Value": "{{i18n:DSV.NB.Emily.beachcomfort.15}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": true
+      }
+    },
+    {
+      "Name": "ny2strangers.3",
+      "Value": "{{i18n:ny2strangers.3}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": false
+      }
+    },
+    {
+      "Name": "ny2strangers.3",
+      "Value": "{{i18n:ny2strangers.3}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryAbigail |contains= true": false,
+        "DSV.Core/ConfigValue:NonbinarySebastian |contains= true": false
+      }
+    },
+    {
+      "Name": "ny2strangers.3",
+      "Value": "{{i18n:DSV.NB.Abigail.ny2strangers.3}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryAbigail |contains= true": true,
+        "DSV.Core/ConfigValue:NonbinarySebastian |contains= true": false
+      }
+    },
+    {
+      "Name": "ny2strangers.3",
+      "Value": "{{i18n:DSV.NB.Sebastian.ny2strangers.3}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryAbigail |contains= true": false,
+        "DSV.Core/ConfigValue:NonbinarySebastian |contains= true": true
+      }
+    },
+    {
+      "Name": "ny2strangers.3",
+      "Value": "{{i18n:DSV.NB.AbbyAndSeb.ny2strangers.3}}",
+      "When": {
+        "HasMod: |contains=DSV.Core": true,
+        "DSV.Core/ConfigValue:NonbinaryAbigail |contains= true": true,
+        "DSV.Core/ConfigValue:NonbinarySebastian |contains= true": true
+      }
+    },
+    {
+      "Name": "Rain.Schedule",
+      "Value": "{{default_schedule}}/1720 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/2110 {{Quinn_SleepLocation}}",
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": false,
+        "IsCommunityCenterComplete": false,
+        "Query: {{DayOfWeek}} = Sunday OR {{DayOfWeek}} = Saturday": false
+      }
+    },
+    {
+      "Name": "Rain.Schedule",
+      "Value": "{{Quinn_LateSchedule}}/1640 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/2200 {{Quinn_SleepLocation}}",
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": true,
+        "IsCommunityCenterComplete": false,
+        "Query: {{DayOfWeek}} = Sunday OR {{DayOfWeek}} = Saturday": false
+      }
+    },
+    {
+      "Name": "Rain.Schedule",
+      "Value": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/730 FishShop 4 6 3/1500 Saloon 33 18 0/2000 {{Quinn_SleepLocation}}",
+      "When": {
+        "IsCommunityCenterComplete": true,
+        "Query: {{DayOfWeek}} = Monday OR {{DayOfWeek}} = Wednesday OR {{DayOfWeek}} = Friday": true
+      }
+    },
+    {
+      "Name": "Rain.Schedule",
+      "Value": "610 HaleyHouse 18 6 3 \"Strings\\schedules\\Quinn:emily_room\"/1000 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/1630 Saloon 16 20 0/2230 {{Quinn_SleepLocation}}",
+      "When": {
+        "IsCommunityCenterComplete": true,
+        "Query: {{DayOfWeek}} = Monday OR {{DayOfWeek}} = Wednesday OR {{DayOfWeek}} = Friday": false
+      }
+    },
+    {
+      "Name": "Rain.Schedule",
+      "Value": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/730 FishShop 4 6 3/1500 Saloon 33 18 0/2000 {{Quinn_SleepLocation}}",
+      "When": {
+        "DayOfWeek": "Saturday"
+      }
+    },
+    {
+      "Name": "Rain.Schedule",
+      "Value": "610 HaleyHouse 18 6 3 \"Strings\\schedules\\Quinn:emily_room\"/1000 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/1630 Saloon 16 20 0/2230 {{Quinn_SleepLocation}}",
+      "When": {
+        "DayOfWeek": "Sunday"
+      }
+    },
+    {
+      "Name": "IslandSeason",
+      "Value": "Spring",
+      "When": {
+        "Season": "Spring"
+      }
+    },
+    {
+      "Name": "IslandSeason",
+      "Value": "Winter",
+      "When": {
+        "Season": "Winter"
+      }
+    },
+    {
+      "Name": "IslandSeason",
+      "Value": "Spring",
+      "When": {
+        "Seasonal cuter Quinn": "false",
+        "Season": "Summer"
+      }
+    },
+    {
+      "Name": "IslandSeason",
+      "Value": "Summer",
+      "When": {
+        "Seasonal cuter Quinn": "true",
+        "Season": "Summer"
+      }
+    },
+    {
+      "Name": "IslandSeason",
+      "Value": "Spring",
+      "When": {
+        "Seasonal cuter Quinn": "false",
+        "Season": "Fall"
+      }
+    },
+    {
+      "Name": "IslandSeason",
+      "Value": "Fall",
+      "When": {
+        "Seasonal cuter Quinn": "true",
+        "Season": "Fall"
+      }
+    }
+  ],
+  "Changes": [
+    {
+      "LogName": "Data includes",
+      "Action": "Include",
+      "FromFile": "data/Schedule.json, data/Dialogue.json, data/NoseCode.json, data/PortraitCode.json, data/Characters.json, data/Movies.json, data/Festivals.json, data/DialogueTweaks.json, data/QuinnMarriageDialogueTweaks.json, data/ScheduleDialogue.json"
+    },
+    {
+      "LogName": "Load Quinn's Schedule",
+      "Action": "Load",
+      "Target": "Characters/schedules/Quinn",
+      "FromFile": "assets/Schedule.json"
+    },
+    {
+      "LogName": "Load Quinn's room events",
+      "Action": "Load",
+      "Target": "Data/Events/jkkps.quinn_QuinnRoom",
+      "FromFile": "assets/Schedule.json"
+    },
+    {
+      "LogName": "Load Quinn's Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Quinn",
+      "FromFile": "assets/Dialogue.json"
+    },
+    {
+      "LogName": "Load Quinn's Schedule Dialogue",
+      "Action": "Load",
+      "Target": "Strings/schedules/Quinn",
+      "FromFile": "assets/Dialogue.json"
+    },
+    {
+      "LogName": "Load Quinn's Marriage Dialogue",
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueQuinn",
+      "FromFile": "assets/ScheduleDialogue.json"
+    },
+    {
+      "LogName": "Load Janice Art",
+      "Action": "Load",
+      "Target": "Characters/Janice, Portraits/Janice,",
+      "FromFile": "assets/EventArt/{{Target}}.png"
+    },
+    {
+      "LogName": "Load Bill Art",
+      "Action": "Load",
+      "Target": "Characters/{{Bill}}, Portraits/{{Bill}}",
+      "FromFile": "assets/EventArt/{{TargetPathOnly}}/Bill.png"
+    },
+    {
+      "LogName": "Load Quinn's Portraits",
+      "Action": "Load",
+      "Target": "Portraits/Quinn, Portraits/Quinn_Winter, Portraits/Quinn_Beach, Portraits/Quinn_BathHouse, Portraits/Quinn_Spring_Casual, Portraits/Quinn_Spring, Portraits/Quinn_Fall, Portraits/Quinn_Summer, Portraits/Quinn_EggF, Portraits/Quinn_IceF, Portraits/Quinn_FlowerDance, Portraits/Quinn_WinterStar, Portraits/Quinn_Luau, Portraits/Quinn_Fair, Portraits/Quinn_Jellies, Portraits/Quinn_SpiritsEve, Portraits/Quinn_Winter, Portraits/Quinn_Lake_Swim, Portraits/Quinn_Y1Eve, Portraits/Quinn_Y2Eve, Portraits/Quinn_Spring_Casual, Portraits/Quinn_Fall_Joja, Portraits/Quinn_Spring_Joja, Portraits/Quinn_Summer_Joja, Portraits/Quinn_Winter_Joja, Portraits/Quinn_Winter_Home, Portraits/Quinn_Winter_Indoors, Portraits/Quinn_Winter_Outdoors, Portraits/Quinn_Joja, Portraits/Quinn_DrunkY1, Portraits/Quinn_DrunkY2, Portraits/Quinn_Pride, Portraits/Quinn_SpiritsEve.ES, Portraits/Quinn_Summer_Rain, Portraits/Quinn_Beach_Summer, Portraits/Quinn_Beach_Spring, Portraits/Quinn_Beach_Fall, Portraits/Quinn_Beach_Winter",
+      "FromFile": "assets/Art/{{Target}}.png"
+    },
+    {
+      "LogName": "Load Quinn's Sprites",
+      "Action": "Load",
+      "Target": "Characters/Quinn, Characters/Quinn_Spring_Rain, Characters/Quinn_Winter, Characters/Quinn_Beach, Characters/Quinn_BathHouse, Characters/Quinn_Spring_Casual, Characters/Quinn_Spring, Characters/Quinn_Fall, Characters/Quinn_Summer, Characters/Quinn_EggF, Characters/Quinn_IceF, Characters/Quinn_FlowerDance, Characters/Quinn_WinterStar, Characters/Quinn_Luau, Characters/Quinn_Fair, Characters/Quinn_Jellies, Characters/Quinn_SpiritsEve, Characters/Quinn_Winter, Characters/Quinn_Lake_Swim, Characters/Quinn_Y1Eve, Characters/Quinn_Y2Eve, Characters/Quinn_Spring_Casual, Characters/Quinn_Fall_Joja, Characters/Quinn_Spring_Joja, Characters/Quinn_Summer_Joja, Characters/Quinn_Winter_Joja, Characters/Quinn_Winter_Home, Characters/Quinn_Winter_Indoors, Characters/Quinn_Winter_Outdoors, Characters/Quinn_Joja, Characters/Quinn_CT, Characters/Quinn_Pride, Characters/Quinn_SpiritsEve.ES, Characters/Quinn_Summer_Rain_Indoors, Characters/Quinn_Summer_Rain, Characters/Quinn_Beach_Summer, Characters/Quinn_Beach_Spring, Characters/Quinn_Beach_Fall, Characters/Quinn_Beach_Winter",
+      "FromFile": "assets/Art/{{Target}}.png"
+    },
+    {
+      "LogName": "Seasonal Calendar Edit",
+      "Action": "EditImage",
+      "Target": "Characters/Quinn",
+      "FromFile": "assets/Art/Characters/Quinn_{{Season}}.png",
+      "When": {
+        "Seasonal cuter Quinn": true
+      }
+    },
+    {
+      "LogName": "Add Quinn's Spouse Room to data",
+      "Action": "EditData",
+      "Target": "Data/SpouseRooms",
+      "Entries": {
+        "Quinn": "jkkps_Quinn_SpouseRoom/0"
+      }
+    },
+    {
+      "LogName": "Load Quinn's Spouse Room",
+      "Action": "Load",
+      "Target": "Maps/jkkps_Quinn_SpouseRoom",
+      "FromFile": "assets/Maps/{{TargetWithoutPath}}.tmx"
+    },
+    {
+      "LogName": "Add Quinn's Spouse Portrait",
+      "Action": "Load",
+      "Target": "TileSheets/{{modID}}_Portrait",
+      "FromFile": "assets/Art/SpousePortraitOverlays/Background/{{Spouse_Portrait_Background_Color}}.png",
+      "When": {
+        "Is Special Portrait": false
+      }
+    },
+    {
+      "LogName": "Add Quinn's Special Portrait",
+      "Action": "Load",
+      "Target": "TileSheets/{{modID}}_Portrait",
+      "FromFile": "assets/Art/SpousePortraitOverlays/Background/{{What_Special_Portrait}}.png",
+      "When": {
+        "Is Special Portrait": true
+      }
+    },
+    {
+      "LogName": "Quinn - Include Route-Dependant Events",
+      "Action": "Include",
+      "FromFile": "data/Events.json"
+    },
+    {
+      "LogName": "Quinn - Include Extra Stuff",
+      "Action": "Include",
+      "FromFile": "data/Extra_Stuff/Festivals_Expansion.json"
+    },
+    //MAP EDITS
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse",
+      "FromFile": "assets/Maps/HaleyHouse.tmx",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 3,
+        "Height": 6
+      },
+      "ToArea": {
+        "X": 24,
+        "Y": 15,
+        "Width": 3,
+        "Height": 6
+      },
+      "When": {
+        "HasMod: |contains=Goldenglow": false
+      }
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 24,
+            "Y": 18
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "LockedDoorWarp 11 8 jkkps.quinn_QuinnRoom 600 2600 Quinn 500"
+          }
+        }
+      ],
+      "Priority": "Default + 10",
+      "When": {
+        "HasMod: |contains=Goldenglow": false
+      }
+    },
+    {
+      "LogName": "Room Trapdoor Warp",
+      "Action": "EditMap",
+      "Target": "Maps/jkkps.quinn_QuinnRoom",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 11,
+            "Y": 7
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 24 19 HaleyHouse"
+          }
+        }
+      ],
+      "Priority": "Default + 10",
+      "When": {
+        "HasMod: |contains=Goldenglow": false
+      }
+    },
+    //Goldenglow Map edits
+    {
+      "LogName": "LockedDoor GG",
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 25,
+            "Y": 24
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "LockedDoorWarp 11 8 jkkps.quinn_QuinnRoom 600 2600 Quinn 500"
+          }
+        }
+      ],
+      "Priority": "Default + 20",
+      "When": {
+        "HasMod: |contains=Goldenglow": true,
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "LogName": "LockedDoor GG+SVE",
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 25,
+            "Y": 25
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "LockedDoorWarp 11 8 jkkps.quinn_QuinnRoom 600 2600 Quinn 500"
+          }
+        }
+      ],
+      "Priority": "Default + 20",
+      "When": {
+        "HasMod: |contains=Goldenglow": true,
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    },
+    {
+      "LogName": "Room Trapdoor Warp GG",
+      "Action": "EditMap",
+      "Target": "Maps/jkkps.quinn_QuinnRoom",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 11,
+            "Y": 7
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 25 25 HaleyHouse"
+          }
+        }
+      ],
+      "Priority": "Default + 20",
+      "When": {
+        "HasMod: |contains=Goldenglow": true,
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "LogName": "Room Trapdoor Warp GG+SVE",
+      "Action": "EditMap",
+      "Target": "Maps/jkkps.quinn_QuinnRoom",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 11,
+            "Y": 7
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Warp 25 26 HaleyHouse"
+          }
+        }
+      ],
+      "Priority": "Default + 20",
+      "When": {
+        "HasMod: |contains=Goldenglow": true,
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    },
+    {
+      "LogName": "Maps",
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse",
+      "FromFile": "assets/Maps/HaleyHouseGoldenGlow.tmx",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 5,
+        "Height": 7
+      },
+      "ToArea": {
+        "X": 23,
+        "Y": 20,
+        "Width": 5,
+        "Height": 7
+      },
+      "Priority": "Default + 10",
+      "When": {
+        "HasMod: |contains=Goldenglow": true,
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    {
+      "LogName": "Maps",
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse",
+      "FromFile": "assets/Maps/HaleyHouseGoldenGlowSVE.tmx",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 5,
+        "Height": 7
+      },
+      "ToArea": {
+        "X": 23,
+        "Y": 21,
+        "Width": 5,
+        "Height": 7
+      },
+      "Priority": "Default + 10",
+      "When": {
+        "HasMod: |contains=Goldenglow": true,
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    },
+    //Temporary fix because, for some reason, Quinn's FlowerDance outfits aren't showing right. 'Appearance' fields were kept in 'data/Characters' so any other mod can reference it if so needed.
+    //This is like putting a bandaid on a gunshot wound, I know, but I have NO CLUE why the bug is happening and I just want people to see Quinn's cute little outfits in the meantime.
+    //Only Flower Dance has this issue
+    {
+      "LogName": "Flower Dance Temporary Fix",
+      "Action": "EditImage",
+      "Target": "Characters/Quinn",
+      "FromFile": "assets/Art/Characters/Quinn_FlowerDance.png",
+      "When": {
+        "LocationName": "Temp",
+        "DayEvent": "flower dance"
+      },
+      "Update": "OnLocationChange"
+    },
+    //Compatibility inclusions
+    {
+      "LogName": "Quinn - Include DSV compatibility",
+      "Action": "Include",
+      "FromFile": "data/Compat/DiverseStardewValley_Compat.json",
+      "When": {
+        "HasMod: |contains=DSV.Core": true
+      }
+    },
+    {
+      "LogName": "Quinn - Include Event Lookup compatibility",
+      "Action": "Include",
+      "FromFile": "data/Compat/EventLookup_Compat.json",
+      "When": {
+        "HasMod: |contains=shekurika.EventLookup": true
+      }
+    },
+    {
+      "LogName": "Quinn - Include Schedule Viewer compatibility",
+      "Action": "Include",
+      "FromFile": "data/Compat/ScheduleViewer_Compat.json",
+      "When": {
+        "HasMod: |contains=BinaryLip.ScheduleViewer": true
+      }
+    },
+    {
+      "LogName": "Quinn - Include Pride In The Valley compatibility",
+      "Action": "Include",
+      "FromFile": "data/Compat/PrideInTheValley_Compat.json",
+      "When": {
+        "HasMod: |contains=sapphicsaph_pitv": true
+      }
+    },
+    {
+      "LogName": "Quinn - Include Stardew Valley Expanded compatibility",
+      "Action": "Include",
+      "FromFile": "data/Compat/StardewValleyExpanded_Compat.json",
+      "When": {
+        "HasMod: |contains=FlashShifter.SVECode": true
+      }
+    },
+    {
+      "LogName": "Quinn - Include East Scarp compatibility",
+      "Action": "Include",
+      "FromFile": "data/Compat/EastScarp_Compat.json",
+      "When": {
+        "HasMod: |contains=atravita.EastScarp": true
+      }
+    },
+    {
+      "LogName": "Quinn - Include Unique Courtship Response compatibility",
+      "Action": "Include",
+      "FromFile": "data/Compat/UniqueCourtshipResponseCore_Compat.json",
+      "When": {
+        "HasMod: |contains=misscoriel.UCRFix": true
+      }
+    },
+    {
+      "LogName": "Quinn - Include Genderbent Quinn compatibility",
+      "Action": "Include",
+      "FromFile": "data/Compat/genderbent_Compat.json",
+      "When": {
+        "HasMod: |contains=jkkps.QuinnGenderbent": true
+      }
+    }
+  ]
+}

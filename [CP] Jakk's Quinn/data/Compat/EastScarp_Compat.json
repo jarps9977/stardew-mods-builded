@@ -1,0 +1,30 @@
+{
+    "Changes": [
+        {
+            "LogName": "ES Spirit's Eve Schedule",
+            "Action": "EditData",
+            "Target": "Characters/schedules/Quinn",
+            "Entries": {
+                "EastScarpe_SpiritsEve": "610 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/910 EastScarp_VillageInn 35 31 1 \"Strings\\schedules\\Quinn:ES.spiritseve.coffee\"/1430 EastScarp_VillageInn 22 33 0 Quinn_dance \"Strings\\schedules\\Quinn:ES.spiritseve.costume\"/1610 EastScarp_VillageInn 29 29 2 \"Strings\\schedules\\Quinn:ES.spiritseve.talk\"/1730 EastScarp_VillageInn 22 33 0 Quinn_dance \"Strings\\schedules\\Quinn:ES.spiritseve.costume\"/1940 jkkps.quinn_QuinnRoom 8 8 0 \"Strings\\schedules\\Quinn:ES.spiritseve.changing\"/2150 {{Quinn_SleepLocation}}"
+            }
+        },
+        {
+            "LogName": "ES Schedule Dialogue",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Quinn",
+            "Entries": {
+                "ES.spiritseve.changing": "{{i18n:dialogue.ES.spiritseve.changing}}",
+                "ES.spiritseve.coffee": "{{i18n:dialogue.ES.spiritseve.coffee}}",
+                "ES.spiritseve.costume": "{{i18n:dialogue.ES.spiritseve.costume}}"
+            }
+        },
+        {
+            "LogName": "ES Animations",
+            "Action": "EditData",
+            "Target": "Data/animationdescriptions",
+            "Entries": {
+                "Quinn_dance": "16/16 16 16 17 17 17 16 16 16 17 17 17 16 16 16 17 17 17 16 16 16 17 17 17 16 16 16 17 17 17 18 18 18 19 19 19 18 18 18 19 19 19 18 18 18 19 19 19 18 18 18 19 19 19 18 18 18 19 19 19/16"
+            }
+        }
+    ]
+}

@@ -1,0 +1,514 @@
+{
+  "Changes": [
+    {
+      "LogName": "NPC Manifestation Romantic",
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Quinn": {
+          "DisplayName": "{{i18n:Quinn.DisplayName}}",
+          "BirthSeason": "Fall",
+          "BirthDay": "28",
+          "HomeRegion": "Town",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Rude",
+          "SocialAnxiety": "Shy",
+          "Optimism": "Positive",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": "{{CanBeRomanced}}",
+          "LoveInterest": "",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": true,
+          "CanReceiveGifts": true,
+          "CanGreetNearbyCharacters": true,
+          "CanCommentOnPurchasedShopItems": false,
+          "CanVisitIsland": null,
+          "IntroductionsQuest": true,
+          "ItemDeliveryQuests": true,
+          "PerfectionScore": true,
+          "EndSlideShow": "MainGroup",
+          "SpouseGiftJealousy": false,
+          "SpouseRoom": {
+            "MapAsset": "jkkps_Quinn_SpouseRoom",
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 6,
+              "Height": 9
+            }
+          },
+          "SpousePatio": {
+            "MapAsset": null,
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 4,
+              "Height": 4
+            },
+            "SpriteAnimationFrames": [
+              [
+                58,
+                10000
+              ],
+              [
+                59,
+                100
+              ]
+            ],
+            "SpriteAnimationPixelOffset": {
+              "X": 0,
+              "Y": 0
+            }
+          },
+          "DumpsterDiveFriendshipEffect": -25,
+          "DumpsterDiveEmote": 12,
+          "FriendsAndFamily": {
+            "Emily": "",
+            "Haley": "",
+            "Willy": ""
+          },
+          "FlowerDanceCanDance": true,
+          "WinterStarParticipant": true,
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "Default",
+              "Location": "HaleyHouse",
+              "Tile": {
+                "X": 19,
+                "Y": 16
+              },
+              "Direction": "down"
+            }
+          ],
+          "TextureName": null,
+          "Appearance": [
+            {
+              "Id": "{{ModId}}_JojaUniformSeasonal",
+              "Condition": "LOCATION_NAME Target JojaMart, {{SeasonalCuterQuinn}}",
+              "Season": null,
+              "Indoors": true,
+              "Outdoors": true,
+              "Sprite": "Characters/Quinn_{{Season}}_Joja",
+              "Portrait": "Portraits/Quinn_{{Season}}_Joja",
+              "IsIslandAttire": false,
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_JojaUniformRegular",
+              "Condition": "LOCATION_NAME Target JojaMart",
+              "Season": null,
+              "Indoors": true,
+              "Outdoors": true,
+              "Sprite": "Characters/Quinn_Joja",
+              "Portrait": "Portraits/Quinn_Joja",
+              "IsIslandAttire": false,
+              "Precedence": -900
+            },
+            {
+              "Id": "{{ModId}}_WinterHome",
+              "Condition": "LOCATION_NAME Target HaleyHouse",
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": false,
+              "Portrait": "Portraits/Quinn_Winter_Home",
+              "Sprite": "Characters/Quinn_Winter_Home",
+              "IsIslandAttire": false,
+              "Precedence": -1000,
+              "Weight": 0
+            },
+            {
+              "Id": "{{ModId}}_FourteenWinter",
+              "Condition": "IS_EVENT {{ModID}}_zuzucityvisit",
+              "Season": "Winter",
+              "Portrait": "Portraits/Quinn_Winter_Home",
+              "Sprite": "Characters/Quinn_Winter_Home",
+              "IsIslandAttire": false,
+              "Precedence": -1000,
+              "Weight": 0
+            },
+            {
+              "Id": "{{ModId}}_WinterOutdoors",
+              "Condition": null,
+              "Season": "Winter",
+              "Indoors": false,
+              "Outdoors": true,
+              "Portrait": "Portraits/Quinn_Winter_Outdoors",
+              "Sprite": "Characters/Quinn_Winter_Outdoors",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            },
+            {
+              "Id": "{{ModId}}_WinterIndoors",
+              "Condition": null,
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": false,
+              "Portrait": "Portraits/Quinn_Winter_Indoors",
+              "Sprite": "Characters/Quinn_Winter_Indoors",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            },
+            {
+              "Id": "{{ModId}}_Beach",
+              "Portrait": "Portraits/Quinn_Beach_{{IslandSeason}}",
+              "Sprite": "Characters/Quinn_Beach_{{IslandSeason}}",
+              "IsIslandAttire": true,
+              "Precedence": -1000,
+              "Weight": 0
+            },
+            {
+              "Id": "{{ModId}}_BathHouse",
+              "Condition": "ANY \"LOCATION_NAME Target BathHouse_Pool\" \"LOCATION_NAME Target BathHouse_WomensLocker\"",
+              "Portrait": "Portraits/Quinn_BathHouse",
+              "Sprite": "Characters/Quinn_BathHouse",
+              "IsIslandAttire": false,
+              "Precedence": -1000,
+              "Weight": 0
+            },
+            {
+              "Id": "{{ModId}}_Quinn_EggF",
+              "Condition": "IS_EVENT festival_spring13, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_EggF",
+              "Portrait": "Portraits/Quinn_EggF",
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_Quinn_FlowerDance",
+              "Condition": "IS_EVENT festival_spring24, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_FlowerDance",
+              "Portrait": "Portraits/Quinn_FlowerDance",
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_Quinn_Luau",
+              "Condition": "IS_EVENT festival_summer11, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_Luau",
+              "Portrait": "Portraits/Quinn_Luau",
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_Quinn_Jellies",
+              "Condition": "IS_EVENT festival_summer28, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_Jellies",
+              "Portrait": "Portraits/Quinn_Jellies",
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_Quinn_Fair",
+              "Condition": "IS_EVENT festival_fall16, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_Fair",
+              "Portrait": "Portraits/Quinn_Fair",
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_Quinn_SpiritsEve",
+              "Condition": "IS_EVENT festival_fall27, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_SpiritsEve",
+              "Portrait": "Portraits/Quinn_SpiritsEve",
+              "Precedence": -1200
+            },
+            //ES SPIRITS EVE
+            {
+              "Id": "{{ModId}}_Quinn_SpiritsEve.ES",
+              "Condition": "DAY_OF_MONTH 27, {{IS_ES_INSTALLED}}",
+              "Season": "Fall",
+              "Sprite": "Characters/Quinn_SpiritsEve.ES",
+              "Portrait": "Portraits/Quinn_SpiritsEve.ES",
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_Quinn_IceF",
+              "Condition": "IS_EVENT festival_winter8, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_IceF",
+              "Portrait": "Portraits/Quinn_IceF",
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_Quinn_WinterStar",
+              "Condition": "IS_EVENT festival_winter25, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_WinterStar",
+              "Portrait": "Portraits/Quinn_WinterStar",
+              "Precedence": -1000
+            },
+            //Seasonal outfits
+            {
+              "Id": "{{ModId}}_Fall",
+              "Condition": "{{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_Fall",
+              "Portrait": "Portraits/Quinn_Fall",
+              "Season": "Fall",
+              "Precedence": -100
+            },
+            {
+              "Id": "{{ModId}}_Summer",
+              "Condition": "{{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_Summer",
+              "Portrait": "Portraits/Quinn_Summer",
+              "Season": "Summer",
+              "Precedence": -100,
+              "Weight": "8"
+            },
+            {
+              "Id": "{{ModId}}_Fourteen_Hearts",
+              "Condition": "IS_EVENT {{ModID}}_zuzucityvisit, {{SeasonalCuterQuinn}}",
+              "Sprite": "Characters/Quinn_{{Season}}",
+              "Portrait": "Portraits/Quinn_{{Season}}",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModId}}_NYE1",
+              "Condition": "IS_EVENT {{ModId}}_ny1",
+              "Sprite": "Characters/Quinn_Y1Eve",
+              "Portrait": "Portraits/Quinn_Y1Eve",
+              "Precedence": -300
+            },
+            {
+              "Id": "{{ModId}}_NYE2",
+              "Condition": "IS_EVENT {{ModId}}_ny2",
+              "Sprite": "Characters/Quinn_Y2Eve",
+              "Portrait": "Portraits/Quinn_Y2Eve",
+              "Precedence": -500
+            },
+            {
+              "Id": "{{ModId}}_LakeSwim",
+              "Condition": "IS_EVENT {{ModId}}_lakeswim",
+              "Sprite": "Characters/Quinn_Lake_Swim",
+              "Portrait": "Portraits/Quinn_Lake_Swim",
+              "Precedence": -1000
+            },
+            {
+              "Id": "{{ModId}}_SpringCasual",
+              "Sprite": "Characters/Quinn_Spring_Casual",
+              "Portrait": "Portraits/Quinn_Spring_Casual",
+              "Condition": "!WEATHER Here RAIN",
+              "Season": "Spring",
+              "Precedence": -100,
+              "Weight": "1"
+            },
+            {
+              "Id": "{{ModId}}_Spring",
+              "Sprite": "Characters/Quinn_Spring",
+              "Portrait": "Portraits/Quinn_Spring",
+              "Condition": "!WEATHER Here RAIN",
+              "Season": "Spring",
+              "Precedence": -100,
+              "Weight": "19"
+            },
+            {
+              "Id": "{{ModId}}_Spring_Rain",
+              "Sprite": "Characters/Quinn_Spring_Rain",
+              "Portrait": "Portraits/Quinn_Spring",
+              "Condition": "WEATHER Town RAIN",
+              "Outdoors": true,
+              "Indoors": false,
+              "Season": "Spring",
+              "Precedence": -150,
+            },
+            {
+              "Id": "{{ModId}}_Summer_Rain",
+              "Sprite": "Characters/Quinn_Summer_Rain",
+              "Portrait": "Portraits/Quinn_Summer_Rain",
+              "Condition": "WEATHER Town RAIN, {{SeasonalCuterQuinn}}",
+              "Outdoors": true,
+              "Indoors": false,
+              "Season": "Summer",
+              "Precedence": -150,
+            },
+            {
+              "Id": "{{ModId}}_Summer_Rain_Indoors",
+              "Sprite": "Characters/Quinn_Summer_Rain_Indoors",
+              "Portrait": "Portraits/Quinn_Summer_Rain",
+              "Condition": "WEATHER Town RAIN, {{SeasonalCuterQuinn}}",
+              "Outdoors": false,
+              "Indoors": true,
+              "Season": "Summer",
+              "Precedence": -150,
+            },
+            {
+              "Id": "{{ModId}}_Summer_GreenRain",
+              "Sprite": "Characters/Quinn_Summer_Rain",
+              "Portrait": "Portraits/Quinn_Summer_Rain",
+              "Condition": "WEATHER Town GreenRain, {{SeasonalCuterQuinn}}",
+              "Outdoors": true,
+              "Indoors": false,
+              "Season": "Summer",
+              "Precedence": -150,
+            },
+            {
+              "Id": "{{ModId}}_Summer_GreenRain_Indoors",
+              "Sprite": "Characters/Quinn_Summer_Rain_Indoors",
+              "Portrait": "Portraits/Quinn_Summer_Rain",
+              "Condition": "WEATHER Town GreenRain, {{SeasonalCuterQuinn}}",
+              "Outdoors": false,
+              "Indoors": true,
+              "Season": "Summer",
+              "Precedence": -150,
+            },
+            //PITV COMPAT
+            {
+              "Id": "{{ModId}}_BiPride",
+              "Condition": "{{SeasonalCuterQuinn}}, {{IS_PITV_INSTALLED}}, !LOCATION_NAME Here DesertFestival, !LOCATION_NAME Here Desert, WEATHER Here Sunny,",
+              "Sprite": "Characters/Quinn_Pride",
+              "Portrait": "Portraits/Quinn_Pride",
+              "Season": "Summer",
+              "Precedence": -100,
+              "Weight": "1"
+            },
+            {
+              "Id": "{{ModId}}_PrideFest",
+              "Condition": "{{SeasonalCuterQuinn}}, IS_EVENT sapphicsaph_pitv.PrideFestival",
+              "Sprite": "Characters/Quinn_Pride",
+              "Portrait": "Portraits/Quinn_Pride",
+              "Season": "Summer",
+              "Precedence": -1000
+            }
+          ],
+          "MugShotSourceRect": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "Breather": true,
+          "BreathChestRect": null,
+          "BreathChestPosition": null,
+          "Shadow": null,
+          "EmoteOffset": {
+            "X": 0,
+            "Y": 0
+          },
+          "ShakePortraits": [
+            6,
+            11
+          ],
+          "KissSpriteIndex": 28,
+          "KissSpriteFacingRight": true,
+          "HiddenProfileEmoteSound": null,
+          "HiddenProfileEmoteDuration": 4000,
+          "HiddenProfileEmoteStartFrame": 54,
+          "HiddenProfileEmoteFrameCount": 2,
+          "HiddenProfileEmoteFrameDuration": 1000.0,
+          "FormerCharacterNames": []
+        }
+      }
+    },
+    {
+      "LogName": "Quinn's Gift Tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Quinn": "{{i18n:giftTastes.Quinn.love}}/sapphicsaph_pitv.LesbianLollipop sapphicsaph_pitv.BiBerryMuffin sapphicsaph_pitv.AngelHairAlfredo FlashShifter.StardewValleyExpandedCP_Grilled_Cheese_Sandwich FlashShifter.StardewValleyExpandedCP_Fish_Dumpling FlashShifter.StardewValleyExpandedCP_Cheese_Charcuterie FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar FlashShifter.StardewValleyExpandedCP_Frog 211 197 424 426 904 212 265 238 113 834 198 269 559 746 91 798/{{i18n:giftTastes.Quinn.like}}/-5 TenebrousNova.EliDylan.CP_DragonEye sapphicsaph_pitv.EnbyEclair sapphicsaph_pitv.ARomanticCookie sapphicsaph_pitv.TastyAceCookie sapphicsaph_pitv.GaylacticCookie sapphicsaph_pitv.PridePop sapphicsaph_pitv.TransTart FlashShifter.StardewValleyExpandedCP_Slime_Berry FlashShifter.StardewValleyExpandedCP_Joja_Berry FlashShifter.StardewValleyExpandedCP_Alligator FlashShifter.StardewValleyExpandedCP_Arrowhead_Shark FlashShifter.StardewValleyExpandedCP_Barred_Knifejaw FlashShifter.StardewValleyExpandedCP_Blue_Tang FlashShifter.StardewValleyExpandedCP_Gemfish FlashShifter.StardewValleyExpandedCP_Daggerfish FlashShifter.StardewValleyExpandedCP_Diamond_Carp 163 900 899 901 902 159 160 795 775 898 682 400 917 143 151 267 215 260 226 167 FlashShifter.StardewValleyExpandedCP_Super_Joja_Cola SkillBook_1 Book_Roe Book_QueenOfSauce 74/{{i18n:giftTastes.Quinn.dislike}}/FlashShifter.StardewValleyExpandedCP_Undeadfish FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine 229 236 239 457 648 727 729 202 210 724 907 540 544/{{i18n:giftTastes.Quinn.hate}}/446 FlashShifter.StardewValleyExpandedCP_Green_Mushroom FlashShifter.StardewValleyExpandedCP_Money_Bag FlashShifter.StardewValleyExpandedCP_Mushroom_Colony FlashShifter.StardewValleyExpandedCP_Void_Mayo_Sandwich FlashShifter.StardewValleyExpandedCP_Frog_Legs FlashShifter.StardewValleyExpandedCP_Nectarine_Fruit_Bread FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine alcohol_item 563 573 403 720 733 148 698 800 721 723 722 719 718 199 218 MossSoup Book_Mystery 207 473 445 188 304/{{i18n:giftTastes.Quinn.neutral}}/814 812 731 78 80 921 FlashShifter.StardewValleyExpandedCP_Bonefish"
+      }
+    },
+    {
+      "LogName": "Strings From Maps",
+      "Action": "EditData",
+      "Target": "Strings/StringsFromMaps",
+      "Entries": {
+        "jkkps.quinn.1": "{{i18n:stringsFromMaps.jkkps.quinn.1}}",
+        "jkkps.quinn.2": "{{i18n:stringsFromMaps.jkkps.quinn.2}}",
+        "jkkps.quinn.3": "{{i18n:stringsFromMaps.jkkps.quinn.3}}",
+        "jkkps.quinn.4": "{{i18n:stringsFromMaps.jkkps.quinn.4}}",
+        "jkkps.quinn.5": "{{i18n:stringsFromMaps.jkkps.quinn.5}}",
+        "jkkps.quinn.6": "{{i18n:stringsFromMaps.jkkps.quinn.6}}",
+        "jkkps.quinn.7": "{{i18n:stringsFromMaps.jkkps.quinn.7}}",
+        "jkkps.quinn.8": "{{i18n:stringsFromMaps.jkkps.quinn.8}}",
+        "jkkps.quinn.9": "{{i18n:stringsFromMaps.jkkps.quinn.9}}",
+        "jkkps.quinn.10": "{{i18n:stringsFromMaps.jkkps.quinn.10}}",
+        "jkkps.quinn.11": "{{i18n:stringsFromMaps.jkkps.quinn.11}}",
+        "jkkps.quinn.12": "{{i18n:stringsFromMaps.jkkps.quinn.12}}",
+        "jkkps.quinn.13": "{{i18n:stringsFromMaps.jkkps.quinn.13}}"
+      }
+    },
+    {
+      "LogName": "Animations",
+      "Action": "EditData",
+      "Target": "Data/animationdescriptions",
+      "Entries": {
+        "Quinn_stock_shelves": "16/17 18 19 20 21 22 23 24 25 26/27",
+        "Quinn_sweep": "33/33 33 34 34 35 35/33",
+        "Quinn_mope": "32/32/32",
+        "Quinn_dishes": "56 57/56 57/56 57",
+        "Quinn_read": "52 53 55/54/55 53 52",
+        "Quinn_sleep": "31/31/31",
+      }
+    },
+    {
+      "LogName": "Quinn Mail",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_confession": "{{i18n:mail.confession.text}}[#]{{i18n:mail.confession.title}}",
+        "{{ModId}}_nextday": "{{i18n:mail.nextday.text}}[#]{{i18n:mail.nextday.title}}",
+        "{{ModId}}_thanksforleaving": "{{i18n:mail.thanksforleaving.text}}[#]{{i18n:mail.thanksforleaving.title}}",
+        "{{ModId}}_jjthxfl": "{{i18n:mail.jjthxfl.text}}[#]{{i18n:mail.jjthxfl.title}}",
+        "{{ModId}}_nyekiss": "{{i18n:mail.nyekiss.text}}[#]{{i18n:mail.nyekiss.title}}",
+        "{{ModId}}_letter": "{{i18n:mail.letter.text}}[#]{{i18n:mail.letter.title}}",
+        "{{modID}}_jojahangout.summer": "{{i18n:mail.jojahangout.summer.text |Meet_up.day={{Meet_up.day}}}}[#]{{i18n:mail.jojahangout.summer.title}}",
+        "{{modID}}_jojahangout.spring": "{{i18n:mail.jojahangout.spring.text |Meet_up.day={{Meet_up.day}}}}[#]{{i18n:mail.jojahangout.spring.title}}",
+        "{{modID}}_jojahangout.fall": "{{i18n:mail.jojahangout.fall.text |Meet_up.day={{Meet_up.day}}}}[#]{{i18n:mail.jojahangout.fall.title}}",
+        "{{modID}}_jojahangout.winter": "{{i18n:mail.jojahangout.winter.text |Meet_up.day={{Meet_up.day}}}}[#]{{i18n:mail.jojahangout.winter.title}}"
+      },
+      "When": {
+        "New mail paper": false
+      }
+    },
+    {
+      "LogName": "Quinn New Paper Mail",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_confession": "{{i18n:mail.confession.text}}[letterbg 5][textcolor black][#]{{i18n:mail.confession.title}}",
+        "{{ModId}}_nextday": "{{i18n:mail.nextday.text}}[letterbg 5][textcolor black][#]{{i18n:mail.nextday.title}}",
+        "{{ModId}}_thanksforleaving": "{{i18n:mail.thanksforleaving.text}}[letterbg 5][textcolor black][#]{{i18n:mail.thanksforleaving.title}}",
+        "{{ModId}}_jjthxfl": "{{i18n:mail.jjthxfl.text}}[letterbg 5][textcolor black][#]{{i18n:mail.jjthxfl.title}}",
+        "{{ModId}}_nyekiss": "{{i18n:mail.nyekiss.text}}[letterbg 5][textcolor black][#]{{i18n:mail.nyekiss.title}}",
+        "{{ModId}}_letter": "{{i18n:mail.letter.text}}[letterbg 5][textcolor black][#]{{i18n:mail.letter.title}}",
+        "{{modID}}_jojahangout.summer": "{{i18n:mail.jojahangout.summer.text |Meet_up.day={{Meet_up.day}}}}[letterbg 5][textcolor black][#]{{i18n:mail.jojahangout.summer.title}}",
+        "{{modID}}_jojahangout.spring": "{{i18n:mail.jojahangout.spring.text |Meet_up.day={{Meet_up.day}}}}[letterbg 5][textcolor black][#]{{i18n:mail.jojahangout.spring.title}}",
+        "{{modID}}_jojahangout.fall": "{{i18n:mail.jojahangout.fall.text |Meet_up.day={{Meet_up.day}}}}[letterbg 5][textcolor black][#]{{i18n:mail.jojahangout.fall.title}}",
+        "{{modID}}_jojahangout.winter": "{{i18n:mail.jojahangout.winter.text |Meet_up.day={{Meet_up.day}}}}[letterbg 5][textcolor black][#]{{i18n:mail.jojahangout.winter.title}}"
+      },
+      "When": {
+        "New mail paper": true
+      }
+    },
+    {
+      "LogName": "New Paper for Quinn",
+      "Action": "EditImage",
+      "Target": "LooseSprites/letterBG",
+      "PatchMode": "Overlay",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 1280,
+        "Height": 512
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 1280,
+        "Height": 512
+      },
+      "FromFile": "assets/Art/letterBG.png",
+      "When": {
+        "New mail paper": true
+      }
+    },
+    {
+      "LogName": "Desert Festival Strings for Quinn",
+      "Action": "EditData",
+      "Target": "Strings/1_6_Strings",
+      "Entries": {
+        "DesertFestival_Quinn1": "{{i18n:DesertFestival_Quinn1}}",
+        "DesertFestival_Quinn3": "{{i18n:DesertFestival_Quinn3}}",
+        "DesertFestival_Quinn_marriage": "{{i18n:DesertFestival_Quinn_marriage}}"
+      }
+    }
+  ]
+}

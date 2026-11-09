@@ -1,0 +1,42 @@
+{
+    "Changes": [
+        //Gift tastes can be found in 'data\Characters.json'
+        {
+            "LogName": "PITV Pride Festival schedule",
+            "Action": "EditData",
+            "Target": "Characters/schedules/Quinn",
+            "Entries": {
+                "sapphicsaph_pitv.PrideFestival_2": "610 HaleyHouse 18 6 3/830 CommunityCenter 23 17 3 \"Strings\\schedules\\Quinn:PrideFest.Read\"/1120 CommunityCenter 26 17 2 Quinn_read \"Strings\\schedules\\Quinn:PrideFest.Read\"/1320 CommunityCenter 53 13 0 \"Strings\\schedules\\Quinn:PrideFest.Emily\"/1440 CommunityCenter 26 17 2 Quinn_read \"Strings\\schedules\\Quinn:PrideFest.Read\"/1610 CommunityCenter 23 17 3 \"Strings\\schedules\\Quinn:PrideFest.Emily\"/1700 Saloon 16 20 0/2330 {{Quinn_SleepLocation}}",
+                "marriage_sapphicsaph_pitv.PrideFestival_2": "830 CommunityCenter 6 8 2 \"Strings\\schedules\\Quinn:PrideFestival.Marriage.1\"/1130 CommunityCenter 5 7 0 \"Strings\\schedules\\Quinn:PrideFestival.Marriage.1\"/1330 CommunityCenter 42 20 3 \"Strings\\schedules\\Quinn:PrideFestival.Marriage.2\"/1530 CommunityCenter 24 17 0 \"Strings\\schedules\\Quinn:PrideFestival.Marriage.3\"/1620 CommunityCenter 26 17 2 Quinn_read \"Strings\\schedules\\Quinn:PrideFestival.Marriage.3\"/1700 CommunityCenter 24 17 0 \"Strings\\schedules\\Quinn:PrideFestival.Marriage.4\"/1730 BusStop -1 23 3"
+            }
+        },
+        {
+            "LogName": "PITV Schedule Dialogue",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Quinn",
+            "Entries": {
+                "PrideFest.Read": "{{i18n:PITV.dialogue.PrideFest.Read}}",
+                "PrideFest.Emily": "{{i18n:PITV.dialogue.PrideFest.Emily}}"
+            }
+        },
+        {
+            "LogName": "PITV Dialogue",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "AcceptGift_(O)sapphicsaph_pitv.EnbyEclair": "{{i18n:PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.EnbyEclair}}",
+                "AcceptGift_(O)sapphicsaph_pitv.LesbianLollipop": "{{i18n:PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.LesbianLollipop}}",
+                "AcceptGift_(O)sapphicsaph_pitv.ARomanticCookie": "{{i18n:PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.ARomanticCookie}}",
+                "AcceptGift_(O)sapphicsaph_pitv.GaylacticCookie": "{{i18n:PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.GaylacticCookie}}",
+                "AcceptGift_(O)sapphicsaph_pitv.PridePop": "{{i18n:PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.PridePop}}",
+                "AcceptGift_(O)sapphicsaph_pitv.TransTart": "{{i18n:PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.TransTart}}",
+                "AcceptGift_(O)sapphicsaph_pitv.BiBerryMuffin": "{{i18n:PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.BiBerryMuffin}}",
+                "AcceptGift_(O)sapphicsaph_pitv.AngelHairAlfredo": "{{i18n:PITV.dialogue.AcceptGift(O)sapphicsaph_pitv.AngelHairAlfredo}}",
+                "WelcomeToPridePITV": "{{i18n:PITV.dialogue.WelcomeToPridePITV}}",
+                "PrideSeasonStartPITV": "{{i18n:PITV.dialogue.PrideSeasonStartPITV}}",
+                "PrideSeasonGiftPITV": "{{i18n:PITV.dialogue.PrideSeasonGiftPITV}}",
+                "HatMouseTheAllyPITV": "{{i18n:PITV.dialogue.HatMouseTheAllyPITV}}"
+            }
+        }
+    ]
+}

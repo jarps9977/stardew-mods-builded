@@ -1,0 +1,18 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Mods/BinaryLip.ScheduleViewer/TileAreas",
+            "Entries": {
+                "{{ModId}}_QuinnsRoom": {
+                    "Npcs": [
+                        "Quinn"
+                    ],
+                    "DisplayName": "{{i18n:QuinnsRoomName}}",
+                    "Location": "jkkps.quinn_QuinnRoom",
+                    "OverrideLocationName": true
+                }
+            }
+        }
+    ]
+}

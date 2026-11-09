@@ -1,0 +1,19 @@
+{
+  "Name": "WorkbenchAllChests",
+  "Author": "ZengGod",
+  "Version": "1.0.3",
+  "Description": "This mod optimizes the way the crafting table, backpack crafting page, and cooking interface read storage containers. You no longer need to rummage through chests everywhere for materials, and settings can be configured in GMCM.",
+  "UniqueID": "ZengGod.WorkbenchAllChests",
+  "EntryDll": "WorkbenchAllChests.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "UpdateKeys": [
+    "Nexus:55015"
+  ],
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ]
+}

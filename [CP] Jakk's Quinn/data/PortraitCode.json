@@ -1,0 +1,80 @@
+{
+  "Changes": [
+    // Quinn's Spouse Portrait
+    {
+      "Action": "EditData",
+      "Target": "Data/Furniture",
+      "Entries": {
+        "JakkQuinnPortrait": "{{modID}}_Portrait/painting/2 2/2 2/1/1000/-1/{{i18n:portrait.display.name}}/0/TileSheets\\{{modID}}_Portrait/true/not_giftable prevent_loss_on_death not_museum_donatable"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": ["Traveler", "Items"],
+      "Entries": {
+        "JakkQuinnPortrait": {
+          "ActionsOnPurchase": null,
+          "CustomFields": null,
+          "TradeItemId": null,
+          "TradeItemAmount": 1,
+          "Price": 30000,
+          "ApplyProfitMargins": null,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": false,
+          "UseObjectDataPrice": false,
+          "PriceModifiers": null,
+          "PriceModifierMode": "Stack",
+          "AvailableStockModifiers": null,
+          "AvailableStockModifierMode": "Stack",
+          "Condition": "PLAYER_HEARTS Current Quinn {{PortraitHeartsRequirement}}",
+          "Id": "JakkQuinnPortrait",
+          "ItemId": "JakkQuinnPortrait",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": -1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": "Stack",
+          "QualityModifiers": null,
+          "QualityModifierMode": "Stack",
+          "ModData": null,
+          "PerItemCondition": null
+        }
+      }
+    },
+    {
+      "LogName": "Portrait Shadow Overlay",
+      "Action": "EditImage",
+      "Target": "TileSheets/{{modID}}_Portrait",
+      "FromFile": "assets/Art/SpousePortraitOverlays/Shadow/{{Spouse_Portrait_Outfit}}/{{Spouse_Portrait_Background_Color}}.png",
+      "PatchMode": "Overlay",
+      "When": {
+        "Is Special Portrait": false
+      }
+    },
+    {
+      "LogName": "Portrait Sprite Overlay",
+      "Action": "EditImage",
+      "Target": "TileSheets/{{modID}}_Portrait",
+      "FromFile": "assets/Art/SpousePortraitOverlays/Characters/{{Spouse_Portrait_Outfit}}.png",
+      "PatchMode": "Overlay",
+      "When": {
+        "Is Special Portrait": false
+      }
+    },
+    {
+      "LogName": "Portrait Sprite Overlay",
+      "Action": "EditImage",
+      "Target": "TileSheets/{{modID}}_Portrait",
+      "FromFile": "assets/Art/SpousePortraitOverlays/Frame/{{Spouse_Portrait_Frame_Color}}.png",
+      "PatchMode": "Overlay"
+    }
+  ]
+}

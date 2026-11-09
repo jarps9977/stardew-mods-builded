@@ -1,0 +1,138 @@
+{
+    "Changes": [
+        //Dialogue can be found in 'data\Dialogue.json' and 'data\DialogueTweaks.json'
+        //Gift tastes can be found in 'data\Characters.json'
+        //Festival dispositions can be found in 'data\Festivals.json'
+        //SVE COMMUNITY DAY
+        {
+            "LogName": "SVE Community Day",
+            "Action": "EditData",
+            "Target": "Characters/schedules/Quinn",
+            "Entries": {
+                "spring_22": "710 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/830 Town 63 16 2 Quinn_read/1200 CommunityCenter 41 10 0/1410 CommunityCenter 2 9 1/1620 CommunityCenter 1 6 1/1710 CommunityCenter 13 27 3/1820 {{Quinn_SleepLocation}}",
+                "summer_22": "700 Beach 43 35 2/950 Beach 35 17 0/1050 CommunityCenter 27 9 0/1250 CommunityCenter 27 9 0/1310 CommunityCenter 25 17 2 Quinn_read/1710 CommunityCenter 13 27 3/1820 {{Quinn_SleepLocation}}",
+                "fall_22": "610 HaleyHouse 14 24 2 Quinn_read/800 AnimalShop 12 16 0/940 Town 17 94 2/1120 CommunityCenter 41 10 0/1420 CommunityCenter 32 14 3/1710 CommunityCenter 13 27 3/1820 {{Quinn_SleepLocation}}",
+                "winter_22": "710 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/820 HaleyHouse 22 17 3/900 HaleyHouse 7 22 2 Quinn_read/1100 HaleyHouse 4 23 0/1120 CommunityCenter 41 10 0/1410 CommunityCenter 2 9 1/1620 CommunityCenter 1 6 1/1710 CommunityCenter 13 27 3/1820 {{Quinn_SleepLocation}}"
+            },
+            "When": {
+                "IsCommunityCenterComplete": true,
+                "HasSeenEvent: anyPlayer |contains=221961715": true
+            }
+        },
+        //SVE JOJA DAY
+        {
+            "LogName": "Early Game Schedule CC Complete",
+            "Action": "EditData",
+            "Target": "Characters/schedules/Quinn",
+            "Entries": {
+                "{{season}}_22": "730 JojaMart 5 10 1/1110 JojaMart 9 20 3/1150 JojaMart 2 19 0/1230 JojaMart 7 5 2/1330 25 16 0/1400 17 24 2/1430 13 6 0/1530 JojaMart 22 5 0/1600 JojaMart 9 15 3/1650 JojaMart 3 25 1/1800 JojaMart 11 25 3/1820 JojaMart 11 27 0/1930 11 20 2/2000 12 23 1/1910 {{Quinn_SleepLocation}}"
+            },
+            "When": {
+                "IsJojaMartComplete": true,
+                "HasSeenEvent: anyPlayer |contains=221971519": true
+            }
+        },
+        //Dialogue
+        {
+            "LogName": "More Dialogue for SVE - Quinn",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "eventSeen_3219872": "{{i18n:SVEdialogue.eventSeen_3219871}}",
+                "eventSeen_6663411": "{{i18n:SVEdialogue.eventSeen_6663411}}",
+            }
+        },
+        {
+            "LogName": "More Dialogue for SVE - Quinn NOT CC",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "eventSeen_3219870": "{{i18n:SVEdialogue.eventSeen_3219870}}",
+                "eventSeen_6665290": "{{i18n:SVEdialogue.eventSeen_6665290}}"
+            },
+            "When": {
+                "IsCommunityCenterComplete": false,
+                "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": false
+            }
+        },
+        {
+            "LogName": "Quinn Employee Meet-up",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "{{lowercase: {{Season}}}}_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Quinn.MeetUpDay}}"
+            },
+            "When": {
+                "HasSeenEvent: anyPlayer |contains={{modId}}_getupfrombed": true,
+                "HasSeenEvent: anyPlayer |contains=3219872": true,
+                "HasSeenEvent: anyPlayer |contains=2118991": true,
+            }
+        },
+        {
+            "LogName": "Quinn Joja Dumped",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "{{lowercase: {{Season}}}}_{{Day}}": "{{i18n:SVEdialogue.Quinn.JojaDumped}}"
+            },
+            "When": {
+                "HasConversationTopic: currentPlayer": "{{modID}}_jojaDumped"
+            },
+            "Priority": "Late"
+        },
+        {
+            "LogName": "Quinn Joja Second Chance",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "{{modID}}_joja2ndchance": "{{i18n:SVEdialogue.Quinn.Joja2nd}}"
+            },
+            "When": {
+                "HasSeenEvent: currentPlayer |contains=30181001": true,
+            }
+        },
+        {
+            "LogName": "SVE Gift Reactions",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Blue_Moon_Wine}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Aged_Blue_Moon_Wine}}",
+                "RejectItem_(O)FlashShifter.StardewValleyExpandedCP_Super_Starfruit": "{{i18n:SVEdialogue.RejectItem_(O)FlashShifter.StardewValleyExpandedCP_Super_Starfruit}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Alligator": "{{i18n:SVEdialogue.livingvoid}}#$b#{{i18n:SVEdialogue.alligator}}#$b#{{i18n:SVEdialogue.superbadass}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Arrowhead_Shark": "{{i18n:SVEdialogue.livingvoid}}#$b#{{i18n:SVEdialogue.arrowhead}}#$b#{{i18n:SVEdialogue.superbadass}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Barred_Knifejaw": "{{i18n:SVEdialogue.livingvoid}}#$b#{{i18n:SVEdialogue.knifejaw}}#$b#{{i18n:SVEdialogue.superbadass}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Bonefish": "{{i18n:SVEdialogue.livingvoid}}#$b#{{i18n:SVEdialogue.bonefish}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Daggerfish": "{{i18n:SVEdialogue.livingvoid}}#$b#{{i18n:SVEdialogue.daggerfish}}#$b#{{i18n:SVEdialogue.superbadass}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Diamond_Carp": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Diamond_Carp}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Gemfish": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Gemfish}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Frog": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Frog}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Undeadfish": "{{i18n:SVEdialogue.livingvoid}}#$b#{{i18n:SVEdialogue.undead}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Baked_Potato": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Baked_Potato}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Candy": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Candy}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Cheese_Charcuterie": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Cheese_Charcuterie}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Chocolate_Truffle_Bar}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Frog_Legs": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Frog_Legs}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Grilled_Cheese_Sandwich": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Grilled_Cheese_Sandwich}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Joja_Veggie": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Joja_Veggie}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Joja_Berry": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Joja_Berry}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Monster_Fruit": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Monster_Fruit}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Golden_Ocean_Flower}}",
+                "AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Money_Bag": "{{i18n:SVEdialogue.AcceptGift_(O)FlashShifter.StardewValleyExpandedCP_Money_Bag}}",
+            }
+        },
+        {
+            "LogName": "Trout Derby schedule SVE",
+            "Action": "EditData",
+            "Target": "Characters/schedules/Quinn",
+            "Entries": {
+                "summer_20": "610 HaleyHouse 18 6 3 \"Strings\\schedules\\Quinn:emily_room\"/730 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/1030 Forest 62 51 2 \"Strings\\schedules\\Quinn:troutderby_start\"/2220 jkkps.quinn_QuinnRoom 9 8 0 \"Strings\\schedules\\Quinn:troutderby_middle\"/2410 {{Quinn_SleepLocation}}",
+                "summer_21": "830 Forest 63 48 2 Quinn_read \"Strings\\schedules\\Quinn:troutderby_read\"/1250 Forest 62 51 2 \"Strings\\schedules\\Quinn:troutderby_end\"/2220 jkkps.quinn_QuinnRoom 9 8 0 \"Strings\\schedules\\Quinn:troutderby_after\"/2410 {{Quinn_SleepLocation}}"
+            },
+            "When": {
+                "IsCommunityCenterComplete": true,
+                "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": true
+            }
+        }
+    ]
+}

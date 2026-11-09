@@ -1,0 +1,38 @@
+{
+  "Changes": [
+    {
+      "LogName": "Nose Overlay Always",
+      "Action": "EditImage",
+      "Target": "Characters/Quinn, Characters/Quinn_Winter, Characters/Quinn_Beach, Characters/Quinn_BathHouse, Characters/Quinn_Spring_Casual, Characters/Quinn_Spring, Characters/Quinn_Fall, Characters/Quinn_EggF, Characters/Quinn_IceF, Characters/Quinn_FlowerDance, Characters/Quinn_WinterStar, Characters/Quinn_Luau, Characters/Quinn_Fair, Characters/Quinn_Jellies, Characters/Quinn_SpiritsEve, Characters/Quinn_Winter, Characters/Quinn_Lake_Swim, Characters/Quinn_Y1Eve, Characters/Quinn_Y2Eve, Characters/Quinn_Spring_Rain, Characters/Quinn_Fall_Joja, Characters/Quinn_Spring_Joja, Characters/Quinn_Summer_Joja, Characters/Quinn_Winter_Joja, Characters/Quinn_Winter_Home, Characters/Quinn_Winter_Indoors, Characters/Quinn_Winter_Outdoors, Characters/Quinn_Joja, Characters/Quinn_CT, Characters/Quinn_Pride, Characters/Quinn_SpiritsEve.ES, Characters/Quinn_Summer_Rain_Indoors, Characters/Quinn_Summer_Rain, Characters/Quinn_Beach_Summer, Characters/Quinn_Beach_Spring, Characters/Quinn_Beach_Fall, Characters/Quinn_Beach_Winter",
+      "FromFile": "assets/Art/Nose/nose.png",
+      "PatchMode": "Overlay",
+      "When": {
+        "Has nose": "True"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Nose Overlay Summer",
+      "Action": "EditImage",
+      "Target": "Characters/Quinn_Summer",
+      "FromFile": "assets/Art/Nose/nose_summer.png",
+      "PatchMode": "Overlay",
+      "When": {
+        "Has nose": "True"
+      },
+      "Update": "OnLocationChange"
+    },
+    {
+      "LogName": "Janice Nose Overlay",
+      "Action": "EditImage",
+      "Target": "Characters/Janice",
+      "FromFile": "assets/Art/Nose/JaniceNose.png",
+      "PatchMode": "Overlay",
+      "When": {
+        "Has nose": "True"
+      },
+      "Priority": "Late",
+      "Update": "OnLocationChange"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "Changes": [
+    //Quinn schedule used to be coded differently; there were 4 patches, one for each possible schedule combination.
+    //Schedules consider two things: 1- has any player watched Quinn's 6 hearts event?; and 2- is the community center complete?
+    //Therefore, there are four possible combinations: [JJ-6], [JJ+6], [CC-6] and [CC+6]
+    //But there were a lot of duplicate schedule entries. I understand the new code is a little noodle-y, but it makes it SO much easier to change any conflicts
+    //-------------------------
+    //-------------------------
+    //-------------------------
+    //ABOUT THE TOKENS: 
+    //'Quinn_SleepLocation' is always 'jkkps.quinn_QuinnRoom 6 4 1 Quinn_sleep'. There was a point in development where she used to sleep in Emily's bed and moved to Haley's bed if any player married Haley; but, now that she has her own room, it's been unused. I keep the token in because I plan on adding rival heart events for Quinn and Emily at some point...!!
+    //All other tokens are there to avoid conflicts with other mods. Currently accounts for SVE, Always Raining in the Valley and East Scarp.
+    {
+      "LogName": "Always Schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "default": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 ArchaeologyHouse {{museum_read_pos}} Quinn_read/1650 Beach 19 24 2/2200 {{Quinn_SleepLocation}}",
+        "fall_Sat": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/830 Mountain 57 20 2 Quinn_read/1600 Saloon 4 19 2 \"Strings\\schedules\\Quinn:you_look_lovely\"/2100 {{Quinn_SleepLocation}}",
+        "winter_Sat": "610 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/910 Town 26 98 2/1050 ArchaeologyHouse {{museum_read_pos}} Quinn_read/1630 Saloon 18 20 0/2230 {{Quinn_SleepLocation}}",
+        "winter_Sun": "610 BathHouse_Entry 4 4 2/940 BathHouse_Pool 13 3 2/1500 BathHouse_Entry 4 4 2/1550 Saloon 17 20 0 \"Strings\\schedules\\Quinn:harvey_in_saloon\"/2200 Saloon 18 20 0/2310 {{Quinn_SleepLocation}}",
+        "marriage_Mon": "900 FishShop 5 6 0/ 1300 Saloon 14 20 0/1600 Saloon 33 18 0/1900 Town 30 56 2/2200 bed",
+        "marriage_Fri": "800 HaleyHouse 16 8 0/1500 {{Saloon_HangAround}}/2130 {{Saloon_OrderDrink}}/2410 Saloon 12 17 1/2440 bed",
+        "marriage_Sat": "610 BathHouse_Entry 4 4 2/940 BathHouse_Pool 13 3 2/1500 BathHouse_Entry 4 4 2/1550 Saloon 17 20 0/2200 Saloon 18 20 0/2310 bed",
+        "marriage_Sun": "GOTO marriage_Mon",
+        "fall_28": "610 HaleyHouse 14 6 1/1210 Town 45 102 2 \"Strings\\schedules\\Quinn:harvey_birthday_talk\"/1710 Town 45 102 2 Quinn_read/1830 Saloon 20 19 3/2140 Town 6 17 Quinn_mope \"Strings\\schedules\\Quinn:birthday_blues\"",
+        "spring_20": "630 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/730 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/930 Beach 19 24 2/1430 Town 61 99 2 Quinn_read/1730 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:someone_else\"/2300 {{Quinn_SleepLocation}}",
+        "marriage_spring_20": "800 Beach 19 24 2/1430 Town 61 99 2 Quinn_read/1730 {{Saloon_TalkToShane}}/2300 bed",
+        "marriage_spring_27": "1500 {{Saloon_TalkToShane}}/2410 Saloon 12 17 1/2440 bed",
+        "marriage_fall_28": "1210 Town 45 102 2/1710 Town 45 102 2 Quinn_read/1830 Saloon 20 19 3/2140 Town 6 17 Quinn_mope \"Strings\\schedules\\Quinn:birthday_blues\"/2500 bed",
+        "marriage_winter_12": "800 Beach 36 35 2 \"Strings\\schedules\\Quinn:squidfest.rooting_for_willy\"/900 Beach 27 27 3/1130 Beach 48 25 2 \"Strings\\schedules\\Quinn:squidfest.fishing_sisters\"/1430 Beach 49 19 2 Quinn_read \"Strings\\schedules\\Quinn:squidfest.fireplace\"/1630 Beach 26 36 2/1830 Saloon 20 19 3/2130 bed",
+        "marriage_winter_13": "800 Beach 36 35 2 \"Strings\\schedules\\Quinn:squidfest.rooting_for_willy\"/900 Beach 27 27 3/1130 Beach 48 25 2 \"Strings\\schedules\\Quinn:squidfest.fishing_sisters\"/1430 Beach 49 19 2 Quinn_read \"Strings\\schedules\\Quinn:squidfest.fireplace\"/1630 Beach 26 36 2/1830 Saloon 20 19 3/2130 bed",
+        "marriage_winter_15": "830 HaleyHouse 4 16 3/1430 Beach 26 36 2/2430 bed",
+        "spring_Sat": "610 HaleyHouse 18 6 3 \"Strings\\schedules\\Quinn:emily_room\"/730 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/930 Beach 19 24 2 Quinn_mope \"Strings\\schedules\\Quinn:beach_moping\"/1430 Town 62 100 2 Quinn_read/1740 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:simple_saloon_dialogue\"/2130 {{Quinn_SleepLocation}}",
+        "spring_Sun": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/830 Forest 16 21 2 Quinn_read/1340 AnimalShop 12 16 0/1600 Town 16 94 Quinn_read/1750 {{Saloon_TalkToShane}}/2100 {{Quinn_SleepLocation}}",
+        "summer_Sun": "830 Forest 16 21 2 Quinn_read/1340 AnimalShop 12 16 0/1600 Town 16 94 Quinn_read/1750 Saloon 10 21 2/2100 {{Quinn_SleepLocation}}",
+        "winter_13": "610 Beach 36 35 2 \"Strings\\schedules\\Quinn:squidfest.rooting_for_willy\"/900 Beach 27 27 3/1130 Beach 48 25 2 \"Strings\\schedules\\Quinn:squidfest.fishing_sisters\"/1430 Beach 49 19 2 Quinn_read \"Strings\\schedules\\Quinn:squidfest.fireplace\"/1630 Beach 26 36 2/1830 Saloon 20 19 3/2130 {{Quinn_SleepLocation}}",
+        "winter_15": "610 HaleyHouse 18 6 3 \"Strings\\schedules\\Quinn:emily_room\"/830 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/1330 HaleyHouse 4 16 3/1430 Beach 26 36 2/2430 {{Quinn_SleepLocation}}"
+      }
+    },
+    {
+      "LogName": "CC ANY POINT (+-6)",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "winter_Fri": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1200 CommunityCenter 14 19 0/1500 CommunityCenter 18 22 0 Quinn_read/1710 Saloon 8 20 0/2100 {{Saloon_TalkToShane}}/2300 {{Quinn_SleepLocation}}",
+        "winter_Mon": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1200 CommunityCenter 24 18 2 Quinn_read/1710 Saloon 10 21 2/2110 {{Quinn_SleepLocation}}",
+        "winter_Wed": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1200 CommunityCenter 7 7 2/1710 Saloon 10 21 2/2110 {{Quinn_SleepLocation}}",
+        "winter_12": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 ArchaeologyHouse {{museum_read_pos}} Quinn_read/1650 Beach 19 24 2/2200 {{Quinn_SleepLocation}}",
+        "winter": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1200 Town 25 23 2/1530 Town 62 18 0/1710 Saloon 10 21 2/2110 {{Quinn_SleepLocation}}",
+        "fall": "910 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 Beach 26 36 2/1400 ArchaeologyHouse {{museum_read_pos}} Quinn_read/1730 Saloon 8 20 0/2200 {{Quinn_SleepLocation}}",
+        "spring_Fri": "910 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 Town 107 27 2 Quinn_read/1900 Saloon 10 21 2/2200 {{Quinn_SleepLocation}}",
+        "spring_Mon": "910 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 Town 63 16 2 Quinn_read/1900 Saloon 10 21 2/2200 {{Quinn_SleepLocation}}",
+        "spring_27": "610 HaleyHouse 18 16 0/1000 Town 16 72 2 Quinn_read/1630 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:someone_else\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}",
+        "spring": "910 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 Beach 26 36 2 Quinn_mope \"Strings\\schedules\\Quinn:beach_moping\"/1900 Saloon 10 21 2/2200 {{Quinn_SleepLocation}}",
+        "spring_Wed": "910 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 Town 94 13 2 Quinn_read \"Strings\\schedules\\Quinn:looking_for_fish\"/1900 Saloon 10 21 2/2200 {{Quinn_SleepLocation}}",
+        "summer": "910 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 Beach 26 36 2 Quinn_mope \"Strings\\schedules\\Quinn:beach_moping\"/1500 FishShop 5 6 0/1730 Saloon 20 19 3 \"Strings\\schedules\\Quinn:emily_works_here\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}",
+        "summer_Fri": "900 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 CommunityCenter 40 10 0/1630 {{Saloon_HangAround}}/2130 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:simple_saloon_dialogue\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}",
+        "summer_Wed": "940 CommunityCenter 15 24/1720 Beach 37 31 2 Quinn_mope \"Strings\\schedules\\Quinn:beach_moping\"/2300 {{Quinn_SleepLocation}}",
+        "marriage_DesertFestival_3": "800 Desert 19 49 2 \"Strings\\1_6_Strings:DesertFestival_Quinn_marriage\"/2430 bed",
+        "DesertFestival_3": "610 HaleyHouse 19 16 0/900 Desert 14 21 0 \"Strings\\1_6_Strings:DesertFestival_Quinn\"/2430 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": true
+      }
+    },
+    {
+      "LogName": "JOJA ANY POINT (+-6)",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "winter_12": "{{default_schedule}}/1650 Beach 19 24 2/2200 {{Quinn_SleepLocation}}",
+        "summer_Wed": "{{default_schedule}}/1720 Beach 37 31 2 Quinn_mope \"Strings\\schedules\\Quinn:beach_moping\"/2300 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": false
+      }
+    },
+    {
+      "LogName": "BEFORE 6 SCHEDULE",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "GreenRain": "610 Saloon 26 18 3",
+        "summer_Sat": "610 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/930 Beach 19 24 2/1430 Town 62 100 2 Quinn_read/1740 Saloon 20 19 3/2130 {{Quinn_SleepLocation}}",
+        "fall_Sun": "610 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/910 Town 26 98 2/1050 ArchaeologyHouse {{museum_read_pos}} Quinn_read/1630 Saloon 18 20 0/2230 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": false
+      }
+    },
+    {
+      "LogName": "AFTER 6 SCHEDULE",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "GreenRain": "610 Saloon 7 17 2",
+        "summer_Sat": "610 HaleyHouse 18 6 3 \"Strings\\schedules\\Quinn:emily_room\"/730 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/930 Beach 19 24 2/1430 Town 62 98 2 Quinn_read/1740 Saloon 20 19 3/2130 {{Quinn_SleepLocation}}",
+        "fall_Sun": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/830 WizardHouse {{WizardHouse.Shelves}}/1230 WizardHouse {{WizardHouse.Read}} Quinn_read/1330 Saloon 18 20 0 \"Strings\\schedules\\Quinn:spice_tolerance\"/1800 Town 50 21 2 Quinn_read/2100 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": true
+      }
+    },
+    {
+      "LogName": "CC BEFORE 6 SCHEDULE",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "fall_Tue": "910 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 Town 94 13 2 Quinn_read \"Strings\\schedules\\Quinn:looking_for_fish\"/1900 Saloon 10 21 2/2200 {{Quinn_SleepLocation}}",
+        "fall_Thu": "910 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/1030 Town 94 13 2 Quinn_read \"Strings\\schedules\\Quinn:looking_for_fish\"/1900 Saloon 10 21 2/2200 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": true,
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": false
+      }
+    },
+    {
+      "LogName": "CC AFTER 6 SCHEDULE",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "fall_Thu": "930 SeedShop 13 27 1/1130 SeedShop 4 19 0/1200 Town 17 95/1630 WizardHouse {{WizardHouse.Shelves}}/2030 WizardHouse {{WizardHouse.Read}} Quinn_read/2400 {{Quinn_SleepLocation}}",
+        "fall_Fri": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/840 WizardHouse {{WizardHouse.Shelves}}/1240 WizardHouse {{WizardHouse.Read}} Quinn_read/1600 {{Saloon_HangAround}}/2130 {{Saloon_OrderDrink}} \"Strings\\schedules\\Quinn:simple_saloon_dialogue\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": true,
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": true
+      }
+    },
+    {
+      "LogName": "JOJA BEFORE 6 SCHEDULE",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "winter": "{{default_schedule}}/1710 Saloon 10 21 2/2110 {{Quinn_SleepLocation}}",
+        "spring": "{{default_schedule}}/1720 Beach 26 36 2/2110 {{Quinn_SleepLocation}}",
+        "fall": "{{default_schedule}}/1720 Beach 26 36 2/2110 {{Quinn_SleepLocation}}",
+        //'spirng' and 'fall' are the same
+        "fall_Fri": "{{default_schedule}}/1710 Saloon 8 20 0/2200 {{Quinn_SleepLocation}}",
+        "spring_27": "{{default_schedule}}/1700 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:someone_else\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}",
+        "summer": "{{default_schedule}}/1720 Beach 26 36 2 Quinn_mope \"Strings\\schedules\\Quinn:beach_moping\"/2110 {{Quinn_SleepLocation}}",
+        "summer_Fri": "{{default_schedule}}/1640 {{Saloon_HangAround}}/2130 Saloon 20 19 3 \"Strings\\schedules\\Quinn:emily_works_here\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": false,
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": false
+      }
+    },
+    {
+      "LogName": "JOJA AFTER 6 SCHEDULE",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "winter": "610 HaleyHouse 19 16 2/{{Quinn_LateSchedule}}/1600 Saloon 10 21 2/2110 {{Quinn_SleepLocation}}",
+        "fall": "{{Quinn_LateSchedule}}/1600 ArchaeologyHouse {{museum_read_pos}} Quinn_read/1800 Saloon 8 20 0/2400 {{Quinn_SleepLocation}}",
+        "fall_Thu": "610 HaleyHouse 19 16 2/{{Quinn_LateSchedule}}/1630 WizardHouse {{WizardHouse.Shelves}}/2030 WizardHouse {{WizardHouse.Read}} Quinn_read/2400 {{Quinn_SleepLocation}}",
+        "fall_Fri": "610 HaleyHouse 20 16 0 Quinn_dishes \"Strings\\schedules\\Quinn:dishes_HaleyHouse\"/{{Quinn_LateSchedule}}/1600 {{Saloon_HangAround}}/2130 {{Saloon_OrderDrink}} \"Strings\\schedules\\Quinn:emily_works_here\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}",
+        "spring_27": "{{Quinn_LateSchedule}}/1700 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:someone_else\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}",
+        "spring": "610 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/{{Quinn_LateSchedule}}/1640 Mountain 57 20 2 Quinn_read/2200 {{Quinn_SleepLocation}}",
+        "summer": "610 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/{{Quinn_LateSchedule}}/1640 {{Saloon_HangAround}}/2130 Saloon 20 19 3 \"Strings\\schedules\\Quinn:emily_works_here\"/2410 Saloon 12 17 1/2440 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": false,
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": true
+      }
+    },
+    //RAINY DAYS
+    {
+      "LogName": "Rainy days schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "rain": "{{Rain.Schedule|Quinn_SleepLocation={{Quinn_SleepLocation}},Quinn_LateSchedule={{Quinn_LateSchedule}},default_schedule={{default_schedule}}}}"
+      }
+    },
+    //TROUT DERBY
+    {
+      "LogName": "Trout Derby schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "summer_20": "610 HaleyHouse 18 6 3 \"Strings\\schedules\\Quinn:emily_room\"/730 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/1100 Forest 90 40 2 \"Strings\\schedules\\Quinn:troutderby_start\"/2220 jkkps.quinn_QuinnRoom 9 8 0 \"Strings\\schedules\\Quinn:troutderby_middle\"/2410 {{Quinn_SleepLocation}}",
+        "summer_21": "830 Forest 93 38 2 Quinn_read \"Strings\\schedules\\Quinn:troutderby_read\"/1250 Forest 90 40 2 \"Strings\\schedules\\Quinn:troutderby_end\"/2220 jkkps.quinn_QuinnRoom 9 8 0 \"Strings\\schedules\\Quinn:troutderby_after\"/2410 {{Quinn_SleepLocation}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": true,
+        "HasSeenEvent: anyPlayer |contains={{modID}}_getupfrombed": true,
+        "HasMod: |contains=FlashShifter.SVECode": false
+      }
+    },
+    //EX-JOJA EMOTIONAL SUPPORT GROUP / JOJA EMPLOYEE HANGOUT
+    {
+      "LogName": "Quinn Joja Meet-up",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Quinn",
+      "Entries": {
+        "spring_{{Meet_up.Day}}": "730 Forest 16 21 2 Quinn_read/1340 AnimalShop 17 16 3/1540 AnimalShop 24 17 1/1800 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:someone_else\"/2340 {{Quinn_SleepLocation}}",
+        "summer_{{Meet_up.Day}}": "730 Beach 32 34 2/1320 Saloon 24 20 3/1540 Saloon 35 18 0/1800 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:someone_else\"/2340 {{Quinn_SleepLocation}}",
+        "fall_{{Meet_up.Day}}": "610 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/1200 HaleyHouse 19 16 0/1400 HaleyHouse 7 21 3/1600 Town 32 36 2/1950 {{Saloon_TalkToShane}} \"Strings\\schedules\\Quinn:someone_else\"/2340 {{Quinn_SleepLocation}}",
+        "winter_{{Meet_up.Day}}": "610 jkkps.quinn_QuinnRoom 3 6 2 Quinn_read/830 Town 20 90 2/910 BathHouse_Pool 14 9 2/1410 BathHouse_Pool 13 6 2/1620 BathHouse_WomensLocker 9 7 1/1730 BathHouse_Entry 5 4 2/1800 {{Quinn_SleepLocation}}",
+        "marriage_fall_{{Meet_up.Day}}": "1000 HaleyHouse 19 16 0/1400 HaleyHouse 7 21 3/1600 Town 32 36 2/1950 {{Saloon_TalkToShane}}/2340 bed",
+        "marriage_spring_{{Meet_up.Day}}": "1250 AnimalShop 17 16 3/1540 AnimalShop 24 17 1/1800 {{Saloon_TalkToShane}}/2340 bed",
+        "marriage_summer_{{Meet_up.Day}}": "1200 Saloon 24 20 3/1540 Saloon 35 18 0/1800 {{Saloon_TalkToShane}}/2340 bed",
+        "marriage_winter_{{Meet_up.Day}}": "900 BathHouse_Pool 14 9 2/1410 BathHouse_Pool 13 6 2/1620 BathHouse_WomensLocker 9 7 1/1730 BathHouse_Entry 5 4 2/1800 bed"
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modId}}_getupfrombed": true,
+        "HasSeenEvent: anyPlayer |contains=2123243": true,
+        "HasSeenEvent: anyPlayer |contains=45": true,
+        "HasSeenEvent: anyPlayer |contains=2118991": true
+      }
+    },
+    {
+      "LogName": "Emily Joja Meet-up",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Emily",
+      "Entries": {
+        "spring_{{Meet_up.Day}}": "1300 AnimalShop 15 17 0/1450 AnimalShop 16 17 0/1540 AnimalShop 27 16 2/1800 Saloon 15 17 0 square_5_1_0/2430 HaleyHouse 21 4 1 emily_sleep",
+        "summer_{{Meet_up.Day}}": "1350 Saloon 23 19 2/1540 Saloon 38 18 1/1740 Saloon 15 17 0 square_5_1_0/2430 HaleyHouse 21 4 1 emily_sleep",
+        "fall_{{Meet_up.Day}}": "1250 HaleyHouse 6 20 2/1600 Town 31 37 1/1950 Saloon 15 17 0 square_5_1_0/2430 HaleyHouse 21 4 1 emily_sleep",
+        "winter_{{Meet_up.Day}}": "830 Town 21 91 13/900 BathHouse_Pool 15 9 2/1410 BathHouse_Pool 3 12 1/1620 BathHouse_WomensLocker 11 7 0/1730 BathHouse_Entry 5 6 0/1800 HaleyHouse 21 4 1 emily_sleep",
+        "marriage_spring_{{Meet_up.Day}}": "1250 AnimalShop 16 17 0/1540 AnimalShop 27 16 2/1750 Saloon 14 20 0/1900 bed",
+        "marriage_summer_{{Meet_up.Day}}": "1200 Saloon 23 19 2/1540 Saloon 38 18 1/1750 bed",
+        "marriage_fall_{{Meet_up.Day}}": "1200 HaleyHouse 6 20 2/1600 Town 31 37 1/1950 bed",
+        "marriage_winter_{{Meet_up.Day}}": "900 BathHouse_Pool 15 9 2/1410 BathHouse_Pool 3 12 1/1620 BathHouse_WomensLocker 11 7 0/1730 BathHouse_Entry 5 6 0/1800 Railroad 30 58 2/1820 bed"
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modId}}_getupfrombed": true,
+        "HasSeenEvent: anyPlayer |contains=2123243": true,
+        "HasSeenEvent: anyPlayer |contains=45": true,
+        "HasSeenEvent: anyPlayer |contains=2118991": true
+      }
+    },
+    {
+      "LogName": "Shane Joja Meet-up",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Shane",
+      "Entries": {
+        "spring_{{Meet_up.Day}}": "610 AnimalShop 23 5 0/830 AnimalShop 24 5 0/1030 AnimalShop 12 16 0/1400 AnimalShop 15 15 2/1540 AnimalShop 25 16 2/1800 Saloon 21 17 2 shane_drink/2340 AnimalShop 27 4 1 shane_sleep",
+        "summer_{{Meet_up.Day}}": "830 AnimalShop 24 5 0/1030 AnimalShop 12 16 0/1320 Saloon 22 20 1/1540 Saloon 40 18 3/1750 Saloon 21 17 2 shane_drink/2340 AnimalShop 27 4 1 shane_sleep",
+        "fall_{{Meet_up.Day}}": "830 AnimalShop 24 5 0/1030 AnimalShop 12 16 0/1400 HaleyHouse 4 23 0/1600 Town 35 37 3/1950 Saloon 21 17 2 shane_drink/2340 AnimalShop 27 4 1 shane_sleep",
+        "winter_{{Meet_up.Day}}": "630 AnimalShop 24 5 0/800 Town 20 92 0/910 BathHouse_Pool 18 5 3/1410 BathHouse_Pool 9 10 3/1620 BathHouse_MensLocker 8 25 0/1730 BathHouse_Entry 4 5 1/1800 AnimalShop 27 4 1 shane_sleep",
+        "marriage_spring_{{Meet_up.Day}}": "930 AnimalShop 24 15 0/1400 AnimalShop 15 15 2/1540 AnimalShop 25 16 2/1800 Saloon 21 17 2 shane_drink/2340 bed",
+        "marriage_summer_{{Meet_up.Day}}": "1200 Saloon 22 20 1/1540 Saloon 40 18 3/1750 Saloon 21 17 2 shane_drink/2340 bed",
+        "marriage_fall_{{Meet_up.Day}}": "1100 HaleyHouse 4 23 0/1600 Town 35 37 3/1950 Saloon 21 17 2 shane_drink/2340 bed",
+        "marriage_winter_{{Meet_up.Day}}": "900 BathHouse_Pool 18 5 3/1410 BathHouse_Pool 9 10 3/1620 BathHouse_MensLocker 8 25 0/1730 BathHouse_Entry 4 5 1/1800 bed"
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modId}}_getupfrombed": true,
+        "HasSeenEvent: anyPlayer |contains=2123243": true,
+        "HasSeenEvent: anyPlayer |contains=45": true,
+        "HasSeenEvent: anyPlayer |contains=2118991": true
+      }
+    },
+    {
+      "LogName": "Sam Joja Meet-up",
+      "Action": "EditData",
+      "Target": "Characters/schedules/Sam",
+      "Entries": {
+        "spring_{{Meet_up.Day}}": "1000 SamHouse 15 13 0/1040 SamHouse 17 15 2 sam_guitar/1340 AnimalShop 14 16 1/1540 AnimalShop 28 17 3/1800 SamHouse 22 16 1/2100 SamHouse 22 13 1 sam_sleep",
+        "summer_{{Meet_up.Day}}": "1000 SamHouse 15 13 0/1040 SamHouse 17 15 2 sam_guitar/1350 Saloon 23 21 0/1540 Saloon 34 18 0/1750 SamHouse 22 16 1/2100 SamHouse 22 13 1 sam_sleep",
+        "fall_{{Meet_up.Day}}": "1000 SamHouse 15 13 0/1040 SamHouse 17 15 2 sam_guitar/1400 HaleyHouse 3 22 1/1600 Town 34 36 2/1950 SamHouse 22 16 1/2100 SamHouse 22 13 1 sam_sleep",
+        "winter_{{Meet_up.Day}}": "610 SamHouse 15 13 0/830 Town 19 91 1/910 BathHouse_Pool 15 5 1/1410 BathHouse_Pool 4 7 2 2/1620 BathHouse_MensLocker 4 13 0 0/1730 BathHouse_Entry 6 5 3/1800 Railroad 30 58 2/1820 SamHouse 22 13 1 sam_sleep",
+        "marriage_spring_{{Meet_up.Day}}": "1250 AnimalShop 14 16 1/1540 AnimalShop 28 17 3/1750 Saloon 12 20 0/1900 bed",
+        "marriage_summer_{{Meet_up.Day}}": "1200 Saloon 23 21 0/1540 Saloon 34 18 0/1750 bed",
+        "marriage_fall_{{Meet_up.Day}}": "1100 HaleyHouse 3 22 1/1600 Town 34 36 2/1950 bed",
+        "marriage_winter_{{Meet_up.Day}}": "900 BathHouse_Pool 15 5 1/1410 BathHouse_Pool 4 7 2 2/1620 BathHouse_MensLocker 4 13 0 0/1730 BathHouse_Entry 6 5 3/1800 Railroad 30 58 2/1820 bed"
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modId}}_getupfrombed": true,
+        "HasSeenEvent: anyPlayer |contains=2123243": true,
+        "HasSeenEvent: anyPlayer |contains=45": true,
+        "HasSeenEvent: anyPlayer |contains=2118991": true
+      }
+    }
+  ]
+}

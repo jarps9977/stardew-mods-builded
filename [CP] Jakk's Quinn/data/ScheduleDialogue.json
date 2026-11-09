@@ -1,0 +1,40 @@
+{
+  "Changes": [
+    {
+      "LogName": "Dialogue Action",
+      "Action": "EditData",
+      "Target": "Strings/schedules/Quinn",
+      "Entries": {
+        "spice_tolerance": "{{i18n:dialogue.Saloon_12_20}}",
+        "emily_works_here": "{{i18n:dialogue.Saloon_18_20}}",
+        "simple_saloon_dialogue": "{{i18n:schedule.dialogue.saloon.01}}",
+        "dishes_HaleyHouse": "{{i18n:dialogue.HaleyHouse_20_16}}",
+        "emily_room": "{{i18n:dialogue.HaleyHouse_18_6}}",
+        "looking_for_fish": "{{i18n:dialogue.Town_94_13}}",
+        "harvey_in_saloon": "{{i18n:dialogue.Saloon_17_20}}",
+        "you_look_lovely": "{{i18n:dialogue.Saloon_4_19}}",
+        "someone_else": "{{i18n:dialogue.Saloon_22_18}}",
+        "birthday_blues": "{{i18n:dialogue.Town_6_17}}",
+        "harvey_birthday_talk": "{{i18n:dialogue.Town_45_102}}",
+        "squidfest.fishing_sisters": "{{i18n:dialogue.Beach_48_25}}",
+        "squidfest.rooting_for_willy": "{{i18n:dialogue.Beach_36_35}}",
+        "squidfest.fireplace": "{{i18n:dialogue.Beach_49_19}}",
+        "beach_moping": "{{i18n:dialogue.beach_moping}}",
+        "troutderby_read": "{{i18n:dialogue.troutderby_read}}",
+        "troutderby_start": "{{i18n:dialogue.troutderby_start}}",
+        "troutderby_middle": "{{i18n:dialogue.troutderby_middle}}",
+        "troutderby_end": "{{i18n:dialogue.troutderby_end}}",
+        "troutderby_after": "{{i18n:dialogue.troutderby_after}}"
+      }
+    },
+    {
+      "LogName": "Dialogue Action",
+      "Action": "EditData",
+      "Target": "Strings/1_6_Strings",
+      "Entries": {
+        "DesertFestival_Quinn": "{{i18n:DesertFestival_Quinn3}}",
+        "DesertFestival_Quinn_marriage": "{{i18n:DesertFestival_Quinn_marriage}}"
+      }
+    }
+  ]
+}

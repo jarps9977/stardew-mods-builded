@@ -1,0 +1,137 @@
+{
+  "Changes": [
+    {
+      "LogName": "Emily Tweaks",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Emily",
+      "Entries": {
+        "married_Quinn": "{{i18n:dialogueEmily.married_Quinn}}",
+        "fall_Sun6_inlaw_Quinn": "{{i18n:dialogueEmily.fall_Sun6_inlaw_Quinn}}",
+        "summer_Wed_inlaw_Quinn": "{{i18n:dialogueEmily.summer_Wed_inlaw_Quinn}}",
+        "eventSeen_{{modID}}_lookingout": "{{i18n:dialogueEmily.lookingout}}",
+        "eventSeen_{{modID}}_getupfrombed": "{{i18n:dialogueEmily.getupfrombed}}",
+        "eventSeen_{{ModId}}_keepwatch": "{{i18n:dialogueEmily.eventSeen_keepwatch}}",
+        "eventSeen_{{ModId}}_next": "{{i18n:dialogueEmily.eventSeen_next}}",
+        "eventSeen_{{ModId}}_wizardsapprentice": "{{i18n:dialogueEmily.eventSeen_wizardsapprentice}}",
+        "divorced_Quinn": "{{i18n:dialogueEmily.divorced_Quinn}}",
+        "eventSeen_{{ModId}}_overwork": "{{i18n:dialogueEmily.eventSeen_overwork}}",
+        "eventSeen_{{ModId}}_girls": "{{i18n:dialogueEmily.eventSeen_girls}}",
+        "spring_mon": "{{i18n:dialogueEmily.spring_mon}}"
+      }
+    },
+    {
+      "LogName": "Haley Tweaks",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Haley",
+      "Entries": {
+        "married_Quinn": "{{i18n:dialogueHaley.married_Quinn}}",
+        "fall_Wed6_inlaw_Quinn": "{{i18n:dialogueHaley.fall_Wed6_inlaw_Quinn}}",
+        "summer_Sun_inlaw_Quinn": "{{i18n:dialogueHaley.summer_Sun_inlaw_Quinn}}",
+        "eventSeen_{{modID}}_getupfrombed": "{{i18n:dialogueHaley.getupfrombed}}",
+        "eventSeen_{{ModId}}_wizardsapprentice": "{{i18n:dialogueHaley.eventSeen_wizardsapprentice}}",
+        "divorced_Quinn": "{{i18n:dialogueHaley.divorced_Quinn}}"
+      }
+    },
+    {
+      "LogName": "Shane Tweaks",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Entries": {
+        "married_Quinn": "{{i18n:dialogueShane.married_Quinn}}",
+        "fall_Sun_inlaw_Quinn": "{{i18n:dialogueShane.fall_Sun_inlaw_Quinn}}",
+        "summer_Wed_inlaw_Quinn": "{{i18n:dialogueShane.summer_Wed_inlaw_Quinn}}",
+        "eventSeen_{{ModId}}_next": "{{i18n:dialogueShane.eventSeen_next}}",
+        "divorced_Quinn": "{{i18n:dialogueShane.divorced_Quinn}}"
+      }
+    },
+    {
+      "LogName": "Shane Extra Tweak",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Entries": {
+        "eventSeen_{{modID}}_getupfrombed": "{{i18n:dialogueShane.eventSeen_getupfrombed}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": false
+      }
+    },
+    {
+      "LogName": "Willy tweaks",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Willy",
+      "Entries": {
+        "married_Quinn": "{{i18n:dialogueWilly.married_Quinn}}",
+        "divorced_Quinn": "{{i18n:dialogueWilly.divorced_Quinn}}"
+      }
+    },
+    {
+      "LogName": "Harvey Tweaks",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Harvey",
+      "Entries": {
+        "spring_Mon_inlaw_Quinn": "{{i18n:dialogueHarvey.spring_Mon_inlaw_Quinn}}",
+        "eventSeen_{{ModId}}_next": "{{i18n:dialogueHarvey.eventSeen_next}}",
+        "summer_Tue_inlaw_Quinn": "{{i18n:dialogueHarvey.summer_Tue_inlaw_Quinn}}"
+      }
+    },
+    {
+      "LogName": "Spouse NYE Kiss Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/{{Spouse}}",
+      "Entries": {
+        "{{modID}}_theyreprudes": "{{i18n:dialogueSpouse.prudes}}"
+      },
+      "When": {
+        "Relationship:Quinn": "Friendly, Divorced, Unmet"
+      }
+    },
+    //Employee hangout dialogue
+    {
+      "LogName": "Shane Employee Meet-up CC",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Entries": {
+        "spring_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Shane.MeetUpDay.1}}",
+        "summer_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Shane.MeetUpDay.2}}",
+        "fall_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Shane.MeetUpDay.2}}",
+        "winter_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Shane.MeetUpDay.3}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": false,
+        "HasSeenEvent: anyPlayer |contains={{modId}}_getupfrombed": true,
+        "HasSeenEvent: anyPlayer |contains=1916822": true,
+        "HasSeenEvent: anyPlayer |contains=2118991": true
+      }
+    },
+    {
+      "LogName": "Shane Employee Meet-up JJ",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Shane",
+      "Entries": {
+        "spring_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Shane.MeetUpDay.1}}",
+        "summer_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Shane.MeetUpDay.2}}",
+        "fall_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Shane.MeetUpDay.2}}",
+        "winter_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Shane.MeetUpDay.4}}"
+      },
+      "When": {
+        "IsCommunityCenterComplete": true,
+        "HasSeenEvent: anyPlayer |contains={{modId}}_getupfrombed": true,
+        "HasSeenEvent: anyPlayer |contains=1916822": true,
+        "HasSeenEvent: anyPlayer |contains=2118991": true
+      }
+    },
+    {
+      "LogName": "Sam Employee Meet-up",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sam",
+      "Entries": {
+        "{{lowercase: {{Season}}}}_{{Meet_up.Day}}": "{{i18n:SVEdialogue.Sam.MeetUpDay}}"
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer |contains={{modId}}_getupfrombed": true,
+        "HasSeenEvent: anyPlayer |contains=1916822": true,
+        "HasSeenEvent: anyPlayer |contains=2118991": true
+      }
+    }
+  ]
+}

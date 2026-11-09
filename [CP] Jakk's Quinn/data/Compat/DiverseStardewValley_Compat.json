@@ -1,0 +1,127 @@
+{
+    "Changes": [
+        //NB Emily: Dialogue substitutes ------------------------------------------------------------------------------------------
+        {
+            "LogName": "DSV Compat - Dialogue substitutes - Non-binary Emily TRUE",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "cc_Bus": "{{i18n:DSV.cc_Bus}}",
+                "Thu8": "{{i18n:DSV.Thu8}}",
+                "Thu6": "{{i18n:DSV.Thu6}}",
+                "Wed2": "{{i18n:DSV.Wed2}}",
+                "winter_Wed2_inlaw_Emily": "{{i18n:DSV.winter_Wed2_inlaw_Emily}}",
+                "married_Emily": "{{i18n:DSV.married_Emily}}",
+                "eventSeen_beachcomfort": "{{i18n:DSV.eventSeen_beachcomfort}}",
+                "fall_15": "{{i18n:DSV.fall_15}}",
+                "divorced_Emily": "{{i18n:DSV.divorced_Emily}}"
+            },
+            "When": {
+                "HasMod: |contains=DSV.Core": true,
+                "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": true
+            },
+            "Priority": "Late"
+        },
+        {
+            "LogName": "DSV Compat - Dialogue substitutes - Non-binary Emily FALSE",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "cc_Bus": "{{i18n:dialogue.cc_Bus}}",
+                "dialogueMarGen.eventSeen_beachcomfort": "{{i18n:dialogue.dialogueMarGen.eventSeen_beachcomfort}}",
+                "Thu8": "{{i18n:dialogue.Thu8}}",
+                "Thu6": "{{i18n:dialogue.Thu6}}",
+                "Wed2": "{{i18n:dialogue.Wed2}}",
+                "winter_Wed2_inlaw_Emily": "{{i18n:dialogue.winter_Wed2_inlaw_Emily}}",
+                "married_Emily": "{{i18n:dialogue.married_Emily}}",
+                "eventSeen_beachcomfort": "{{i18n:dialogue.eventSeen_beachcomfort}}",
+                "fall_15": "{{i18n:dialogue.fall_15}}",
+                "divorced_Emily": "{{i18n:dialogue.divorced_Emily}}"
+            },
+            "When": {
+                "HasMod: |contains=DSV.Core": true,
+                "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": false
+            },
+            "Priority": "Late"
+        },
+        //NB Emily: Schedule dialogue substitutes ------------------------------------------------------------------------------------------
+        {
+            "LogName": "DSV Compat - Schedule dialogue substitutes - Non-binary Emily TRUE",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Quinn",
+            "Entries": {
+                "emily_room": "{{i18n:DSV.emily_room}}",
+                "emily_works_here": "{{i18n:DSV.emily_works_here}}"
+            },
+            "When": {
+                "HasMod: |contains=DSV.Core": true,
+                "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": true
+            },
+            "Priority": "Late"
+        },
+        {
+            "LogName": "DSV Compat - Schedule dialogue substitutes - Non-binary Emily FALSE",
+            "Action": "EditData",
+            "Target": "Strings/schedules/Quinn",
+            "Entries": {
+                "emily_room": "{{i18n:dialogue.HaleyHouse_18_6}}",
+                "emily_works_here": "{{i18n:dialogue.Saloon_18_20}}"
+            },
+            "When": {
+                "HasMod: |contains=DSV.Core": true,
+                "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": false
+            },
+            "Priority": "Late"
+        },
+        //NB Emily: Haley dialogue substitutes ------------------------------------------------------------------------------------------
+        {
+            "LogName": "DSV Compat - Haley dialogue substitutes - Non-binary Emily TRUE",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "summer_Sun_inlaw_Quinn": "{{i18n:DSV.dialogueHaley.summer_Sun_inlaw_Quinn}}"
+            },
+            "When": {
+                "HasMod: |contains=DSV.Core": true,
+                "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": true
+            }
+        },
+        {
+            "LogName": "DSV Compat - Haley dialogue substitutes - Non-binary Emily FALSE",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Haley",
+            "Entries": {
+                "summer_Sun_inlaw_Quinn": "{{i18n:dialogueHaley.summer_Sun_inlaw_Quinn}}"
+            },
+            "When": {
+                "HasMod: |contains=DSV.Core": true,
+                "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": false
+            }
+        },
+        //NB Emily: Mail substitutes ------------------------------------------------------------------------------------------
+        {
+            "LogName": "DSV Compat - Mail substitutes - Non-binary Emily TRUE",
+            "Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+                "{{ModId}}_thanksforleaving": "{{i18n:DSV.mail.thanksforleaving.text}}[#]{{i18n:mail.thanksforleaving.title}}"
+            },
+            "When": {
+                "HasMod: |contains=DSV.Core": true,
+                "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": true
+            }
+        },
+        {
+            "LogName": "DSV Compat - Mail substitutes - Non-binary Emily FALSE",
+            "Action": "EditData",
+            "Target": "Data/mail",
+            "Entries": {
+                "{{ModId}}_thanksforleaving": "{{i18n:mail.thanksforleaving.text}}[#]{{i18n:mail.thanksforleaving.title}}"
+            },
+            "When": {
+                "HasMod: |contains=DSV.Core": true,
+                "DSV.Core/ConfigValue:NonbinaryEmily |contains= true": false
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "Changes": [
+        {
+            "LogName": "Quinn UCR",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "give_pendant": "{{i18n:dialogue.give_pendant}}",
+                "refusal_no_heartsA": "{{i18n:dialogue.refusal_no_heartsA}}",
+                "refusal_no_heartsB": "{{i18n:dialogue.refusal_no_heartsB}}",
+                "refusal_knownA": "{{i18n:dialogue.refusal_knownA}}",
+                "refusal_knownB": "{{i18n:dialogue.refusal_knownB}}",
+                "refusal_botherA": "{{i18n:dialogue.refusal_botherA}}",
+                "refusal_botherB": "{{i18n:dialogue.refusal_botherB}}"
+            }
+        }
+    ]
+}

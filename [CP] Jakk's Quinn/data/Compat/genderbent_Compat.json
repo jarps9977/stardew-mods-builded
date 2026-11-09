@@ -1,0 +1,112 @@
+{
+    "Changes": [
+        //GENDERBENT COMPATIBILITY
+        {
+            "LogName": "GBQ Dialogue changes",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Quinn",
+            "Entries": {
+                "Wed10": "{{i18n:GBQ.dialogue.Wed10}}",
+                "summer_Fri6": "{{i18n:GBQ.dialogue.summer_Fri6}}"
+            },
+            "Priority": "Default + 20",
+            "When": {
+                "QuinnGender": "Male"
+            }
+        },
+        {
+            "LogName": "GBQ Married dialogue changes Spring",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueQuinn",
+            "Entries": {
+                "OneKid_0": "{{i18n:GBQ.dialogueMarSpring.OneKid_0}}",
+                "Indoor_Night_3": "{{i18n:GBQ.dialogueMarSpring.Indoor_Night_3 |HusbandOrWife={{HusbandOrWife}}}}",
+                "spring_24": "{{i18n:GBQ.dialogueMarSpring.spring_24 |PrinceOrPrincess={{PrinceOrPrincess}}}}",
+                "TwoKids_2": "{{i18n:GBQ.dialogueMarSpring.TwoKids_2}}"
+            },
+            "Priority": "Default + 20",
+            "When": {
+                "QuinnGender": "Male",
+                "Season": "Spring"
+            }
+        },
+        {
+            "LogName": "GBQ Married dialogue changes Summer",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/MarriageDialogueQuinn",
+            "Entries": {
+                "TwoKids_3": "{{i18n:GBQ.dialogueMarSummer.TwoKids_3}}",
+                "TwoKids_1": "{{i18n:GBQ.dialogueMarSummer.TwoKids_1}}"
+            },
+            "Priority": "Default + 20",
+            "When": {
+                "QuinnGender": "Male",
+                "Season": "Summer"
+            }
+        },
+        {
+            "LogName": "GBQ Shane inlaw dialogue changes",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Shane",
+            "Entries": {
+                "summer_Wed_inlaw_Quinn:": "{{i18n:GBQ.dialogueShane.summer_Wed_inlaw_Quinn}}"
+            },
+            "Priority": "Default + 20",
+            "When": {
+                "QuinnGender": "Male"
+            }
+        },
+        {
+            "LogName": "GBQ 2 hearts JJ",
+            "Action": "EditData",
+            "Target": "Data/Events/Town",
+            "Entries": {
+                "{{ModId}}_workplacefight/f Quinn 750/Time 1700 2600/!FestivalDay/!DayOfWeek Sun Sat/Weather sunny": "continue/-1000 1000/farmer 45 67 0 Quinn 48 73 3 Shane 45 73 1/skippable/pause 1000/speak Shane \"{{i18n:workplacefight.0}}\"/pause 500/beginSimultaneousCommand/viewport 47 73/globalFadeToClear 0.01/endSimultaneousCommand/speak Quinn \"{{i18n:workplacefight.1}}\"/pause 500/speak Shane \"{{i18n:workplacefight.2}}\"/pause 200/speak Quinn \"{{i18n:workplacefight.3}}\"/pause 200/speak Shane \"{{i18n:workplacefight.4}}\"/pause 300/shake Quinn 200/emote Quinn 12/pause 200/speak Quinn \"{{i18n:workplacefight.5}}\"/pause 500/faceDirection Shane 0 true/shake Shane 200/speak Shane \"{{i18n:GBQ.workplacefight.6}}\"/shake Quinn 200/speak Quinn \"{{i18n:GBQ.workplacefight.7}}\"/pause 500/faceDirection Shane 1/speak Shane \"{{i18n:workplacefight.8}}\"/emote Quinn 40/pause 500/speak Quinn \"{{i18n:workplacefight.9}}\"/pause 500/stopMusic/emote Shane 12/speak Shane \"{{i18n:workplacefight.10}}\"/pause 500/shake Quinn 200/speak Quinn \"{{i18n:workplacefight.11}}\"/pause 500/speak Shane \"{{i18n:workplacefight.12}}\"/pause 500/emote Quinn 28/speak Quinn \"{{i18n:workplacefight.13}}\"/pause 500/faceDirection Shane 0 true/shake Shane 200/speak Shane \"{{i18n:workplacefight.14}}\"/pause 200/move Shane 0 -2 0/warp Shane 1000 -1000/playSound doorClose/faceDirection Quinn 2/emote Quinn 12/pause 500/faceDirection Quinn 1/shake Quinn 200/speak Quinn \"{{i18n:workplacefight.15}}\"/pause 500/shake Quinn 200/speak Quinn \"{{i18n:workplacefight.16}}\"/pause 300/faceDirection Quinn 3/speak Quinn \"{{i18n:workplacefight.17}}\"/pause 500/faceDirection Quinn 2/move farmer 3 0 2 true/speak Quinn \"{{i18n:workplacefight.18}}\"/pause 500/animate Quinn false true 0 32 32 32/move farmer 0 4 2 true/pause 1500/stopAnimation Quinn 29/showFrame Quinn 29/jump Quinn/playSound batScreech/pause 300/showFrame Quinn 12/faceDirection Quinn 0/speak Quinn \"{{i18n:workplacefight.19}}\"/pause 500/emote Quinn 40/speak Quinn \"{{i18n:workplacefight.20}}\"/pause 500/faceDirection Quinn 2/pause 500/speak Quinn \"{{i18n:workplacefight.21}}\"/pause 500/faceDirection Quinn 0/speak Quinn \"{{i18n:workplacefight.22}}\"/pause 500/question fork0 \"#{{i18n:workplacefight.farmer1}}#{{i18n:workplacefight.farmer2}}\"/fork {{ModId}}_dunce/pause 500/speak Quinn \"{{i18n:workplacefight.23}}\"/friendship Quinn 25/pause 500/speak Quinn \"{{i18n:workplacefight.24}}\"/pause 500/speak Quinn \"{{i18n:workplacefight.25}}\"/pause 500/faceDirection Quinn 2/shake Quinn 200/move Quinn -10 0 2 true/globalFade/viewport -1000 -1000/pause 600/end",
+                "{{ModId}}_dunce": "pause 500/friendship Quinn 50/speak Quinn \"{{i18n:dunce.0}}\"/pause 500/speak Quinn \"{{i18n:dunce.1}}\"/pause 500/speak Quinn \"{{i18n:dunce.2}}\"/pause 500/faceDirection Quinn 2/shake Quinn 200/move Quinn -10 0 2 true/globalFade/viewport -1000 -1000/pause 600/end"
+            },
+            "Priority": "Default + 20",
+            "When": {
+                "QuinnGender": "Male",
+                "IsJojaMartComplete": true
+            }
+        },
+        {
+            "LogName": "GBQ Shane polyamoury event changes",
+            "Action": "EditData",
+            "Target": "Data/Events/Forest",
+            "Entries": {
+                "30181007_hiding": "pause 500/emote Shane 12 true/resetVariable/speak Shane \"{{i18n:30181007_hiding.0}}\"/pause 500/speak Shane \"{{i18n:30181007_hiding.1}}\"/faceDirection farmer 3/quickQuestion #{{i18n:30181007.insist}}#{{i18n:30181007.forget}}(break)pause 500\\faceDirection Shane 1\\speak Shane \"{{i18n:30181007_hiding.2}}\"\\faceDirection farmer 3\\pause 500\\faceDirection Quinn 3\\speak Quinn \"{{i18n:30181007_hiding.3}}\"\\pause 500\\faceDirection farmer 1\\pause 500\\speak Quinn \"{{i18n:30181007_hiding.4}}\"\\faceDirection Quinn 2\\faceDirection Shane 3\\faceDirection farmer 3 true\\emote farmer 28\\speak Shane \"{{i18n:30181007_hiding.5}}\"\\pause 500\\speak Quinn \"{{i18n:GBQ.30181007_hiding.6}}\"\\faceDirection farmer 1\\pause 300\\speak Shane \"{{i18n:30181007_hiding.7}}\"\\faceDirection Quinn 3 true\\faceDirection farmer 3 true\\pause 500\\speak Quinn \"{{i18n:30181007_hiding.8}}\"\\pause 1000\\faceDirection Shane 1 true\\speak Shane \"{{i18n:30181007_hiding.9}}\"\\emote Quinn 20\\speak Quinn \"{{i18n:30181007_hiding.10}}\"\\pause 500\\speak Shane \"{{i18n:30181007_hiding.11}}\"\\faceDirection Quinn 2 true\\faceDirection farmer 1\\pause 500\\faceDirection Shane 2 true\\faceDirection farmer 3\\pause 500\\faceDirection farmer 2 true\\emote farmer 20(break)pause 500\\speak Quinn \"{{i18n:30181007_hiding.12}}\"\\faceDirection Shane 2 true\\pause 500\\speak Shane \"{{i18n:30181007_hiding.13}}\"\\faceDirection Quinn 2 true\\pause 500\\speak Quinn \"{{i18n:30181007_hiding.14}}\"\\pause 500\\faceDirection farmer 2\\pause 500\\speak Shane \"{{i18n:30181007_hiding.15}}\"\\pause 500\\speak Quinn \"{{i18n:30181007_hiding.16}}\"\\pause 500\\emote farmer 20/pause 1000/globalFade/viewport -1000 -1000/end"
+            },
+            "Priority": "Default + 20",
+            "When": {
+                "QuinnGender": "Male",
+                "Shane Polyamoury Events": true
+            }
+        },
+        {
+            "LogName": "GBQ Flower Dance Dialogue",
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "Entries": {
+                "Quinn_y2": "{{i18n:GBQ.flowerdance.Quinn_y2}}"
+            },
+            "Priority": "Default + 20",
+            "When": {
+                "QuinnGender": "Male"
+            }
+        },
+        {
+            "LogName": "GBQ Strings from maps",
+            "Action": "EditData",
+            "Target": "Strings/StringsFromMaps",
+            "Entries": {
+                "jkkps.quinn.5": "{{i18n:GBQ.stringsFromMaps.jkkps.quinn.5}}",
+                "jkkps.quinn.6": "{{i18n:GBQ.stringsFromMaps.jkkps.quinn.6}}"
+            },
+            "Priority": "Default + 20",
+            "When": {
+                "QuinnGender": "Male"
+            }
+        }
+    ]
+}

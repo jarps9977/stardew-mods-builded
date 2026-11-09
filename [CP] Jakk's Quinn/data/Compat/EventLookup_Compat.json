@@ -1,0 +1,31 @@
+{
+    "Changes": [
+        //EVENT LOOKUP COMPATIBILITY
+        {
+            "LogName": "EventLookUp Location Names",
+            "Action": "EditData",
+            "Target": "Mods/shekurika.EventLookup/locationnames",
+            "Entries": {
+                "jkkps.quinn": "{{i18n:QuinnsRoomName}}"
+            }
+        },
+        {
+            "LogName": "EventLookUp Event Blocklist Always",
+            "Action": "EditData",
+            "Target": "Mods/shekurika.EventLookup/blocklist",
+            "Entries": {
+                "{{ModId}}_springhangout": "T",
+                "{{ModId}}_summerhangout": "T",
+                "{{ModId}}_fallhangout": "T",
+                "{{ModId}}_winterhangout": "T",
+                "{{ModId}}_wizardsapprentice": "T",
+                "{{ModId}}_ny1": "T",
+                "{{ModId}}_ny2": "T",
+                "30181008": "T",
+                "30181007": "T",
+                "{{ModId}}_firstjjalt": "T"
+            }
+        },
+        
+    ]
+}

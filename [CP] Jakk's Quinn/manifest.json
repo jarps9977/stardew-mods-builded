@@ -1,0 +1,45 @@
+{
+  "Name": "Jakk's Quinn",
+  "Author": "jakkpays",
+  "Description": "A mod that adds a new NPC to the main game",
+  "Version": "1.2.13",
+  "UniqueID": "jkkps.quinn",
+  "UpdateKeys": ["Nexus:30181"],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "Hana.GNMTokens",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "Goldenglow",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "DSV.Core",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "misscoriel.UCRFix",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "shekurika.EventLookup",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "BinaryLip.ScheduleViewer",
+      "IsRequired": false
+    }
+  ]
+}
