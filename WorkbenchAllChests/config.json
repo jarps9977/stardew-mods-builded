@@ -1,0 +1,11 @@
+{
+  "WorkbenchReadMode": "connected",
+  "BackpackReadMode": "off",
+  "BackpackNearbyRange": 13,
+  "CookoutKitUseFridge": true,
+  "CookReadMode": "off",
+  "IncludeMiniFridges": true,
+  "IncludeJunimoChests": false,
+  "IncludeMiniShippingBins": false,
+  "IncludeOtherStorageContainers": true
+}
