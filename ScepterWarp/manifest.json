@@ -1,0 +1,17 @@
+{
+  "Name": "Scepter Warp",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Replaces the Return Scepter sparkles with a jade flame warp: a rising column, a burst on departure and flame tendrils on arrival home.",
+  "UniqueID": "Gego.ScepterWarp",
+  "EntryDll": "ScepterWarp.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
