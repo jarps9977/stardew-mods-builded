@@ -1,0 +1,17 @@
+{
+  "Name": "Push to Talk",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Hold B to talk to other players in co-op using Steam voice.",
+  "UniqueID": "Gego.PushToTalk",
+  "EntryDll": "PushToTalk.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
