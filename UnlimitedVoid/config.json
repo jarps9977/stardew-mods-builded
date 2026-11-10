@@ -14,7 +14,7 @@
   "WeakDamageDealtMultiplier": 0.5,
   "SpeedBonus": 2,
   "EnergyCost": 15,
-  "CastPoseSeconds": 0.6,
+  "CastPoseSeconds": 0.5,
   "PlaySounds": true,
   "ShowBanner": true,
   "BannerTitle": "DOMAIN EXPANSION",
@@ -23,6 +23,7 @@
   "DarknessOpacity": 0.6,
   "ShowVoidEye": true,
   "UseGojoVoice": true,
-  "VoiceLeadSeconds": 1.7,
-  "TestMode": true
+  "VoiceLeadSeconds": 1.8,
+  "WindupAuraOpacity": 0.7,
+  "TestMode": false
 }
