@@ -1,7 +1,7 @@
 {
   "Enabled": true,
   "ActivateKey": "V",
-  "MaxGauge": 10,
+  "MaxGauge": 100,
   "PointsPerKill": 10,
   "BonusPointsFromMonsterHealth": true,
   "DomainDurationSeconds": 30.0,

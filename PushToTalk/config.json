@@ -1,0 +1,9 @@
+{
+  "Enabled": true,
+  "TalkKey": "B",
+  "Volume": 1.0,
+  "Proximity": false,
+  "ProximityTiles": 30,
+  "ShowIndicators": true,
+  "HearSelf": false
+}
