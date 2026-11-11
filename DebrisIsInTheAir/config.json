@@ -1,0 +1,11 @@
+{
+  "EnableLeavesEverywhere": true,
+  "EnableLeavesInRain": true,
+  "EnableDynamicRainDensity": true,
+  "RainDensityChangeIntervalHours": 2,
+  "EnableWindDnaLog": false,
+  "EnablePuddles": true,
+  "EnableLeafPiles": true,
+  "EnableMorningDew": true,
+  "EnableFog": true
+}
