@@ -1,0 +1,187 @@
+{
+	"JP98.DIITA.config.menukey": "Menu Key",
+    "JP98.DIITA.config.menukey.description": "Key to open the location toggle menu.",
+	"JP98.DIITA.error.indoors": "You can only use the Menu and Debris outdoors!",
+	
+	"JP98.DIITA.menu.title": "Debris in: {{location}}",
+  
+
+	"JP98.DIITA.config.appearance.section": "Appearance Settings",
+    "JP98.DIITA.config.appearance.type": "Night Effect Type",
+    "JP98.DIITA.config.appearance.type.description": "Choose between magical particles (Baubles), fireflies or dynamic.\nThe 'Dynamic' option creates Baubles in winter and Fireflies the rest of the year.",
+    
+    "JP98.DIITA.config.spritetype.Baubles": "Magical Particles (Baubles)",
+    "JP98.DIITA.config.spritetype.Fireflies": "Fireflies",
+	"JP98.DIITA.config.spritetype.Dynamic": "Dynamic",
+	
+	"JP98.DIITA.config.size.fireflymin": "Min Firefly Radius", 
+    "JP98.DIITA.config.size.fireflymin.description": "The minimum radius for firefly light.", 
+    "JP98.DIITA.config.size.fireflymax": "Max Firefly Radius", 
+    "JP98.DIITA.config.size.fireflymax.description": "The maximum radius for firefly light.", 
+
+    "JP98.DIITA.config.appearance.style": "Appearance of the Baubles",
+    "JP98.DIITA.config.appearance.style.description": "Change the appearance of Baubles between Baubles or Cosmic Dust, or combine both.",
+
+    "JP98.DIITA.config.baublestyle.Vanilla": "Bauble",
+	"JP98.DIITA.config.baublestyle.Dust": "Cosmic Dust",
+	"JP98.DIITA.config.baublestyle.Mixed": "Mixed",
+	
+    "JP98.DIITA.config.frequency.section": "Effect Frequency",
+    "JP98.DIITA.config.frequency.mode": "Frequency",
+    "JP98.DIITA.config.frequency.mode.description": "How often the effects appear during the current season (on randomly selected days).",
+    "JP98.DIITA.config.frequency.alldays": "Every Night",
+    "JP98.DIITA.config.frequency.frequent": "Frequent (~14-20 days)",
+    "JP98.DIITA.config.frequency.occasional": "Occasional (~8-13 days)",
+    "JP98.DIITA.config.frequency.rare": "Rare (~3-7 days)",
+
+	"JP98.DIITA.config.size.section": "Size Settings",
+    "JP98.DIITA.config.size.bauble": "Bauble Size",
+    "JP98.DIITA.config.size.bauble.description": "Adjust the size of the baubles (1-16).\nNote: 1 is very small and values above 8 might be too large for comfortable viewing.",
+
+    "JP98.DIITA.config.lightmode.section": "Firefly Light Mode",
+    "JP98.DIITA.config.lightmode.mode": "Light Behavior",
+    "JP98.DIITA.config.lightmode.mode.description": "Choose the light behavior for fireflies.\nStatic: Emits constant, unchanging light.\nColor Fade: Every so often, the color changes from the selected color to a neutral color.\nPulse: The light fades and reappears as it does in real life.",
+
+    "JP98.DIITA.config.lightmode.static": "Static",
+    "JP98.DIITA.config.lightmode.colorfade": "Color Fade",
+    "JP98.DIITA.config.lightmode.pulse": "Pulse",
+
+    "JP98.DIITA.config.colormode.section": "Color Mode Settings",
+    "JP98.DIITA.config.colormode.mode": "Effect Color Mode",
+    "JP98.DIITA.config.colormode.mode.description": "Choose between predefined seasonal colors (Default) or\ncustom color selection (Combination of the options below).\nValid for Baubles and Fireflies.",
+    "JP98.DIITA.config.colormode.default": "Default",
+    "JP98.DIITA.config.colormode.custom": "Custom",
+    
+	"JP98.DIITA.menu.global": "Global",
+    "JP98.DIITA.menu.both": "Both",
+    "JP98.DIITA.menu.disabled": "Disabled",
+    "JP98.DIITA.menu.b_vanilla": "1: Baubles",
+    "JP98.DIITA.menu.b_dust": "2: Dust",
+    "JP98.DIITA.menu.b_mixed": "3: Mixed",
+    "JP98.DIITA.menu.fireflies": "Fireflies",
+    "JP98.DIITA.menu.party_off": "Party: Off",
+    "JP98.DIITA.menu.party_lv": "Party: Lv {{level}}",
+	
+    "JP98.DIITA.config.colors.section": "Custom Color Options",
+
+    "JP98.DIITA.config.colors.red": "Enable Red",
+    "JP98.DIITA.config.colors.red.description": "Show red effects in the night sky",
+
+    "JP98.DIITA.config.colors.orange": "Enable Orange",
+    "JP98.DIITA.config.colors.orange.description": "Show orange effects in the night sky",
+
+    "JP98.DIITA.config.colors.yellow": "Enable Yellow",
+    "JP98.DIITA.config.colors.yellow.description": "Show yellow effects in the night sky",
+
+    "JP98.DIITA.config.colors.green": "Enable Green",
+    "JP98.DIITA.config.colors.green.description": "Show green effects in the night sky",
+
+    "JP98.DIITA.config.colors.blue": "Enable Blue",
+    "JP98.DIITA.config.colors.blue.description": "Show blue effects in the night sky",
+
+    "JP98.DIITA.config.colors.indigo": "Enable Indigo",
+    "JP98.DIITA.config.colors.indigo.description": "Show indigo effects in the night sky",
+
+    "JP98.DIITA.config.colors.violet": "Enable Violet",
+    "JP98.DIITA.config.colors.violet.description": "Show violet effects in the night sky",
+
+    "JP98.DIITA.config.colors.white": "Enable White",
+    "JP98.DIITA.config.colors.white.description": "Show white effects in the night sky",
+
+    "JP98.DIITA.config.colors.black": "Enable Black",
+    "JP98.DIITA.config.colors.black.description": "Show black effects in the night sky",
+
+    "JP98.DIITA.config.colors.pink": "Enable Pink",
+    "JP98.DIITA.config.colors.pink.description": "Show pink effects in the night sky",
+
+    "JP98.DIITA.config.colors.cyan": "Enable Cyan",
+    "JP98.DIITA.config.colors.cyan.description": "Show cyan effects in the night sky",
+
+    "JP98.DIITA.config.colors.magenta": "Enable Magenta",
+    "JP98.DIITA.config.colors.magenta.description": "Show magenta effects in the night sky",
+
+    "JP98.DIITA.config.colors.lime": "Enable Lime",
+    "JP98.DIITA.config.colors.lime.description": "Show lime effects in the night sky",
+
+    "JP98.DIITA.config.colors.teal": "Enable Teal",
+    "JP98.DIITA.config.colors.teal.description": "Show teal effects in the night sky",
+
+    "JP98.DIITA.config.colors.skyblue": "Enable Sky Blue",
+    "JP98.DIITA.config.colors.skyblue.description": "Show sky blue effects in the night sky",
+
+    "JP98.DIITA.config.colors.navy": "Enable Navy",
+    "JP98.DIITA.config.colors.navy.description": "Show navy effects in the night sky",
+
+    "JP98.DIITA.config.colors.purple": "Enable Purple",
+    "JP98.DIITA.config.colors.purple.description": "Show purple effects in the night sky",
+
+    "JP98.DIITA.config.colors.brown": "Enable Brown",
+    "JP98.DIITA.config.colors.brown.description": "Show brown effects in the night sky",
+
+    "JP98.DIITA.config.colors.maroon": "Enable Maroon",
+    "JP98.DIITA.config.colors.maroon.description": "Show maroon effects in the night sky",
+
+    "JP98.DIITA.config.colors.olive": "Enable Olive",
+    "JP98.DIITA.config.colors.olive.description": "Show olive effects in the night sky",
+
+    "JP98.DIITA.config.colors.gray": "Enable Gray",
+    "JP98.DIITA.config.colors.gray.description": "Show gray effects in the night sky",
+
+    "JP98.DIITA.config.colors.gold": "Enable Gold",
+    "JP98.DIITA.config.colors.gold.description": "Show gold effects in the night sky",
+
+    "JP98.DIITA.config.colors.silver": "Enable Silver",
+    "JP98.DIITA.config.colors.silver.description": "Show silver effects in the night sky",
+
+    "JP98.DIITA.config.colors.coral": "Enable Coral",
+    "JP98.DIITA.config.colors.coral.description": "Show coral effects in the night sky",
+	
+	
+	"JP98.DIITA.color.red": "Red",
+    "JP98.DIITA.color.orange": "Orange",
+    "JP98.DIITA.color.yellow": "Yellow",
+    "JP98.DIITA.color.green": "Green",
+    "JP98.DIITA.color.blue": "Blue",
+    "JP98.DIITA.color.indigo": "Indigo",
+    "JP98.DIITA.color.violet": "Violet",
+    "JP98.DIITA.color.white": "White",
+    "JP98.DIITA.color.black": "Black",
+    "JP98.DIITA.color.pink": "Pink",
+    "JP98.DIITA.color.cyan": "Cyan",
+    "JP98.DIITA.color.magenta": "Magenta",
+    "JP98.DIITA.color.lime": "Lime",
+    "JP98.DIITA.color.teal": "Teal",
+    "JP98.DIITA.color.skyblue": "Sky Blue",
+    "JP98.DIITA.color.navy": "Navy",
+    "JP98.DIITA.color.purple": "Purple",
+    "JP98.DIITA.color.brown": "Brown",
+    "JP98.DIITA.color.maroon": "Maroon",
+    "JP98.DIITA.color.olive": "Olive",
+    "JP98.DIITA.color.gray": "Gray",
+    "JP98.DIITA.color.gold": "Gold",
+    "JP98.DIITA.color.silver": "Silver",
+    "JP98.DIITA.color.coral": "Coral",
+
+    "JP98.DIITA.config.eternal": "Eternal",
+    "JP98.DIITA.config.eternal.description": "If enabled, effects will appear at any time of day, ignoring sunset.",
+
+    "JP98.DIITA.menu.pattern_lv": "Pattern {{level}}",
+    "JP98.DIITA.menu.density_high": "Density: High",
+    "JP98.DIITA.menu.density_veryhigh": "Density: Very High",
+    "JP98.DIITA.menu.density_extreme": "Density: Extreme",
+    "JP98.DIITA.menu.density_low": "Density: Low",
+    "JP98.DIITA.menu.density_normal": "Density: Normal",
+    "JP98.DIITA.menu.scattering_on": "Scattering: On",
+    "JP98.DIITA.menu.scattering_off": "Scattering: Off",
+
+    "JP98.DIITA.menu.tooltip.fireflies": "Show only fireflies in this location.",
+    "JP98.DIITA.menu.tooltip.both": "Combine fireflies and baubles/dust in this location.",
+    "JP98.DIITA.menu.tooltip.baubles": "Cycle between Baubles, Cosmic Dust, or Mixed styles.",
+    "JP98.DIITA.menu.tooltip.global": "Use the default global configuration for this location.",
+    "JP98.DIITA.menu.tooltip.pattern": "Change the movement pattern of baubles and dust.",
+    "JP98.DIITA.menu.tooltip.disabled": "Disable all night effects in this location.",
+    "JP98.DIITA.menu.tooltip.density": "Adjust the amount of particles spawned in this location.",
+    "JP98.DIITA.menu.tooltip.scattering": "Toggle physical resistance and deflection when walking through particles.",
+    "JP98.DIITA.menu.tooltip.party": "Cycle dynamic rainbow color transitions (Off / Lv 1-3).",
+    "JP98.DIITA.menu.tooltip.color": "Force a specific custom color for this location."
+}
