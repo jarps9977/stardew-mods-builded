@@ -1,0 +1,10 @@
+{
+    "Name": "(JP98) Debris Is In The Air",
+    "Author": "Juanpa98ar",
+    "Version": "1.0.0",
+    "Description": "Adds ambient leaves and rain density customization in Stardew Valley.",
+    "UniqueID": "Juanpa98ar.Code.DebrisIsInTheAir",
+    "EntryDll": "DebrisIsInTheAir.dll",
+    "MinimumApiVersion": "4.0.0",
+    "UpdateKeys": [ "Nexus:55256" ]
+}
