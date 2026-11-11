@@ -2,7 +2,7 @@
   "Name": "Reverse Cursed Technique",
   "Author": "Gego",
   "Version": "1.0.0",
-  "Description": "A rare ring from the deep mines. Channel it to heal at the cost of energy until it breaks.",
+  "Description": "A rare ring from the deep mines. Hold the cast key to fully restore HP and energy; it shatters after one use.",
   "UniqueID": "Gego.ReverseCursedTechnique",
   "EntryDll": "ReverseCursedTechnique.dll",
   "MinimumApiVersion": "4.0.0",
@@ -10,10 +10,6 @@
   "Dependencies": [
     {
       "UniqueID": "spacechase0.GenericModConfigMenu",
-      "IsRequired": false
-    },
-    {
-      "UniqueID": "Gego.UnlimitedVoid",
       "IsRequired": false
     }
   ],
