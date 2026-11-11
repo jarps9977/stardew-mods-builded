@@ -1,0 +1,35 @@
+{
+   "Format": "1.24.0",
+   "Changes": [
+    {"Action": "EditImage",
+      "Target": "Animals/cat",
+      "FromFile": "assets/Animals/cat.png"
+      },
+    {"Action": "EditImage",
+      "Target": "Animals/cat1",
+      "FromFile": "assets/Animals/cat1.png"
+      },
+    {"Action": "EditImage",
+      "Target": "Animals/cat2",
+      "FromFile": "assets/Animals/cat2.png"
+      },
+    {"Action": "EditImage",
+      "Target": "Animals/dog",
+      "FromFile": "assets/Animals/dog.png"
+      },
+    {"Action": "EditImage",
+      "Target": "Animals/dog1",
+      "FromFile": "assets/Animals/dog1.png"
+      },
+    {"Action": "EditImage",
+      "Target": "Animals/dog2",
+      "FromFile": "assets/Animals/dog2.png"
+      },
+    {"Action": "EditImage",
+      "Target": "LooseSprites/Cursors",
+      "FromFile": "assets/LooseSprites/z_Cursors.png",
+      "FromArea": { "X": 0, "Y": 0, "Width": 95, "Height": 16 },
+      "ToArea": { "X": 160, "Y": 208, "Width": 95, "Height": 16 }
+      }
+ ]
+}

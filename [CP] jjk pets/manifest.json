@@ -1,0 +1,12 @@
+{
+  "Name": "Jujutsu pets",
+  "Author": "mistyspring",
+  "Version": "1.2.0",
+  "Description": "Adds jujutsu characters to the game as pets.",
+  "UniqueID": "mistyspring.jjkpets",
+  "UpdateKeys": ["Nexus:10963"],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}
+
