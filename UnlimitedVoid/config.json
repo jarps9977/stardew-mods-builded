@@ -16,6 +16,7 @@
   "EnergyCost": 15,
   "CastPoseSeconds": 0.5,
   "HandSignPose": true,
+  "RemoveHatDuringDomain": true,
   "PlaySounds": true,
   "ShowBanner": true,
   "BannerTitle": "DOMAIN EXPANSION",
@@ -26,5 +27,5 @@
   "UseGojoVoice": true,
   "VoiceLeadSeconds": 1.8,
   "WindupAuraOpacity": 0.7,
-  "TestMode": false
+  "TestMode": true
 }
