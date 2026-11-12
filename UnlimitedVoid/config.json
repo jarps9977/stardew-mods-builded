@@ -27,8 +27,8 @@
   "UseGojoVoice": true,
   "VoiceLeadSeconds": 1.8,
   "WindupAuraOpacity": 0.7,
-  "WhiteWaveStartSeconds": 3.0,
-  "WhiteWaveTilesPerSecond": 21.0,
-  "SecondRingDelaySeconds": 1.0,
-  "TestMode": true
+  "WhiteWaveStartSeconds": 1.8,
+  "WhiteWaveTilesPerSecond": 28.0,
+  "SecondRingDelaySeconds": 0.6,
+  "TestMode": false
 }
