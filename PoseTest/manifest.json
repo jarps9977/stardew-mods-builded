@@ -1,0 +1,17 @@
+{
+  "Name": "Pose Test",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Plays custom player poses with hand-drawn arm frames; hair, shirt, pants and hats still follow the character.",
+  "UniqueID": "Gego.PoseTest",
+  "EntryDll": "PoseTest.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
