@@ -29,6 +29,6 @@
   "WindupAuraOpacity": 0.7,
   "WhiteWaveStartSeconds": 3.0,
   "WhiteWaveTilesPerSecond": 21.0,
-  "SecondRingDelaySeconds": 0.0,
+  "SecondRingDelaySeconds": 1.0,
   "TestMode": true
 }
