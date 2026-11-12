@@ -1,0 +1,19 @@
+{
+  "Poses": {
+    "hand_sign": {      "Down": [
+        { "Base": 0, "Slot": 0, "Ms": 100 },
+        { "Base": 0, "Slot": 1, "Ms": 140 },
+        { "Base": 0, "Slot": 2, "Ms": 350 },
+        { "Base": 0, "Slot": 3, "Ms": 90 },
+        { "Base": 0, "Slot": 4, "Ms": 90 },
+        { "Base": 0, "Slot": 5, "Ms": 1400 }
+      ]
+    },
+    "vanilla_cast": {
+      "Down": [
+        { "Base": 84, "Ms": 500 },
+        { "Base": 29, "Ms": 700 }
+      ]
+    }
+  }
+}
