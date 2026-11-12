@@ -25,5 +25,10 @@
   "UseGojoVoice": true,
   "VoiceLeadSeconds": 1.8,
   "WindupAuraOpacity": 0.7,
-  "TestMode": false
+  "CastAnimEnabled": true,
+  "CastAnimFrameWidth": 32,
+  "CastAnimFps": 8.0,
+  "CastAnimScale": 4.0,
+  "CastAnimLoop": true,
+  "TestMode": true
 }
