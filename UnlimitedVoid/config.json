@@ -27,5 +27,5 @@
   "UseGojoVoice": true,
   "VoiceLeadSeconds": 1.8,
   "WindupAuraOpacity": 0.7,
-  "TestMode": true
+  "TestMode": false
 }
