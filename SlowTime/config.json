@@ -8,6 +8,7 @@
   "WinterMineMultiplier": 1.5,
   "ShowHud": true,
   "ShowHudAtNormalSpeed": false,
+  "HudTextScale": 0.8,
   "HudOffsetX": 0,
   "HudOffsetY": 0
 }
