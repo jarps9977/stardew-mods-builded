@@ -2,7 +2,7 @@
   "Name": "Slow Time",
   "Author": "Gego",
   "Version": "1.0.0",
-  "Description": "Slows the in-game clock a little for co-op, scaled by players online. Normal speed while anyone is in the mines.",
+  "Description": "Changes the clock speed by time of day, season and the mines.",
   "UniqueID": "Gego.SlowTime",
   "EntryDll": "SlowTime.dll",
   "MinimumApiVersion": "4.0.0",
