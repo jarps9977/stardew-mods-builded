@@ -12,5 +12,6 @@
   "ScreenShake": true,
   "ShakeStrength": 2.0,
   "FlashOpacity": 0.0,
-  "PlaySounds": true
+  "PlaySounds": true,
+  "TestMode": true
 }
