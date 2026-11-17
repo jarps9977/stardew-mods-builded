@@ -30,5 +30,5 @@
   "WhiteWaveStartSeconds": 1.8,
   "WhiteWaveTilesPerSecond": 28.0,
   "SecondRingDelaySeconds": 0.6,
-  "TestMode": true
+  "TestMode": false
 }
