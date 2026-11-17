@@ -1,0 +1,16 @@
+{
+  "ReturnKey": "J",
+  "AutoPromptReturn": true,
+  "PoseFrame": 29,
+  "PoseSeconds": 1.0,
+  "FlameSeconds": 1.5,
+  "FlameSizeTiles": 4.2,
+  "FlameSaturation": 1.6,
+  "FlameBrightness": 0.85,
+  "SheetAnchorY": 0.8,
+  "ParticleDensity": 1.8,
+  "ScreenShake": true,
+  "ShakeStrength": 2.0,
+  "FlashOpacity": 0.0,
+  "PlaySounds": true
+}
