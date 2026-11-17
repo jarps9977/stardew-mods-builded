@@ -1,0 +1,17 @@
+{
+  "Name": "Warp Storm",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "A totem sold by Clint that warps you to the hot spring in a spirit flame, then back to the farm or where you left once HP and energy are full.",
+  "UniqueID": "Gego.WarpStorm",
+  "EntryDll": "WarpStorm.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
