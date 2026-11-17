@@ -3,6 +3,7 @@
   "AutoPromptReturn": true,
   "PoseFrame": 29,
   "PoseSeconds": 1.0,
+  "ArrivePoseSeconds": 1.0,
   "FlameSeconds": 2.5,
   "FlameSizeTiles": 4.2,
   "FlameSaturation": 1.6,
@@ -15,5 +16,5 @@
   "ShakeStrength": 2.0,
   "FlashOpacity": 0.0,
   "PlaySounds": true,
-  "TestMode": true
+  "TestMode": false
 }
