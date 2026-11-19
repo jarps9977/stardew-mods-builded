@@ -1,35 +1,55 @@
 {
-   "Format": "1.24.0",
+   "Format": "2.0.0",
    "Changes": [
-    {"Action": "EditImage",
-      "Target": "Animals/cat",
+    // Load as new assets instead of overwriting vanilla pet textures.
+    {"Action": "Load",
+      "Target": "Mods/{{ModId}}/Cat0",
       "FromFile": "assets/Animals/cat.png"
       },
-    {"Action": "EditImage",
-      "Target": "Animals/cat1",
+    {"Action": "Load",
+      "Target": "Mods/{{ModId}}/Cat1",
       "FromFile": "assets/Animals/cat1.png"
       },
-    {"Action": "EditImage",
-      "Target": "Animals/cat2",
+    {"Action": "Load",
+      "Target": "Mods/{{ModId}}/Cat2",
       "FromFile": "assets/Animals/cat2.png"
       },
-    {"Action": "EditImage",
-      "Target": "Animals/dog",
+    {"Action": "Load",
+      "Target": "Mods/{{ModId}}/Dog0",
       "FromFile": "assets/Animals/dog.png"
       },
-    {"Action": "EditImage",
-      "Target": "Animals/dog1",
+    {"Action": "Load",
+      "Target": "Mods/{{ModId}}/Dog1",
       "FromFile": "assets/Animals/dog1.png"
       },
-    {"Action": "EditImage",
-      "Target": "Animals/dog2",
+    {"Action": "Load",
+      "Target": "Mods/{{ModId}}/Dog2",
       "FromFile": "assets/Animals/dog2.png"
       },
-    {"Action": "EditImage",
-      "Target": "LooseSprites/Cursors",
-      "FromFile": "assets/LooseSprites/z_Cursors.png",
-      "FromArea": { "X": 0, "Y": 0, "Width": 95, "Height": 16 },
-      "ToArea": { "X": 160, "Y": 208, "Width": 95, "Height": 16 }
+    {"Action": "Load",
+      "Target": "Mods/{{ModId}}/Icons",
+      "FromFile": "assets/LooseSprites/z_Cursors.png"
+      },
+
+    // Add as extra breeds; selectable at character creation and from Marnie.
+    {"Action": "EditData",
+      "Target": "Data/Pets",
+      "TargetField": [ "Cat", "Breeds" ],
+      "Entries": {
+        "{{ModId}}_Cat0": { "Id": "{{ModId}}_Cat0", "Texture": "Mods/{{ModId}}/Cat0", "IconTexture": "Mods/{{ModId}}/Icons", "IconSourceRect": { "X": 0, "Y": 0, "Width": 16, "Height": 16 } },
+        "{{ModId}}_Cat1": { "Id": "{{ModId}}_Cat1", "Texture": "Mods/{{ModId}}/Cat1", "IconTexture": "Mods/{{ModId}}/Icons", "IconSourceRect": { "X": 16, "Y": 0, "Width": 16, "Height": 16 } },
+        "{{ModId}}_Cat2": { "Id": "{{ModId}}_Cat2", "Texture": "Mods/{{ModId}}/Cat2", "IconTexture": "Mods/{{ModId}}/Icons", "IconSourceRect": { "X": 32, "Y": 0, "Width": 16, "Height": 16 } }
+      }
+      },
+    {"Action": "EditData",
+      "Target": "Data/Pets",
+      "TargetField": [ "Dog", "Breeds" ],
+      "Entries": {
+        "{{ModId}}_Dog0": { "Id": "{{ModId}}_Dog0", "Texture": "Mods/{{ModId}}/Dog0", "IconTexture": "Mods/{{ModId}}/Icons", "IconSourceRect": { "X": 48, "Y": 0, "Width": 16, "Height": 16 } },
+        "{{ModId}}_Dog1": { "Id": "{{ModId}}_Dog1", "Texture": "Mods/{{ModId}}/Dog1", "IconTexture": "Mods/{{ModId}}/Icons", "IconSourceRect": { "X": 64, "Y": 0, "Width": 16, "Height": 16 } },
+        // Icon sheet is 95px wide, so the last icon is 15px.
+        "{{ModId}}_Dog2": { "Id": "{{ModId}}_Dog2", "Texture": "Mods/{{ModId}}/Dog2", "IconTexture": "Mods/{{ModId}}/Icons", "IconSourceRect": { "X": 80, "Y": 0, "Width": 15, "Height": 16 } }
+      }
       }
  ]
 }
