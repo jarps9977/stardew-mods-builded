@@ -2,7 +2,7 @@
   "Name": "Junimo Ginger Island",
   "Author": "Gego",
   "Version": "1.0.0",
-  "Description": "Buy a Pet Hut from the Wizard and build it on the Ginger Island farm. Cats and dogs harvest the island crops into the hut and sometimes dig up a Golden Walnut.",
+  "Description": "Buy a Pet Hut from the Wizard and build it on your farm or the Ginger Island farm. Cats and dogs harvest the crops into the hut and sometimes dig up a Golden Walnut.",
   "UniqueID": "Gego.JunimoGingerIsland",
   "EntryDll": "JunimoGingerIsland.dll",
   "MinimumApiVersion": "4.0.0",
