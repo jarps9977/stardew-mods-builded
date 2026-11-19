@@ -130,6 +130,18 @@ function Start-Game {
     return $p.ExitCode
 }
 
+# Invoke-WebRequest and Expand-Archive are slow in PowerShell 5.1; use .NET directly.
+function Save-Url([string]$Url, [string]$Path) {
+    $wc = New-Object System.Net.WebClient
+    $wc.Headers['User-Agent'] = 'pull-mods-lasted'
+    try { $wc.DownloadFile($Url, $Path) } finally { $wc.Dispose() }
+}
+
+function Expand-Zip([string]$Zip, [string]$Dir) {
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    [IO.Compression.ZipFile]::ExtractToDirectory($Zip, $Dir)
+}
+
 function Stop-WithError([string]$Message) {
     Write-Host "FAILED: $Message" -ForegroundColor Red
     if ($Launch) { exit (Start-Game) }
@@ -250,9 +262,9 @@ function Install-Smapi([string]$GameDir, [string]$TempRoot) {
     else            { Write-Host "Installing SMAPI $latest ..." }
 
     $zip = Join-Path $TempRoot $asset.name
-    Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zip -UseBasicParsing
+    Save-Url $asset.browser_download_url $zip
     $dir = Join-Path $TempRoot 'smapi'
-    Expand-Archive -LiteralPath $zip -DestinationPath $dir -Force
+    Expand-Zip $zip $dir
 
     $exe = Get-ChildItem -LiteralPath $dir -Recurse -File -Filter 'SMAPI.Installer.exe' |
         Where-Object { $_.DirectoryName -match '\\windows$' } | Select-Object -First 1
@@ -298,6 +310,18 @@ function Remove-ModPath([string]$Path) {
     Remove-Item -LiteralPath $Path -Recurse -Force
 }
 
+function Get-FileHashBytes([string]$Path) {
+    $s = [IO.File]::Open($Path, 'Open', 'Read', 'ReadWrite')
+    try { return [BitConverter]::ToString($script:Hasher.ComputeHash($s)) } finally { $s.Dispose() }
+}
+
+# Skips rewriting unchanged files; writes under Program Files are slow (antivirus scan per file).
+function Test-SameFile([string]$Src, [string]$Dst) {
+    $d = New-Object IO.FileInfo $Dst
+    if (-not $d.Exists -or $d.Length -ne (New-Object IO.FileInfo $Src).Length) { return $false }
+    return (Get-FileHashBytes $Src) -eq (Get-FileHashBytes $Dst)
+}
+
 function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
     Write-Step 'Mods'
     $repoMods = @(Get-ChildItem -LiteralPath $SrcRoot -Directory |
@@ -305,7 +329,8 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
     $repoNames = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
     foreach ($m in $repoMods) { [void]$repoNames.Add($m.Name) }
 
-    $created = 0; $updated = 0; $removed = 0; $stale = 0
+    $created = 0; $updated = 0; $unchanged = 0; $removed = 0; $stale = 0; $copied = 0
+    $script:Hasher = [Security.Cryptography.SHA256]::Create()
 
     # Backups made by older versions of this script.
     $oldBackup = Join-Path (Split-Path -Parent $ModsPath) 'Mods_backup'
@@ -324,39 +349,45 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
 
     foreach ($mod in $repoMods) {
         $dest = Join-Path $ModsPath $mod.Name
-        $isNew = -not (Test-Path -LiteralPath $dest)
-        if ($isNew) { New-Item -ItemType Directory -Path $dest | Out-Null }
+        $isNew = -not [IO.Directory]::Exists($dest)
+        if ($isNew) { [void][IO.Directory]::CreateDirectory($dest) }
+        $changes = 0
 
         $repoFiles = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
-        foreach ($file in Get-ChildItem -LiteralPath $mod.FullName -Recurse -File) {
-            $rel = $file.FullName.Substring($mod.FullName.Length).TrimStart('\', '/')
+        foreach ($src in [IO.Directory]::GetFiles($mod.FullName, '*', [IO.SearchOption]::AllDirectories)) {
+            $rel = $src.Substring($mod.FullName.Length).TrimStart('\', '/')
             [void]$repoFiles.Add($rel)
-            $target = Join-Path $dest $rel
-            $targetDir = Split-Path -Parent $target
-            if (-not (Test-Path -LiteralPath $targetDir)) { New-Item -ItemType Directory -Path $targetDir -Force | Out-Null }
-            Copy-Item -LiteralPath $file.FullName -Destination $target -Force
+            $target = [IO.Path]::Combine($dest, $rel)
+            if (-not $isNew -and (Test-SameFile $src $target)) { continue }
+            [void][IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($target))
+            # Clear read-only so the overwrite does not fail (Copy-Item -Force did this).
+            if ([IO.File]::Exists($target)) { [IO.File]::SetAttributes($target, [IO.FileAttributes]::Normal) }
+            [IO.File]::Copy($src, $target, $true)
+            $copied++; $changes++
         }
 
         # Delete leftover files from older versions.
         if (-not $isNew) {
-            foreach ($file in Get-ChildItem -LiteralPath $dest -Recurse -File) {
-                $rel = $file.FullName.Substring($dest.Length).TrimStart('\', '/')
+            foreach ($file in [IO.Directory]::GetFiles($dest, '*', [IO.SearchOption]::AllDirectories)) {
+                $rel = $file.Substring($dest.Length).TrimStart('\', '/')
                 if ($repoFiles.Contains($rel)) { continue }
                 $first = ($rel -split '[\\/]')[0]
                 if ($rel -match '[\\/]' -and $KeepSubdirs -contains $first) { continue }
                 # SMAPI creates config.json on first run; keep player settings unless the repo ships one.
                 if ($rel -ieq 'config.json') { continue }
-                Remove-ModPath $file.FullName
-                $stale++
+                Remove-ModPath $file
+                $stale++; $changes++
             }
         }
 
-        if ($isNew) { $created++; Write-Host "[NEW]    $($mod.Name)" -ForegroundColor Green }
-        else        { $updated++; Write-Host "[UPDATE] $($mod.Name)" -ForegroundColor Cyan }
+        if ($isNew)       { $created++;   Write-Host "[NEW]    $($mod.Name)" -ForegroundColor Green }
+        elseif ($changes) { $updated++;   Write-Host "[UPDATE] $($mod.Name)" -ForegroundColor Cyan }
+        else              { $unchanged++; Write-Host "[OK]     $($mod.Name)" -ForegroundColor DarkGray }
     }
+    $script:Hasher.Dispose()
 
     Write-Host ''
-    Write-Host "Mods: New $created, Updated $updated, Removed $removed, Stale files $stale" -ForegroundColor Green
+    Write-Host "Mods: New $created, Updated $updated, Unchanged $unchanged, Removed $removed, Files copied $copied, Stale files $stale" -ForegroundColor Green
 }
 
 # ---------- Steam launch options ----------
@@ -636,9 +667,9 @@ try {
         $zipUrl = if ($remoteSha) { "https://github.com/jarps9977/stardew-mods-builded/archive/$remoteSha.zip" } else { $RepoZipUrl }
         Write-Host "Downloading $zipUrl ..."
         $zipPath = Join-Path $tempRoot 'repo.zip'
-        Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath -UseBasicParsing
+        Save-Url $zipUrl $zipPath
         $extractDir = Join-Path $tempRoot 'extract'
-        Expand-Archive -LiteralPath $zipPath -DestinationPath $extractDir -Force
+        Expand-Zip $zipPath $extractDir
         $srcRoot = Get-ChildItem -LiteralPath $extractDir -Directory | Select-Object -First 1
         if (-not $srcRoot) { throw 'Downloaded archive is empty.' }
 
