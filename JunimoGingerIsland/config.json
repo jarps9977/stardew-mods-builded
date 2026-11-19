@@ -10,5 +10,6 @@
   "WalnutChancePercent": 1,
   "MaxWalnutsPerDay": 2,
   "ShowIdlePets": true,
+  "WanderIdlePets": true,
   "PetScalePercent": 70
 }
