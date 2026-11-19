@@ -1,6 +1,6 @@
 {
   "Enabled": true,
-  "MorningMultiplier": 0.5,
+  "MorningMultiplier": 1.5,
   "AfternoonMultiplier": 1.25,
   "EveningMultiplier": 1.0,
   "MineMultiplier": 1.0,
