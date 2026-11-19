@@ -1,0 +1,11 @@
+{
+  "Name": "New Greenhouse",
+  "Author": "Jarukit",
+  "Version": "1.0.0",
+  "Description": "Replaces the greenhouse interior map.",
+  "UniqueID": "Jarukit.NewGreenhouse",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}
