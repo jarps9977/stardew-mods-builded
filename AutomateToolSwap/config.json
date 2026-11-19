@@ -118,7 +118,7 @@
   "AnyToolForSupplyCrates": true,
   "PanForPanningSpots": true,
   "HayForFeedingBench": true,
-  "MilkPailForCowsAndGoats": true,
-  "ShearsForSheeps": true,
+  "SwapToMilkPail": true,
+  "SwapToShears": true,
   "FertilizerForCrops": false
 }
