@@ -1,4 +1,8 @@
 {
   "Enabled": true,
-  "SpeedMultiplier": 10
+  "SpeedMultiplier": 10,
+  "HoldToCrack": true,
+  "AutoSellEnabled": true,
+  "BlacklistKey": "LeftControl + LeftAlt + MouseRight",
+  "ItemBlacklist": []
 }
