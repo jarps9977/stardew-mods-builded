@@ -24,7 +24,7 @@
   "SmokeAmount": 28.0,
   "SmokeOpacity": 0.45,
   "SmokeSpread": 300.0,
-  "WhiteWaveStartSeconds": 3.0,
+  "WhiteWaveStartSeconds": 1.5,
   "WhiteWaveTilesPerSecond": 24.0,
   "WhiteHoldSeconds": 0.2,
   "HyperspaceGrowSeconds": 0.4,
@@ -42,7 +42,7 @@
   "BannerTitle": "",
   "BannerSubtitle": "INFINITE VOID",
   "DarknessDurationSeconds": 2.0,
-  "DarknessOpacity": 0.6,
+  "DarknessOpacity": 0.2,
   "SecondRingDelaySeconds": 0.0,
   "PlaySounds": true,
   "UseGojoVoice": true,
@@ -50,33 +50,40 @@
     "Voice": {
       "Enabled": true,
       "Delay": 0.0,
-      "Volume": 90
+      "Volume": 100,
+      "Overlap": 10.0
     },
     "Wand": {
       "Enabled": false,
       "Delay": 0.0,
-      "Volume": 60
+      "Volume": 60,
+      "Overlap": 10.0
     },
     "Thunder": {
       "Enabled": false,
       "Delay": 0.0,
-      "Volume": 60
+      "Volume": 60,
+      "Overlap": 10.0
     },
     "Meteorite": {
       "Enabled": true,
       "Delay": 0.0,
-      "Volume": 70
+      "Volume": 70,
+      "Overlap": 10.0
     },
     "Crystal": {
       "Enabled": false,
       "Delay": 0.0,
-      "Volume": 60
+      "Volume": 60,
+      "Overlap": 10.0
     },
     "DebuffSpell": {
       "Enabled": true,
       "Delay": 0.0,
-      "Volume": 60
-    }
+      "Volume": 60,
+      "Overlap": 10.0
+    },
+    "CrossfadeSeconds": 3.0
   },
   "TestMode": true
 }
