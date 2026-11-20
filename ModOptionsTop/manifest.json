@@ -1,0 +1,17 @@
+{
+  "Name": "Mod Options Top",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Moves Generic Mod Config Menu's Mod Options button to the top of the in-game Options tab.",
+  "UniqueID": "Gego.ModOptionsTop",
+  "EntryDll": "ModOptionsTop.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
