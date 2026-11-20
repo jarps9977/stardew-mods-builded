@@ -4,5 +4,31 @@
   "HoldToCrack": true,
   "AutoSellEnabled": true,
   "BlacklistKey": "LeftControl + LeftAlt + MouseRight",
-  "ItemBlacklist": []
+  "ItemBlacklist": [
+    "(O)569",
+    "(O)557",
+    "(O)543",
+    "(O)548",
+    "(O)555",
+    "(O)568",
+    "(O)546",
+    "(O)575",
+    "(O)552",
+    "(O)553",
+    "(O)545",
+    "(O)558",
+    "(O)572",
+    "(O)577",
+    "(O)562",
+    "(O)539",
+    "(O)560",
+    "(O)540",
+    "(O)564",
+    "(O)541",
+    "(O)576",
+    "(O)559",
+    "(O)123",
+    "(O)563",
+    "(O)571"
+  ]
 }
