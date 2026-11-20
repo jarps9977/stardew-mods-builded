@@ -1,0 +1,17 @@
+{
+  "Name": "Infinite Void",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Kill monsters to charge the gauge, then expand the Infinite Void domain: hand sign, white wave, hyperspace and the void. Frozen monsters die in one hit, stranded ones vanish on their own.",
+  "UniqueID": "Gego.InfinitVoid",
+  "EntryDll": "InfinitVoid.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
