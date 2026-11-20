@@ -24,8 +24,8 @@
   "SmokeAmount": 28.0,
   "SmokeOpacity": 0.45,
   "SmokeSpread": 300.0,
-  "WhiteWaveStartSeconds": 5.5,
-  "WhiteWaveTilesPerSecond": 16.0,
+  "WhiteWaveStartSeconds": 3.0,
+  "WhiteWaveTilesPerSecond": 24.0,
   "WhiteHoldSeconds": 0.2,
   "HyperspaceGrowSeconds": 0.4,
   "HyperspaceHoldSeconds": 2.3,
@@ -64,8 +64,8 @@
     },
     "Meteorite": {
       "Enabled": true,
-      "Delay": 2.25,
-      "Volume": 65
+      "Delay": 0.0,
+      "Volume": 70
     },
     "Crystal": {
       "Enabled": false,
