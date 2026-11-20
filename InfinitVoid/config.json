@@ -22,13 +22,14 @@
   "WindupAuraOpacity": 0.15,
   "GroundSmoke": true,
   "SmokeAmount": 28.0,
-  "SmokeOpacity": 0.45,
-  "SmokeSpread": 300.0,
-  "WhiteWaveStartSeconds": 1.5,
+  "SmokeOpacity": 0.2,
+  "SmokeSpread": 70.0,
+  "SmokeStartSeconds": 0.8,
+  "WhiteWaveStartSeconds": 3.0,
   "WhiteWaveTilesPerSecond": 24.0,
-  "WhiteHoldSeconds": 0.2,
+  "WhiteHoldSeconds": 0.1,
   "HyperspaceGrowSeconds": 0.4,
-  "HyperspaceHoldSeconds": 2.3,
+  "HyperspaceHoldSeconds": 1.5,
   "HyperspaceLineCount": 500,
   "HyperspaceSpeed": 3.0,
   "InkEdgeRoughness": 2.0,
@@ -51,39 +52,38 @@
       "Enabled": true,
       "Delay": 0.0,
       "Volume": 100,
-      "Overlap": 10.0
+      "StartAt": 0.0
     },
     "Wand": {
       "Enabled": false,
       "Delay": 0.0,
       "Volume": 60,
-      "Overlap": 10.0
+      "StartAt": 3.0
     },
     "Thunder": {
       "Enabled": false,
       "Delay": 0.0,
       "Volume": 60,
-      "Overlap": 10.0
+      "StartAt": 3.0
     },
     "Meteorite": {
       "Enabled": true,
       "Delay": 0.0,
-      "Volume": 70,
-      "Overlap": 10.0
+      "Volume": 50,
+      "StartAt": 2.1
     },
     "Crystal": {
       "Enabled": false,
       "Delay": 0.0,
       "Volume": 60,
-      "Overlap": 10.0
+      "StartAt": 0.0
     },
     "DebuffSpell": {
       "Enabled": true,
       "Delay": 0.0,
       "Volume": 60,
-      "Overlap": 10.0
-    },
-    "CrossfadeSeconds": 3.0
+      "StartAt": 0.0
+    }
   },
-  "TestMode": true
+  "TestMode": false
 }
