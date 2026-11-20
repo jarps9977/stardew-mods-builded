@@ -1,8 +1,8 @@
 {
   "Name": "Fast Geode",
   "Author": "Gego",
-  "Version": "1.0.0",
-  "Description": "Speeds up Clint's geode cracking animation only.",
+  "Version": "1.1.0",
+  "Description": "Speeds up Clint's geode cracking, hold click to crack a stack, and auto-sells blacklisted treasures to Clint.",
   "UniqueID": "Gego.FastGeode",
   "EntryDll": "FastGeode.dll",
   "MinimumApiVersion": "4.0.0",

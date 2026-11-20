@@ -1,0 +1,17 @@
+{
+  "Name": "Bulk Buy",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Type how many to buy in any shop for unlimited stackable items like seeds, fertilizer and bombs.",
+  "UniqueID": "Gego.BulkBuy",
+  "EntryDll": "BulkBuy.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
