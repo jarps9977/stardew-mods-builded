@@ -69,7 +69,7 @@
     "Meteorite": {
       "Enabled": true,
       "Delay": 0.0,
-      "Volume": 50,
+      "Volume": 60,
       "StartAt": 2.1
     },
     "Crystal": {
