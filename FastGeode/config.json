@@ -3,7 +3,7 @@
   "SpeedMultiplier": 10,
   "HoldToCrack": true,
   "AutoSellEnabled": true,
-  "BlacklistKey": "LeftControl + LeftAlt + MouseRight",
+  "BlacklistKey": "LeftAlt + MouseRight",
   "ItemBlacklist": [
     "(O)569",
     "(O)557",
