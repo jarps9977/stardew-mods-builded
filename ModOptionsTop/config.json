@@ -1,5 +1,7 @@
 {
   "Enabled": true,
+  "PaddingLeft": 24,
+  "PaddingTop": 12,
   "ButtonLabels": [
     "Mod Options"
   ]

@@ -1,0 +1,82 @@
+{
+  "Enabled": true,
+  "ActivateKey": "V",
+  "MaxGauge": 100,
+  "PointsPerKill": 10,
+  "BonusPointsFromMonsterHealth": true,
+  "DomainDurationSeconds": 30.0,
+  "CoverWholeLocation": true,
+  "DomainRadiusTiles": 10,
+  "ExpandTilesPerSecond": 10.0,
+  "DebuffDurationSeconds": 10.0,
+  "LocationCooldownSeconds": 20.0,
+  "WeakDamageTakenMultiplier": 1.5,
+  "WeakDamageDealtMultiplier": 0.5,
+  "SpeedBonus": 2,
+  "EnergyCost": 15,
+  "KillStrandedMonsters": true,
+  "CastPoseSeconds": 0.8,
+  "HandSignPose": true,
+  "RemoveHatDuringDomain": true,
+  "VoiceLeadSeconds": 3.0,
+  "WindupAuraOpacity": 0.15,
+  "GroundSmoke": true,
+  "SmokeAmount": 28.0,
+  "SmokeOpacity": 0.45,
+  "SmokeSpread": 300.0,
+  "WhiteWaveStartSeconds": 5.5,
+  "WhiteWaveTilesPerSecond": 16.0,
+  "WhiteHoldSeconds": 0.2,
+  "HyperspaceGrowSeconds": 0.4,
+  "HyperspaceHoldSeconds": 2.3,
+  "HyperspaceLineCount": 500,
+  "HyperspaceSpeed": 3.0,
+  "InkEdgeRoughness": 2.0,
+  "NebulaStrength": 2.0,
+  "CenterBurst": true,
+  "FinalImageFadeInSeconds": 0.2,
+  "FinalImageHoldSeconds": 2.0,
+  "FinalImageFadeOutSeconds": 0.5,
+  "FinalImageZoomPercent": 2.0,
+  "ShowBanner": true,
+  "BannerTitle": "",
+  "BannerSubtitle": "INFINITE VOID",
+  "DarknessDurationSeconds": 2.0,
+  "DarknessOpacity": 0.6,
+  "SecondRingDelaySeconds": 0.0,
+  "PlaySounds": true,
+  "UseGojoVoice": true,
+  "Sounds": {
+    "Voice": {
+      "Enabled": true,
+      "Delay": 0.0,
+      "Volume": 90
+    },
+    "Wand": {
+      "Enabled": false,
+      "Delay": 0.0,
+      "Volume": 60
+    },
+    "Thunder": {
+      "Enabled": false,
+      "Delay": 0.0,
+      "Volume": 60
+    },
+    "Meteorite": {
+      "Enabled": true,
+      "Delay": 2.25,
+      "Volume": 65
+    },
+    "Crystal": {
+      "Enabled": false,
+      "Delay": 0.0,
+      "Volume": 60
+    },
+    "DebuffSpell": {
+      "Enabled": true,
+      "Delay": 0.0,
+      "Volume": 60
+    }
+  },
+  "TestMode": true
+}
