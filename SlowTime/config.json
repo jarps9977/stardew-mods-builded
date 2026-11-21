@@ -1,10 +1,10 @@
 {
   "Enabled": true,
-  "MorningMultiplier": 1.5,
+  "MorningMultiplier": 1.9,
   "AfternoonMultiplier": 1.25,
   "EveningMultiplier": 1.0,
   "MineMultiplier": 1.0,
-  "WinterOutsideMultiplier": 1.25,
+  "WinterOutsideMultiplier": 0.7,
   "WinterMineMultiplier": 1.5,
   "ShowHud": true,
   "ShowHudAtNormalSpeed": false,

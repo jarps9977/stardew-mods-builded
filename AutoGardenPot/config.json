@@ -1,0 +1,7 @@
+{
+  "Enabled": true,
+  "RangeTiles": 2,
+  "RewaterDuringDay": true,
+  "OnlyPotsWithCrop": false,
+  "ShowRange": true
+}

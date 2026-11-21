@@ -1,4 +1,16 @@
 {
   "Price": 500000,
-  "BuildDays": 1
+  "UpperPrice": 1000000,
+  "BasementPrice": 1000000,
+  "BuildDays": 1,
+  "UpperLadderTile": "",
+  "BasementLadderTile": "",
+  "IncubatorItem": "(O)386",
+  "IncubatorAmount": 10,
+  "HatchDays": 2,
+  "MaxCrabs": 12,
+  "OreChancePercent": 75,
+  "OreMin": 1,
+  "OreMax": 3,
+  "BreedChancePercent": 100
 }
