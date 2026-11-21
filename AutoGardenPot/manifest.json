@@ -1,0 +1,17 @@
+{
+  "Name": "Auto Garden Pot",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Pot Mister from Marnie's shop waters every Garden Pot in its range.",
+  "UniqueID": "Gego.AutoGardenPot",
+  "EntryDll": "AutoGardenPot.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}

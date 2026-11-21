@@ -1,8 +1,8 @@
 {
   "Name": "New Greenhouse",
   "Author": "Gego",
-  "Version": "1.0.0",
-  "Description": "Pay Robin to renovate the greenhouse into a new layout, ready the next morning. Once per farm, co-op ready.",
+  "Version": "1.1.0",
+  "Description": "Robin's greenhouse projects: renovation, a 20x20 upper floor and a basement for fruit trees and Iridium Crabs. Co-op ready.",
   "UniqueID": "Gego.NewGreenhouse",
   "EntryDll": "NewGreenhouse.dll",
   "MinimumApiVersion": "4.0.0",
