@@ -57,7 +57,9 @@
     "(O)885",
     "(O)890",
     "(O)PowdermelonSeeds",
-    "(O)MixedFlowerSeeds"
+    "(O)MixedFlowerSeeds",
+    "(BC)62",
+    "(O)466"
   ],
   "DetectionMethod": "Cursor",
   "RequireClick": true,
