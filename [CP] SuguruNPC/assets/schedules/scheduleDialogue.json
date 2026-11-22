@@ -1,0 +1,27 @@
+{
+
+    "library.000": "Here to read a book, @?$0",
+    "library.001": "Hey, sweetheart!$1#$b#Wanna read this with me? Come here.$0",
+
+    "desertfest.000": "Hey, sweetheart!$1#$b#I'm just looking around to see if there's anything interesting.$0",
+
+    "nightmarket.000": "Woah, look at all these lights, honey!$1#$b#But they're nothing compared to you. Ahem.$4",
+    "nightmarket.001": "There you are, sweetheart. I was waiting for you.$1#$b#Wanna take a look around? Let's try the coffee over there.$0",
+    "nightmarket.002": "This is the last day of the night market, huh? Gotta make the most of it.$1#$b#Let's take a look around. Here, give me your hand.$8",
+
+    "job.000": "@! What are you doing here?$8#$b#Coming to see me, huh?$9",
+    "job.001": "Miss me, huh?$9#$b#I miss you too, my love.$8#$b#How about you pretend to kidnap me so I can go home early?$1",
+
+    "shop.000": "Hey, @. Out shopping too?$0#$b#Yeah, I go shopping every Monday. Don't want to starve for the rest of the week.$10",
+    "shop.001": "Hmmm... vanilla or chocolate...$3",
+
+    "beach.000": "Done for the day, @?$0#$b#The beach air is so refreshing in Summer.$1",
+
+
+    "saloon.000": "Ah... nothing beats a refreshing drink after a long day. Am I right, @?$1",
+    "saloon.001": "@, you're here!$1#$b#What's wrong? Miss me already? Haha, I'll be home soon.$8",
+
+
+    "training.000": "Hey, sweetheart.$1#$b#Now that we have a family of our own, I feel like I need to get stronger to protect what I love.$3#$b#I'm just gonna train here for a while, okay?$9",
+    "training.001": "@! You came here looking for me?$6#$b#Don't worry, my love, I just feel like training for a while. I'll be home soon.$1#$b#Then... we can spend time together, okay?$4"
+}

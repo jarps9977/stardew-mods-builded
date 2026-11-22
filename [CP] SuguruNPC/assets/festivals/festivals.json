@@ -1,0 +1,540 @@
+{
+	"Changes": 
+    [
+		{	
+			"LogName": "Egg Festival",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false},
+			"Target": "Data/Festivals/spring13",
+			"TextOperations":
+   			[
+   				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "Set-Up_additionalCharacters"],
+   				    "Value": "GetoSuguru 40 57 down",
+   				    "Delimiter": "/"
+				},
+
+   				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "MainEvent_additionalCharacters"],
+   				    "Value": "GetoSuguru 41 55 down",
+   				    "Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 40 57 down",
+					"Delimiter": "/"
+			    },
+
+				
+			    {
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+					"Value": "GetoSuguru 41 55 down",
+					"Delimiter": "/"
+			    }
+			]
+		},
+		{	
+			"LogName": "Egg Festival - SVE compat",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true},
+			"Target": "Data/Festivals/spring13",
+			"TextOperations":
+			[
+   				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "Set-Up_additionalCharacters"],
+   				    "Value": "GetoSuguru 34 62 down",
+   				    "Delimiter": "/"
+				},
+
+   				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "MainEvent_additionalCharacters"],
+   				    "Value": "GetoSuguru 37 57 down",
+   				    "Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 34 62 down",
+					"Delimiter": "/"
+			 },
+
+				
+			 {
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+					"Value": "GetoSuguru 37 57 down",
+					"Delimiter": "/"
+			 }
+			]
+		},
+		{
+			"LogName": "Egg Festival - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"Entries": 
+			{ "GetoSuguru": "I discreetly drew small doodles on one of the eggs. Let me know if you find it.$1",
+			  "GetoSuguru_y2": "This morning, I jokingly said I'll join the egg hunt this year... you wouldn't believe the face Marlon gave me right after.$11"
+			}
+			
+		},
+		{
+			"LogName": "Egg Festival - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"Entries": 
+			{ "GetoSuguru_spouse": "I'm rooting for you, my love.$1#$b#Now, beat 'em! Don't let all that training go to waste.$9#$b#But losing or winning... I'm proud of you either way.$6",
+			  "GetoSuguru_spouse_y2": "I helped with decorating the eggs this year!$1#$b#Let's see if you can spot the eggs with my doodles on them, love.$9"
+			
+			},
+			"When": {
+				"Spouse": "GetoSuguru"
+				}
+		},
+		{	
+			"LogName": "Flower Dance",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false},
+			"Target": "Data/Festivals/spring24",
+			"TextOperations":
+   			[
+   				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "Set-Up_additionalCharacters"],
+   				    "Value": "GetoSuguru 4 41 down",
+   				    "Delimiter": "/"
+				},
+				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "MainEvent_additionalCharacters"],
+   				    "Value": "GetoSuguru 21 31 up",
+   				    "Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 3 41 left",
+					"Delimiter": "/"
+			 },
+			 
+			 {
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+					"Value": "GetoSuguru 21 31 up",
+					"Delimiter": "/"
+			 }
+			]
+		},
+		{	
+			"LogName": "Flower Dance - SVE compat",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true},
+			"Target": "Data/Festivals/spring24",
+			"TextOperations":
+			[
+   				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "Set-Up_additionalCharacters"],
+   				    "Value": "GetoSuguru 10 42 left",
+   				    "Delimiter": "/"
+				},
+
+   				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "MainEvent_additionalCharacters"],
+   				    "Value": "GetoSuguru 9 33 down",
+   				    "Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 3 41 left",
+					"Delimiter": "/"
+			 },
+
+				
+			 {
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+					"Value": "GetoSuguru 9 33 down",
+					"Delimiter": "/"
+			 }
+			]
+		},
+		{	
+			"LogName": "Flower Dance - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"Entries": 
+			{ "GetoSuguru": "Whoa, who decorated this place? Simple, yet beautiful.$8",
+			  "GetoSuguru_y2": "Hey, @.$0#$b#I knew you'd show up.$1"
+			}
+		},
+		{
+			"LogName": "Flower Dance - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"Entries": 
+			{ "GetoSuguru_spouse": "Ready to dance, lovebird?$9",
+			  "GetoSuguru_spouse_y2": "Hm? Oh... sorry, I think this year I want to dance with...$3#$b#Just kidding, sweetheart. Of course you're the only one I'll dance with.$1"
+			},
+			"When": {
+				"Spouse": "GetoSuguru"
+				}
+		},
+		{	
+			"LogName": "Luau",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations":
+   			[
+   				
+				{
+   				    "Operation": "Append",
+   				    "Target": ["Entries", "Set-Up_additionalCharacters"],
+   				    "Value": "GetoSuguru 23 24 down",
+   				    "Delimiter": "/"
+				},
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters"],
+					"Value": "GetoSuguru 14 24 down",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 23 24 down",
+					"Delimiter": "/"
+			 },
+			 
+			 {
+				 "Operation": "Append",
+				 "Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+				 "Value": "GetoSuguru 14 24 down",
+				 "Delimiter": "/"
+			 }
+			]
+		},
+		{	
+			"LogName": "Luau - dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"Entries": 
+			{ "GetoSuguru": "I hope people can handle a bit of spiciness...$11#$b#Yeah... I might have put some hot pepper in there. Just a little, though... it completely slipped my mind.$10",
+			  "GetoSuguru_y2": "I actually put in something really tasty this year!$1"
+			}
+		},
+		{
+			"LogName": "Luau - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"Entries": 
+			{ "GetoSuguru_spouse": "Yes, I put in the hot pepper!$1#$b#Darling, it's from our farm! People should taste how good it is!$7",
+			  "GetoSuguru_spouse_y2": "Don't worry, sweetheart. This year I brought something normal.$10"
+			},
+			"When": {
+				"Spouse": "GetoSuguru"
+				}
+		},
+		{	
+			"LogName": "Dance of the Moonlight Jellies",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false},
+			"Target": "Data/Festivals/summer28",
+			"TextOperations":
+			[
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "GetoSuguru 26 36 down",
+					"Delimiter": "/"
+				},
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters"],
+					"Value": "GetoSuguru 20 11 down",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 26 36 down",
+					"Delimiter": "/"
+				},
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+					"Value": "GetoSuguru 20 11 down",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{	
+			"LogName": "Dance of the Moonlight Jellies - SVE Sompat",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true},
+			"Target": "Data/Festivals/summer28",
+			"TextOperations":
+			[
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "GetoSuguru 9 11 left",
+					"Delimiter": "/"
+				},
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters"],
+					"Value": "GetoSuguru 9 11 left",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 9 11 left",
+					"Delimiter": "/"
+				},
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "MainEvent_additionalCharacters_y2"],
+					"Value": "GetoSuguru 9 11 left",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{	
+			"LogName": "Dance of the Moonlight Jellies - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"Entries": 
+			{ "GetoSuguru": "The jellies are coming out anytime soon, now.$0",
+			  "GetoSuguru_y2": "No matter how many times I've seen this, it still takes my breath away each time.$0"
+			}
+		},
+		{
+			"LogName": "Dance of the Moonlight Jellies - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"Entries": 
+			{ "GetoSuguru_spouse": "Back in the city, I never really paid attention to natural phenomena, the things happening around me...$0#$b#But here in Pelican town, I feel like I'm seeing and learning something new every single day.$1#$b#And with you by my side, it feels even better, my love.$6",
+			  "GetoSuguru_spouse_y2": "Come closer, my love. Let's enjoy this moment together.$8"
+			},
+			"When": {
+				"Spouse": "GetoSuguru"
+				}
+		},
+		{	
+			"LogName": "Stardew Valley Fair",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false},
+			"Target": "Data/Festivals/fall16",
+			"TextOperations":
+			[
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "GetoSuguru 41 87 right",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 49 89 down",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{	
+			"LogName": "Stardew Valley Fair - SVE compat",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true},
+			"Target": "Data/Festivals/fall16",
+			"TextOperations":
+			[
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "GetoSuguru 36 83 up",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 49 89 up",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{	
+			"LogName": "Stardew Valley Fair - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Entries": 
+			{ "GetoSuguru": "Ugh... I don't like this very much. Too crowded for my liking.$11",
+			  "GetoSuguru_y2": "This event gets more and more crowded each year...$11"
+			}
+		},
+		{
+			"LogName": "Stardew Valley Fair - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"Entries": 
+			{ "GetoSuguru_spouse": "Look at all these people... this fair gets more and more crowded with each passing year.$11#$b#Let's grab something to eat and escape to a private corner. Sounds good to you, baby?$9",
+			  "GetoSuguru_spouse_y2": "Ah... it's so crowded.$7#$b#Which means more excuses to wrap my arms around you like this.$4"
+			},
+			"When": {
+				"Spouse": "GetoSuguru"
+				}
+		},
+		{	
+			"LogName": "Spirit's Eve",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false},
+			"Target": "Data/Festivals/fall27",
+			"TextOperations":
+			[
+				
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "GetoSuguru 27 63 down",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 27 63 down",
+					"Delimiter": "/"
+				}
+			]
+		},			
+		{	
+			"LogName": "Spirit's Eve - SVE compat",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true},
+			"Target": "Data/Festivals/fall27",
+			"TextOperations":
+			[
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "GetoSuguru 21 69 right",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 21 63 right",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{	
+			"LogName": "Spirit's Eve - dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"Entries": 
+			{ "GetoSuguru": "Wanna race? Whoever gets to the end of the maze first wins.$9#$b#Heh... just kidding. I still want to grab a serving of that heavenly mashed potatoes.$1",
+			  "GetoSuguru_y2": "I ate too many cookies...$11"
+			}
+		},
+		{	
+			"LogName": "Spirit's Eve - dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"Entries": 
+			{ "GetoSuguru_spouse": "You know, it would be fun to fish out some of my curses just to-$3#$b#Haha! I'm just kidding, darling. Don't be frowny now.$10#$b#%GetoSuguru gives you an apologetic peck on the cheek.",
+			  "GetoSuguru_spouse_y2": "Sweetheart, what do you say we tackle the maze together?$8#$b#Come on now, don't be shy. I'm sure something like this is easy for you.$9"
+			},
+			"When": {
+				"Spouse": "GetoSuguru"
+				}
+		},
+		{
+			"LogName": "Feast of the Winter Star",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": false},
+			"Target": "Data/Festivals/winter25",
+			"TextOperations":
+			[
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "GetoSuguru 28 60 down",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 28 60 down",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "Feast of the Winter Star",
+			"Action": "EditData",
+			"When": { "HasMod: |contains=FlashShifter.StardewValleyExpandedCP": true},
+			"Target": "Data/Festivals/winter25",
+			"TextOperations":
+			[
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters"],
+					"Value": "GetoSuguru 37 70 left",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": ["Entries", "Set-Up_additionalCharacters_y2"],
+					"Value": "GetoSuguru 37 70 left",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{	
+			"LogName": "Feast of the Winter Star - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"Entries": 
+			{ "GetoSuguru": "Looking to grab some dessert too, hm?$0#$b#For real, though... that roasted turkey is heaven. Have you tried it?$1#$b#Hurry, before it disappears!$7",
+			  "GetoSuguru_y2": "I actually made some of the cookies. Wanna try some, @?$0"
+			}
+		},
+		{	
+			"LogName": "Feast of the Winter Star - Dialogue",
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"Entries": 
+			{ "GetoSuguru_spouse": "Sweetheart, here we are, at the end of the year once again.$1#$b#I have nothing to say besides... thank you. For staying, for being something irreplaceable in my life. For existing.$6#$b#For making me feel like... I'm home.$4#$b#I love you, @. You're it for me. I don't plan on stopping, not by a long shot.$6",
+			  "GetoSuguru_spouse_y2": "You are the best thing that the universe has ever granted to me, @...$6#$b#Haha, just a little emotional. I'm so happy that we got to spend yet another amazing year together.$1#$b#I love you, @.$4"
+			},
+			"When": {
+				"Spouse": "GetoSuguru"
+				}
+		}
+
+	]
+}

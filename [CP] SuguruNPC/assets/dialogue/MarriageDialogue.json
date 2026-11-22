@@ -1,0 +1,110 @@
+{
+
+  "spring_1": "Happy new year, darling.$1#$b#Being here with you has been nothing short of amazing. You bring out the best in me, @...$4#$b#Let me love and cherish you this year too, okay?$6",
+  "spring_12": "Honey, what do you say I sneak some of our eggs into your basket for a head start tomorrow?$3#$b#No cheating?! But, babe!$7",
+  "spring_16": "Desert festival? Are you going, babe?$0#$b#Me? I wish I could go to at least accompany you... but I need to finish something today.$11#$b#But let's see, maybe I can go later if I do it quickly!$1",
+  "spring_23": "@, let's practice dance moves for tomorrow!$1#$b#Oh? Planning to surprise me, are you?$9",
+
+  "summer_1": "Why did I bury my head under the pillow last night?$7#$b#It's the crickets, darling...$11#$b#Hm? You'll cover my ears for me?$8#$b#Heh... aren't you the sweetest.$1",
+  "summer_10": "Darling, have you thought of what to bring to put in the pot tomorrow?$0#$b#Me? Well... I have a great idea, alright.$9",
+  "summer_20": "Hm? Yes, honey?$0#$b#This? It's a net! I made it myself. It's for the Trout Derby!$1#$b#Huh?! Cheating?! Darling, I can't fish! And this net... it's still 'fishing out' the fish, no?$7",
+  "summer_27": "Whoa... summer is about to end. Less crickets, flies, and termites!$1#$b#As for the sweating during the night, though...$4",
+
+  "Good_0": "You look as radiant as ever, sweetheart.$1#$b#What did I do to deserve someone like you?$6",
+  "Good_2": "If you have time today, why don't we spend some time together?$1",
+  "Good_3": "I have no regrets coming to Pelican Town. Because I got to meet you, @.$6",
+  "Good_4": "If you're tired, why don't you let me massage you for a bit?$1",
+  "Good_5": "You know, my love, I've been trying to grow some plants in my room lately.$0#$b#I want to be better in helping you with the crops...$4",
+  "Good_6": "What are your plans today, my love? I'd be happy to help.$1",
+
+  "Neutral_0": "Hey, @. How's your day?$0",
+  "Neutral_2": "Nothing much happened today, huh?$0#$b#Same here.$11",
+  "Neutral_3": "Today isn't that bad, but not that good either. Just the usual.$0",
+  "Neutral_4": "Nothing remarkable happened today. I just went on with my day as usual.$1",
+  "Neutral_5": "Hm? Did you say something?$0",
+  "Neutral_6": "A normal, uneventful day is also a blessing, no?$9",
+
+  "Bad_0": "I think I'm gonna sleep early today. What about you?$3",
+  "Bad_2": "...I need some fresh air. I'll go out in a bit.$3",
+  "Bad_3": "...$3#$b#...can I have some space?$2",
+  "Bad_4": "I was hoping for a better outcome.$2",
+  "Bad_5": "Sorry, darling. I don't feel like talking right now.$3#...$2",
+  "Bad_6": "I guess this is my cue to lower my expectations.$3",
+
+
+  "fall_1": "Ah... Autumn. The start of cuddle season.$8",
+  "fall_2": "Hey, gorgeous.$1#$b#The air is fresh outside. I know you have a husband, but, will you be kind enough to accompany a lonely guy on a walk?$9",
+  "fall_15": "Hmm...$3#$b#Ah, babe! I'm having a little difficulty choosing what to display from our farm tomorrow. Everything looks amazing... because they're the fruit of your diligence.$8#$b#Should we bring everything?$1",
+  "fall_26": "@... wanna wear a costume tomorrow?$0#$b#How about we become junimos?$1",
+
+  "winter_1": "@! Let's have a snowball fight outside!$1",
+  "winter_7": "Honey, what do you think of me making an ice sculpture of my own?$11#$b#I'll call it, 'deformed rock'!$1",
+  "winter_12": "There you are, honey. What do you wanna have for dinner? I'll-$0#$b#Squid? Again?$7",
+  "winter_15": "Are you coming to the night market, honey?$0#$b#Me? I don't know yet, but I want to see. Should we go together?$8",
+  "winter_24": "Are you ready for The Feast of the Winter Star tomorrow, sweets?$0#$b#Me? I'm excited to take care of you the whole meal. And mainly, seeing you smile.$8",
+  "winter_26": "I had a really good meal yesterday... ugh, I'm still full even now.$11#$b#Should we find a way to burn all those calories off, darling?$6",
+
+
+  "Rainy_Day_0": "@, why don't we go out and sit together on the patio for a while, hm?$0#$b#I want to enjoy the sound and smell of the rain with my perfect darling.$1",
+  "Rainy_Day_1": "Good morning, gorgeous. How was your sleep?$1#$b#It's still raining out there, why don't you stay inside a bit more?$1#$b#Here, I made you some coffee.[395]$0",
+  "Rainy_Day_2": "Brr... it's a little cold because of the rain.$11#$b#Haha, can't fool you, can I? Yeah, some cold air like this doesn't affect me.$10#$b#But, babe... I only thought I'd try a more creative approach when asking for cuddles...$11",
+  "Rainy_Day_3": "It's raining so hard out there, huh?$0#$b#Want a warm bath, darling? I'll go prepare it for you.$1",
+  "Rainy_Day_4": "Sweetheart, it's still raining out there. Why don't you stay inside a bit longer?$0#$b#It's not good to always go out and get soaked in the rain, you know... you'll catch a cold.$10",
+  "Rainy_Night_0": "Darling... you're soaked! Come here, quick.$7#$b#Call me next time, okay? I'll bring you an umbrella.$11",
+  "Rainy_Night_1": "Just on time, honey! Dinner is ready. Here, I made something that goes well with this rainy night.[218]$1",
+  "Rainy_Night_2": "Thank you for your hard work today too, @.$0#$b#Now since it's the perfect weather, how about some cuddles, hm?$8",
+  "Rainy_Night_3": "@, really, you never cease to amaze me with how much of a hardworker you are...$6#$b#Even if it's raining, you still get all the work done. And perfectly, too.$10#$b#Are you sure you're not a superhuman or something?$9#$b#No? Then, maybe, an angel?$1",
+  "Rainy_Night_4": "Welcome back, sweetheart.$8#$b#Brr... it's quite chilly out there, isn't it? Your hands are freezing...$11#$b#Come here, let me warm you up.$4",
+  "Rainy_Night_5": "Ah, perfect timing, sweetheart. I just made some hot tea. Here, have some. [614]$0",
+
+
+  "Indoor_Day_GetoSuguru": "Hey, sweetheart. Did you sleep well?$0#$b#Me? I slept well because I had you in my arms.$1",
+  "Indoor_Day_0": "Good morning, my love.$0#$b#I don't know why, but I feel so energetic right now.$10#$b#Maybe I can channel some of that energy to you?$1",
+  "Indoor_Day_1": "Darling, what's with you and looking so breathtaking when you just woke up?$4#$b#Will you grant me the honor of showering you with kisses to start your day with, @?$6",
+  "Indoor_Day_2": "Hey there, stunning.$0#$b#The weather is really nice today. Wanna go up the mountain for a small hike?$1",
+  "Indoor_Day_3": "@, I've been thinking about learning a new hobby...$3#$b#Do you have any suggestions, my love?$8",
+  "Indoor_Day_4": "Good morning, sweetheart. I made you some breakfast. [201 210 211 228 237]$1#$b#Be careful out there, okay? Call me if you need anything.$0",
+  "Indoor_Night_0": "Welcome back, sweetheart.$11#$b#I had a rough day today... but now that you're home, smiling at me, all my fatigue just disappeared.$8",
+  "Indoor_Night_1": "Darling, I'm so thankful, really...$6#$b#Thank you for giving me this life, @. Just being able to stay by your side, waking up and sleeping next to you every day... I wouldn't trade it for anything else in the world.$4",
+  "Indoor_Night_2": "Thank you for your hard work today too, @.$1#$b#You always inspire me to become a better person than yesterday, my love. To be worthy of standing beside such an amazing person like you...$6#$b#...to become a better husband for you.$4",
+  "Indoor_Night_3": "Phew... even after working the whole day, @, you still look breathtaking.$4#$b#Welcome home, sweetheart. Let me take care of you now, hm?$1",
+  "Indoor_Night_4": "Welcome back, my love. I made some juice, do you want some? [350]$1",
+
+
+  "Outdoor_GetoSuguru": "Sweetheart, wanna join me here for a while before you go to work?$0#$b#Here, I would even share you some of my tea. [614]$1",
+  "Outdoor_0": "My god, @.$7#$b#No, nothing's wrong. You look...$4#$b#...I'm so lucky, aren't I?$6",
+  "Outdoor_1": "Wanna know something, @?$9#$b#I wrote a poem for you last night. I think now is the best time to recite it to you: outdoor, just you and me, and a nice weather.$1#$b#Here comes! Ahem... Roses are red, violets are blue.$3#$b#Huh... hold on, honey.$11#$b#...$11#$b#I'm sorry, darling. I can't read this one. Can't believe I can't read my own handwriting.$10",
+  "Outdoor_2": "Standing here, in our farm, surrounded by all the crops and animals we're taking care of...$8#$b#Thank you for choosing me, @. You make me the happiest man alive.$6",
+  "Outdoor_3": "Honey, look.$3#$b#That. Our windows. People still can see what we're doing inside...$3#$b#I think I'm gonna order some more blinds.$11",
+  "Outdoor_4": "Now we're outdoor, perfect!$1#$b#Hm? What do you mean 'what'?$10#$b#Come at me. Show me how much you've trained without me, darling.$9#$b#I'll go all out!$1",
+
+
+  "spouseRoom_GetoSuguru": "Hey, take it easy today, okay? You worked so hard yesterday.$0#$b#How about you stay here for a bit and let me massage your back, hm? I'll be sure to meticulously loosen up all those muscle knots for you.$8",
+  "patio_GetoSuguru": "Hey, sweetheart. I made some tea today. Here, this one is yours. [614]$0#$b#So, how is it? Do I deserve a kiss?$1",
+  "funLeave_GetoSuguru": "@, come here. I have something serious to say to you.$3#$b#While I'm away, be careful okay? Careful, like, really. Really careful.$3#$b#I just... had a bad dream the other day that something bad happened to you while you're out venturing in the mines...$11#$b#I know it's just a dream, but... I'm worried, you know. Because it might happen. Not definitely, but it might.$2#$b#Should I just go with you?$10",
+  "funReturn_GetoSuguru": "My love! I'm back! I missed you so much, you don't even know!$1#$b#Let's take a warm bath together!$8",
+
+  "funLeave_summer": "Hey, sweetheart! I'm going to visit a friend in Zuzu city for a while. I won't take long. Do you want me to bring anything back?$0",
+  "funLeave_winter": "Sweetheart, I'm going to visit Ginger Island today. Wanna come with me?$8",
+  "funReturn_summer": "@! I'm back! Since you were unsure about what you wanted, I got you this![279]$1#$b#Anything for you, my love.$9",
+  "funReturn_winter": "Darling, I'm home! You wouldn't believe what I saw!$1#$b#I saw a... uh... how do I say this... a monkey boy? A bird boy? He was speaking in bird language... I couldn't understand what he was saying.$10#$b#But we got along, and I gave him a bread. He gave me this in return... I don't know what to do with this, so... I'm giving this to you. Who knows it'll be useful in your adept hands?[908]$1",
+
+
+  "OneKid_0": "%kid1 has your nose...$6#$b#So cute...$10",
+  "OneKid_1": "I still can't believe that I'm a father sometimes, you know. It feels so... strange. In a good way.$4#$b#I love you, @. And I love %kid1 just as much!$6",
+  "OneKid_2": "%kid1 is so cute...$1#$b#Well, that is to be expected. After all, I'm the dad. Must've got it from me.$9",
+  "OneKid_3": "They are right to say that parenting isn't easy, huh...$0#$b#But we're in this together, @. Let's learn together, okay?$8#$b#Believe me when I say I love both of you so much... I'll protect you and %kid1 with my life.$6",
+
+  "TwoKid_0": "Darling, did you know? %kid1 helped me feed %kid2 earlier.$0#$b#I did say there's no need to, but %kid1 insisted. It was... such a cute sight. I think I cried a little.$10",
+  "TwoKid_1": "@... I can't be thankful enough for this little family we have.$6#$b#I love you so much, @. I swear I'll protect our family with everything that I have.$4",
+  "TwoKid_2": "I took %kid1 and %kid2 for a little walk yesterday, and they got too comfortable eating cookies in Granny Evelyn's house...$11#$b#I got carried away talking about the cute things they did, asking for advice and everything. We ended up staying longer than planned.$10",
+  "TwoKid_3": "I never imagined my life to turn out so beautifully...$6#$b#I am now a father of two beautiful children, and I get to spend the rest of my life with you...$4#$b#I know I've said this many times already, but... I love you, @. More than anything.$6",
+
+
+  "GetoSuguruAfterWedding": "I still can't believe we're married now... it all feels like a dream.$6#$b#From now on, you don't have to do everything on your own, okay? I'll be with you every step of the way.$1",
+  "MovieInvite_Spouse_GetoSuguru": "Of course, sweetheart. I'll be more than happy to spend time with you.$1",
+  "SpouseFarmhouseClutter": "Darling, don't you think we need more free space in the house?$11#Of course I love your decorating! Thank you for taking the time to make our house look nice and lively, my love.$1#$b#It's just... sometimes it's hard for me to walk around.$10",
+  "SpouseGiftJealous": "So... you secretly gave {0} a {1} today, huh?$3#...no, I'm not jealous.$2",
+  "SpouseStardrop": "@... after all this time, you still make me the happiest man alive.$6#$b#Thank you, my love, for always loving me and accepting all that I am.$6#$b#This is something I have been meaning to give you. Let's be happy together for a long time, okay? I love you, @.$4"
+
+}

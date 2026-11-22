@@ -1,0 +1,72 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "GetoSuguru": {
+                    "DisplayName": "Suguru",
+                    "BirthSeason": "Spring",
+                    "BirthDay": 3,
+                    "HomeRegion": "Other",
+                    "Gender": "Male",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Neutral",
+                    "Optimism": "Neutral",
+
+                    "CanBeRomanced": true,
+                    "LoveInterest": "null",
+
+                    "Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "AdventureGuild",
+                            "Tile": { "X": 1, "Y": 14 },
+                            "Direction": "Right"
+                        }
+                    ],
+
+                    "SpouseRoom": {
+                        "MapAsset": "SuguruNPCSpouseRoom",
+                        "MapSourceRect": {
+                            "X": 0,
+                            "Y": 0,
+                            "Width": 6,
+                            "Height": 9
+                        }
+                    },
+
+                    "SpousePatio": {
+                        "MapAsset": "SuguruNPCSpousePatio",
+                        "MapSourceRect": {
+                            "X": 0,
+                            "Y": 0,
+                            "Width": 4,
+                            "Height": 4
+                        },
+                        "SpriteAnimationFrames": [
+                            [16, 2000],
+					    	[17, 2000],
+					    	[18, 2000],
+					    	[19, 2000],
+					    	[0, 13500],
+					    	[16, 2000],
+					    	[17, 2000],
+					    	[18, 2000],
+					    	[19, 2000],
+					    	[16, 2000],
+					    	[17, 2000],
+					    	[18, 2000],
+					    	[19, 2000]
+                        ],
+                        "SpriteAnimationPixelOffset": {
+                            "X": 0,
+                            "Y": 0
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

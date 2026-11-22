@@ -1,0 +1,42 @@
+{
+    "Changes": [
+        {
+			"Action": "Load",
+			"Target": "SuguruNPC/Objects",
+			"FromFile": "assets/Objects/fallenpicture.png"
+		},
+		{
+            "LogName": "Load Suguru Portrait Frame Tilesheet",
+            "Action": "Load",
+            "Target": "SuguruNPC/Objects/PortraitFrames",
+            "FromFile": "assets/Objects/SuguruFrame.png"
+        },
+        {
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+
+				"SuguruNPC_Fallen_Picture": {
+					"Name": "Fallen Picture",
+					"Displayname": "Fallen Picture",
+					"Description": "A keepsake that Suguru holds dear.",
+					"Type": "Basic",
+					"Category": 0,
+					"Price": 0,
+					"Edibility": -300,
+
+					"Texture": "SuguruNPC/Objects",
+					"SpriteIndex": 0,
+					"ContextTags": [ "color_white", "not_placeable" ]
+				}
+			}
+		},
+        {
+			"Action": "EditData",
+			"Target": "Data/Furniture",
+			"Entries": {
+				"SuguruNPC_SuguruPortrait": "SuguruPortrait/painting/2 2/2 2/1/999/-1/Suguru Portrait/0/SuguruNPC\\Objects\\PortraitFrames"
+			}
+		}
+    ]
+}

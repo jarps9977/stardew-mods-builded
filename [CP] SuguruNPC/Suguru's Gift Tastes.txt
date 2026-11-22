@@ -1,0 +1,39 @@
+LOVED GIFTS:
+- prismatic shard
+- sashimi
+- pancakes
+- ice cream
+- chocolate cake
+- cookies
+- maki roll
+- tea leaves
+- tea set
+- green tea
+
+LIKED GIFTS:
+- salad
+- wine
+- honey
+- maple bar
+- eggs
+- milk
+
+NEUTRAL GIFTS:
+- ancient seed
+- artisan goods
+- flowers (not the foraged ones)
+
+DISLIKED GIFTS:
+- strange bun
+- artifact trove
+- bombs
+- minerals
+- fish
+- seed
+- forage (greens)
+
+HATED GIFTS:
+- trash (he won't accept it)
+- monster loot
+- bait
+- fishing tackles

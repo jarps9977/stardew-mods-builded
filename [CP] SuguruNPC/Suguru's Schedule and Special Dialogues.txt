@@ -1,0 +1,72 @@
+    
+    
+    ------------------------------------------------------SCHEDULE-----------------------------------------------------------
+    
+SPRING ->   always starts at 6.10 AM to stand near the mountain lake
+            at 9 AM he walks to the pierre's (mon, fri) or forest (tue, thu) or library (wed, sun)
+            goes back to the guild at 5 PM
+            on FRIDAY, he goes to the saloon from 5 PM until 11 PM
+            He stays in the guild all day on Saturday
+
+SUMMER ->   7 AM walks out of the adventure guild to stand on the bridge near the beach (he always does this on summer)
+            MON and FRI, at 12 PM he walks to pierre's
+            TUE and THU, at 10 AM he goes to forest
+            WED, at 12 PM he goes near the ice cream stand
+            SAT, at 12 PM he goes to the library
+            SUN, he stays in the guild all day
+            always goes home at 5 PM except FRI (11 PM) after drinking in the saloon and SAT (8 PM)
+
+() His Fall schedule is the same as Spring
+
+WINTER ->   Always walks out of the guild at 9 AM to stand near the beach
+            MON - THU at 9 AM goes to the forest, 4 PM to beach, 9 PM goes back to the guild
+            FRI at 9 AM goes to the library, 6 PM goes to saloon, 11 PM goes home
+            SAT and SUN he stays in the guild all day
+
+NOTES/SUMMARY:
+() Always stands near mountain lake on Spring and Fall in the morning
+() Always stands near the beach on Summer in the morning
+() Always goes to the Saloon at 5-6 PM until 11 PM on Friday
+() When not in Saloon, he mostly goes back to the guild at 5 PM
+
+
+GREEN RAIN (NOT MARRIED) -> stays in the guild
+
+
+    --------------------------------------------------MARRIAGE SCHEDULE-----------------------------------------------------------
+
+() So I tried to write his schedule differently after marriage so he doesn't become a trophy husband (gets bonked)
+() He has a job in the adventure guild so that's where he goes to most of the time
+
+
+WED -> 10 AM adventure guild - 12 PM library - 3 PM in town square (near the river) - 6 PM home
+
+FRI -> 10 AM adventure guild - 3 PM saloon - 8 PM home
+
+SAT -> 9 AM forest - 3 PM home
+
+Suguru now goes to the dessert festival after marriage.
+
+
+    ----------------------------------------------------SPECIAL DIALOGUES-----------------------------------------------------------
+
+() When he stays in the guild all day (sat/sun), he might bring up a conversation in which you can ask him questions (options provided)
+() the number of options will increase according to your friendship/heart level with him
+() when I indicate the number of required hearts to get the dialogue, it's absolute. means no less and no more
+
+SPRING -> on the first day of second year he wishes you happy new year
+          before any events in Spring
+
+SUMMER -> 10, 20, 27
+
+FALL   -> 2, 15, 26
+          (four hearts) friday
+          (eight hearts) friday, wednesday, sunday
+
+WINTER -> 1, 7, 12, 24, 26
+          (four hearts) thursday
+          (eight hearts) tuesday, friday
+
+() all of his 10 hearts dialogues are unique in every season
+
+() gifts special dialogues: prismatic shard, salad, wine, sashimi, obsidian, honey, maple bar, ancient seed

@@ -1,0 +1,272 @@
+  {
+
+  "Introduction": "Oh? Hello. You're the new farmer who just moved in.$1#I'm Suguru. Full name? Geto Suguru. Nice to meet you, @.$0",
+
+  "WipedMemory": "Oh! This is the first time we've met, right? You're the farmer who just moved in.$0#I'm Geto Suguru. Nice to meet you. @? That's a nice name.$1",
+
+  "FlowerDance_Accept": "I thought you'd never ask!$1",
+  "FlowerDance_Accept_Spouse": "You know the answer, my love.$9",
+  "FlowerDance_Decline": "Sorry, I don't feel like dancing. Maybe next time?$0",
+
+  "GreenRain": "It's green everywhere. I woke up and had to blink a couple times, I thought I was still dreaming.$10",
+  "GreenRain_2": "I have a sudden urge to try and drink some of this green rain... what, don't tell me you're not curious even the slightest bit?$7",
+  "GreenRainFinished": "Turns out it's just a natural phenomenon, huh? But feel free to stay close to me next time if it scares you.$10",
+
+  "AcceptBirthdayGift_Loved": "You remembered my birthday, @! This makes me so happy... thank you!$1",
+  "AcceptBirthdayGift_Liked": "For my birthday? I didn't think you would remember. I'll treasure this, @.$8",
+  "AcceptBirthdayGift_Neutral": "A birthday gift? Thanks for remembering my birthday, @.$0",
+  "AcceptBirthdayGift_Disliked": "Hm? A birthday gift? For me? ...thanks, I'll take it.$10",
+
+  "DumpsterDiveComment": "...@, what are you doing rummaging the trash like that?$11",
+
+  "AcceptBouquet": "...$7#$b#...!!$4#$b#...@? Of course I want to be your boyfriend!$1#$b#Now... I can call you \"darling\".$4",
+
+  "engaged0": "Hey, gorgeous. Coming to see your soon-to-be husband?$9",
+  "engaged1": "I still can't believe I'm going to be your husband, @...$4#$b#I'll do my best to protect that sweet smile of yours... and the little family we're going to have.$6",
+
+  "refusal_no_heartsB": "I'm sorry... we just met now, I think.$3",
+  "refusal_knownA": "I don't mean to make this sound harsh, @, but I think I'd like us to stay friends...$10",
+  "refusal_knownB": "I'm sorry, @, but let's just remain friends, okay?$0",
+
+  "breakUp": "...@? You... want to break up? But... did I do something wrong? I...$7#$b#Alright, if that's what you want.$2",
+  "dumped_Boys": "Oh. Hello, @.$3#$b#...$3",
+  "secondChance_Boys": "Are you serious this time? You... want me back?$7#$b#...if you break my heart again, there is no more chances, okay? Let's try this again, @.$3",
+  "divorced": "Enough is enough, @.$5",
+  "RejectBouquet_Divorced": "Enough is enough, @.$5",
+  "RejectBouquet_LowHearts": "I'm sorry, @, But we don't even know each other that well yet.$10",
+  "RejectBouquet_VeryLowHearts": "...huh?$7",
+  "RejectGift_Divorced": "You didn't have to, @.$3",
+  "RejectItem_category_junk": "...you're giving me trash?$7",
+  "RejectMermaidPendant_Divorced": "...I don't think I want to try again, @. Forget it.$2",
+  "RejectMermaidPendant_NeedHouseUpgrade": "@, I'm delighted.$10#But... I'm afraid we need more time. There isn't enough roof for us... yet.$10",
+  "RejectMermaidPendant_Under8Hearts": "I'm sorry, @... I don't think I think of you that way.$11",
+  "RejectMermaidPendant_Under10Hearts": "@... I don't think we're ready for that step yet...$11",
+  "RejectMermaidPendant_Under10Hearts_AskedAgain": "...@, I didn't think I need to say this twice.$11#I'm sorry, my answer is still the same.$3",
+
+  "Resort_Entering": "The weather is so nice in here!$1",
+  "Resort": "I wonder what coming here in Winter feels like...$8",
+  "Resort_Bar": "The banana smoothie tastes so good, you should try some.$1",
+  "Resort_Leaving": "Time to head back, huh? I can see myself coming here frequently to clear my mind.$1",
+  "Resort_Shore": "Just standing here, feeling the warm sand beneath my feet and listening to the sounds of waves crashing... I feel at ease.$0",
+  "Resort_Wander": "So, tell me, @. How did you manage to build this entire resort on your own? You're incredible.$1",
+
+  "MovieInvitation": "Why not? I'll see you there, @.$9",
+  "RejectMovieTicket_AlreadyWatchedThisWeek": "We... already watched that, don't you think?$10",
+  "RejectMovieTicket_Divorced": "...no thanks, @.$3",
+  "RejectMovieTicket_DontWantToSeeThatMovie": "Ah... maybe another time?$10",
+
+  "saloon": "It's so lively in here, isn't it?$10",
+  "beach": "I like listening to waves. It makes me feel peaceful inside.$0",
+
+  "AcceptGift_(O)StardropTea": "Stardrop tea? For me?$7#$b#My, aren't you just full of surprises? Thank you. I will enjoy every last drop.$8",
+  "AcceptGift_(O)74": "Woah, I heard these things are rare. Spoiling me, aren't you?$7#$b#Thanks, @. I'll keep it close.$1",
+  "AcceptGift_(O)196": "It looks good and healthy. Trying to discreetly fix my eating habit, aren't you?$9#Haha, I'm kidding. Thank you for looking out for me, @.$10",
+  "AcceptGift_(O)348": "Wine?$7#$b#Now, I couldn't possibly finish this bottle by myself. So, care to join me for dinner, @?$9",
+  "AcceptGift_(O)227": "Sashimi? I love this!$1#$b#Let's find a nice spot and enjoy this together, hm?$8",
+  "AcceptGift_(O)575": "Oh, obsidian! It has a pretty color.$1#Hm? It reminds you of me?$7#You flatter me, @.$10",
+  "AcceptGift_(O)340": "Honey?$8#Haha, I wasn't calling you. But, nice try.$1",
+  "AcceptGift_(O)731": "A sweet and savory treat. Thank you, @.$8",
+  "AcceptGift_(O)114": "Hm? Is this edible?$7",
+  "AcceptGift_(O)SuguruNPC_Fallen_Picture": "Hm?$8#$b#The one in the middle is Ieiri Shoko.$1#$b#The one poking my cheek? Gojo Satoru.$8#Haha, you almost got it! Repeat after me.$10#$b#Sho...$0#$b#ko. Shoko.$0#$b#Sa...$0#$b#to...$0#$b#ru.$0#$b#Satoru. There we go.$1",
+
+  "dating_GetoSuguru_memory_oneyear": "You look stunning today.$6#$b#If you keep this up, I swear, I'm gonna have to put a ring on that finger of yours.$4",
+
+  "cc_Complete": "You fixed the old community center by yourself, @?$7#$b#Really... you never cease to amaze me...$10",
+  "cc_Bus": "I heard the bus is working again all of the sudden! Isn't that great, @?$8",
+  "movieTheater": "That movie theater seems to appear out of thin air.$10",
+  
+  "Mon": "Hey, @.$0#Monday blues, huh?$10",
+  "Tue": "Hey, @. Looking for some fresh air too?$0",
+  "Wed": "Nice to see you in good spirits, @.$0",
+  "Thu": "Just a few days left before the weekend. Sweet!$1",
+  "Fri": "The Saloon is always crowded on Fridays. Sometimes I can't even find a seat.$11",
+  "Sat": "Yo, @! Fancy seeing you here. Are you joining the Adventure Guild?$8#$b#Or... just passing by?$9",
+  "Sun": "The library is peaceful and quiet. A good place to think.$0",
+
+  "summer_Tue": "Visiting the beach feels nice during Summer.$0",
+  "summer_Wed": "Yo, @! Getting some ice cream?$1",
+  "summer_Thu": "Ugh, the heat is getting to me...$11",
+  "summer_Sat": "I come to the library whenever I need some form of entertainment. Some of their collections are very interesting.$0",
+  "summer_Sun": "Yo, @! Fancy seeing you here. Are you joining the Adventure Guild?$8#$b#Or... just passing by?$9",
+
+  "fall_Mon": "The leaves are pretty this time of year. Don't you think so, @?$0",
+  "fall_Tue": "The air feels best in the forest during fall.$0",
+  "fall_Sun": "I come to the library whenever I need some form of entertainment. Some of their collections are very interesting.$0",
+
+  "winter_Mon": "Brr...$11#It's cold, but I'm gonna get lazy and feel colder if I don't move my body.$11",
+  "winter_Tue": "Aren't you cold, @?$7",
+  "winter_Thu": "It was snowing last night! Did you see, @?$1#$b#Oh... of course you were sleeping at 2 AM.$10",
+  "winter_Sat": "Brr... it's too cold to go out today...$11",
+  "winter_Sun": "You're still out and about in this weather, @?$7#$b#I'm impressed, @. You're tough.$10",
+
+
+  "Mon2": "Good to see you first day of the week, @.$8#How do you plan to tackle this week?$9",
+  "Tue2": "Ah, working hard as always, admirable @.$9",
+  "Wed2": "Nice to see you in good spirits, @.$0#$b#Wanna accompany me for a walk outside?$1",
+  "Thu2": "I'm going to the Saloon tomorrow. You, @?$0",
+  "Fri2": "Good job trying to sneak up on me.$1#$b#But I could sense you from miles away, you know.$9",
+  "Sat2": "Hey, @.#$q 42/43 Sat2_followup#Wanna have some chat?#$r 42 15 hair#I really like your hair#$r 43 10 guild#How is the Guild holding up?",
+  "hair": "Ah... my hair?$7#$b#What, got a thing for men with black hair?$9#$b#Haha, I'm just joking.$10#$b#Thanks. I guess I'll keep it this way, then.$1",
+  "guild": "The Guild? Well, same old.$11#$b#I have been taking on more and more of the paperwork lately.$10#$b#Yeah, it's boring. But it helps taking my mind off some things... sometimes.$0",
+  "Sat2_followup": "#$p 43#Come to the Adventure Guild anytime, @. I'd appreciate the company.$1|You know, I can give you a private lesson on how to tie up your hair like mine.$1",
+  "Sun2": "Hey, @. Looking for something?$0",
+
+  "summer_Wed2": "@! Getting some ice cream?$1#$b#What flavor do you like?$0",
+  "summer_Sat2": "Hey, @. Looking for something?$0",
+  "summer_Sun2": "Hey, @.#$q 43/44 summer_Sun2_old#Wanna have some chat?#$r 43 15 hair#I really like your hair#$r 44 10 guild#How is the Guild holding up?",
+  "hair": "Ah... my hair?$7#$b#What, got a thing for men with black hair?$9#$b#Haha, I'm just joking.$10#$b#Thanks. I guess I'll keep it this way, then.$1",
+  "guild": "The Guild? Well, same old.$11#$b#I have been taking on more and more of the paperwork lately.$10#$b#Yeah, it's boring. But it helps taking my mind off some things... sometimes.$0",
+  "summer_Sun2_old": "#$p 44#Come to the Adventure Guild anytime, @. I'd appreciate the company.$1|You know, I can give you a private lesson on how to tie up your hair like mine.$1",
+
+  "fall_Tue2": "The air feels best in the forest during fall.$0#$b#Careful not to slip on the fallen leaves, okay? I might not always be there to catch you.$10",
+  "fall_Fri2": "With the air getting colder these days, it's a necessity to hit the Saloon after a long day now.$0#$b#Why, because it's warm in there!$10",
+
+  "winter_Mon2": "My hands are really cold right now. Wanna feel them?$10",
+  "winter_Thu2": "@! Let's have a snow fight!$1",
+  "winter_Fri2": "With the air getting colder these days, it's a necessity to hit the Saloon after a long day now.$0#$b#Why, because it's warm in there!$10",
+  "winter_Sat2": "Hey, @. I'm staying here the whole day today. Come sit with me if you're not busy.$0#Haha! There's snow in your hair.$10",
+
+
+  "Mon4": "Hey, @!$1#$b#I feel like Mondays become much bearable now. The reason? Well...$9",
+  "Tue4": "Hey, @. I knew you'd be here.$8",
+  "Wed4": "Hey, @.$0#$b#Out of curiosity... what genre of book do you like?$1#Why? I just want to know more about you.$10",
+  "Thu4": "You look tired. How about some drink at the Saloon tomorrow? My treat.$1",
+  "Fri4": "You look positively glowing, @. Wanna share your secrets with me?$9",
+  "Sat4": "Hey, @.#$q 45/46 Sat4_old#Wanna have some chat?#$r 45 15 hair#I really like your hair#$r 46 10 guild#How is the Guild holding up?#$r 46 10 opinion#What do you think about me?",
+  "hair": "Ah... my hair?$7#$b#What, got a thing for men with black hair?$9#$b#Haha, I'm just joking.$10#$b#Thanks. I guess I'll keep it this way, then.$1",
+  "guild": "The Guild? Well, same old.$11#$b#I have been taking on more and more of the paperwork lately.$10#$b#Yeah, it's boring. But it helps taking my mind off some things... sometimes.$0",
+  "opinion": "You? Hmm...$3#$b#You're a good person, @.$1#$b#Not just me, I'm sure everyone here enjoy your company. You have this aura around you that makes you look very kind and approachable.$9#$b#Your turn! What do you think about me?$1",
+  "Sat4_old": "#$p 46#Come to the Adventure Guild anytime, @. I'd appreciate the company.$1|You know, I can give you a private lesson on how to tie up your hair like mine.$1",
+  "Sun4": "Hey, cutie. Looking for something?$9#Or rather... someone?$9",
+
+  "summer_Tue4": "Hey, let's go swimming one of these days, @!$1",
+  "summer_Wed4": "@, my favorite farmer! Want some ice cream? My treat.$9",
+  "summer_Sat4": "Hey, cutie. Looking for something?$9#Or rather... someone?$9",
+  "summer_Sun4": "Hey, @.#$q 47/48 summer_Sun4_old#Wanna have some chat?#$r 47 15 hair#I really like your hair#$r 48 10 guild#How is the Guild holding up?#$r 48 10 opinion#What do you think about me?",
+  "hair": "Ah... my hair?$7#$b#What, got a thing for men with black hair?$9#$b#Haha, I'm just joking.$10#$b#Thanks. I guess I'll keep it this way, then.$1",
+  "guild": "The Guild? Well, same old.$11#$b#I have been taking on more and more of the paperwork lately.$10#$b#Yeah, it's boring. But it helps taking my mind off some things... sometimes.$0",
+  "opinion": "You? Hmm...$3#$b#You're a good person, @.$1#$b#Not just me, I'm sure everyone here enjoy your company. You have this aura around you that makes you look very kind and approachable.$9#$b#Your turn! What do you think about me?$1",
+  "summer_Sun4_old": "#$p 48#Come to the Adventure Guild anytime, @. I'd appreciate the company.$1|You know, I can give you a private lesson on how to tie up your hair like mine.$1",
+
+  "fall_Fri4": "There's something sad about watching leaves wilt and fall during fall... don't you think so, @?$3#Reminds me that in every meeting, there is always parting.$0",
+
+  "winter_Thu4": "@! The snow is really thick out there. Wanna build a snowman?$1",
+
+
+  "Mon6": "There you are. How about a lunch together today, @? I'll cook.$8",
+  "Tue6": "Have you ever been deep into the forest, @?$0#I heard there's this interesting lake with glowing water deep in the forest.$0#Let me know if you see it, okay?$1",
+  "Wed6": "The library is lively when the kids are around.$0#Hmm... makes me think of having my own kids one day...$9",
+  "Thu6": "You see me in the forest a lot?$8#$b#Why, that's because I sometimes forage nature's bounty.$9#I also follow fruit-like creatures running around sometimes.$10#$b#You don't look surprised. Have you seen them too?$7",
+  "Fri6": "Your hands look heavy, @.$7#No, seriously, that wasn't a pick-up line or something. Have you been swinging your axe the whole week?$10#Ah, now I'm worried. Come here, let me massage your arms.$11",
+  "Sat6": "Coming to see me, @?#$q 49/50 Sat6_old#Wanna have some chat?#$r 50 15 hair#I really like your hair#$r 50 10 guild#How is the Guild holding up?#$r 50 10 opinion#What do you think about me?#$r 49 15 date#What is your ideal date?",
+  "hair": "Ah... my hair?$7#$b#What, got a thing for men with black hair?$9#$b#Haha, I'm just joking.$10#$b#Thanks. I guess I'll keep it this way, then.$1",
+  "guild": "The Guild? Well, same old.$11#$b#I have been taking on more and more of the paperwork lately.$10#$b#Yeah, it's boring. But it helps taking my mind off some things... sometimes.$0",
+  "opinion": "You? Hmm...$3#$b#You're a good person, @.$1#$b#Not just me, I'm sure everyone here enjoy your company. You have this aura around you that makes you look very kind and approachable.$9#$b#Your turn! What do you think about me?$1",
+  "date": "Ah, curious, are you?$9#$b#A date that fits the mood, I guess. There is no specific setting, no specific words to say, or things to do. Just me and my partner being in sync with each other and enjoying the moment.$10#$b#What about you?$0",
+  "Sat6_old": "#$p 50#Come to the Adventure Guild anytime, @. I'd appreciate the company.$1|Talking about date... do you have any plans tonight, by any chance?$9",
+  "Sun6": "Have you ever been to Zuzu city, @?$0#I heard they sell good crepes there. Wanna go together sometime?$1",
+
+  "summer_Sat6": "Have you ever been to Zuzu city, @?$0#I heard they sell good crepes there. Wanna go together sometime?$1",
+  "summer_Sun6": "Coming to see me, @?#$q 51/52 summer_Sun6_old#Wanna have some chat?#$r 51 15 hair#I really like your hair#$r 51 10 guild#How is the Guild holding up?#$r 51 10 opinion#What do you think about me?#$r 52 15 date#What is your ideal date?",
+  "hair": "Ah... my hair?$7#$b#What, got a thing for men with black hair?$9#$b#Haha, I'm just joking.$10#$b#Thanks. I guess I'll keep it this way, then.$1",
+  "guild": "The Guild? Well, same old.$11#$b#I have been taking on more and more of the paperwork lately.$10#$b#Yeah, it's boring. But it helps taking my mind off some things... sometimes.$0",
+  "opinion": "You? Hmm...$3#$b#You're a good person, @.$1#$b#Not just me, I'm sure everyone here enjoy your company. You have this aura around you that makes you look very kind and approachable.$9#$b#Your turn! What do you think about me?$1",
+  "date": "Ah, curious, are you?$9#$b#A date that fits the mood, I guess. There is no specific setting, no specific words to say, or things to do. Just me and my partner being in sync with each other and enjoying the moment.$10#$b#What about you?$0",
+  "summer_Sun6_old": "#$p 51#Come to the Adventure Guild anytime, @. I'd appreciate the company.$1|Talking about date... do you have any plans tonight, by any chance?$9",
+
+  "fall_Thu6": "There you are, @.$1#$b#If you have some free time, wanna go with me for a walk?$0",
+  "fall_Fri6": "It's always tranquil during fall, don't you think so, @?$0#The crisp autumn air, and the forest is richest during Autumn.$1",
+
+  "winter_Tue6": "It's getting really cold now, @. Shouldn't you wear something warmer?$11",
+  "winter_Wed6": "@, I know you are strong as I have seen for myself. But I can't help but worry.$11#Promise to get enough rest every night, okay?$10",
+  "winter_Thu6": "Say, @, there isn't much foraging for me to do in winter, so... why don't I come over to %farm tomorrow morning to help you with farm stuff?$1#I won't be as skilled as you, but I would really love to help. If you would allow me.$10",
+
+
+  "Mon8": "I can't help but admire the way you're working on your farm all by yourself, @.$8#If you ever need something, don't hesitate to come to me, okay?$1",
+  "Tue8": "@, wanna venture into the forest with me? Who knows there'd be something interesting in there?$1#Don't worry, just stay by my side. I won't even let you trip.$9",
+  "Wed8": "Hmm...$3#No, nothing is wrong. I just miss some dishes from my hometown.$10",
+  "Thu8": "I don't always drink alcohol in the Saloon. Sometimes I just order some milkshake.$10#Hm? I have a sweet tooth too, you know. Sweets can lift up one's mood.$8",
+  "Fri8": "How was your week, @?$9#There's no rest when it comes to tending the farm, huh? You're amazing, @.$10",
+  "Sat8": "Coming to see me, @?#$q 53/54 Sat8_old#Wanna have some chat?#$r 53 15 hair#I really like your hair#$r 53 10 guild#How is the Guild holding up?#$r 53 10 opinion#What do you think about me?#$r 53 15 date#What is your ideal date?#$r 54 10 say#Do you have anything to say to me?",
+  "hair": "Ah... my hair?$7#$b#What, got a thing for men with black hair?$9#$b#Haha, I'm just joking.$10#$b#Thanks. I guess I'll keep it this way, then.$1",
+  "guild": "The Guild? Well, same old.$11#$b#I have been taking on more and more of the paperwork lately.$10#$b#Yeah, it's boring. But it helps taking my mind off some things... sometimes.$0",
+  "opinion": "You? Hmm...$3#$b#You're a good person, @.$1#$b#Not just me, I'm sure everyone here enjoy your company. You have this aura around you that makes you look very kind and approachable.$9#$b#Your turn! What do you think about me?$1",
+  "date": "Ah, curious, are you?$9#$b#A date that fits the mood, I guess. There is no specific setting, no specific words to say, or things to do. Just me and my partner being in sync with each other and enjoying the moment.$10#$b#What about you?$0",
+  "say": "I always have something to say to you, @.$9#$b#That's why we should spend more time together, okay?$1",
+  "Sat8_old": "#$p 53#Come to the Adventure Guild anytime, @. I'd appreciate the company.$1|I really enjoy talking with you, @. Just hearing your voice makes it all better for me.$1",
+  "Sun8": "I was just thinking... maybe we should go on more adventures together?$0#Even if we encounter problems, hey, they said problems bring people closer.$9",
+
+  "summer_Tue8": "@, how do you sleep at night with the crickets throwing parties here and there?$3#$b#It's not that bad?$7#$b#...I keep on tossing and turning because of the heat and the crickets...$11",
+  "summer_Wed8": "I buy ice cream almost everyday in summer... @, do you think I'm wasting too much money?$11",
+  "summer_Sat8": "I have the weirdest dreams in summer.$11#$b#Last night, I dreamt of having a really bad fight with my best friend in front of a fast food restaurant...$10",
+  "summer_Sun8": "Coming to see me, @?#$q 55/56 summer_Sun8_old#Wanna have some chat?#$r 55 15 hair#I really like your hair#$r 55 10 guild#How is the Guild holding up?#$r 55 10 opinion#What do you think about me?#$r 55 15 date#What is your ideal date?#$r 56 10 say#Do you have anything to say to me?",
+  "hair": "Ah... my hair?$7#$b#What, got a thing for men with black hair?$9#$b#Haha, I'm just joking.$10#$b#Thanks. I guess I'll keep it this way, then.$1",
+  "guild": "The Guild? Well, same old.$11#$b#I have been taking on more and more of the paperwork lately.$10#$b#Yeah, it's boring. But it helps taking my mind off some things... sometimes.$0",
+  "opinion": "You? Hmm...$3#$b#You're a good person, @.$1#$b#Not just me, I'm sure everyone here enjoy your company. You have this aura around you that makes you look very kind and approachable.$9#$b#Your turn! What do you think about me?$1",
+  "date": "Ah, curious, are you?$9#$b#A date that fits the mood, I guess. There is no specific setting, no specific words to say, or things to do. Just me and my partner being in sync with each other and enjoying the moment.$10#$b#What about you?$0",
+  "say": "I always have something to say to you, @.$9#$b#That's why we should spend more time together, okay?$1",
+  "summer_Sun8_old": "#$p 55#Come to the Adventure Guild anytime, @. I'd appreciate the company.$1|Talking about date... do you have any plans tonight, by any chance?$9",
+
+  "fall_Fri8": "You know, @, I used to grow my hair really long. But I trimmed my hair before coming here.$0#$b#Heh... no idea. Maybe a symbol of a new beginning? Ever heard that our hair hold memories?$10",
+  "fall_Wed8": "@, what do you say we go out and annihilate monsters side-by-side one of these days, hm?$9#$b#I wanna know our compatibility as a duo in combat.$1",
+  "fall_Sun8": "...you have some free time, huh?$0#$b#Come at me, @. Try to hit me this time. Give it your best shot. Seeing how far you've improved, I won't hold back.$9",
+
+  "winter_Tue8": "Your hands are cold, @.$7#$b#Put them in my pockets.$1",
+  "winter_Wed8": "A warm bath sounds really nice, but... at the same time...$11#$b#It gets really cold when the warm water stops.$11",
+  "winter_Thu8": "Is %pet doing alright in this freezing weather?$8",
+  "winter_Fri8": "The Saloon becomes so much warmer in winter. Must be because of how crowded it is.$10#$b#If you still feel cold, well... feel free to come closer to me.$9",
+
+
+  "spring_Mon10": "Dinner over at my house tonight, sweetheart? I promise I'll cook your favorite.$9",
+  "spring_Tue10": "Honey... I looked into the mirror last night, and guess what I found?$11#$b#Gray hair!$11#Will you still love me even if I'm wrinkly and wobbly- hey, don't laugh!$9",
+  "spring_Wed10": "Darling, do you like pancakes?$0#You do? I happen to have the ingredients to make it right now! Why don't I whip some up for you?$8",
+  "spring_Thu10": "You look especially radiant today, sweetheart. Had a good dream?$9#Any chance that I was in it?$1",
+  "spring_Fri10": "@... I have been thinking more of you lately...$11#What did you do to me and my poor little heart, huh?$9",
+  "spring_Sat10": "Ah, there's the smile I love so much. Hey, @.$6#I'm stuck in here... wanna do me a favor and kidnap me? Make sure Marlon doesn't see.$11",
+  "spring_Sun10": "My earrings? Haha, they're huge?$10#You can touch them if you're curious, @.$9",
+
+  "summer_Mon10": "Ugh... it's so hot today... wanna get ice cream, honey? Which one do you want?$11",
+  "summer_Tue10": "@, call me smitten, but you look even cuter in Summer.$6#...$4",
+  "summer_Wed10": "...@, don't smile like that. You're melting my ice cream. And me.$4",
+  "summer_Thu10": "You're sweating pretty bad right now, @.$10#$b#Come here, you can take cover under my shadow.$0#Anything for you, sweetheart.$1",
+  "summer_Fri10": "Hm? My cursed technique?$7#$b#Where or who did you learn that term from, @?$10#$b#But I guess I don't mind showing you. Promise to not freak out?$9",
+  "summer_Sat10": "I'm sorry if I smell bad, @... it's the terrible heat. I'm so sweaty right now.$11",
+  "summer_Sun10": "Babe, should we go to Zuzu city and buy matching slippers?$0#$b#Huh, random? Well... I saw a Dokdok video last night and it's cute... and most people wear slippers in summer, no?$10",
+
+  "fall_Mon10": "The breeze feels good this time of year... let's find a nice spot for a picnic, @!$1",
+  "fall_Tue10": "Hey, sweetheart. Have you been working on those combat skills of yours?$9#Let me help you with that. I want my darling to always come back from the caves safe and sound.$8",
+  "fall_Wed10": "@, you have leaf on your hair... haha. Let me get it for you.$10#$b#What would you do without me, huh?$9",
+  "fall_Thu10": "How is the farm holding up, honey?$0#$b#I'm always happy to lend a hand.$8",
+  "fall_Fri10": "Look at the colors of those trees... they all come together to create a beautiful gradient.$1",
+  "fall_Sat10": "@... what are your plans for Sunday night?$0#$b#I caught some crabs and clams yesterday! Wanna have hotpot dinner?$8",
+  "fall_Sun10": "@, what do you think if I dye my hair the color of fallen leaves?$3#Why, so that I could camouflage myself and jump at monsters when they least expect it!$1",
+
+  "winter_Mon10": "@, last night I made some hot cocoa and it was delicious.$1#$b#I wanna make one for you now, so you can taste it too.$0",
+  "winter_Tue10": "You know, darling? I used to have a very close friend that was born in Winter. I just wonder how he is doing now.$3#$b#Probably still a sorcerer... he's very strong, after all.$10",
+  "winter_Wed10": "Heheh...$6#Your cheeks and nose are red from the cold. You look cute.$4",
+  "winter_Thu10": "Brr... sweetheart, aren't you cold?$11#$b#Come closer. My hugs are warm.$6",
+  "winter_Fri10": "There's barely any plants outside... all dead or covered in snow.$11#$b#But the emptiness is filled by the vibrant Christmas decorations.$1",
+  "winter_Sat10": "I tried knitting you a scarf the other day, @.$11#$b#Where is it? Heh... turned out knitting isn't my forte after all.$10",
+  "winter_Sun10": "Nowadays, when it snows, I find myself thinking about you, @.$4#$b#Why, you ask?$8#$b#Of course because the falling snow looks beautiful. Just like you.$6",
+
+
+  "spring_1_2": "Happy new year, @!$1#$b#Ready for more secrets to discover and new lessons to learn?$9",
+  "spring_12": "Are you participating in the egg hunt tomorrow, @?$0",
+  "spring_16": "I want to go and see the desert festival... but I can't. There are jobs to finish.$11",
+  "spring_23": "Flower dance tomorrow, huh?$0#$b#Are you gonna dance, @?$9",
+
+  "summer_10": "It's quite unique that everyone is allowed to bring anything they want to put into a mega bowl...$0#$b#...and expect it to taste good...$10",
+  "summer_20": "Is there any rule that says we should use fishing rod to catch fish in Trout Derby?$3#$b#I'm not good at fishing... just thinking of using my hands...$11",
+  "summer_27": "As much as I'm glad that the heat will be over soon, there is surely some nice aspects of Summer that I'll miss.$0",
+
+  "fall_2": "...$7#$b#You... have a leaf on your hair.$10#$b#Come here, let me get it for you.$0",
+  "fall_15": "Are you going to display the items from %farm tomorrow, @?$0",
+  "fall_26": "Taking on the maze challenge tomorrow, @?$9",
+
+  "winter_1": "Ah, it's this time of the year already, huh? Are you looking forward to see the snow, @?$0",
+  "winter_7": "I'm going to the forest tomorrow... I want to see what kind of amazing ice sculpture Robin and Leah are making this year!$1",
+  "winter_12": "Hmm... I'm thinking of having squid for dinner...$3",
+  "winter_24": "The Feast of the Winter Star is truly the core of Winter, isn't it?$0",
+  "winter_26": "I had a really good meal yesterday... ugh, I'm still full even now.$11"
+
+    }
