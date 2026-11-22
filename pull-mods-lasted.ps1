@@ -322,8 +322,8 @@ function Test-SameFile([string]$Src, [string]$Dst) {
     return (Get-FileHashBytes $Src) -eq (Get-FileHashBytes $Dst)
 }
 
+# Quiet: only problems are printed; the caller ends with "Done.".
 function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
-    Write-Step 'Mods'
     $repoMods = @(Get-ChildItem -LiteralPath $SrcRoot -Directory |
         Where-Object { -not $_.Name.StartsWith('.') -and $RootFiles -notcontains $_.Name })
     $repoNames = New-Object 'System.Collections.Generic.HashSet[string]' ([StringComparer]::OrdinalIgnoreCase)
@@ -335,7 +335,7 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
     # Backups made by older versions of this script.
     $oldBackup = Join-Path (Split-Path -Parent $ModsPath) 'Mods_backup'
     if (Test-Path -LiteralPath $oldBackup) {
-        try { Remove-ModPath $oldBackup; Write-Host "[DELETE] $oldBackup" -ForegroundColor Yellow }
+        try { Remove-ModPath $oldBackup }
         catch { Write-Host "Cannot delete ${oldBackup}: $($_.Exception.Message)" -ForegroundColor Yellow }
     }
 
@@ -344,7 +344,6 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
         if ($dir.Name.StartsWith('.') -or $ProtectedMods -contains $dir.Name -or $repoNames.Contains($dir.Name)) { continue }
         Remove-ModPath $dir.FullName
         $removed++
-        Write-Host "[REMOVE] $($dir.Name)" -ForegroundColor Yellow
     }
 
     foreach ($mod in $repoMods) {
@@ -380,14 +379,11 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
             }
         }
 
-        if ($isNew)       { $created++;   Write-Host "[NEW]    $($mod.Name)" -ForegroundColor Green }
-        elseif ($changes) { $updated++;   Write-Host "[UPDATE] $($mod.Name)" -ForegroundColor Cyan }
-        else              { $unchanged++; Write-Host "[OK]     $($mod.Name)" -ForegroundColor DarkGray }
+        if ($isNew)       { $created++ }
+        elseif ($changes) { $updated++ }
+        else              { $unchanged++ }
     }
     $script:Hasher.Dispose()
-
-    Write-Host ''
-    Write-Host "Mods: New $created, Updated $updated, Unchanged $unchanged, Removed $removed, Files copied $copied, Stale files $stale" -ForegroundColor Green
 }
 
 # ---------- Steam launch options ----------
@@ -665,7 +661,7 @@ try {
     if ($doSync) {
         # Download the exact commit that was checked so the saved SHA matches the files.
         $zipUrl = if ($remoteSha) { "https://github.com/jarps9977/stardew-mods-builded/archive/$remoteSha.zip" } else { $RepoZipUrl }
-        Write-Host "Downloading $zipUrl ..."
+        Write-Host $(if ($remoteSha) { "Downloading mods ($($remoteSha.Substring(0, 7))) ..." } else { 'Downloading mods ...' })
         $zipPath = Join-Path $tempRoot 'repo.zip'
         Save-Url $zipUrl $zipPath
         $extractDir = Join-Path $tempRoot 'extract'
