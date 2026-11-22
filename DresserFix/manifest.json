@@ -1,0 +1,17 @@
+{
+  "Name": "Dresser Fix",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Stops the dresser menu from crashing on items left by removed mods (no display name).",
+  "UniqueID": "Gego.DresserFix",
+  "EntryDll": "DresserFix.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
