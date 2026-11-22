@@ -25,11 +25,11 @@
   "SmokeOpacity": 0.2,
   "SmokeSpread": 70.0,
   "SmokeStartSeconds": 0.8,
-  "WhiteWaveStartSeconds": 3.0,
-  "WhiteWaveTilesPerSecond": 24.0,
+  "WhiteWaveStartSeconds": 1.5,
+  "WhiteWaveTilesPerSecond": 40.0,
   "WhiteHoldSeconds": 0.1,
-  "HyperspaceGrowSeconds": 0.4,
-  "HyperspaceHoldSeconds": 1.5,
+  "HyperspaceGrowSeconds": 0.3,
+  "HyperspaceHoldSeconds": 2.0,
   "HyperspaceLineCount": 500,
   "HyperspaceSpeed": 3.0,
   "InkEdgeRoughness": 2.0,
@@ -70,7 +70,7 @@
       "Enabled": true,
       "Delay": 0.0,
       "Volume": 60,
-      "StartAt": 2.1
+      "StartAt": 1.0
     },
     "Crystal": {
       "Enabled": false,
