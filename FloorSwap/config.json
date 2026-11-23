@@ -1,0 +1,10 @@
+{
+  "Enabled": true,
+  "FloorModeKey": "G",
+  "FenceModeKey": "H",
+  "MaxSelectedTiles": 300,
+  "RefundOldItems": true,
+  "ShowEffects": true,
+  "PlaySounds": true,
+  "MaxEffectTiles": 64
+}
