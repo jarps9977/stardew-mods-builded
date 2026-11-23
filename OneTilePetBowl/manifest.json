@@ -1,0 +1,17 @@
+{
+  "Name": "One Tile Pet Bowl",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "The pet bowl takes 1 tile instead of 2x2.",
+  "UniqueID": "Gego.OneTilePetBowl",
+  "EntryDll": "OneTilePetBowl.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
