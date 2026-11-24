@@ -1,0 +1,17 @@
+{
+  "Name": "Fertilizer Bubbles",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Shows a Deluxe Speed-Gro bubble over watered crops that have no fertilizer yet.",
+  "UniqueID": "Gego.FertilizerBubbles",
+  "EntryDll": "FertilizerBubbles.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
