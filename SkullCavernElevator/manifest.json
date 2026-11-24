@@ -1,0 +1,17 @@
+{
+  "Name": "Skull Cavern Elevator",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Skull Cavern elevator with a checkpoint every 30 floors. Treasure-only floors never appear when you ride the elevator straight to them.",
+  "UniqueID": "Gego.SkullCavernElevator",
+  "EntryDll": "SkullCavernElevator.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
