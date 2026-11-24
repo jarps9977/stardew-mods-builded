@@ -2,7 +2,7 @@
   "Name": "Floor Swap",
   "Author": "Gego",
   "Version": "1.0.0",
-  "Description": "Drag over placed floors, paths or fences, then pick a replacement from your inventory to swap them in place.",
+  "Description": "Click placed floors, paths or fences to select the connected area, then pick a replacement from your inventory to swap them in place.",
   "UniqueID": "Gego.FloorSwap",
   "EntryDll": "FloorSwap.dll",
   "MinimumApiVersion": "4.0.0",
