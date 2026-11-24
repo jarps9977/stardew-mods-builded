@@ -1,0 +1,17 @@
+{
+  "Name": "Obelisk Skins",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Earth, Water, Desert and Island obelisks become walkable warp platforms (4x2). Click to warp, like vanilla.",
+  "UniqueID": "Gego.ObeliskSkins",
+  "EntryDll": "ObeliskSkins.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
