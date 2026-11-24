@@ -1,0 +1,17 @@
+{
+  "Name": "Clothes Catalog",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "A wardrobe catalogue with every hat, shirt, pants and boots in the game, plus custom clothes from clothes.json.",
+  "UniqueID": "Gego.ClothesCatalog",
+  "EntryDll": "ClothesCatalog.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
