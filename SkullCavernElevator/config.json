@@ -1,0 +1,8 @@
+{
+  "Enabled": true,
+  "CheckpointInterval": 5,
+  "NoTreasureRoomByElevator": true,
+  "ElevatorInSkullCave": true,
+  "ElevatorOnLadderUp": true,
+  "ShowCheckpointMessage": true
+}

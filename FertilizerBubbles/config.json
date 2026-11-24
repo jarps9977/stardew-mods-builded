@@ -1,0 +1,12 @@
+{
+  "Enabled": true,
+  "OnlyAfterWatered": true,
+  "OnlyWhenHoldingSpeedGro": false,
+  "IncludeGardenPots": true,
+  "ToggleKey": "None",
+  "Animate": true,
+  "OpacityPercent": 85,
+  "SizePercent": 100,
+  "OffsetX": 0,
+  "OffsetY": 0
+}
