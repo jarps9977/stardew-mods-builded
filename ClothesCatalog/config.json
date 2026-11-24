@@ -1,0 +1,10 @@
+{
+  "Enabled": true,
+  "CatalogPrice": 30000,
+  "ClothingPrice": 0,
+  "IncludeHats": true,
+  "IncludeShirts": true,
+  "IncludePants": true,
+  "IncludeBoots": true,
+  "IncludeCustom": true
+}
