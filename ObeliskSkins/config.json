@@ -1,4 +1,5 @@
 {
   "Enabled": true,
-  "ClickWhileStanding": true
+  "ClickWhileStanding": true,
+  "StandingEffect": true
 }
