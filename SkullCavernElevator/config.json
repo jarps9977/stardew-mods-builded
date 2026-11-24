@@ -3,7 +3,6 @@
   "CheckpointInterval": 30,
   "NoTreasureRoomByElevator": true,
   "ElevatorInSkullCave": true,
-  "DoorOpensElevator": true,
   "ElevatorOnLadderUp": true,
   "ShowCheckpointMessage": true
 }
