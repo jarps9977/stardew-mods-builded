@@ -1,0 +1,6 @@
+{
+  "Enabled": true,
+  "CabinCollision": true,
+  "TestMode": true,
+  "MenuKey": "F9"
+}
