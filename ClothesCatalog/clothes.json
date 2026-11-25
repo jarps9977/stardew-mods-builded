@@ -1,3 +1,6 @@
 {
-  "Clothes": []
+  "Clothes": [
+    { "Id": "ChosoRobe", "Type": "Shirt", "Name": "Choso Robe", "Description": "White robe with a purple scarf.", "Texture": "assets/clothes/choso_robe.png", "SpriteIndex": 0, "HasSleeves": true },
+    { "Id": "ChosoPants", "Type": "Pants", "Name": "Choso Pants", "Description": "Loose white pants.", "Texture": "assets/clothes/choso_pants.png", "SpriteIndex": 0, "DefaultColor": "255 255 255" }
+  ]
 }
