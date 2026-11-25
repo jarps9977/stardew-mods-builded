@@ -5,6 +5,6 @@
   "IncludeHats": true,
   "IncludeShirts": true,
   "IncludePants": true,
-  "IncludeBoots": true,
-  "IncludeCustom": true
+  "IncludeCustom": true,
+  "FashionSenseMenu": true
 }
