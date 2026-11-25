@@ -1,6 +1,7 @@
 {
   "Enabled": true,
   "OpenKey": "LeftControl + MouseRight",
+  "EnableCrafting": true,
   "MaxQuantity": 999,
   "DefaultQuantity": 10
 }
