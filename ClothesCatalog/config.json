@@ -6,5 +6,5 @@
   "IncludeShirts": true,
   "IncludePants": true,
   "IncludeCustom": true,
-  "FashionSenseMenu": true
+  "TestMode": false
 }
