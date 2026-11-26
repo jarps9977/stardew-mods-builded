@@ -60,7 +60,9 @@
     "(O)MixedFlowerSeeds",
     "(BC)62",
     "(O)466",
-    "(BC)114"
+    "(BC)114",
+    "(BC)21",
+    "(BC)19"
   ],
   "DetectionMethod": "Cursor",
   "RequireClick": true,
