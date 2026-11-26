@@ -1,0 +1,17 @@
+{
+  "Name": "Farm Visitors",
+  "Author": "Gego",
+  "Version": "1.1.0",
+  "Description": "Villagers walk to the farm during the day, look around your crops, animals and machines, then go back to their normal schedule.",
+  "UniqueID": "Gego.FarmVisitors",
+  "EntryDll": "FarmVisitors.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
