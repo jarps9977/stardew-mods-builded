@@ -2,7 +2,7 @@
   "Enabled": true,
   "MaxVisitorsPerDay": 5,
   "VisitChancePercent": 60,
-  "EarliestArrival": 1000,
+  "EarliestArrival": 700,
   "LatestArrival": 1400,
   "StayMinutes": 120,
   "WanderOnFarm": true,
