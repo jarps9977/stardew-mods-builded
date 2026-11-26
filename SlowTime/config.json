@@ -4,7 +4,7 @@
   "AfternoonMultiplier": 1.25,
   "EveningMultiplier": 1.0,
   "MineMultiplier": 1.0,
-  "WinterOutsideMultiplier": 0.7,
+  "WinterOutsideMultiplier": 0.5,
   "WinterMineMultiplier": 1.5,
   "ShowHud": true,
   "ShowHudAtNormalSpeed": false,
