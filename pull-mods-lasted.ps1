@@ -7,8 +7,9 @@
     2. Downloads the repo archive and syncs every mod folder into the Mods folder.
        Repo is the source of truth: all files, including config.json, are overwritten.
        A local config.json is kept when the repo has none for that mod.
-       Mods not in the repo, and stale files inside repo mods, are deleted
-       (SMAPI bundled mods and dot-folders are kept). Old <game>\Mods_backup is deleted.
+       Mods installed by an earlier sync and later removed from the repo, and stale files
+       inside repo mods, are deleted. Other mods in the Mods folder (installed by the user)
+       are never touched. Old <game>\Mods_backup is deleted.
     3. Saves this script to the game folder.
     4. Steam only: sets the game launch options to run this script with -Launch
        (auto-update on every Play, then SMAPI) if not set yet,
@@ -78,6 +79,8 @@ $RepoZipUrl = "https://github.com/jarps9977/stardew-mods-builded/archive/refs/he
 $RepoCommitApi = "https://api.github.com/repos/jarps9977/stardew-mods-builded/commits/$Branch"
 $SmapiReleaseApi = 'https://api.github.com/repos/Pathoschild/SMAPI/releases/latest'
 $ShaFileName = '.pull-mods-sha'
+# Mod folders installed by the last sync; only these may be deleted later.
+$ListFileName = '.pull-mods-list'
 $ScriptName = 'pull-mods-lasted.ps1'
 $SteamAppId = '413150'
 $RootFiles = @('README.md', 'pull-mods-lasted.ps1', 'pull-mods-lasted.bat', '.gitignore', '.gitattributes')
@@ -339,11 +342,19 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
         catch { Write-Host "Cannot delete ${oldBackup}: $($_.Exception.Message)" -ForegroundColor Yellow }
     }
 
-    # Delete mods that are not part of the repo.
-    foreach ($dir in Get-ChildItem -LiteralPath $ModsPath -Directory) {
-        if ($dir.Name.StartsWith('.') -or $ProtectedMods -contains $dir.Name -or $repoNames.Contains($dir.Name)) { continue }
-        Remove-ModPath $dir.FullName
-        $removed++
+    # Delete only mods this script installed before and the repo no longer has; user-installed mods are kept.
+    $listFile = Join-Path (Split-Path -Parent $ModsPath) $ListFileName
+    if (Test-Path -LiteralPath $listFile) {
+        foreach ($name in [IO.File]::ReadAllLines($listFile)) {
+            $name = $name.Trim()
+            # List file is on disk and editable; reject anything that is not a plain folder name.
+            if (-not $name -or $name.StartsWith('.') -or $name -match '[\\/:*?"<>|]') { continue }
+            if ($ProtectedMods -contains $name -or $repoNames.Contains($name)) { continue }
+            $dir = Join-Path $ModsPath $name
+            if (-not [IO.Directory]::Exists($dir)) { continue }
+            try { Remove-ModPath $dir; $removed++ }
+            catch { Write-Host "Cannot delete ${dir}: $($_.Exception.Message)" -ForegroundColor Yellow }
+        }
     }
 
     foreach ($mod in $repoMods) {
@@ -384,6 +395,7 @@ function Sync-Mods([string]$SrcRoot, [string]$ModsPath) {
         else              { $unchanged++ }
     }
     $script:Hasher.Dispose()
+    [IO.File]::WriteAllLines($listFile, [string[]]@($repoMods | ForEach-Object { $_.Name }))
 }
 
 # ---------- Steam launch options ----------
