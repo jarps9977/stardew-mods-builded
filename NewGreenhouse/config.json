@@ -7,7 +7,7 @@
   "CavePrice": 1000000,
   "ApiaryPrice": 1000000,
   "BuildDays": 1,
-  "TestMode": true,
+  "TestMode": false,
   "UpperLadderTile": "",
   "BasementLadderTile": "",
   "ElevatorTile": "",
