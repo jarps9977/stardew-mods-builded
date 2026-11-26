@@ -1,0 +1,6 @@
+{
+  "Enabled": true,
+  "MaxTransfersPerTick": 3,
+  "IncludeMiniShippingBin": false,
+  "IncludeJunimoHut": true
+}
