@@ -1,8 +1,8 @@
 {
   "Name": "New Greenhouse",
   "Author": "Gego",
-  "Version": "1.1.0",
-  "Description": "Robin's greenhouse projects: renovation, a 20x20 upper floor and a basement for fruit trees and Iridium Crabs. Co-op ready.",
+  "Version": "1.2.0",
+  "Description": "Robin's greenhouse projects: renovation, a basement (B1) and floors 2-6 (soil, aquarium, crystal cave, rooftop apiary) linked by an elevator. Co-op ready.",
   "UniqueID": "Gego.NewGreenhouse",
   "EntryDll": "NewGreenhouse.dll",
   "MinimumApiVersion": "4.0.0",
