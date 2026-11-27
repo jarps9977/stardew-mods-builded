@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Pet Interaction",
+  "Author": "jahangmar",
+  "Version": "1.2.0",
+  "Description": "Lets your pet follow you, do silly stuff, and play fetch",
+  "UniqueID": "jahangmar.PetInteraction",
+  "EntryDll": "PetInteraction.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
