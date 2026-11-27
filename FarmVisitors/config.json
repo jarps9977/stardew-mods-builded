@@ -11,5 +11,20 @@
   "SkipRainyDays": true,
   "ExcludeShopkeepers": true,
   "MinHearts": 0,
-  "ExcludedNpcs": ""
+  "ExcludedNpcs": "",
+  "Wishes": true,
+  "WishChancePercent": 35,
+  "WishBonusChancePercent": 50,
+  "WishBonusFriendship": 120,
+  "MoneyRequests": true,
+  "MoneyRequestChancePercent": 15,
+  "MoneyRequestMinGold": 50000,
+  "MoneyRequestMinAmount": 100,
+  "MoneyRequestMaxAmount": 1000,
+  "MoneyRequestFriendship": 50,
+  "Donations": true,
+  "DonationChancePercent": 40,
+  "DonationMinAmount": 50,
+  "DonationMaxAmount": 500,
+  "DebugLog": true
 }
