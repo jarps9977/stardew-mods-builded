@@ -1,0 +1,12 @@
+{
+  "Enabled": true,
+  "BeeCount": 4,
+  "BeeColorR": 255,
+  "BeeColorG": 200,
+  "BeeColorB": 40,
+  "BeeSizePercent": 45,
+  "BeeSpeedPercent": 30,
+  "StingChancePercent": 0,
+  "StingDamage": 3,
+  "MaxSoundDistance": 0
+}
