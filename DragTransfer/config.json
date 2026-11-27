@@ -4,5 +4,6 @@
   "IncludeMiniShippingBin": false,
   "IncludeJunimoHut": true,
   "IncludeShippingBin": true,
-  "UndoKey": "LeftControl + Z"
+  "UndoKey": "LeftControl + Z",
+  "ShowUndoList": true
 }

@@ -74,5 +74,31 @@
 
   "greenhouse.1": "The greenhouse is amazing. It's like summer in there all year!$h",
   "greenhouse.2": "I remember when this greenhouse was falling apart. Look at it now.",
-  "greenhouse.3": "Perfect lighting in there. I'm coming back with my camera."
+  "greenhouse.3": "Perfect lighting in there. I'm coming back with my camera.",
+
+  // Wish: the visitor would love this item as a gift today.
+  "wish.1": "That {{item}} looks so good... I'd really love to try some, @.$h",
+  "wish.2": "Mmm, {{item}}. I've been craving that lately. Just saying.",
+  "wish.3": "If someone gave me some {{item}} today, I'd be so happy. Hint, hint.$h",
+  "wish.4": "Is that {{item}}? I've always wanted to try yours, @.",
+  "wish.5": "{{item}}... Okay, I'm staring. I know. It just looks amazing.",
+  "wish.bonus": "{{npc}} really wanted that! Extra friendship.",
+
+  // Money request: the farm looks rich, so the visitor asks for a little gold.
+  "money.ask.1": "Your farm is doing so well, @... Could you spare {{amount}}g? I'm a little short this week.",
+  "money.ask.2": "Wow, this place looks rich. Any chance you could lend me {{amount}}g? I'll owe you one.",
+  "money.ask.3": "Okay, don't laugh, but... could I borrow {{amount}}g? Business is clearly good out here.",
+  "money.question": "Give {{npc}} {{amount}}g?",
+  "money.yes": "Yes",
+  "money.no": "No",
+  "money.thanks.1": "Really? Thank you so much, @!$h",
+  "money.thanks.2": "You're the best. I won't forget this.$h",
+  "money.thanks.3": "Wow, {{amount}}g! You didn't have to... but I'm glad you did.$h",
+  "money.declined.1": "Oh, okay. No worries, I get it.",
+  "money.declined.2": "That's fair. Forget I asked.",
+  "money.declined.3": "Hmph. Fine. I'll just look at your crops then.",
+  "money.broke.1": "Oh... looks like you're short too. Never mind!",
+
+  // Donation left for the farm tour, added to the wallet automatically.
+  "donation": "{{npc}} left a {{amount}}g donation for the farm tour."
 }
