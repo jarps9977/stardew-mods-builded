@@ -2,5 +2,7 @@
   "Enabled": true,
   "MaxTransfersPerTick": 3,
   "IncludeMiniShippingBin": false,
-  "IncludeJunimoHut": true
+  "IncludeJunimoHut": true,
+  "IncludeShippingBin": true,
+  "UndoKey": "LeftControl + Z"
 }

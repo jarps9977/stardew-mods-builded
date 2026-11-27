@@ -1,7 +1,7 @@
 {
   "Name": "Drag Transfer",
   "Author": "Gego",
-  "Version": "1.1.0",
+  "Version": "1.2.0",
   "Description": "Hold left click and drag over inventory or chest slots to move every item you pass over, or ship them into the shipping bin (with undo).",
   "UniqueID": "Gego.DragTransfer",
   "EntryDll": "DragTransfer.dll",

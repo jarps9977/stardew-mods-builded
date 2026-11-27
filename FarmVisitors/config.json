@@ -1,6 +1,6 @@
 {
   "Enabled": true,
-  "MaxVisitorsPerDay": 5,
+  "MaxVisitorsPerDay": 8,
   "VisitChancePercent": 60,
   "EarliestArrival": 700,
   "LatestArrival": 1400,
