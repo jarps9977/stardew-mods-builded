@@ -4,10 +4,12 @@
   "pet_fetch_friendship_increase": 10,
   "pet_petting_friendship_increase": 12,
   "stick_range": 12.0,
+  "fetch_radius": 10,
   "show_message_on_warp": true,
   "unconditional_love": false,
   "love_everytime_at_max_friendship": false,
   "pass_through_following_pets": true,
+  "release_all_key": "P",
   "pet_speed": 6,
   "pet_fast_speed": 10
 }
