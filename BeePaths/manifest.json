@@ -1,0 +1,17 @@
+{
+  "Name": "Bee Paths",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Bees fly between each bee house and the flower it gets its honey from. Optional stings and buzzing.",
+  "UniqueID": "Gego.BeePaths",
+  "EntryDll": "BeePaths.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
