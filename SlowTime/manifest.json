@@ -1,7 +1,7 @@
 {
   "Name": "Slow Time",
   "Author": "Gego",
-  "Version": "1.0.0",
+  "Version": "1.1.0",
   "Description": "Changes the clock speed by time of day, season and the mines.",
   "UniqueID": "Gego.SlowTime",
   "EntryDll": "SlowTime.dll",
