@@ -1,6 +1,6 @@
 {
   "EnergyRestored": 50,
   "SellPrice": 100,
-  "TestMode": true,
+  "TestMode": false,
   "Edibility": 20
 }
