@@ -1,0 +1,17 @@
+{
+  "Name": "Test Snack",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Adds an edible Star Cookie.",
+  "UniqueID": "Gego.TestSnack",
+  "EntryDll": "TestSnack.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
