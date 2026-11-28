@@ -1,0 +1,17 @@
+{
+  "Name": "Lucky Charm",
+  "Author": "Gego",
+  "Version": "1.0.0",
+  "Description": "Pierre sells a Lucky Charm: carry it to get a little extra daily luck.",
+  "UniqueID": "Gego.LuckyCharm",
+  "EntryDll": "LuckyCharm.dll",
+  "MinimumApiVersion": "4.0.0",
+  "MinimumGameVersion": "1.6.0",
+  "Dependencies": [
+    {
+      "UniqueID": "spacechase0.GenericModConfigMenu",
+      "IsRequired": false
+    }
+  ],
+  "UpdateKeys": []
+}
